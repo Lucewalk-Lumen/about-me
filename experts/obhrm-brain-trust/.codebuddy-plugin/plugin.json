@@ -4,7 +4,7 @@
   "description": "OBHRM multi-agent knowledge team linking a 12-chapter textbook with 145 theories, 601 scales and 108 R methods: a lead orchestrator routes each concept query to three specialist agents and assembles one complete four-library answer.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/obhrm-brain-trust-lead.md",

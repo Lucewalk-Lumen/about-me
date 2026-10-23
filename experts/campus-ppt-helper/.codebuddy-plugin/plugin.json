@@ -4,7 +4,7 @@
   "description": "A campus presentation expert team covering teaching, thesis-defense, internship and Party-building scenarios, from information collection and structure planning to official-skill PPT building and four-dimension quality assurance.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/campus-ppt-lead.md",

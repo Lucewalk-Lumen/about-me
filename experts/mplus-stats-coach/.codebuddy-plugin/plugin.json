@@ -6,7 +6,7 @@
   "description": "An Mplus learning agent that explains syntax, reviews .inp code, interprets output, advises on model choice, and diagnoses warnings and errors, with every claim traceable to a source.",
   "author": {
     "name": "Xing",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/mplus-stats-coach.md"

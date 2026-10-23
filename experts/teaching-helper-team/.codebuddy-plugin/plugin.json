@@ -4,7 +4,7 @@
   "description": "Nine teaching experts and 18 skills covering course building, case writing, thesis mentoring, slides, minutes, voice synthesis and grant proposals, with de-AI and citation-fidelity gates.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/teaching-helper-team-lead.md",

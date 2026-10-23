@@ -4,7 +4,7 @@
   "description": "Investment Star-map Team covering hotspot scanning, deep company research, K-line technical review, portfolio strategy and event interpretation, with built-in data-reliability guardrails against hallucination.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/touyan-expert-team-lead.md",

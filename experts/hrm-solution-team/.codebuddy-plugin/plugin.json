@@ -4,7 +4,7 @@
   "description": "China-market HRM team: one orchestrator plus eight specialists across org planning, talent sourcing, recruitment, talent, performance, compensation, compliance and SBTI assessment, gated by a unified compliance layer.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/hrm-solution-team-lead.md",
