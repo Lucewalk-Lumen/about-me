@@ -1,0 +1,56 @@
+title: M10 model
+
+variable:  NAMES ARE y1-y5;
+           GROUPING IS y5 (0 = g1 1 = g2);
+
+data: file=2.dat;
+
+analysis: estimator=mlr; convergence=10000000;
+
+model: 
+
+     f1 BY y1;
+     f1 BY y2;
+     f1 BY y3;
+     f1 BY y4;
+
+  MODEL G1:
+
+     f1 BY y1@1;
+     f1 BY y2*0.375 (5);
+     f1 BY y3*0.876 (6);
+     f1 BY y4*1.005 (7);
+
+     [ y1*0.112 ] (1);
+     [ y2*0.248 ] (2);
+     [ y3*0.281 ] (3);
+     [ y4*0.324 ] (4);
+     [ f1@0 ];
+
+     y1*0.007;
+     y2*0.163;
+     y3*0.466;
+     y4*0.403;
+     f1*0.092;
+
+  MODEL G2:
+
+     f1 BY y1@1;
+     f1 BY y2*0.375;
+     f1 BY y3*0.876;
+     f1 BY y4*1.005;
+
+     [ y1*0.112 ] (1);
+     [ y2*0.248 ] (2);
+     [ y3*0.281 ] (3);
+     [ y4*0.324 ] (4);
+     [ f1*0.304 ];
+
+     y1*0.629;
+     y2*1.042;
+     y3*0.107;
+     y4*0.246;
+     f1*0.554;
+
+
+output: tech5;

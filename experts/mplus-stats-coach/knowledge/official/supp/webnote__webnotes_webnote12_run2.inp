@@ -1,0 +1,9 @@
+title: M1 model
+
+variable:  NAMES ARE y1-y5;
+
+data: file=1.dat;
+
+analysis: estimator=mlr; 
+
+model: f1 BY y1-y5; y1 with y2; y3 with y2; 

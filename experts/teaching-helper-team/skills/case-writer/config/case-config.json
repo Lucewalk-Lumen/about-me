@@ -1,0 +1,90 @@
+{
+  "skill": "case-writer",
+  "version": "1.0.2",
+  "description": "机器可读配置：排版规范 / 引用规范 / 四条路径映射（A 教学案例 / B 课程思政案例 / C 融入思政 / D 工商管理案例）。由 scripts/md_to_docx.py 读取，不进入 LLM 上下文（省 token）。",
+  "docx": {
+    "fonts": {
+      "body_cn": "宋体",
+      "body_en": "Times New Roman",
+      "heading_cn": "黑体",
+      "heading_en": "Times New Roman",
+      "title_cn": "黑体"
+    },
+    "sizes_pt": {
+      "title": 18,
+      "h1": 16,
+      "h2": 14,
+      "h3": 12,
+      "body": 12
+    },
+    "align": "justify",
+    "first_line_indent_pt": 21,
+    "ref_hang_indent_pt": 21,
+    "spacing": {
+      "title_line": 1.3,
+      "title_after": 6,
+      "heading_line": 1.25,
+      "heading_before": 12,
+      "heading_before_sub": 8,
+      "heading_after": 6,
+      "body_line": 1.5,
+      "body_after": 6,
+      "ref_line": 1.4,
+      "ref_after": 3,
+      "bullet_line": 1.4,
+      "bullet_after": 3
+    }
+  },
+  "citation": {
+    "inline_superscript": true,
+    "ref_trigger_heading": "参考文献",
+    "in_text_mark": "〔来源：…〕（锚定 quality/citation-integrity L0 SSOT；路径 D 不再使用 ¹²³ 脚注）",
+    "ref_format": "[N] 《文件全称》〔发布机构，年份〕 / [N] 机构/报告名〔年份；检索日期 YYYY-MM-DD〕 / [N] 作者/机构. 篇名. 媒体/发布机构, 日期. URL（访问日期 YYYY-MM-DD）",
+    "note": "文内用统一 〔来源：…〕 标记；文末可选『参考文献』节用 [N] 编号条目，悬挂缩进由 md_to_docx 处理。统一著录细则见 references/case-reference-standard.md。"
+  },
+  "paths": {
+    "A": {
+      "id": "A",
+      "name": "教学案例",
+      "template": "assets/teaching-case-template.md",
+      "spec": "references/teaching-case-spec.md",
+      "quality_base": "references/case-quality-base.md",
+      "length_chars": "3000-8000",
+      "elements": null
+    },
+    "B": {
+      "id": "B",
+      "name": "课程思政案例",
+      "template": "assets/sizheng-case-template.md",
+      "spec": "references/sizheng-case-spec.md",
+      "quality_base": "references/case-quality-base.md",
+      "length_chars": "3000-8000",
+      "elements": "references/sizheng-elements.md"
+    },
+    "C": {
+      "id": "C",
+      "name": "教学中融入思政",
+      "template": "assets/teaching-case-template.md",
+      "spec": "references/teaching-case-spec.md",
+      "quality_base": "references/case-quality-base.md",
+      "length_chars": "3000-8000",
+      "light_mode": true,
+      "elements": "references/sizheng-elements.md"
+    },
+    "D": {
+      "id": "D",
+      "name": "工商管理案例",
+      "template": "assets/management-case-template.md",
+      "spec": "references/management-case-spec.md",
+      "quality_base": "references/case-quality-base.md",
+      "length_chars": "5000-8000",
+      "intro_chars": "500-800",
+      "teaching_notes_required": false,
+      "elements": null
+    }
+  },
+  "assets": {
+    "teaching_template": "assets/teaching-case-template.md",
+    "sizheng_template": "assets/sizheng-case-template.md"
+  }
+}

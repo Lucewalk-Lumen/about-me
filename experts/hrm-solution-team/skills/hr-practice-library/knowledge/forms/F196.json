@@ -1,0 +1,60 @@
+{
+  "form_id": "F196",
+  "module_code": "ARC",
+  "module_zh": "人事档案管理",
+  "module_order": 7,
+  "kind": "表格",
+  "title": "档案移交（接收）登记表",
+  "file": "templates/ARC/form/F196.docx",
+  "n_tables": 1,
+  "n_rows": 3,
+  "outline": [
+    "案卷目录号",
+    "案卷目录题名或组织机构名称",
+    "所属年度",
+    "移交（接收）日期",
+    "移交（接收）原因",
+    "案卷数量",
+    "备注"
+  ],
+  "n_outline": 7,
+  "body": "案卷目录号 | 案卷目录题名或组织机构名称 | 所属年度 | 移交（接收）日期 | 移交（接收）原因 | 案卷数量 | 备注\n小计 | 其中\n永久 | 长期 | 短期\n移交单位（部门）（盖章）：               接收单位（部门）（盖章）：\n移交人（签字）：                    接收人（签字）：",
+  "body_chars": 162,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-08T02:40:00Z",
+    "modified": "2019-04-08T02:41:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

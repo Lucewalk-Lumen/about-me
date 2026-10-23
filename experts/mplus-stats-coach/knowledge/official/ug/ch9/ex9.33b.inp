@@ -1,0 +1,21 @@
+TITLE:	this is an example of a two-level,
+    single-indicator measurement error model
+    analyzed as a two-level ARIMA(1,0,1) =
+    ARMA(1,1) with a random AR(1)
+DATA:	FILE = ex9.33.dat;
+VARIABLE:	NAMES = y subject;
+	CLUSTER = subject;
+    LAGGED = y(1);
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+	ESTIMATOR = BAYES; 
+	PROCESSORS = 2; 
+	BITERATIONS = (5000); 
+MODEL:	%WITHIN%
+	s | y ON y&1;
+	e BY y@1 (&1);
+	y@.01;
+	y ON e&1;	
+    %BETWEEN%
+    y WITH s;
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE = PLOT3;	

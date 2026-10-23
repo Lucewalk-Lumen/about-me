@@ -1,0 +1,68 @@
+# contract.yaml — workbuddy-expert-studio-toolkit 确定性规则唯一事实源
+# 本文件是阈值/categoryId 枚举的**唯一事实源**：verify.py 与 gates.py 均从本文件读取，
+# 脚本内不再各写一份硬编码（脚本仅保留「本文件缺失时」的内置兜底默认值）。
+contract_version: "1.0.2"
+
+# 官方 15 类 categoryId 枚举（见 knowledge/workbuddy-expert-studio-standards.md，与内置快照一致）
+category_ids:
+  - "01-ProductDesign"
+  - "02-Engineering"
+  - "03-GameSpatial"
+  - "04-DataAI"
+  - "05-MarketingGrowth"
+  - "06-ContentCreative"
+  - "07-SalesCommerce"
+  - "08-FinanceInvestment"
+  - "09-OperationsHR"
+  - "10-ProjectQuality"
+  - "11-SecurityCompliance"
+  - "12-IndustryConsultant"
+  - "13-TencentZone"
+  - "14-WorldWise"
+  - "15-Education"
+
+# plugin.json 硬门禁（见 knowledge/workbuddy-expert-studio-standards.md，与内置快照一致）
+manifest:
+  plugin_eq_name: true              # plugin == name == 顶层目录名
+  display_description_cjk_min: 40    # displayDescription.zh CJK 字数下界
+  display_description_cjk_max: 50    # displayDescription.zh CJK 字数上界（unicodedata 判 CJK，非 len()）
+  tags_count: 3
+  quick_prompts_count: 3
+  default_init_prompt_eq_qp0: true
+  expert_type_team_required: true
+  members_allowed_fields: [id, name, profession, avatar, role]   # 多余自采字段=非合规
+  team_info_lead_eq_members0_eq_agent_name: true
+  four_way_consistency: true        # members id ↔ agents/*.md ↔ frontmatter name ↔ settings.json
+  category_id_enum: true
+
+# 长度门禁（平台口径：readFile utf8 .length，CRLF 的 \r 计入）
+# gates.py 的 _length_check() 直接读取本 warn_limit（不再在脚本内硬编码常量）。
+length:
+  warn_limit: 18000                 # 主文件超此值建议分片（平台注入上限约 20000）
+  caliber: "utf8_code_points"       # 与运行时一致；CRLF 计 2
+
+# 头像门禁（gates.py）：落实知识库第 9 条「头像文件全部可达、无断链」+ 最小体积防占位图顶替
+avatar:
+  min_bytes: 10240                  # 正式插画头像远大于此；占位实色 PNG（约 4KB）判红
+
+# 门禁绿红双证（G003）：每条门禁必须能判红也能判绿
+dual_proof:
+  required: true
+  negative_control: "挪走文件 / 注入已知缺陷必须 FAIL"
+  positive_control: "恢复后必须 PASS"
+
+# 规则编号注册表（唯一事实源；编号一旦被引用不得改义，新规则续号，未用号不宣称）
+rule_registry:
+  C001: "长指令分片：主指令超平台约 2 万字符注入上限即分片（gates.py）"
+  C003: "审脚本必须真跑一遍，按声称的产物清单逐个核对"
+  C004: "换版本九步：解压隔离→读清单与版本→查市场登记→目录比对新增→扫高危调用→备份→覆盖并回读→校验+重注册→版本四处一致"
+  C005: "自引用路径用平台根目录变量；plugin.json 声明的 agents/skills 条目存在性（gates.py）"
+  R2: "脚本可执行性门禁（py_compile + --help 冒烟）"
+  G002: "结构化文件写完读回再验：内存构造→解析预检→写盘→读回→比对"
+  G003: "门禁绿红双证：每条门禁必须真会红、也真不冤枉好人（dual_proof.py）"
+  G004: "脚本输出用 [OK]/[FAIL] 纯文本标记，不用 emoji"
+  G005: "主文件长度按平台口径（CRLF 计入），超 18000 字符告警"
+  G006: "清点脚本自引用不动点：首跑少算自己一件，读数取第二跑"
+  G007: "扫描豁免精确到文件/模式；报 0 必须变异自证"
+  G009: "门禁落进构建脚本；加功能同轮补门禁"
+  G010: "标题层级纪律：agents/*.md 代码块内禁二级标题（应用 ### 或纯文本），防渲染器误判章节（K10，gates.py heading）"

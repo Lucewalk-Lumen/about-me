@@ -1,0 +1,26 @@
+TITLE:this is an example of two-level mixture 
+	regression for a continuous dependent variable
+        with a between-level categorical latent variable
+DATA:	FILE = ex10.2.dat;
+VARIABLE:	NAMES ARE y x1 x2 w dummy clus;
+	USEVARIABLES = y-w;
+	CLASSES = cb(2);
+	WITHIN = x1 x2;
+	BETWEEN = cb w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE RANDOM;
+	PROCESSORS = 2;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	y ON x1 x2;
+	%cb#1%
+	y ON x1 x2;
+	%cb#2%
+	y ON x1 x2;
+	%BETWEEN%
+	%OVERALL% 
+	cb ON w;
+	y ON w;
+OUTPUT:	TECH1 TECH8;	
+

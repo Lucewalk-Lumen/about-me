@@ -1,0 +1,68 @@
+title:
+
+  montecarlo:
+        names = y1-y10;
+        nobs = 200;
+        nreps = 500;
+
+  model population:
+        f1 by y1-y5*.8 y6-y10@.0;
+        f2 by y1-y5@0 y6-y10*.8;
+
+        f1-f2@1;
+        f1 with f2*.5;
+
+        y1-y10*.36;
+
+        y1 with y6*.3;
+        y2 with y7*.3;
+
+
+  analysis:
+      estimator = bayes;
+      process = 2;
+      algorithm = gibbs(rw);
+      fbiter = 100000;
+
+
+  model:
+      f1 by y1@.8 y2-y5*.8 y6-y10@.0;
+      f2 by y1-y5@0 y6@.8 y7-y10*.8;
+
+      f1-f2*1 (fv1-fv2);
+      f1 with f2*.5 (fc12);
+
+
+      y1-y10*.36 (p1-p10);
+      y1 with y2-y5 y6*.3 y7-y10 (p11-p19);
+      y2 with y3-y6 y7*.3 y8-y10 (p20-p27);
+      y3 with y4-y10 (p28-p34);
+      y4 with y5-y10 (p35-p40);
+      y5 with y6-y10 (p41-p45);
+      y6 with y7-y10 (p46-p49);
+      y7 with y8-y10 (p50-p52);
+      y8 with y9-y10 (p53-p54);
+      y9 with y10 (p55);
+
+  model priors:
+
+    p1-p10~IG(-1,0);
+      p11-p55~N(0,0.001);
+      p15~N(0,1000);
+      p24~N(0,1000);
+
+  model constraint:
+      new(fr12*.5 yr12*0 yr16*.438);
+
+      !fr is factor correlation
+      !yr is observed variable residual correlation
+
+       fr12 = fc12/(sqrt(fv1)*sqrt(fv2));
+
+      yr12 = p11/(sqrt(p1)*sqrt(p2));
+      yr16 = p15/(sqrt(p1)*sqrt(p6));
+
+
+  output:
+      tech9;
+

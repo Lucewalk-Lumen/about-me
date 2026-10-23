@@ -1,0 +1,17 @@
+TITLE:	this is an example of a two-level
+		continuous-time survival analysis using
+		Cox regression with a random intercept
+DATA:	FILE = ex9.18.dat;
+VARIABLE:	NAMES = t x w tc clus;
+	CLUSTER = clus;
+	WITHIN = x;
+	BETWEEN = w;
+	SURVIVAL = t (ALL);
+	TIMECENSORED = tc (0 = NOT 1 = RIGHT);
+ANALYSIS:	TYPE = TWOLEVEL;
+	BASEHAZARD = OFF;
+MODEL:	%WITHIN%
+	t ON x;
+	%BETWEEN%
+	t ON w;
+	t;

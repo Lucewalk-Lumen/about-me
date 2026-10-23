@@ -1,0 +1,22 @@
+TITLE:	this is an example of a multinomial 
+		logistic regression for an unordered 
+		categorical dependent variable with two 
+		covariates
+MONTECARLO:			
+		NAMES = u1 x1 x3;
+		NOBSERVATIONS = 500;
+		NREPS = 1;
+		SEED = 53487;
+		GENERATE = u1(n 2);
+		NOMINAL = u1;
+		SAVE = ex3.6.dat;	
+MODEL POPULATION:
+		[x1-x3@0];
+		x1-x3@1;
+		u1#1 ON x1*1 x3*2;
+		u1#2 ON x1*.5 x3*1;
+		[u1#1*-.5 u1#2*.5];
+MODEL:	u1#1 ON x1*1 x3*2;
+		u1#2 ON x1*.5 x3*1;
+		[u1#1*-.5 u1#2*.5];
+OUTPUT:	TECH8 TECH9;

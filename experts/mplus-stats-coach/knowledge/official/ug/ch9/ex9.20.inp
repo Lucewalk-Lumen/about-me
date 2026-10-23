@@ -1,0 +1,23 @@
+TITLE:      this is an example of 3-level regression
+DATA:       FILE = ex9.20.dat;
+VARIABLE:   NAMES = y x w z level2 level3;
+            CLUSTER = level3 level2;
+		    WITHIN = x;
+		    BETWEEN =(level2) w (level3) z;
+ANALYSIS:   TYPE = THREELEVEL RANDOM;
+MODEL:      %WITHIN%
+            s1 | y ON x;
+		    %BETWEEN level2%
+            s2 | y ON w;
+            s12 | s1 ON w;
+            s1;
+            y WITH s1;
+            %BETWEEN level3%
+            y ON z;
+            s1 ON z;
+            s2 ON z;
+            s12 ON z;
+            y WITH s1 s2 s12;
+            s1 WITH s2 s12;
+            s2 WITH s12;
+OUTPUT:     TECH1 TECH8;

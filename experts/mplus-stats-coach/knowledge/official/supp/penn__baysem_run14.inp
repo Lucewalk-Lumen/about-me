@@ -1,0 +1,48 @@
+TITLE: b5BHPS TGm1 ESEM cu=yes type=complex
+
+DATA: FILE =  BHPS OINDRESPX1.DAT;
+
+VARIABLE: NAMES =
+!  b5a1r b5a2 b5a3 b5c1 b5c2r b5c3 b5e1 b5e2 b5e3r b5n1 b5n2 b5n3r
+!  b5o1 b5o2 b5o3 
+y1-y15
+  fsb5n fsb5a fsb5e fsb5c fsb5o
+ ohid opno  oXRWTUK2
+osex  dGH RGHSQ RGHCUB  DAG RASQ RACUB
+ragsx rasqsx racubsx
+rGHsx rGHSqsx rGHcubsx
+ragGH rasqGH racubGH
+ragGHS rasqGHS racubGHS
+ragGHC rasqGHC racubGHC
+agec10 bfagec10 missb5,xhhid,indid xindid;
+
+    usevariables   y1-y15; 
+
+    ! 7-point scale from 1 does not apply to 7 applies perfectly
+
+! weight is oXRWTUK2;
+ missing are all (-9.99);
+!  cluster is ohid;
+  !, asex;
+  !  grouping is asex (1=g1 2=g2);
+! age = dag+47.068+0.306 = dag+47.4, so
+! dag = age - 47.4
+! osex = 1 for males and 2 for females
+
+    useobs = osex eq 2 and (dag gt 2 and dag lt 8); ! males age 50-55 
+
+ANALYSIS:
+    estimator = ml;
+    process = 2;
+
+MODEL:
+    f1-f5 by y1-y15 (*1);
+
+OUTPUT:        
+    tech1 sampstat modindices(all 3.84) stdy;
+
+Plot:
+    type = plot3;
+
+
+

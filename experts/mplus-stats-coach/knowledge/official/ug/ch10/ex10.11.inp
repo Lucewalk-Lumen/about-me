@@ -1,0 +1,22 @@
+TITLE:	this is an example of a two-level LCGA for a three-category outcome
+DATA:	FILE IS ex10.11.dat;
+VARIABLE:	NAMES ARE u1-u4 class clus;
+	USEVARIABLES = u1-u4;
+	CATEGORICAL = u1-u4;
+	CLASSES = c(2);
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	i s | u1@0 u2@1 u3@2 u4@3;
+	i-s@0; 
+	%c#1%
+	[i*1 s*1];
+	%c#2%
+	[i@0 s];
+	%BETWEEN%
+	%OVERALL%
+	c#1*1;
+	[u1$1-u4$1*1] (1);
+	[u1$2-u4$2*1.5] (2);

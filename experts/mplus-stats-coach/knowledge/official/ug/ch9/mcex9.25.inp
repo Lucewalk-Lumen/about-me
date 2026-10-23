@@ -1,0 +1,59 @@
+TITLE:  this is an example of path analysis with cross-
+        classified data
+montecarlo:
+        names = y1 y2 x w z;
+        within = x;
+        between = (level2a) w (level2b) z;
+        nobs = 2000;
+        nreps =1;
+        ! 100 level2b units and 20 level2a units:
+        csizes = 100[20(1)]; 
+        ncsizes = 1[1];
+        save = ex9.25.dat;
+analysis:
+        type = crossclassified random;
+        estimator = bayes;
+        processors = 2;
+        biter = (2000);
+model population:
+        %within%
+        x@1;
+        y2 on y1*.5
+        x*0;
+        y1 on x*.7;
+        y1-y2*1;
+        %between level2a%
+        w@1;
+        y1 on w*.6;
+        y2 on w*.3;
+        y1-y2*.5;
+        y1 with y2*0;
+        %between level2b%
+        z@1;
+        y1 on z*.3;
+        y2 on z*.6;
+        y1-y2*.5;
+        y1 with y2*0;
+        [y1-y2*1.5];
+model:
+        %within%
+     !   x@1;
+        y2 on y1*.5
+        x*0;
+        y1 on x*.7;
+        y1-y2*1;
+        %between level2a%
+     !   w@1;
+        y1 on w*.6;
+        y2 on w*.3;
+        y1-y2*.5;
+        y1 with y2*0;
+        %between level2b%
+     !   z@1;
+        y1 on z*.3;
+        y2 on z*.6;
+        y1-y2*.5;
+        y1 with y2*0;
+        [y1-y2*1.5];
+
+output: tech8;

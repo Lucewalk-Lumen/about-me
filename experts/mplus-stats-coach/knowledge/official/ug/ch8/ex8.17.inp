@@ -1,0 +1,19 @@
+TITLE:	this is an example of a continuous-time survival mixture analysis
+        using a Cox regression model
+DATA:	FILE = ex8.17.dat;
+VARIABLE:	NAMES = t u1-u5 x tc;
+	CATEGORICAL = u1-u5;
+	CLASSES = c (2);
+	SURVIVAL = t (ALL);
+	TIMECENSORED = tc (0 = NOT 1 = RIGHT);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	%OVERALL%
+	t ON x; 
+	c ON x;
+	%c#1%
+	[u1$1-u5$1];
+	t ON x;
+	%c#2%
+	[u1$1-u5$1];
+	t ON x;
+OUTPUT:	TECH1 TECH8;

@@ -1,0 +1,63 @@
+title:
+		this is an example of a LCA with binary 
+	latent class indicators using automatic 
+	starting values with random starts with a 
+	covariate and a direct effect
+
+montecarlo:
+	names are u1-u4 x;
+	generate = u1-u4(1);
+	categorical = u1-u4;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.12.dat;
+
+analysis:
+	type = mixture;
+
+
+model population:
+
+	%overall%
+
+	[x@0]; x@1;
+
+	[c#1*0];
+
+	c#1 on x*1;
+
+	u4 on x*.5;
+	
+	%c#1%
+	[u1$1*1 u2$1*1 u3$1*-1 u4$1*-1];
+
+	%c#2%
+	[u1$1*-1 u2$1*-1 u3$1*1 u4$1*1];
+
+model:
+
+	%overall%
+
+	[c#1*0];
+
+	c#1 on x*1;
+
+	u4 on x*.5;
+	
+	%c#1%
+	[u1$1*1 u2$1*1 u3$1*-1 u4$1*-1];
+
+	%c#2%
+	[u1$1*-1 u2$1*-1 u3$1*1 u4$1*1];
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

@@ -1,0 +1,63 @@
+title:
+	this is an example of a LCA with unordered 
+	categorical latent class indicators using 
+	automatic starting values with random 
+	starts
+	! using the population threshold values 
+	! in ex 7.6 as intercept values 
+	! so that in effect ordinal outcomes
+	! are treated as unordered in the analysis.
+	! note that intercept values need not be 
+	! ordered with nominal outcomes.
+
+montecarlo:
+	names are u1-u4;
+	generate = u1-u4(n 2);
+	nominal = u1-u4;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 5000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.7.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	[c#1*0];
+	
+	%c#1%
+	[u1#1*.5 u2#1*.5 u3#1*-.5 u4#1*-.5];
+	[u1#2*1 u2#2*1 u3#2*0 u4#2*0];
+
+	%c#2%
+	[u1#1*-.5 u2#1*-.5 u3#1*.5 u4#1*.5];
+	[u1#2*0 u2#2*0 u3#2*1 u4#2*1];
+
+model:
+
+	%overall%
+
+	[c#1*0];
+	
+	%c#1%
+	[u1#1*.5 u2#1*.5 u3#1*-.5 u4#1*-.5];
+	[u1#2*1 u2#2*1 u3#2*0 u4#2*0];
+
+	%c#2%
+	[u1#1*-.5 u2#1*-.5 u3#1*.5 u4#1*.5];
+	[u1#2*0 u2#2*0 u3#2*1 u4#2*1];
+
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

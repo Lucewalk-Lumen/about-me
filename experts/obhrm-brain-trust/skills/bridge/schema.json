@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "obhrm://obhrm-bridge/schema.json",
+  "title": "OBHRM 概念桥接层 Schema",
+  "description": "定义概念桥接层的唯一数据契约：桥接索引 knowledge/_bridge.json（schema: \"bridge\"）。该文件承载概念词表（中英双语关键词）及其到教材章节 / 理论 / 量表 / R 方法四库的映射，是概念词表的唯一来源，检索脚本读取此文件。draft 条目经桥接层对外呈现时，须遵循引用规则：资料本身真实、可引用出结果，但输出须显著标记「来源未确证」，严禁编造。",
+  "$defs": {
+    "concept_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "概念稳定主键（slug），如 ob_intro / scientific_management。词表内以 concept_id 唯一标识。"
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["content", "method"],
+      "description": "内容域 content（锚定教材章节，91 个）；方法域 method（不设教材锚点，16 个）。"
+    },
+    "keyword_list": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "中英双语检索关键词。中文子串匹配 name_zh / variable_zh；英文亦为子串匹配 name_en / variable_en / construct_id（不做词首边界限定，下划线不与空格等价）。"
+    },
+    "chapter_ref": {
+      "type": ["string", "null"],
+      "description": "教材 D1 章节锚点，形如 ch01。方法域概念为 null（不设教材锚点）。"
+    },
+    "lib_ref": {
+      "type": "object",
+      "title": "四库真实节点引用（theories / scales / methods 数组元素）",
+      "description": "id 取自各库真实主键（Txxx / Sxxx / method_no）；by 为命中关键词；zh / en 为节点展示名；methods 另含 stage（方法族阶段目录）与 file（R 脚本相对路径）。",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "来源库真实主键。" },
+        "zh": { "type": "string" },
+        "en": { "type": "string" },
+        "by": { "type": "array", "items": { "type": "string" }, "description": "命中的关键词，用于说明该映射的关联依据。" },
+        "stage": { "type": "string", "description": "仅 methods 含：方法族阶段目录，如 05-measurement。" },
+        "file": { "type": "string", "description": "仅 methods 含：R 脚本相对路径。" }
+      },
+      "required": ["id", "by"],
+      "additionalProperties": true
+    },
+    "bridge_concept": {
+      "type": "object",
+      "title": "桥接索引概念节点（_bridge.json.concepts.<concept_id>）",
+      "description": "同一份词表 + 其到教材章节 / 理论 / 量表 / R 方法的映射。theories / scales / methods 数组中的 id 必须取自各库真实节点，严禁臆造。",
+      "properties": {
+        "concept_id": { "$ref": "#/$defs/concept_id" },
+        "label_zh": { "type": "string", "description": "概念中文标签（首选展示名）。" },
+        "zh": { "$ref": "#/$defs/keyword_list" },
+        "en": { "$ref": "#/$defs/keyword_list" },
+        "domain": { "$ref": "#/$defs/domain" },
+        "chapter": { "$ref": "#/$defs/chapter_ref" },
+        "chapter_title": { "type": ["string", "null"], "description": "教材章节标题；方法域为 null。" },
+        "theories": { "type": "array", "items": { "$ref": "#/$defs/lib_ref" } },
+        "scales": { "type": "array", "items": { "$ref": "#/$defs/lib_ref" } },
+        "methods": { "type": "array", "items": { "$ref": "#/$defs/lib_ref" } },
+        "note": { "type": "string" }
+      },
+      "required": ["concept_id", "label_zh", "zh", "en", "domain", "chapter", "chapter_title", "theories", "scales", "methods", "note"],
+      "additionalProperties": false
+    },
+    "bridge_file": {
+      "type": "object",
+      "title": "桥接索引文件（knowledge/_bridge.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": { "const": "bridge" },
+            "version": { "type": "string" },
+            "source_concepts": { "type": "integer", "minimum": 0, "description": "必须等于 concepts 对象键数（109）。" },
+            "source_libs": {
+              "type": "object",
+              "properties": {
+                "theories": { "type": "integer" },
+                "scales": { "type": "integer" },
+                "r_scripts": { "type": "integer" }
+              },
+              "required": ["theories", "scales", "r_scripts"],
+              "additionalProperties": false
+            },
+            "note": { "type": "string" }
+          },
+          "required": ["schema", "source_concepts", "source_libs"],
+          "additionalProperties": true
+        },
+        "concepts": { "type": "object", "additionalProperties": { "$ref": "#/$defs/bridge_concept" } }
+      },
+      "required": ["_meta", "concepts"],
+      "additionalProperties": false
+    }
+  }
+}

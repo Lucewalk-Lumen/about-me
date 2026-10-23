@@ -1,0 +1,77 @@
+{
+  "form_id": "F154",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "员工离职通知书",
+  "file": "templates/ER/form/F154.docx",
+  "n_tables": 1,
+  "n_rows": 17,
+  "outline": [
+    "服务单位",
+    "职称",
+    "姓名",
+    "到职日期",
+    "离职原因",
+    "自动",
+    "体弱多病",
+    "另有他就",
+    "物品交还或应扣款",
+    "单位",
+    "总务单位",
+    "人事单位",
+    "财务单位",
+    "其他部门",
+    "核订",
+    "单位主管："
+  ],
+  "n_outline": 16,
+  "body": "服务单位 | 职称 | 姓名\n到职日期 | 年   月   日 | 离职日期 | 年   月   日 | 全提资\n离职原因\n自动 | 被动\n体弱多病 | 服兵役 | 开除 | 解雇\n另有他就 | 试用不合辞退 | 其他\n物品交还或应扣款\n单位 | 应办事项 | 已收还或应扣金额 | 应办事项 | 已收还或应扣金额 | 接收人或经管人\n服务单位 | 移交清楚 | 未了事目已交待清楚\n总务单位 | 服装 | 伙食\n福利贷款 | 家具或文具\n其他扣款\n人事单位 | 工作名称 | 劳保费\n财务单位 | 款项未清 | 月中借支\n其他部门\n核订 | 人事单位：\n单位主管： | 离职人： 年    月    日",
+  "body_chars": 302,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-03T03:59:00Z",
+    "modified": "2019-04-03T04:00:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

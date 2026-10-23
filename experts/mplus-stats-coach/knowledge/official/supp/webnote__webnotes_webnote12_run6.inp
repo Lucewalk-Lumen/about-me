@@ -1,0 +1,29 @@
+title: M10 model
+
+variable:  NAMES ARE y1-y5;
+
+data: file=1.dat;
+
+analysis: estimator=mlr; convergence=10000000;
+
+model: 
+
+[y1*0.280 y2*0.380 y3*0.400 y4*0.420 y5*0.420];
+
+Y1*0.443;
+Y1 with Y2*0.127;
+Y2*0.436;
+Y1 with Y3*0.234;
+Y2 with Y3*0.088;
+Y3*0.560;
+Y1 with  Y4*0.233;
+Y2 with  Y4*0.172;
+Y3 with  Y4*0.227;
+Y4*0.604;
+Y1 with Y5*0.235;
+Y2 with Y5*0.148;
+Y3 with Y5*0.196;
+Y4 with Y5*0.164;
+Y5*0.604;
+
+output: tech5;

@@ -1,0 +1,45 @@
+title:
+	this is an example of CFA mixture modeling
+
+montecarlo:
+	names are y1-y5;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.17.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	y1-y5*.25;
+	f by y1@1 y2-y5*.75;
+	[f@0];
+	f*1;
+
+	[c#1*0];
+	
+	%c#1%
+	[f*2];
+
+model:
+	
+	%overall%
+
+	y1-y5*.25;
+	f by y1@1 y2-y5*.75;
+	[f@0];
+	f*1;
+
+	[c#1*0];
+	
+	%c#1%
+	[f*2];
+
+output:
+	tech8 tech9;	

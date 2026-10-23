@@ -1,0 +1,11 @@
+TITLE:	this is an example of multiple imputation 
+		for a set of variables with missing values 
+DATA:		FILE = ex11.5.dat;
+VARIABLE:	NAMES = x1 y1-y4 z x2;
+		MISSING = ALL(999);
+DATA IMPUTATION:
+		IMPUTE = y1-y4 x1 (c) x2;
+		NDATASETS = 10;
+		SAVE = ex11.5imp*.dat;
+ANALYSIS:	TYPE = BASIC;
+OUTPUT:	TECH8;

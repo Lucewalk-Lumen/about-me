@@ -1,0 +1,27 @@
+TITLE:	this is an example of a two-group twin 
+		model for categorical outcomes using 
+		maximum likelihood and parameter constraints
+DATA:		FILE = ex7.28.dat;
+VARIABLE:	NAMES = u1 u2 dz;
+		CATEGORICAL = u1 u2;
+		CLASSES = cdz (2);
+		KNOWNCLASS = cdz (dz = 0 dz = 1);
+ANALYSIS:	TYPE = MIXTURE;
+		ALGORITHM = INTEGRATION;
+		LINK = PROBIT;
+MODEL:	%OVERALL%
+		[u1$1-u2$1] (1);
+		f1 BY u1;
+		f2 BY u2;
+    		[f1-f2@0]; 
+    		f1-f2 (varf);
+    		%cdz#1% 
+    		f1 WITH f2(covmz); 
+    		%cdz#2% 
+    		f1 WITH f2(covdz);
+MODEL CONSTRAINT:
+		NEW(a c h);     
+ 		varf = a**2 + c**2 + .001;  
+ 		covmz = a**2 + c**2;
+		covdz = 0.5*a**2 + c**2;
+ 		h = a**2/(a**2 + c**2 + 1);

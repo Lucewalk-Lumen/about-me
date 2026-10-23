@@ -1,0 +1,61 @@
+TITLE:	Monte Carlo for a two-level path 
+	analysis model with a continuous and a
+	categorical dependent variable ????
+
+montecarlo:
+	names are y u x w z;
+	generate = u(1);
+	categorical = u;
+	nobservations = 1000;
+	ncsizes = 3;
+	csizes = 40 (5) 50 (10) 20 (15);
+	seed = 58459;
+	nreps = 1;
+	within = x;
+	between = w z;
+	save = ex9.4.dat;
+
+ANALYSIS:	
+	TYPE = TWOLEVEL;
+	algo = int;
+    estimator = wlsm;
+
+model population:
+
+	%WITHIN%
+
+	x@1;
+
+	u ON y*.75 x*.5;
+	y ON x*.25;
+	y*1;
+
+	%BETWEEN%
+
+	w@1;
+
+	u ON w*1 y*.5 z*.7;
+	y ON w*.5;
+    z ON w*.7;
+    y with z*.25;
+	y*.5; z*.5; u*.4;
+
+model:
+
+	%WITHIN%
+
+	u ON y*.75 x*.5;
+	y ON x*.25;
+	y*1;
+
+	%BETWEEN%
+
+	u ON w*1 y*.5 z*.7;
+	y ON w*.5;
+    z ON w*.7;
+    y with z*.25;
+	y*.5; z*.5; u*.4;
+
+
+output:
+	tech9;

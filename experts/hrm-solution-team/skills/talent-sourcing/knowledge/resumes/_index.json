@@ -1,0 +1,35 @@
+{
+  "schema": "talent-resume",
+  "schema_version": "1.0.0",
+  "count": 1,
+  "id_prefix": "R",
+  "fields": [
+    "candidate_id",
+    "pii.candidate_name",
+    "pii.phone_masked",
+    "pii.email_masked",
+    "profile.current_company",
+    "profile.current_title",
+    "profile.industry",
+    "profile.city",
+    "profile.years_of_exp",
+    "profile.education_level",
+    "profile.skills",
+    "profile.assessment",
+    "source.channel_id",
+    "source.source_type",
+    "source.consent.obtained",
+    "status",
+    "labels",
+    "last_contacted_at"
+  ],
+  "searchable_filters": [
+    "skills",
+    "city",
+    "years_of_exp",
+    "labels",
+    "status"
+  ],
+  "audit_log": [],
+  "updated_at": "2026-09-29"
+}

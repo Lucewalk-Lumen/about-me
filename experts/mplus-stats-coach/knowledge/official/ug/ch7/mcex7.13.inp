@@ -1,0 +1,62 @@
+TITLE:	
+	this is an example of a LCA with binary 
+	latent class indicators and parameter 
+	constraints
+
+	! this model is that of pp. 70-72 in
+	! McCutcheon (2002) in the Hagenaars & McCutcheon (2002)
+	! book Applied Latent Class Analysis (Cambridge Univ Press).
+
+montecarlo:
+	names are u1-u4;
+	genclasses = c(2);
+	classes = c(2);
+	generate = u1-u4(1);
+	categorical = u1-u4;
+	nobs = 1000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.13.dat;
+
+ANALYSIS:
+	TYPE = MIXTURE;
+
+MODEL POPULATION:
+	%OVERALL%
+	[c#1*-1];
+	%c#1%
+	[u1$1*-1];
+	[u2$1*-1];
+	[u3$1*-1];
+	[u4$1*-1];
+	%c#2%
+	[u1$1@-15];
+	[u2$1*1];
+	[u3$1*1];
+	[u4$1*1];
+
+MODEL:
+	%OVERALL%
+	[c#1*-1];
+	%c#1%
+	[u1$1*-1];
+	[u2$1*-1] (1);
+	[u3$1*-1] (1);
+	[u4$1*-1] (p1);
+	%c#2%
+	[u1$1@-15]; 
+	! this gives the McCutcheon p. 72 eqn (13)
+	! deterministic restriction P(u1=1 |c=2) = 1
+	[u2$1*1] (2);
+	[u3$1*1] (2);
+	! this gives the McCutcheon p. 70 eqn (11)
+	! parallell indicators hypothesis
+	[u4$1*1] (p2);
+
+MODEL CONSTRAINT:
+	p2 = - p1; 
+	! this constraint gives the McCutcheon 
+	! p. 71 eqn (12) equal error rate hypothesis 
+
+OUTPUT:
+	TECH8 tech9;

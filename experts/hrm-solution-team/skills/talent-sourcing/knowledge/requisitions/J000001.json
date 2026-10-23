@@ -1,0 +1,46 @@
+{
+  "schema": "job-requisition",
+  "schema_version": "1.0.0",
+  "req_id": "J000001",
+  "title": "高级后端工程师",
+  "department": "技术中心/平台部",
+  "city": "杭州",
+  "level": "P7",
+  "headcount": 2,
+  "hiring_manager": "（姓名或工号，内部字段）",
+  "must_have": ["5年以上后端经验", "微服务架构实战", "高并发系统设计"],
+  "nice_to_have": ["电商交易域经验", "Kafka 深度调优"],
+  "salary_band": {"min_k": 35, "max_k": 55, "currency": "CNY", "note": "需与 compensation-strategy 对标确认"},
+  "sourcing_profile": {
+    "target_companies": ["（目标公司清单，可关联 talent-maps）"],
+    "target_titles": ["高级后端工程师", "技术专家"],
+    "capability_weights": [
+      {"capability": "微服务架构实战", "weight": 40},
+      {"capability": "高并发系统设计", "weight": 35},
+      {"capability": "跨部门协作与推动", "weight": 25}
+    ],
+    "implicit_expectations": ["示例：该岗位前任因跨部门推动不力离开，隐含强 stakeholder 管理能力要求"],
+    "talent_tags": ["Java微服务", "高并发", "电商交易", "平台架构"],
+    "skill_keywords": {
+      "standard_terms": [
+        {"zh": "微服务", "en": "microservices"},
+        {"zh": "高并发", "en": "high concurrency"}
+      ],
+      "niche_terms": [
+        {"zh": "订单中心", "en": "order center"},
+        {"zh": "交易中台", "en": "transaction middle platform"}
+      ],
+      "aliases": [
+        {"zh": "后端开发", "en": "backend development"},
+        {"zh": "服务端工程师", "en": "server-side engineer"}
+      ],
+      "copy_ready_list": "微服务 microservices 高并发 high-concurrency 订单中心 交易中台 后端开发"
+    },
+    "exclude": ["频繁跳槽（3段<1年）", "示例红线：近 2 年内曾因重大线上事故被公开通报"]
+  },
+  "priority": "high",
+  "status": "open",
+  "opened_at": "2026-09-01",
+  "target_fill_date": "2026-11-30",
+  "_note": "示例档案：字段值均为占位样例。sourcing_profile 为 v1.1 六要素结构：能力权重排序（capability_weights）/隐性招聘诉求（implicit_expectations）/人才标签（talent_tags）/关键词三级分类（skill_keywords：标准名/细分赛道专属名/行业通用别名）/红线硬过滤（exclude）。"
+}

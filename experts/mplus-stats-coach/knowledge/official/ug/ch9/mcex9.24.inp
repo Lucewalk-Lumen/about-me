@@ -1,0 +1,62 @@
+TITLE:  this is an example of regression with cross-
+        classified data
+montecarlo:
+        names = y x1 x2 w z;
+        within = x1 x2;
+        between = (level2a) w (level2b) z;
+        nobs = 3000;
+        nreps =1;
+        csizes = 50[30(2)];
+        ncsizes = 1[1];
+        save = ex9.24.dat;
+analysis:
+        type = crossclassified random;
+        estimator = bayes;
+        processors = 2;
+        biter = (2000);
+model population:
+        %within%
+        x1-x2@1;
+        y on x1*1;
+        s | y on x2;
+        y*2;
+        %between level2a%
+        w@1;
+        y on w*.6;
+        y*1;
+        s on w*.3;
+        s*.4;
+        y with s*0;
+        %between level2b%
+        z@1;
+        y on z*.4;
+        y*.5;
+        [y*2];
+        s on z*.3;
+        s*.2;
+        [s*1];
+        y with s*0;
+model:
+        %within%
+       ! x1-x2@1;
+        y on x1*1;
+        s | y on x2;
+        y*2;
+        %between level2a%
+       ! w@1;
+        y on w*.6;
+        y*1;
+        s on w*.3;
+        s*.4;
+        y with s*0;
+        %between level2b%
+       ! z@1;
+        y on z*.4;
+        y*.5;
+        [y*2];
+        s on z*.3;
+        s*.2;
+        [s*1];
+        y with s*0;
+
+output: tech8;

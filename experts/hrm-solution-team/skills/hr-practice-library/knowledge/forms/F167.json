@@ -1,0 +1,57 @@
+{
+  "form_id": "F167",
+  "module_code": "ARC",
+  "module_zh": "人事档案管理",
+  "module_order": 7,
+  "kind": "制度",
+  "title": "人事档案室出入登记规定",
+  "file": "templates/ARC/policy/F167.docx",
+  "n_tables": 0,
+  "n_rows": 0,
+  "outline": [
+    "人事档案室出入登记规定",
+    "四、严禁将任何火种带入档案室内，任何人不准在档案室内吸烟。",
+    "五、室内无人时，随手关紧门窗。",
+    "七、本规定自审批签发之日起执行。"
+  ],
+  "n_outline": 4,
+  "body": "人事档案室出入登记规定\n为加强公司人事档案管理，防止机密资料、人事档案丢失，严防泄密事件的发生，特制订本制度，望各部门遵照执行。\n一、人事档案室是公司人事档案保存使用的场所，除人力资源部职员外其他人员未经批准，不得随便进入室内。公司总经理及执行监督检查人员除外。\n二、各部门需要调档案及借阅档案时，由负责档案管理的人员，根据《档案管理制度》办理，认真履行登记、签字手续。\n三、需要复印打印相关文件资料时，交工作人员后，只能在档案室小门外等候，不允许进入复印室；复印打印要认真做好记录。\n四、严禁将任何火种带入档案室内，任何人不准在档案室内吸烟。\n五、室内无人时，随手关紧门窗。\n六、凡违反本规定的，或拒不接受人力资源部职员劝阻而进入人事档案室工作区域的，每人每次罚款50元。人力资源部职员未劝阻或同意其他人员进入的，每人每次罚100元。\n七、本规定自审批签发之日起执行。",
+  "body_chars": 385,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-04T07:14:00Z",
+    "modified": "2019-04-26T03:45:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

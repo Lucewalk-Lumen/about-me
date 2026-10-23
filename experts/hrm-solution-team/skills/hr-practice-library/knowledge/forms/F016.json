@@ -1,0 +1,59 @@
+{
+  "form_id": "F016",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "人力资源管理费用预算执行表",
+  "file": "templates/HRP/form/F016.docx",
+  "n_tables": 1,
+  "n_rows": 17,
+  "outline": [
+    "费用分摊额",
+    "月度",
+    "本季度累计",
+    "本年度累计",
+    "培训费用",
+    "薪金费用",
+    "办公费用",
+    "……",
+    "合计"
+  ],
+  "n_outline": 9,
+  "body": "填报人：                                       填报时间：\n费用分摊额 | 月度 | 本季度累计 | 本年度累计\n预算 | 实际 | 差异 | 差异率（%） | 预算 | 实际 | 差异 | 差异率（%） | 预算 | 实际 | 差异 | 差异率（%）\n培训费用 | 外派学习\n入职培训\n业务培训\n……\n小计\n薪金费用 | 员工工资\n保险总额\n福利费用\n其他\n小计\n办公费用 | 办公用品\n出差\n小计\n……\n合计",
+  "body_chars": 225,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-13T06:40:00Z",
+    "modified": "2019-03-13T06:55:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+TITLE:
+    Two-level skeleton - random intercept model (self-authored)
+
+DATA:
+    FILE IS mydata.dat;
+
+VARIABLE:
+    NAMES ARE clus x1-x3 y1-y4 w1-w2;
+    USEVARIABLES = x1-x3 y1-y4 w1-w2;
+    CLUSTER = clus;
+    WITHIN = x1-x3;
+    BETWEEN = w1 w2;
+    MISSING = ALL (-999);
+
+ANALYSIS:
+    TYPE = TWOLEVEL;
+    ESTIMATOR = MLR;
+
+MODEL:
+    %WITHIN%
+    yw BY y1-y4;
+    yw ON x1-x3;
+
+    %BETWEEN%
+    yb BY y1-y4;
+    yb ON w1 w2;
+
+OUTPUT:
+    SAMPSTAT STANDARDIZED TECH1 TECH8;

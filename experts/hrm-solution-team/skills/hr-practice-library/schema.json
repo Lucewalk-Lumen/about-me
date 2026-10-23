@@ -1,0 +1,455 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hrm-solution://hr-practice-library/schema.json",
+  "title": "HR 实务工具库 Schema",
+  "description": "定义实务条目文件 knowledge/forms/Fxxx.json、索引 knowledge/_practice_index.json 与模块策展映射 knowledge/_module_map.json 的结构契约。",
+  "$defs": {
+    "form_id": {
+      "type": "string",
+      "pattern": "^F[0-9]{3}$",
+      "description": "模板稳定主键，形如 F001。文件名必须为 <form_id>.json。编号段绑定 HR 职能闭环位置，删除后留空不递补。"
+    },
+    "module_code": {
+      "enum": [
+        "HRP",
+        "REC",
+        "TRN",
+        "PER",
+        "COM",
+        "ER",
+        "ARC"
+      ],
+      "description": "七大模块代码：人力资源规划 / 招聘与配置管理 / 培训与开发管理 / 绩效管理 / 薪酬福利管理 / 员工关系管理 / 人事档案管理。"
+    },
+    "kind": {
+      "enum": [
+        "制度",
+        "表格"
+      ],
+      "description": "模板类型。制度的 outline 为章条标题；表格的 outline 为字段标签。"
+    },
+    "status": {
+      "enum": [
+        "verified",
+        "draft",
+        "deprecated"
+      ],
+      "description": "verified = 原件存在且文本抽取成功（内容与格式仍以原件为准）；draft = 原件待补；deprecated = 保留但不再推荐。"
+    },
+    "solution_link": {
+      "type": "object",
+      "title": "归属与引擎连接（solution_links）",
+      "description": "实务条目到本包内真实存在的技能 / agent / SOP 引擎 / 终检闸门与相关参考的可追踪连接。",
+      "properties": {
+        "owner_skill": {
+          "type": "string",
+          "description": "归属的本包 scoped 技能 id。"
+        },
+        "owner_agent": {
+          "type": "string",
+          "description": "归属的本包 agent id。"
+        },
+        "primary_engines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "主要 SOP 引擎脚本文件名（如 payroll_engine.py）。"
+        },
+        "extra_engines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "增强 SOP 引擎脚本文件名（可为空）。"
+        },
+        "gate": {
+          "type": "object",
+          "description": "终检闸门归属。",
+          "properties": {
+            "skill": {
+              "type": "string"
+            },
+            "agent": {
+              "type": "string"
+            },
+            "engine": {
+              "type": "string",
+              "description": "闸门引擎脚本文件名，如 compliance_gate.py。"
+            },
+            "path": {
+              "type": "string",
+              "description": "闸门脚本相对包根的路径。"
+            }
+          },
+          "required": [
+            "engine"
+          ],
+          "additionalProperties": true
+        },
+        "related_refs": {
+          "type": "array",
+          "description": "相关参考文档（技能内 references）。",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string",
+                "description": "参考文档相对包根的路径。"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "owner_skill",
+        "owner_agent"
+      ],
+      "additionalProperties": true
+    },
+    "entry": {
+      "type": "object",
+      "title": "实务条目文件（knowledge/forms/Fxxx.json）",
+      "properties": {
+        "form_id": {
+          "$ref": "#/$defs/form_id"
+        },
+        "module_code": {
+          "$ref": "#/$defs/module_code"
+        },
+        "module_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "module_order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "kind": {
+          "$ref": "#/$defs/kind"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1,
+          "description": "原件相对路径，相对本 skill 根，如 templates/PER/form/F096.docx。必须真实存在。"
+        },
+        "n_tables": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "outline": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "结构骨架：表格类为字段标签，制度类为章条标题。"
+        },
+        "n_outline": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "必须等于 outline 长度。"
+        },
+        "body": {
+          "type": "string",
+          "description": "从 .docx 抽取的全文纯文本副本。"
+        },
+        "body_chars": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "必须等于 body 长度。"
+        },
+        "solution_links": {
+          "$ref": "#/$defs/solution_link"
+        },
+        "origin": {
+          "type": "object",
+          "description": "原件元数据。注意：本批模板未标注作者/出版信息，商用前须自行确认授权。",
+          "properties": {
+            "creator": {
+              "type": "string"
+            },
+            "last_modified_by": {
+              "type": "string"
+            },
+            "created": {
+              "type": "string"
+            },
+            "modified": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "note"
+          ],
+          "additionalProperties": true
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "body",
+        "body_chars",
+        "file",
+        "form_id",
+        "kind",
+        "module_code",
+        "module_order",
+        "module_zh",
+        "n_outline",
+        "n_rows",
+        "n_tables",
+        "note",
+        "origin",
+        "outline",
+        "solution_links",
+        "status",
+        "title"
+      ],
+      "additionalProperties": true
+    },
+    "index_node": {
+      "type": "object",
+      "title": "索引节点（_practice_index.json.nodes[]）",
+      "description": "索引节点是条目文件的摘要投影，检索入口只读索引，避免把 199 份全文载入上下文。",
+      "properties": {
+        "form_id": {
+          "$ref": "#/$defs/form_id"
+        },
+        "module_code": {
+          "$ref": "#/$defs/module_code"
+        },
+        "module_zh": {
+          "type": "string"
+        },
+        "module_order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "kind": {
+          "$ref": "#/$defs/kind"
+        },
+        "title": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "n_tables": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_outline": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "body_chars": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "solution_links": {
+          "$ref": "#/$defs/solution_link"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "form_id",
+        "module_code",
+        "module_zh",
+        "module_order",
+        "kind",
+        "title",
+        "file",
+        "n_tables",
+        "n_rows",
+        "n_outline",
+        "body_chars",
+        "solution_links",
+        "status",
+        "note"
+      ],
+      "additionalProperties": true
+    },
+    "index": {
+      "type": "object",
+      "title": "索引文件（knowledge/_practice_index.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": "practice-solution"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "必须等于 nodes 长度且等于 forms/ 目录下条目文件数。"
+            },
+            "version": {
+              "type": "string",
+              "description": "随包版本号，与 .codebuddy-plugin/plugin.json 的 version 保持一致。"
+            },
+            "modules": {
+              "type": "object"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "schema",
+            "count"
+          ],
+          "additionalProperties": true
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/index_node"
+          }
+        }
+      },
+      "required": [
+        "_meta",
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "module_map": {
+      "type": "object",
+      "title": "模块策展映射（knowledge/_module_map.json）",
+      "description": "编者归纳（editorial）的模块层映射与跨模块交接表。非模板原文事实，但其中每个 form_id 均须真实可达。",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": "practice-module-map"
+            },
+            "editorial": {
+              "const": true
+            }
+          },
+          "required": [
+            "schema",
+            "editorial"
+          ],
+          "additionalProperties": true
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "$ref": "#/$defs/module_code"
+              },
+              "zh": {
+                "type": "string"
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "id_range": {
+                "type": "string",
+                "pattern": "^F[0-9]{3}–F[0-9]{3}$"
+              },
+              "role": {
+                "type": "string"
+              },
+              "upstream": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/module_code"
+                }
+              },
+              "downstream": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/module_code"
+                }
+              }
+            },
+            "required": [
+              "code",
+              "zh",
+              "order",
+              "id_range",
+              "role",
+              "upstream",
+              "downstream"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "handoffs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "$ref": "#/$defs/form_id"
+              },
+              "to": {
+                "$ref": "#/$defs/form_id"
+              },
+              "what": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stage": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "what"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "_meta",
+        "modules",
+        "handoffs"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

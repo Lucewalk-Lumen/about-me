@@ -1,0 +1,89 @@
+TITLE:	this is an example of a Monte Carlo simulation study for a 
+  two-level growth model for a continuous outcome (three level analysis)
+        with a between-level  categorical latent variable
+montecarlo:
+	names are y1-y4 x w;
+	nobservations = 2000;
+	ncsizes = 1;
+	csizes = 100(20);
+	seed = 58459;
+	genclasses = cb(2 b);
+	classes = cb(2);
+	within = x;
+	between = cb w;
+	nreps = 1;
+	save = ex10.8.dat;
+
+ANALYSIS:	
+	TYPE IS TWOLEVEL mixture;
+
+MODEL POPULATION:
+
+	%WITHIN%
+	%overall%
+	x@1;
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4*.5 (1);
+	iw ON x*1;
+	sw ON x*.2;
+	iw*1; sw*.5;
+	sw on iw*.5;
+	
+	%cb#2%
+	sw on iw*0;
+
+	%BETWEEN%
+	%overall%
+	w@1;
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib ON w*.5;
+	sb ON w*.2;
+	ib*.5; sb*.2;
+
+	
+	cb#1 on w*1;
+
+
+	%cb#1%
+	[ib*0 sb*0];
+	%cb#2%
+	[ib*1.5 sb*1.5];
+
+
+MODEL:
+		%WITHIN%
+	%overall%
+
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4*.5 (1);
+	iw ON x*1;
+	sw ON x*.2;
+	iw*1; sw*.5;
+	sw on iw*.5;
+	
+	%cb#2%
+	sw on iw*0;
+
+	%BETWEEN%
+	%overall%
+
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib ON w*.5;
+	sb ON w*.2;
+	ib*.5; sb*.2;
+
+	
+	cb#1 on w*1;
+
+
+	%cb#1%
+	[ib*0 sb*0];
+	%cb#2%
+	[ib*1.5 sb*1.5];
+
+
+
+output:
+	tech8 tech9;

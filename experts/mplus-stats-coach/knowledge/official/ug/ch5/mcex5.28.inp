@@ -1,0 +1,22 @@
+TITLE:
+    this is an example of EFA using ESEM
+    with residual variances restricted to
+    be greater than zero
+MONTECARLO:
+    NAMES = y1-y10;
+    NOBSERVATIONS = 50;
+    NREPS = 1;
+    SAVE = ex5.28.dat;
+MODEL POPULATION:
+    f1 BY y1-y8*0.8;
+    f2 BY y9-y10*0.9;
+    f1-f2@1;
+    f1 WITH f2*0;
+    y1-y8*0.36 y9-y10*0.1;
+ANALYSIS:
+    ROTATION = GEOMIN;
+MODEL:
+    f1 BY y1-y8*0.8 y9-y10*0 (*1);
+    f2 BY y1-y8*0 y9-y10*0.9 (*1);
+    y1-y8*0.36 y9-y10*0.1;
+

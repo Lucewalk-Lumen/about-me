@@ -1,0 +1,15 @@
+TITLE:	    this is an example of multiple imputation 
+		    for a set of variables with missing values 
+            followed by a growth model analysis by
+            maximum-likelihood estimation
+DATA:		FILE = ex11.6.dat;
+VARIABLE:	NAMES = x1 y1-y4 z x2;
+            USEVARIABLES = y1-y4 x1 x2;
+		    MISSING = ALL(999);
+DATA IMPUTATION:
+		    IMPUTE = y1-y4 x1 (c) x2;
+	    	NDATASETS = 10;
+ANALYSIS:   ESTIMATOR = ML;
+MODEL:      i s | y1@0 y2@1 y3@2 y4@3;
+            i s ON x1 x2;
+OUTPUT:     TECH1;

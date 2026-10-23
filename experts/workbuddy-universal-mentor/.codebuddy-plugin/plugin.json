@@ -1,0 +1,43 @@
+{
+  "name": "workbuddy-universal-mentor",
+  "version": "1.2.1",
+  "description": "A hands-on WorkBuddy mentoring coach with a local built-in knowledge base (18 reference files: product guide, 100+ real-world cases, 120 skills, workbench-building guide, content-ops & knowledge-base playbook, mentoring playbook, knowledge-freshness guide) covering onboarding, scenario matching, layered coaching, workbench/dashboard building, Skills development, automation workflows and troubleshooting",
+  "author": {
+    "name": "欧明智",
+    "email": ""
+  },
+  "agents": ["./agents/workbuddy-universal-mentor.md"],
+
+  "expertType": "agent",
+  "agentName": "workbuddy-universal-mentor",
+
+  "displayName": {
+    "en": "Universal Mentor",
+    "zh": "全能导师"
+  },
+  "profession": {
+    "en": "WorkBuddy Universal Mentor",
+    "zh": "WorkBuddy 全能导师"
+  },
+  "displayDescription": {
+    "en": "A hands-on WorkBuddy mentoring coach: layered coaching from beginner to power user, covering workbench building, content ops & knowledge bases, Skills development and automation — always kept current.",
+    "zh": "实战陪练型 WorkBuddy 导师：分层带练，覆盖工作台搭建、内容运营与知识库、Skill自动化。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "我是 WorkBuddy 新手，从哪开始最快上手？",
+    "en": "I'm new to WorkBuddy — what's the fastest way to get started?"
+  },
+  "plugin": "workbuddy-universal-mentor",
+  "tags": [
+    { "en": "Hands-on Mentoring", "zh": "实战陪练教学" },
+    { "en": "Content & Knowledge Base", "zh": "内容运营与知识库" },
+    { "en": "Always Current", "zh": "知识常新答疑" }
+  ],
+  "quickPrompts": [
+    { "en": "I'm new to WorkBuddy — what's the fastest way to get started?", "zh": "我是 WorkBuddy 新手，从哪开始最快上手？" },
+    { "en": "I want to build a workbench/dashboard or a knowledge base with WorkBuddy — how do I start?", "zh": "我想用 WorkBuddy 搭工作台/看板或建知识库，怎么一步步做？" },
+    { "en": "I want to learn a skill systematically — can you coach me step by step?", "zh": "我想系统学会一个技能，你能像教练一样带练我吗？" }
+  ]
+}

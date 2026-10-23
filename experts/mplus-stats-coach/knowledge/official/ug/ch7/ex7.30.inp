@@ -1,0 +1,22 @@
+TITLE:	this is an example of continuous-time survival 
+		analysis using a Cox regression model to 
+		estimate a treatment effect
+DATA:		FILE = ex7.30.dat;
+VARIABLE:	NAMES are t u x tcent class;
+		USEVARIABLES = t-tcent;
+		SURVIVAL = t;
+		TIMECENSORED = tcent;
+		CATEGORICAL = u;
+		CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE; 
+MODEL: 
+		%OVERALL%
+		t ON x;
+		%c#1% 
+		[u$1@15];
+		[t@0];
+		%c#2%   
+		[u$1@-15];
+		[t];
+OUTPUT:	TECH1 LOGRANK;
+PLOT:		TYPE = PLOT2;

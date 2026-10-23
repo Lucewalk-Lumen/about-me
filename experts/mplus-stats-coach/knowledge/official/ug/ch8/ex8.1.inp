@@ -1,0 +1,15 @@
+TITLE:	this is an example of a GMM for a
+		continuous outcome using automatic
+		starting values and random starts
+DATA:	FILE IS ex8.1.dat;
+VARIABLE:       NAMES ARE y1-y4 x;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+	STARTS = 40 8;
+MODEL:	
+	%OVERALL%
+	i s | y1@0 y2@1 y3@2 y4@3;
+	i s ON x;
+	c ON x;
+OUTPUT:	TECH1 TECH8;
+

@@ -1,0 +1,61 @@
+{
+  "form_id": "F115",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "保险缴费基数核定表",
+  "file": "templates/COM/form/F115.docx",
+  "n_tables": 1,
+  "n_rows": 16,
+  "outline": [
+    "参保单位名称",
+    "参保单位地址",
+    "参保单位性质",
+    "基本养老保险",
+    "基本医疗保险",
+    "生育保险",
+    "工伤保险",
+    "失业保险"
+  ],
+  "n_outline": 8,
+  "body": "填表时间：\n参保单位名称 | 参保单位地址\n参保单位性质 | 社会保险代码 | 联系人 | 电话\n基本养老保险 | 人数 | 月缴费基数 | 基本养老保险缴费金额(元/月)\n单位按缴费基数    %缴费\n个人按缴费基数2%缴费\n合计\n基本医疗保险 | 人数 | 月缴费基数 | 基本医疗保险缴费金额(元/月) | 大额医疗保险(元/年) | 个人账户金额(元/月)\n在职职工 | 单位按缴费基数    %缴费\n退休人员 | 个人按缴费基数2%缴费\n合计 | 合计\n生育保险 | 人数 | 月缴费基数 | 缴费比例(%) | 生育保险缴费金额(元/月)\n0.70%\n工伤保险 | 人数 | 月缴费基数 | 缴费比例(%) | 工伤保险缴费金额(元/月)\n失业保险 | 人数 | 月缴费基数 | 缴费比例 | 失业保险缴费金额(元/月) | 按户口分类\n个人 | 单位 | 合计 | 个人 | 单位 | 城镇 | 农民工\n1% | 2%\n参保单位(章)                             武川县社保中心（章）\n法人代表：                              业务经办人：\n劳资负责人：                      复核人：",
+  "body_chars": 538,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-28T07:47:00Z",
+    "modified": "2019-03-28T07:48:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

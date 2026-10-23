@@ -1,0 +1,59 @@
+TITLE:	this is an example of a two-level growth model
+	for a categorical outcome (three-level analysis).
+
+montecarlo:
+	names are u1-u4 x w;
+	generate = u1-u4(1);
+	categorical = u1-u4;
+	nobservations = 500;
+	ncsizes = 3;
+	csizes = 10 (5) 50 (3) 30 (10);
+	seed = 58459;
+	nreps = 1;
+	within = x; 
+	between = w;
+	save = ex9.13.dat;
+
+ANALYSIS:	
+	TYPE = TWOLEVEL;
+	integration = 7;
+
+MODEL POPULATION:
+
+	%WITHIN%
+	x@1;
+	iw sw | u1@0 u2@1 u3@2 u4@3;
+	iw ON x*1;
+	sw ON x*.2;
+	iw*1; sw*.5;
+
+	%BETWEEN%
+	w@1;
+	ib sb | u1@0 u2@1 u3@2 u4@3;
+	[u1$1-u4$1*0];
+	ib ON w*.5;
+	sb ON w*.2;
+	[ib@0 sb*.5];
+	ib*.5; sb*.3;
+
+MODEL:
+
+	%WITHIN%
+
+	iw sw | u1@0 u2@1 u3@2 u4@3;
+	iw ON x*1;
+	sw ON x*.2;
+	iw*1; sw*.5;
+
+	%BETWEEN%
+
+	ib sb | u1@0 u2@1 u3@2 u4@3;
+	[u1$1-u4$1*0] (1);
+	ib ON w*.5;
+	sb ON w*.2;
+	[ib@0 sb*.5];
+	ib*.5; sb*.3;
+
+
+output:
+	tech8 tech9;

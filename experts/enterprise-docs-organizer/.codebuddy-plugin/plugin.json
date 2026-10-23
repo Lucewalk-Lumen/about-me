@@ -1,0 +1,74 @@
+{
+  "name": "enterprise-docs-organizer",
+  "version": "1.0.0",
+  "description": "Enterprise document organizer team: turns scattered company files into a categorized structure, a searchable knowledge base, an employee FAQ and operation manuals.",
+  "author": {
+    "name": "Kaiye",
+    "email": "kaiye@local"
+  },
+  "agents": [
+    "./agents/enterprise-docs-organizer-team-lead.md",
+    "./agents/archive-classifier.md",
+    "./agents/manual-writer.md"
+  ],
+
+  "expertType": "team",
+  "agentName": "enterprise-docs-organizer-team-lead",
+  "teamInfo": {
+    "leadAgent": "enterprise-docs-organizer-team-lead",
+    "memberAgents": ["archive-classifier", "manual-writer"]
+  },
+
+  "displayName": {
+    "en": "Enterprise Document Organizer",
+    "zh": "企业资料整理专家"
+  },
+  "profession": {
+    "en": "Enterprise Document Organizer",
+    "zh": "企业资料整理专家"
+  },
+  "displayDescription": {
+    "en": "Organizes scattered company files into a categorized structure and a searchable knowledge base, then produces an employee FAQ and operation manuals so people stop asking the same questions.",
+    "zh": "把散乱的企业文件分类归档，沉淀为可检索知识库、FAQ 与操作手册，让员工不再为一个问题反复打扰同事。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "帮我把这些散乱文件分类并建立目录结构",
+    "en": "Help me categorize these scattered files and build a folder structure"
+  },
+  "plugin": "enterprise-docs-organizer",
+  "tags": [
+    { "en": "File Categorization", "zh": "文件分类" },
+    { "en": "Knowledge Base", "zh": "知识库" },
+    { "en": "Operation Manual", "zh": "操作手册" }
+  ],
+  "quickPrompts": [
+    { "en": "Help me categorize these scattered files and build a folder structure", "zh": "帮我把这些散乱文件分类并建立目录结构" },
+    { "en": "Generate an employee FAQ from these materials", "zh": "根据这些资料生成一份员工常见问题 FAQ" },
+    { "en": "Turn this process into a standard operation manual", "zh": "把这份流程整理成标准操作手册" }
+  ],
+  "members": [
+    {
+      "id": "enterprise-docs-organizer-team-lead",
+      "name": { "en": "Gui", "zh": "归有章" },
+      "profession": { "en": "Knowledge Manager", "zh": "知识管理官" },
+      "avatar": "avatars/enterprise-docs-organizer-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "archive-classifier",
+      "name": { "en": "Luo", "zh": "罗致" },
+      "profession": { "en": "Archive Classifier", "zh": "档案分类师" },
+      "avatar": "avatars/archive-classifier.png",
+      "role": "member"
+    },
+    {
+      "id": "manual-writer",
+      "name": { "en": "Shu", "zh": "舒卷" },
+      "profession": { "en": "Manual Writer", "zh": "手册撰写师" },
+      "avatar": "avatars/manual-writer.png",
+      "role": "member"
+    }
+  ]
+}

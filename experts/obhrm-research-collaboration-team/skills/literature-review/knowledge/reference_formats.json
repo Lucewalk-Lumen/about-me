@@ -1,0 +1,17 @@
+{
+  "apa7": {
+    "name": "APA 7th Edition (国际期刊)",
+    "template": "{authors}. ({year}). {remainder}{doi}",
+    "en": {
+      "author_join": ", & "
+    },
+    "cn": {
+      "author_join": "，"
+    },
+    "doi": {
+      "join": " "
+    },
+    "sort": "first_surname_unicode",
+    "sort_note": "当前预留字段：format_references.py 暂未读取，仅作文档说明"
+  }
+}

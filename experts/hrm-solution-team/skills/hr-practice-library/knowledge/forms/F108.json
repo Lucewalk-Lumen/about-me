@@ -1,0 +1,74 @@
+{
+  "form_id": "F108",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "制度",
+  "title": "员工津贴管理制度",
+  "file": "templates/COM/policy/F108.docx",
+  "n_tables": 0,
+  "n_rows": 0,
+  "outline": [
+    "员工津贴管理制度",
+    "一、目的",
+    "二、范围",
+    "适用于公司全体人员。",
+    "三．职责",
+    "1.人力资源部：",
+    "（1）负责本制度的编制、颁布和实施。",
+    "（2）对员工进行与本制度有关的培训。",
+    "（3）制定各部门、各岗位适用标准。",
+    "（4）总结本制度实施过程中的适宜性、有效性因素的变化情况并及时进行修订。",
+    "2.财务部：负责记录、统计和分发各项津贴。",
+    "3.稽核组：负责对本制度实施过程的监督，并分析实施效果。",
+    "4.总经办：负责本制度的批准和实施费用的审批。",
+    "四、津贴内容",
+    "2.伙食补贴：未在厂里用餐的员工公司一律给予250元/月补贴。",
+    "3.夫妻房外宿补贴：结婚双方在本公司上班申请在外住宿一律给予50元/人补贴。",
+    "6.差旅费补贴：包括外出办事时的餐费补贴与住宿补贴。",
+    "10.职务补贴：对于公司特殊职位给予的100～800元不等补贴。",
+    "五、附则",
+    "1.本管理制度由人事部负责起草、解释。",
+    "2.本管理制度从发布之日起开始实施。"
+  ],
+  "n_outline": 21,
+  "body": "员工津贴管理制度\n一、目的\n为了规范公司津贴的管理，并使之纳入公司的激励机制中，为公司管理效率和企业文化及形象的提升服务，特制定本制度。\n二、范围\n适用于公司全体人员。\n三．职责\n1.人力资源部：\n（1）负责本制度的编制、颁布和实施。\n（2）对员工进行与本制度有关的培训。\n（3）制定各部门、各岗位适用标准。\n（4）总结本制度实施过程中的适宜性、有效性因素的变化情况并及时进行修订。\n2.财务部：负责记录、统计和分发各项津贴。\n3.稽核组：负责对本制度实施过程的监督，并分析实施效果。\n4.总经办：负责本制度的批准和实施费用的审批。\n四、津贴内容\n1.津贴种类：伙食补贴、夫妻外宿补贴、技术补贴、工龄补贴、差旅补贴、高温补贴、卫生补贴、子女教育补贴和职务补贴等。\n2.伙食补贴：未在厂里用餐的员工公司一律给予250元/月补贴。\n3.夫妻房外宿补贴：结婚双方在本公司上班申请在外住宿一律给予50元/人补贴。\n4.技术补贴：对于一些关键性的技术性岗位，我们将给予100～500元不等的技术补贴。\n5.工龄补贴：公司内签订一年以上《劳动合同》且入职满一年的员工我们将给予工龄补贴（补贴随工龄递增）。\n6.差旅费补贴：包括外出办事时的餐费补贴与住宿补贴。\n7.高温补贴：因天气炎热，车间环境受限致使相关员工在高温温室内作业所给予100元补贴。\n8.卫生补贴：因车间环境及制造产品致使相关员工在卫生条件差的环境下作业给予100元补贴。\n9.子女教育补贴：夫妻两在我公司上班或单亲离异的子女正接受义务教育者，公司给予每个子女500元/位的补贴。\n10.职务补贴：对于公司特殊职位给予的100～800元不等补贴。\n五、附则\n1.本管理制度由人事部负责起草、解释。\n2.本管理制度从发布之日起开始实施。",
+  "body_chars": 743,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-28T03:23:00Z",
+    "modified": "2019-04-26T07:33:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

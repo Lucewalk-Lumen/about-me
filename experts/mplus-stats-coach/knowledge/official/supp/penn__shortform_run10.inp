@@ -1,0 +1,49 @@
+Title: 
+    Clinical Trials data
+    Using M* as mediator
+
+data:
+    file = 4cat m.dat;
+     
+variable:
+    names = intent tx ciguse w;
+
+    usev = tx ciguse intent;
+
+    categorical = ciguse intent;
+    freqweight = w;
+
+ 
+Analysis:
+        estimator = wlsmv;
+      
+model:
+        [ciguse$1] (mbeta0);
+        ciguse on tx (beta2)
+        intent (beta1);
+        intent on tx (gamma1);
+
+model constraint:
+    new(ind dir arg11 arg10 arg00 v1 v0 
+    probit11 probit10 probit00 indirect direct orind ordir);
+    dir=beta2;
+    ind=beta1*gamma1;
+    arg11=-mbeta0+beta2+beta1*(0+gamma1); ! gamma0=0 for m*
+    arg10=-mbeta0+beta2+beta1*0;
+    arg00=-mbeta0+beta1*0;
+    v1=beta1^2*1+1; !sigma=1 for m* residual variance
+    v0=beta1^2*1+1;
+    probit11=arg11/sqrt(v1);
+    probit10=arg10/sqrt(v1);
+    probit00=arg00/sqrt(v0);
+    ! Phi function needed below:
+    indirect=phi(probit11)-phi(probit10);
+    direct=phi(probit10)-phi(probit00);
+    orind=(phi(probit11)/(1-phi(probit11)))/(phi(probit10)/(1-phi(probit10)));
+    ordir=(phi(probit10)/(1-phi(probit10)))/(phi(probit00)/(1-phi(probit00)));
+   
+output:
+        tech1 tech8 sampstat patterns standardized;
+
+plot:
+        type = plot3;

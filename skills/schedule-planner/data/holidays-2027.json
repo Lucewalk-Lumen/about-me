@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "year": 2027,
+  "data_kind": "predicted_holiday_arrangement",
+  "read_only": true,
+  "participates_in_scheduling_default": false,
+  "source": {
+    "authority": "国务院办公厅",
+    "document_id": null,
+    "source_url": "https://www.gov.cn",
+    "source_url_note": "此 URL 为 2027 年安排未来官宣后的落点；截至 2026-10-21 该年度通知尚未在此发布，因此它并非本文件条目的已核验来源。",
+    "fetched_at": "2026-10-21",
+    "fetched_by": "browser-skill (bsk v0.3.3) / Edge 155 / session_id=ympj",
+    "collection_channel": "搜索引擎结果页（含 Bing AI Overview 整理）",
+    "originally_verified": false,
+    "official_source_published": false,
+    "verification_note": "2027 年节假日安排国务院办公厅尚未发布。本文件全部条目为预测，不得作为真值直接进入排程。"
+  },
+  "governance": {
+    "grading_and_release_owner": "fact-verifier",
+    "consumer": "schedule-architect",
+    "consumer_rule": "默认不消费本文件；确需使用时必须显式声明并取得 fact-verifier 放行签字",
+    "gate_rule": "confidence=medium 进『假设声明』；confidence=low/unknown 进『待确认清单』，由用户拍板",
+    "write_rule": "包内 data/ 视为只读基线，任何脚本一律禁止写入"
+  },
+  "basis_document": "最终方案以国务院办公厅 2026 年底发布的《2027 年部分节假日安排通知》为准",
+  "counts": {
+    "holiday_entries": 2,
+    "make_up_workday_entries": 0,
+    "entries_total": 2,
+    "resolved_entries": 1,
+    "unresolved_entries": 1,
+    "holiday_days_total": null
+  },
+  "confidence_rationale": {
+    "元旦": {
+      "level": "medium",
+      "reason": "多来源对 2027-01-01~01-03 一致，但国务院办公厅尚未发布，故不置 high"
+    },
+    "春节": {
+      "level": "low",
+      "reason": "存在三套互斥预测方案（起止日期互不兼容），来源直接冲突，不选定任何一套为真值"
+    }
+  },
+  "limits": [
+    "本文件默认不参与排程（participates_in_scheduling_default=false）。",
+    "holiday_lookup.py 在未显式开启预测数据前，对本年份任何日期一律返回 unknown。",
+    "春节条目为未裁决冲突（resolved=false），任何脚本不得私自选定其中一套方案。",
+    "除元旦、春节外的 2027 年节假日（清明/劳动节/端午/中秋/国庆等）本轮未采集，不得依据 2026 年日期推算填充。"
+  ],
+  "entries": [
+    {
+      "id": "H-2027-01",
+      "name": "元旦",
+      "type": "holiday",
+      "start": "2027-01-01",
+      "end": "2027-01-03",
+      "days": 3,
+      "dates": ["2027-01-01", "2027-01-02", "2027-01-03"],
+      "start_weekday": "周五",
+      "end_weekday": "周日",
+      "resolved": true,
+      "make_up_workdays": [],
+      "make_up_workdays_known": false,
+      "make_up_workdays_note": "官宣通知未发布，调休上班日未知，不得由 2026 年模式推算填充",
+      "source_url": "https://www.gov.cn",
+      "fetched_at": "2026-10-21",
+      "source_kind": "search_result_unverified",
+      "confidence": "medium",
+      "status": "predicted",
+      "official_basis": "未发布",
+      "official_basis_document": "国务院办公厅 2026 年底发布的《2027 年部分节假日安排通知》",
+      "originally_verified": false,
+      "participates_in_scheduling": false,
+      "participates_in_scheduling_default": false,
+      "pending_confirmation": true,
+      "gate_disposition": "hypothesis",
+      "basis_document": "最终方案以国务院办公厅 2026 年底发布的《2027 年部分节假日安排通知》为准",
+      "note": "预测放假 3 天（周五至周日）。未官宣，默认不参与排程。"
+    },
+    {
+      "id": "H-2027-02",
+      "name": "春节",
+      "type": "holiday",
+      "start": null,
+      "end": null,
+      "days": null,
+      "dates": [],
+      "resolved": false,
+      "resolved_note": "三套互斥预测方案冲突，未选定真值；start/end/days 均为 null 即为此意，不得被补默认值填充",
+      "make_up_workdays": [],
+      "make_up_workdays_known": false,
+      "make_up_workdays_note": "官宣通知未发布，调休上班日未知，不得由任一预测方案推算",
+      "source_url": "https://www.gov.cn",
+      "fetched_at": "2026-10-21",
+      "source_kind": "search_result_unverified",
+      "confidence": "low",
+      "status": "predicted",
+      "official_basis": "未发布",
+      "official_basis_document": "国务院办公厅 2026 年底发布的《2027 年部分节假日安排通知》",
+      "originally_verified": false,
+      "participates_in_scheduling": false,
+      "participates_in_scheduling_default": false,
+      "pending_confirmation": true,
+      "gate_disposition": "pending_confirmation",
+      "basis_document": "最终方案以国务院办公厅 2026 年底发布的《2027 年部分节假日安排通知》为准",
+      "conflict": {
+        "kind": "mutually_exclusive_schemes",
+        "selected_scheme": null,
+        "schemes": [
+          {
+            "label": "A",
+            "start": "2027-02-05",
+            "end": "2027-02-12",
+            "days": 8,
+            "start_weekday": "周五",
+            "end_weekday": "周五",
+            "source_summary": "搜索结果页预测口径之一",
+            "consistency": "仅单一来源，未被其他来源交叉确认"
+          },
+          {
+            "label": "B",
+            "start": "2027-02-06",
+            "end": "2027-02-14",
+            "days": 9,
+            "start_weekday": "周六",
+            "end_weekday": "周日",
+            "source_summary": "搜索结果页预测口径之一",
+            "consistency": "仅单一来源，未被其他来源交叉确认"
+          },
+          {
+            "label": "C",
+            "start": "2027-02-15",
+            "end": "2027-02-23",
+            "days": 9,
+            "start_weekday": "周一",
+            "end_weekday": "周二",
+            "source_summary": "沿用 2026 年春节日期顺延的推测口径",
+            "consistency": "仅单一来源，且与 A/B 起止完全错位"
+          }
+        ],
+        "conflict_note": "三套方案起止互不兼容（A 8 天、B/C 9 天），落差达 8 天以上；春节涉及学期第 1 周的起算偏移，私自选定任一套都会造成整学期周次错位。",
+        "handling_rule": "保持 resolved=false，由 fact-verifier 列入待确认清单并在用户拍板前返回 unknown。"
+      },
+      "note": "2027 年春节安排国务院办公厅尚未发布，存在三套互斥预测；本条不作为真值，任何落在其任一方案区间内的日期查询均返回 unknown 并附冲突说明。"
+    }
+  ]
+}

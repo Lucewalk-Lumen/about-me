@@ -1,0 +1,55 @@
+{
+  "form_id": "F070",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "培训报名表",
+  "file": "templates/TRN/form/F070.docx",
+  "n_tables": 1,
+  "n_rows": 16,
+  "outline": [
+    "报名课程",
+    "组织部门",
+    "培训时间",
+    "报名人",
+    "您参加这次培训的目的是什么？",
+    "以下请报名人的部门主管填写：",
+    "当培训与您的下属工作有冲突时，您怎样处理？",
+    "以下由培训组织部门培训主管填写："
+  ],
+  "n_outline": 8,
+  "body": "报名课程 | 组织部门 | 培训时间\n报名人 | 部门 | 岗位 | 职务\n您是否清楚了解培训组织部门安排这次培训的目的？             是□                 否□\n这个培训对您目前的工作是否有帮助？                                   是□                 否□\n您参加这次培训的目的是什么？\n您会积极配合讲师，尽可能多地吸收新知识、新方法吗？         是□                 否□\n您会积极配合培训组织部门，严格遵守培训纪律，一旦出现迟到、早退、事先未书面请假而旷课等情况时甘愿受罚吗？                                          是□                 否□\n从讲师培训的知识变为自己的知识还有相当长的时间，您会在参加完培训后将学到的东西加以运用、巩固吗？                                                        是□                 否□\n您会积极配合培训组织部门跟踪培训效果吗？                           是□                 否□\n以下请报名人的部门主管填写：\n您是否希望您的下属参加这个培训，并将指导其合理安排培训当日的工作？                                                                                                   是□                 否□\n您是否与您的下属充分地沟通过，并非常明确这次培训的目的和意义吗？                                                                                                   是□                 否□\n当培训与您的下属工作有冲突时，您怎样处理？\n一般来说，培训结束后学员的吸收效果只有30%，需不断地将所学知识运用、实践，吸收效果才会逐步提高。您会在培训组织部门的协助下，对您的下属进行培训效果的跟踪及督促吗？                            是□                 否□ 领导签名：\n以下由培训组织部门培训主管填写：\n该学员是否为本课程适宜的培训对象？                                      是□                 否□\n非常感谢您的合作！我们将尽力做好本次培训工作。",
+  "body_chars": 1151,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-21T06:25:00Z",
+    "modified": "2019-03-21T06:42:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

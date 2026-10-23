@@ -1,0 +1,19 @@
+TITLE:	this is an example of moderated mediation with a plot of the indirect effect
+DATA:	FILE = ex3.18.dat;
+VARIABLE:	NAMES = y m x z;
+	USEVARIABLES = y m x z xz;
+DEFINE:	xz = x*z;
+ANALYSIS:	ESTIMATOR = BAYES;
+	PROCESSORS = 2;
+	BITERATIONS = (30000);
+MODEL:	y ON m (b)
+	x z;
+     	m ON x (gamma1)
+	z
+	xz (gamma2);
+MODEL CONSTRAINT:
+	PLOT(indirect);
+	LOOP(mod,-2,2,0.1);
+	indirect = b*(gamma1+gamma2*mod); 
+PLOT:	TYPE = PLOT2;
+OUTPUT:   TECH8;

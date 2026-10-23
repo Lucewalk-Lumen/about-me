@@ -1,0 +1,23 @@
+title:	this is an example of a CFA with continuous factor indicators 
+
+montecarlo:
+	names = y1-y6;
+	nobs = 500;
+	nreps = 1;
+	save = ex5.1.dat;
+
+model montecarlo:
+	f1 by y1@1 y2-y3*1;
+	f2 by y4@1 y5-y6*.8;
+	y1-y6*1;
+	f1-f2*1;
+
+model:	
+	f1 by y1@1 y2-y3*1;
+	f2 by y4@1 y5-y6*.8;
+	y1-y6*1;
+	f1-f2*1;
+
+output:
+	tech9;
+

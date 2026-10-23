@@ -1,0 +1,29 @@
+TITLE:	this is an example of a two-group IRT 
+twin model for factors with categorical factor 
+indicators using parameter constraints  
+DATA:	FILE = ex7.29.dat;
+VARIABLE:	NAMES = u11-u14 u21-u24 dz;
+	CATEGORICAL = u11-u24;
+	CLASSES = cdz (2);
+	KNOWNCLASS = cdz (dz = 0 dz = 1);
+ANALYSIS:	TYPE = MIXTURE;
+	ALGORITHM = INTEGRATION;
+MODEL:	%OVERALL%
+	f1 BY u11
+	      u12-u14 (lam2-lam4); 
+	f2 BY u21
+	      u22-u24 (lam2-lam4); 
+	[f1-f2@0]; 
+	f1-f2 (var);
+	[u11$1-u14$1] (t1-t4);
+	[u21$1-u24$1] (t1-t4);
+	%cdz#1%
+	f1 WITH f2(covmz); 
+	%cdz#2%
+	f1 WITH f2(covdz);
+MODEL CONSTRAINT:
+	NEW(a c e h); 
+	var = a**2 + c**2 + e**2;
+	covmz = a**2 + c**2;
+	covdz = 0.5*a**2 + c**2;
+	h = a**2/(a**2 + c**2 + e**2);

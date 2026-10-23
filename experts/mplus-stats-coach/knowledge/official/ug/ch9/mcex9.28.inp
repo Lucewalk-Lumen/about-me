@@ -1,0 +1,42 @@
+Title:      this is an example of two-level regression
+	        analysis for a continuous dependent
+	        variable with a random intercept and a random residual 
+            variance
+MONTECARLO:  NAMES ARE y x w xm z;
+             NOBS = 20000;
+             NREP = 1;
+             NCSIZES = 1;
+             CSIZES = 200(100);
+             WITHIN = x;
+             BETWEEN = w xm z;
+             SAVE = ex9.28.dat;
+MODEL POPULATION:
+            %WITHIN%
+            x*1;
+            y ON x*.7;
+            logv | y; 
+            %BETWEEN%
+            w-z*1;
+            y*0.3; 
+            [logv*0]; logv*.1; 
+            y ON w*.5 xm*.3;
+            logv ON w*.3 xm*.1;
+            y WITH logv*.1;
+            z ON y*.5 logv*.2; 
+ANALYSIS:   TYPE = TWOLEVEL RANDOM;
+    		ESTIMATOR = BAYES;  
+             PROCESSORS = 2;
+            BITERATIONS = (2000);          
+MODEL:
+            %WITHIN%
+            y ON x*.7;
+            logv | y; 
+            %BETWEEN%
+            y*0.3; 
+            [logv*0]; logv*.1; 
+            y ON w*.5 xm*.3;
+            logv ON w*.3 xm*.1;
+            y WITH logv*.1;
+            z ON y*.5 logv*.2;
+OUTPUT:
+            TECH8;

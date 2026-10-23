@@ -1,0 +1,21 @@
+TITLE:          this is an example of IRT analysis with
+                random binary items
+DATA:           FILE = ex9.26.dat;
+VARIABLE:       NAMES = u level2a level2b;
+                CATEGORICAL = u;
+                CLUSTER = level2b level2a;
+ANALYSIS:       TYPE = CROSSCLASSIFIED RANDOM;
+                ESTIMATOR = BAYES;
+                PROCESSORS = 2;
+MODEL:          %WITHIN%
+                ! variation across subjects:
+                %BETWEEN level2a%
+                s | f BY u;
+                f@1;
+                u@0;
+                ! variation across items:
+                %BETWEEN level2b%
+                u; [u$1];
+                s; [s*1];
+OUTPUT:         TECH1 TECH8;
+

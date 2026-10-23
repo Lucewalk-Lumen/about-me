@@ -1,0 +1,60 @@
+title:
+	this is an example of a GMM for a 
+	continuous outcome using automatic 
+	starting values and random starts 
+
+montecarlo:
+	names are y1-y4 x;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex8.1.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	[x@0]; x@1;
+
+	y1-y4*.5;
+	i s | y1@0 y2@1 y3@2 y4@3;
+	i*1; s*.2;
+
+	c#1 on x*1;
+	i on x*.5;
+	s on x*.3;
+
+	%c#1%
+	[i*1 s*.5];
+
+	%c#2%
+	[i*3 s*1];
+
+
+model:
+	
+	%overall%
+
+	y1-y4*.5;
+	i s | y1@0 y2@1 y3@2 y4@3;
+	i*1; s*.2;
+
+	c#1 on x*1;
+	i on x*.5;
+	s on x*.3;
+
+	%c#1%
+	[i*1 s*.5];
+
+	%c#2%
+	[i*3 s*1];
+
+
+
+output:
+	tech8 tech9;

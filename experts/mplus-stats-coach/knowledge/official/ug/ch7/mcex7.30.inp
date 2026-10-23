@@ -1,0 +1,47 @@
+title:
+    this is an example of continuous-time survival 
+    analysis using a Cox regression model to 
+    estimate a treatment effect
+
+montecarlo: 
+    names are t u x;
+    categorical=u;
+    survival=t;
+    generate=t(s) u(1);
+    hazardc = t (0.7);
+    nobs=500;
+    class=c(2);
+    genclass=c(2); 
+    nrep=1;
+    save=ex7.30.dat;
+
+model montecarlo: 
+
+%overall%
+    [t#1*1]; x*1;
+    t on x*0.5;
+
+%c#1%
+    [u$1@15]; ! control group, u=0 (with Prob=1)
+    [t*0];
+
+%c#2%
+    [u$1@-15]; ! tx group, u=1 (with Prob=1)
+    [t*1];
+
+analysis: 
+    type=mixture; 
+
+model: 
+    %overall%
+    t on x*0.5;
+
+    %c#1%
+    [u$1@15];
+    [t@0];
+
+    %c#2%
+    [u$1@-15];
+    [t*1];
+
+output: tech9;

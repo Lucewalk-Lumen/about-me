@@ -1,0 +1,37 @@
+TITLE:	this is an example of a two-level IRT mixture analysis
+        with binary factor indicators and a between-level
+        categorical latent variable
+
+VARIABLE:NAMES ARE u1-u8 dumb dum clus;
+	USEVARIABLES = u1-u8;
+	CATEGORICAL = u1-u8;
+	CLASSES = cb(2) c(2);
+	BETWEEN = cb;
+	CLUSTER = clus;
+DATA:	FILE = ex10.5.dat;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+	ALGORITHM = INTEGRATION;
+	PROCESSORS = 2;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	f BY u1-u8;
+	[f@0];
+	%BETWEEN%
+	%OVERALL%
+	%cb#1.c#1%
+	[u1$1-u8$1];
+	%cb#1.c#2%
+	[u1$1-u8$1];
+	%cb#2.c#1%
+	[u1$1-u8$1];
+	%cb#2.c#2%
+	[u1$1-u8$1];
+MODEL c:
+	%WITHIN%
+	%c#1%
+	f;
+	%c#2%
+	f;
+OUTPUT:	TECH1 TECH8;
+

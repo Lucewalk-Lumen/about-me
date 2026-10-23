@@ -1,0 +1,17 @@
+TITLE:	this is an example of a two-level CFA with 
+	continuous factor indicators, a random intercept 
+    factor, and covariates
+DATA:	FILE IS ex9.6.dat;
+VARIABLE:	NAMES ARE y1-y4 x1 x2 w clus; 
+	WITHIN = x1 x2;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL; 
+MODEL:
+	%WITHIN%
+	fw BY y1-y4;	
+	fw ON x1 x2;
+	%BETWEEN%
+	fb BY y1-y4;	
+	y1-y4@0;
+	fb ON w;

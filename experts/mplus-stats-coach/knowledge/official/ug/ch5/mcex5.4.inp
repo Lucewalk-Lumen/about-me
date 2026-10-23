@@ -1,0 +1,32 @@
+TITLE:	this is an example of a CFA with censored and count factor indicators 
+
+montecarlo:
+	names = y1-y3 u4-u6;
+	generate = y1-y3(ca 10) u4-u6(c);
+	censored = y1-y3(a);
+	count = u4-u6;
+	nobs = 500;
+	nreps = 1;
+	save = ex5.4.dat;
+
+model montecarlo:
+
+	f1 by y1@1 y2-y3*1;
+	f2 by u4@1 u5-u6*1;
+	y1-y3*.2;
+	f1-f2*.8;
+	[y1-y3*8 u4-u6*.5];
+
+model:
+	
+	f1 by y1@1 y2-y3*1;
+	f2 by u4@1 u5-u6*1;
+	y1-y3*.2;
+	f1-f2*.8;
+	[y1-y3*8 u4-u6*.5];
+
+output:
+	tech8 tech9;
+
+
+

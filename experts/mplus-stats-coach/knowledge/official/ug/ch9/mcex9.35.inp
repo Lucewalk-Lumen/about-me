@@ -1,0 +1,50 @@
+TITLE:	this is an example of a two-level random
+            first-order autoregressive AR(1) IRT model 
+            with binary indicators, random indicator thresholds, 
+            random residual factor variance, and a between-level factor
+
+montecarlo:
+	names are u1-u4;
+    NOBS = 20000;
+    NREP = 1;
+    NCSIZES = 1;
+    CSIZES = 200(100);
+     generate = u1-u4(1);
+  	categorical = u1-u4;
+    save = ex9.35part2.dat;
+     
+ANALYSIS:   
+    TYPE = TWOLEVEL RANDOM;
+    		estimator=bayes;  
+            biter=(2000); 
+            proc=2;
+
+model population:
+    %within%
+    f by u1-u4*1(&1); 
+!    y1-y4*.5; 
+    logvf | f;
+    s | f on f&1; 
+    %between%
+    fb BY u1-u4*1;
+    fb*.2;
+    u1-u4*.3;
+    [logvf@0]; logvf*.1;
+    [s*0.3]; s*.02;
+   
+model:
+     %within%
+    f by u1-u4*1(&1 1-4); 
+!    y1-y4*.5; 
+    logvf | f;
+    s | f on f&1; 
+    %between%
+    fb BY u1-u4*1 (1-4);
+    fb*.2;
+    u1-u4*.3;
+    [logvf@0]; logvf*.1;
+    [s*0.3]; s*.02;
+
+output:
+	tech8 tech9;	
+	

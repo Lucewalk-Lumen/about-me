@@ -1,0 +1,20 @@
+{
+  "schema": "talent-persona",
+  "schema_version": "1.0.0",
+  "persona_id": "P000001",
+  "name": "电商后端高工（5-8年）",
+  "segment": {"industry": "电商", "function": "后端工程", "years_range": [5, 8]},
+  "supply": {
+    "market_size_estimate": "需人工核实（引用报告时标注出处）",
+    "active_rate": "约 20% 活跃看机会（示例值，须以实际调研更新）",
+    "hot_cities": ["杭州", "上海", "北京"]
+  },
+  "comp_benchmark": {"p50_k": 42, "p75_k": 52, "baseline_date": "2026-H1", "source": "需人工核实"},
+  "switch_triggers": ["技术栈升级", "业务稳定性", "薪酬涨幅≥25%"],
+  "typical_career_path": "大厂后端 → 独角兽技术专家 / 大厂 T7",
+  "sourcing_difficulty": "medium",
+  "notes": "该群体对业务稳定性敏感，触达话术需突出公司现金流与业务增长",
+  "baseline_date": "2026-09-01",
+  "source_refs": [],
+  "_note": "示例档案：群体统计特征，不含个人 PII；市场数据为占位样例并标「需人工核实」，引用真实报告时须填 source_refs（出处 + 基准日期）。"
+}

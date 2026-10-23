@@ -1,0 +1,56 @@
+title:
+	this is an example of a LCA with 
+	continuous latent class indicators using 
+	automatic starting values with random 
+	starts
+
+montecarlo:
+	names are y1-y4;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.9.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	[c#1*0];
+	
+	%c#1%
+	[y1-y4*1];
+	y1-y4*1;
+
+	%c#2%
+	[y1-y4*-1];
+	y1-y4*1;
+
+model:
+
+	%overall%
+
+	[c#1*0];
+
+	y1-y4*1;
+	
+	%c#1%
+	[y1-y4*1];
+
+
+	%c#2%
+	[y1-y4*-1];
+
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

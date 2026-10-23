@@ -1,0 +1,108 @@
+TITLE:	this is an example of a three-level MIMIC with 
+	continuous factor indicators, two covariates on within,
+    one covariate on between 2, one covariate on between 3,
+	and random slopes on both within and between 2
+
+montecarlo:
+    names are y1-y6 x1 x2 w z;
+    nobservations = 7500;
+    nreps = 1;
+    CSIZES = 50[30(5)];
+    ncsize = 1[1];	
+    save = ex9.22.dat;
+	WITHIN = x1 x2;
+	BETWEEN = (level2) w (level3) z;
+
+ANALYSIS:	TYPE = THREELEVEL RANDOM; 
+
+MODEL POPULATION: 
+
+	%WITHIN%
+	x1-x2@1;
+	fw1 BY y1@1 y2-y3*1;
+    fw2 BY y4@1 y5-y6*1;
+    fw1 on x1*.8;
+	s | fw2 ON x2;
+	fw1-fw2*1;
+    fw1 with fw2*0;
+	y1-y6*1;
+
+	%BETWEEN Level2%
+	w@1;
+	fb2 BY y1@1 y2-y6*1;
+	y1-y6*.5;
+	fb2*.5;
+	sf2 | fb2 on w;
+	ss | s on w;
+    s*.6;
+    fb2 with s*0;
+
+    %Between Level3%
+    z@1;
+    fb3 BY y1@1 y2-y6*1;
+    fb3 ON z*.5;
+    fb3*.3;
+    s ON z*.3;
+    s*.3;
+    sf2 ON z*.2;
+    sf2*.3;
+    ss ON z*.3;
+    ss*.3;
+    fb3 with s*0;
+    fb3 with sf2*0;
+    fb3 with ss*0;
+    s with sf2*0;
+    s with ss*0;
+    sf2 with ss*0;
+    [s*.2];
+    [sf2*1];
+    [ss*.5];
+    y1-y6*.2;
+    [y1-y6*.5];
+
+MODEL: 
+	%WITHIN%
+!	x1-x2@1;
+	fw1 BY y1@1 y2-y3*1;
+    fw2 BY y4@1 y5-y6*1;
+    fw1 on x1*.8;
+	s | fw2 ON x2;
+	fw1-fw2*1;
+    fw1 with fw2*0;
+	y1-y6*1;
+
+	%BETWEEN Level2%
+!	w@1;
+	fb2 BY y1@1 y2-y6*1;
+	y1-y6*.5;
+	fb2*.5;
+	sf2 | fb2 on w;
+	ss | s on w;
+    s*.6;
+    fb2 with s*0;
+
+    %Between Level3%
+!    z@1;
+    fb3 BY y1@1 y2-y6*1;
+    fb3 ON z*.5;
+    fb3*.3;
+    s ON z*.3;
+    s*.3;
+    sf2 ON z*.2;
+    sf2*.3;
+    ss ON z*.3;
+    ss*.3;
+    fb3 with s*0;
+    fb3 with sf2*0;
+    fb3 with ss*0;
+    s with sf2*0;
+    s with ss*0;
+    sf2 with ss*0;
+    [s*.2];
+    [sf2*1];
+    [ss*.5];
+    y1-y6*.2;
+    [y1-y6*.5];
+
+output:
+	tech8 tech9;

@@ -1,0 +1,14 @@
+TITLE:	this is an example of an N=1 time series analysis 
+    with a bivariate cross-lagged model with two factors 
+    and continuous factor indicators
+DATA:	FILE = ex6.28.dat;
+VARIABLE:	NAMES = y11-y14 y21-y24;
+ANALYSIS:	ESTIMATOR = BAYES;
+	PROCESSORS = 2;
+	BITERATIONS = (2000);
+MODEL:	f1 BY y11-y14 (&1); 
+	f2 BY y21-y24 (&1); 
+	f1 ON f1&1 f2&1;
+	f2 ON f2&1 f1&1;
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE = PLOT3;

@@ -1,0 +1,26 @@
+TITLE:
+    this is an example of bi-factor ESEM, with two
+    items loading only on the general factor
+MONTECARLO:
+    NAMES = y1-y10;
+    NOBSERVATIONS = 500;
+    NREPS = 1;
+    SAVE = ex5.30.dat;
+MODEL POPULATION:
+    fg BY y1-y10*0.7;
+    f1 BY y1-y4*0.4;
+    f2 BY y5-y8*0.3;
+    fg-f2@1;
+    fg WITH f1-f2@0;
+    f1 WITH f2*0;
+    y1-y4*0.35 y5-y8*0.42 y9-y10*0.51;
+ANALYSIS:
+    ROTATION = GEOMIN;
+MODEL:
+    fg BY y1-y10*0.7;
+    fg@1;
+    f1 BY y1-y4*0.4 y5-y8*0 (*1);
+    f2 BY y1-y4*0 y5-y8*0.3 (*1);
+    fg WITH f1-f2@0;
+    y1-y4*0.35 y5-y8*0.42 y9-y10*0.51;
+

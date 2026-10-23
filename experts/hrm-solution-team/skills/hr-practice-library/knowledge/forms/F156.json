@@ -1,0 +1,72 @@
+{
+  "form_id": "F156",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "员工职业生涯规划表",
+  "file": "templates/ER/form/F156.docx",
+  "n_tables": 1,
+  "n_rows": 17,
+  "outline": [
+    "姓名",
+    "教育情况",
+    "参加过的培训",
+    "目前具备的技能/能力",
+    "其他单位工作经历简介",
+    "单位",
+    "请详细介绍一下自己的专长：",
+    "结合自己的需要和专长，你对目前的工作是否感兴趣，请详细介绍一下原因：",
+    "请详细介绍自己希望选择哪条晋升通道（或组合）：",
+    "请详细介绍自己的1～3个月、6～12个月和3～5年的职业规划设想：",
+    "谈谈自身的优势与不足："
+  ],
+  "n_outline": 11,
+  "body": "填表日期：     年    月    日                                         填表人：\n姓名 | 年龄 | 部门 | 岗位名称\n教育情况 | 最高学历 | 毕业时间 | 毕业院校\n已涉足的主要领域：\n参加过的培训 | 1. | 5.\n2. | 6.\n3. | 7.\n4. | 8.\n目前具备的技能/能力 | 技能/能力的类型 | 证书/简要介绍此技能\n其他单位工作经历简介\n单位 | 部门 | 职务 | 对工作满意的地方 | 对工作不满意的地方\n你认为对自己最重要的3种需要，请按优先顺序标注1、2、3。 □成为管理者      □报酬       □成为专家\n请详细介绍一下自己的专长：\n结合自己的需要和专长，你对目前的工作是否感兴趣，请详细介绍一下原因：\n请详细介绍自己希望选择哪条晋升通道（或组合）：\n请详细介绍自己的1～3个月、6～12个月和3～5年的职业规划设想：\n谈谈自身的优势与不足：",
+  "body_chars": 422,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-01T09:29:00Z",
+    "modified": "2019-04-26T07:49:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+title:
+          Raw data from Holzinger-Swineford
+
+          Grades VII and VIII of the
+          Pasteur elementary school (n=156) followed by Grant-White (n=145)
+
+          Gender, grade, and age information, and the 24 tests
+
+          Sources:
+          Holzinger, K. J. & Swineford, F. (1939).
+          A study in Factor Analysis: The Stability of a Bi-Factor
+          Solution. Supplementary Educational Monographs.
+          Chicago, Ill.: The University of Chicago.
+
+          Harman, H.H. (1976). Modern Factor Analysis.
+          Third Edition. Chicago: The University of Chicago Press
+
+data:
+          file is H-S Combined.txt; 
+
+variable:
+          names are id female grade agey agem school ! school =0/1 with Pasteur=1
+          visual cubes paper flags general paragrap
+          sentence wordc wordm addition code counting straight wordr
+          numberr figurer object numberf figurew deduct
+          numeric problemr series arithmet; 
+
+          usev = visual-figurew;
+          useobs = school eq 0;
+
+define:
+	standardize visual-figurew;
+
+    grade  = grade - 7; !grade = 0 for Grade 7 vs 1 for Grade 8
+
+
+analysis: 
+    estimator = bayes;
+    proc = 2; 
+    fbiter = 10000;
+
+model:  
+    spatial by visual* cubes paper flags;
+    verbal by general* paragrap sentence wordc wordm;
+    speed by addition* code counting straight;
+    memory by wordr* numberr figurer object numberf figurew;
+
+    spatial-memory@1;
+
+    ! cross-loadings:
+
+    spatial  by general-figurew*0 (a1-a15);
+    verbal by visual-flags*0 (b1-b4);
+    verbal by addition-figurew*0 (b5-b14);
+    speed by visual-wordm*0 (c1-c9);
+    speed by wordr-figurew*0 (c10-c15);
+    memory by visual-straight*0 (d1-d13);
+
+model priors:
+    a1-d13 ~ N(0,.01);
+!    b1-b14 ~ N(0,.01);
+!    c1-c15 ~ N(0,.01);
+!    d1-d13 ~ N(0,.01);
+
+output:
+    tech1 tech8 stdy svalues;
+    
+plot:
+    type = plot2;  
+

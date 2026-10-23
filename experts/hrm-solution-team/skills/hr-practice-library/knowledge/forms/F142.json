@@ -1,0 +1,75 @@
+{
+  "form_id": "F142",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "制度",
+  "title": "员工职业生涯规划制度",
+  "file": "templates/ER/policy/F142.docx",
+  "n_tables": 0,
+  "n_rows": 0,
+  "outline": [
+    "第一章 总则",
+    "第一条 目的",
+    "第二条 范围",
+    "第三条 职责",
+    "第四条 遵循原则",
+    "第二章 职业生涯规划具体管理办法",
+    "第五条 员工调查",
+    "第六条 员工职业发展规划",
+    "第七条 职业生涯规划的实施与修正",
+    "第三章 绩效考核后的处理",
+    "第八条 晋升与奖励",
+    "第九条 降级与处罚",
+    "第四章 附则",
+    "第十条 本制度自颁布之日起施行，每年根据企业发展的实际情况修订一次。"
+  ],
+  "n_outline": 14,
+  "body": "员工职业生涯规划制度\n第一章 总则\n第一条 目的\n为促进员工与企业共同发展，加强员工与公司间的良好合作，特制定本制度。\n第二条 范围\n适用于企业所有员工的职业生涯规划管理。\n第三条 职责\n1.员工负责个人职业规划的提报以及企业职业规划培训计划的配合执行。\n2.各部门经理负责本部门员工职业规划中相关事项的确认，并协助企业人力资源部开展员工职业规划评审的执行。\n3.人力资源部负责员工职业发展调查、职业通道划分以及员工职业发展档案的建立、保管与更新。\n4.人力资源部负责集团公司、各下属公司员工职业规划所需的培训计划及科目的拟订，并督促员工完成个人职业规划的目标。\n5.公司人力资源部为本制度的归口部门，负责本制度的编制、培训及落实执行工作。\n6.公司总经理负责本制度制定、修正完善的核准。\n第四条 遵循原则\n1.长期性原则：员工的职业生涯发展规划要贯穿员工的职业生涯始终。\n2.动态原则：根据公司的发展战略、组织结构的变化以及员工不同时期的发展需求进行相应调整。\n第二章 职业生涯规划具体管理办法\n第五条 员工调查\n1.员工新进公司时，由人力资源部负责对新进员工进行职业发展计划调查（调查表包括“员工职业发展规划表”和“员工能力开发需求表”）。\n2.人力资源部根据员工工作岗位说明书及员工自己的职业发展规划进行职业发展通道划分。职业发展通道分为：管理通道、技术通道和业务通道。\n3.员工根据自己的岗位说明书及个人职业发展填写“员工职业发展规划表”和“员工能力开发需求表”，需经部门经理、人力资源部审核。\n第六条 员工职业发展规划\n人力资源部根据员工的职业发展规划和员工能力开发需求建立员工职业发展档案，并结合公司战略发展需要对员工素质提高的需求，制订员工职业发展培训计划。\n第七条 职业生涯规划的实施与修正\n1.人力资源部对所有员工的培训结果进行培训考核，并作为员工年度工作绩效考核的依据之一。\n2.公司根据《绩效考核管理制度》的考核处理结果，对考核成绩优秀的员工施以相应的奖励或晋升；对考核成绩中表现不合格的员工施以相应的处罚，对不能胜任本职工作的人员进行降级、辞退等处理。\n3.对于工作中存在不足、需要改进或者不适应本职工作的员工，人力资源部应及时组织面谈，根据面谈结果及其个人期望，修订其职业生涯规划和职业发展路径。\n第三章 绩效考核后的处理\n第八条 晋升与奖励\n1.公司绩效考核完成，选择工作当中表现出色的且具备相应管理能力的人员作为公司储备人才，重点培养。当公司相关岗位出现空缺时，则由公司储备人才竞争该岗位。只有在公司没有适合该岗位的储备人才时，才考虑外部招聘。\n2.个人竞岗通过后，晋升者办理原岗位工作交接手续后到新岗位报到并办理相关上岗手续（具体见《员工异动、工作移交管理制度》）。\n第九条 降级与处罚\n公司通过绩效考核，对不能胜任本职工作等绩效考核不合格的员工予以处罚或降级处理。\n第四章 附则\n第十条 本制度自颁布之日起施行，每年根据企业发展的实际情况修订一次。",
+  "body_chars": 1241,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-01T06:57:00Z",
+    "modified": "2019-04-26T07:43:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

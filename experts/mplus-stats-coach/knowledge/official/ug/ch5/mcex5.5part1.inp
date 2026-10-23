@@ -1,0 +1,28 @@
+TITLE:
+    this is an example of a generalized partial credit item 
+    response theory (IRT) model
+MONTECARLO:
+	NAMES = u1-u20;
+	GENERATE = u1-u20(4 gpcm);
+	CATEGORICAL = u1-u20 (gpcm);
+	NOBSERVATIONS = 5000;
+	NREPS = 1;
+    SAVE = ex5.5part1.dat;	
+MODEL POPULATION:
+	f BY u1-u20*1; 
+    f@1;
+    [u1$1-u20$1*.5];
+    [u1$2-u20$2*-.5];
+    [u1$3-u20$3*1];
+    [u1$4-u20$4*0];
+ANALYSIS:
+    ESTIMATOR = MLR;
+MODEL:
+    f BY u1-u20*1; 
+    f@1;
+    [u1$1-u20$1*.5];
+    [u1$2-u20$2*-.5];
+    [u1$3-u20$3*1];
+    [u1$4-u20$4*0];
+OUTPUT:
+	TECH8;

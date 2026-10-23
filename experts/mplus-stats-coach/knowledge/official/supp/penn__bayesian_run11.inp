@@ -1,0 +1,48 @@
+TITLE:  
+    ML
+
+MONTECARLO:  
+    NAMES ARE y x;
+    NOBS = 500;
+    NREP = 500;
+	NCsizes = 1;
+    csizes = 10 (50);
+
+    within = x; 
+    
+MODEL POPULATION:
+
+    %within%
+    x*1;
+    y on x*1; 
+    y*2;  
+
+    %between%
+   
+    y*.222;  !icc = .222/2.222 = 0.1
+  
+ANALYSIS: 
+    type = twolevel; 
+    estimator = bayes;
+    process = 2;
+    fbiter = 1000;
+    point = mode;
+
+MODEL:
+    %within%
+    y on x*1; 
+    y*2 (w);  
+
+    %between%
+    y*.222 (b);  !icc = .222/2.222 = 0.1
+
+Model priors:
+    b~U(0,1000);
+
+Model constraint:
+    new(icc*.1);
+    icc = b/(w+b);
+  
+
+output:
+    tech9;

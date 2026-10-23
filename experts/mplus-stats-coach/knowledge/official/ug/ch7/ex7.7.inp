@@ -1,0 +1,11 @@
+TITLE:	this is an example of a LCA with unordered
+	categorical latent class indicators using
+	automatic starting values with random
+	starts
+DATA:	FILE IS ex7.7.dat;
+VARIABLE:	NAMES ARE u1-u4 c;
+	USEVARIABLES ARE u1-u4;
+	CLASSES = c (2);
+	NOMINAL = u1-u4;
+ANALYSIS:	TYPE = MIXTURE;
+OUTPUT:	TECH1 TECH8;

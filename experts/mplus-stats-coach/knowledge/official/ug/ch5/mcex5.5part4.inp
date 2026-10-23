@@ -1,0 +1,27 @@
+TITLE:  this is an example of a 4PL item response theory (IRT) model
+        using priors for the lower and upper asymptote parameters
+MONTECARLO:			
+		NAMES = u1-u20;
+		NOBSERVATIONS = 10000;
+		NREPS = 1;
+		GENERATE = u1-u20(4pl);
+		CATEGORICAL = u1-u20(4pl);
+        SAVE = ex5.5part4.dat;
+
+MODEL POPULATION:
+        f BY u1-u20*1; f@1;
+		[u1$1-u20$1*0];
+		[u1$2-u20$2*1.386];
+		[u1$3-u20$3*-2];
+ANALYSIS: 
+        ESTIMATOR = MLR;
+MODEL:
+        f BY u1-u20*1; f@1;
+		[u1$1-u20$1*0];
+		[u1$2-u20$2*1.386] (a1-a20);
+		[u1$3-u20$3*-2] (b1-b20);
+MODEL PRIOR: 
+        a1-a20~N(1.386,1);
+        b1-b20~N(-2,1);
+OUTPUT:	
+        TECH8; 

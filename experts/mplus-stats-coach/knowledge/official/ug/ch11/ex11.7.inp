@@ -1,0 +1,25 @@
+TITLE:	this is an example of multiple imputation of 
+		plausible values generated from a multiple 
+		indicator linear growth model for categorical 
+		outcomes using Bayesian estimation
+DATA:           FILE = ex11.7.dat;
+VARIABLE:	NAMES = u11 u21 u31 u12 u22 u32 u13 u23 u33;
+		CATEGORICAL = u11-u33;
+ANALYSIS:	ESTIMATOR = BAYES;
+		PROCESSORS = 2;
+MODEL:	f1 BY	u11 
+		u21-u31 (1-2);
+		f2 BY 	u12 
+		u22-u32 (1-2);
+		f3 BY 	u13 
+		u23-u33 (1-2);
+		[u11$1 u12$1 u13$1] (3);
+		[u21$1 u22$1 u23$1] (4);
+		[u31$1 u32$1 u33$1] (5);
+		i s | f1@0 f2@1 f3@2; 
+DATA IMPUTATION:	
+		NDATASETS = 20;
+                SAVE = ex11.7imp*.dat;
+OUTPUT:	TECH1 TECH8;
+SAVEDATA:       FILE = ex11.7plaus.dat;
+	SAVE = FSCORES(20) LRESPONSES;

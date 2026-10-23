@@ -1,0 +1,10 @@
+TITLE:	this is an example of a generalized partial credit 
+    item response theory (IRT) model
+DATA:	FILE IS ex5.5part1.dat;
+VARIABLE:	NAMES ARE u1-u20;
+	CATEGORICAL ARE u1-u20 (gpcm);
+ANALYSIS:	ESTIMATOR = MLR;
+MODEL:	f BY u1-u20*;
+	f@1;
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE = PLOT3;

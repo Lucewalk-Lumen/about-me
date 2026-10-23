@@ -1,0 +1,77 @@
+{
+  "form_id": "F155",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "员工纪律处分登记表",
+  "file": "templates/ER/form/F155.docx",
+  "n_tables": 1,
+  "n_rows": 19,
+  "outline": [
+    "员工姓名：",
+    "性别：",
+    "入职日期：",
+    "部门：",
+    "处分原因",
+    "日期：",
+    "违纪描述：",
+    "违反以下条例：",
+    "员工解释：",
+    "处分类型",
+    "时间限制及如果未改正的后果：",
+    "此前各种违纪处分类型记录",
+    "检查此处",
+    "我已收到此通知 员工本人签字：______________",
+    "签署",
+    "部门负责人签字"
+  ],
+  "n_outline": 16,
+  "body": "员工姓名： | 性别： | 入职日期：\n部门： | 职位： | 生效日期：\n处分原因\n日期： | 时间： | 地点：\n违纪描述：\n违反以下条例：\n员工解释：\n处分类型\n□批评教育      □口头警告      □书面警告      □严重警告      □解除劳动合同 备注：\n时间限制及如果未改正的后果：\n此前各种违纪处分类型记录\n批评教育                                 日期________________\n口头警告                                 日期________________\n书面警告                                 日期________________\n严重警告                                 日期________________\n检查此处 | 员工已被告知《公平对待的保证》政策\n我已收到此通知 员工本人签字：______________ | 若员工不签字，则由见证人签字作证 见证人签字：_________________\n签署\n部门负责人签字 | 办公室签字 | 总经理审批",
+  "body_chars": 516,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-01T09:12:00Z",
+    "modified": "2019-04-01T09:22:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

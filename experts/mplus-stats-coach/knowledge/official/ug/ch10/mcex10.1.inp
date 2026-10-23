@@ -1,0 +1,102 @@
+title:
+	monte carlo for two-level mixture 
+	regression for a continuous
+	dependent variable
+
+montecarlo:
+	names are y x1 x2 w;
+	nobservations = 1000;
+	ncsizes = 3;
+	csizes = 40 (5) 50 (10) 20 (15);
+	genclasses = c(2);
+	classes = c(2);
+	within = x1 x2;
+	between = w;
+	seed = 3454367;
+	nrep = 1;
+	save = ex10.1.dat;
+
+analysis:
+	type = twolevel mixture;
+
+model population:
+
+	%within%
+
+	%overall%
+
+	x1-x2*1; 
+	[x1-x2*0];
+
+	[c#1*0];
+
+	c#1 on x1*1;
+
+	y on x1*2 x2*1;
+	
+	y*1;
+	
+	%c#1%
+
+	y on x2*2;
+
+	y*2;
+
+
+	%between%
+
+	%overall% 
+
+	[w@0]; w@1;
+
+	y on w*.7; y*.5;
+	
+	c#1 on w*1; c#1*.4;
+
+	[y*1];
+
+	%c#1%
+	
+	[y*2];
+
+model:
+
+	%within%
+
+	%overall%
+
+
+	[c#1*0];
+
+	c#1 on x1*1;
+
+	y on x1*2 x2*1;
+	
+	y*1;
+	
+	%c#1%
+
+	y on x2*2;
+
+	y*2;
+
+
+	%between%
+
+	%overall% 
+
+	y on w*.7; y*.5;
+	
+	c#1 on w*1; c#1*.4;
+
+	[y*1];
+
+	%c#1%
+	
+	[y*2];
+
+	
+
+output:
+	tech8 tech9;	
+	

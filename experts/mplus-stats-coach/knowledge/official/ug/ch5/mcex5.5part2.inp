@@ -1,0 +1,19 @@
+TITLE:	this is an example of a two-parameter
+  	logistic item response theory (IRT) model
+montecarlo:
+  	names = u1-u20;
+  	generate = u1-u20(1);
+  	categorical = u1-u20;
+  	nobs = 500;
+  	nreps = 1;
+  	save = ex5.5part2.dat;
+ANALYSIS:	ESTIMATOR = MLR;
+model population:	
+  	f by u1-u20*1;
+  	f@1;
+  	[u1$1-u10$1*-.5 u11$1-u20$1*.5];
+MODEL:	
+  	f by u1-u20*1;
+  	f@1;
+  	[u1$1-u10$1*-.5 u11$1-u20$1*.5];
+OUTPUT:	TECH8 tech9;

@@ -1,0 +1,9 @@
+TITLE:	this is an example of an EFA with covariates (MIMIC) 
+    with continuous factor indicators and direct effects
+DATA:	FILE IS ex5.24.dat;
+VARIABLE:	NAMES ARE y1-y8 x1 x2;
+MODEL:	f1-f2 BY y1-y8(*1);
+    	f1-f2 ON x1-x2;
+    	y1 ON x1;
+    	y8 ON x2;
+OUTPUT:	TECH1;

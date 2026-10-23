@@ -1,0 +1,68 @@
+{
+  "form_id": "F147",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "劳动合同到期处理意见征求表",
+  "file": "templates/ER/form/F147.docx",
+  "n_tables": 1,
+  "n_rows": 4,
+  "outline": [
+    "征求意见人",
+    "部门",
+    "职位",
+    "征求时间",
+    "合同到期员工基本信息",
+    "人力资源部经理处理意见",
+    "总经理处理意见"
+  ],
+  "n_outline": 7,
+  "body": "征求意见人 | 部门 | 职位 | 征求时间\n合同到期员工基本信息 | 签订合同次数： 本次合同期限：自     年    月    日至     年    月    日 连续工作年限： 业绩考核情况：优秀□    良□    一般□    较差□    很差□\n人力资源部经理处理意见 | 同意续订：□理由： 不同意续订：□理由： 签字：                  日期：      年    月    日\n总经理处理意见 | 同意续订：□理由： 不同意续订：□理由： 签字：                  日期：      年    月    日",
+  "body_chars": 281,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T06:34:00Z",
+    "modified": "2019-04-02T06:49:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

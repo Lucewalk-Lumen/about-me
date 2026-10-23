@@ -1,0 +1,58 @@
+title:
+	this is an example of a SEM with a 
+	continuous and a categorical latent 
+	variable
+
+montecarlo:
+	names are u1-u8;
+	generate = u1-u8(1);
+	categorical = u1-u8;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 1000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.19.dat;
+
+analysis:
+	type = mixture;
+	algo = int;
+
+model population:
+
+	%overall%
+
+	f by u1@1 u2-u4*1;
+	f*1;
+	c#1 on f*1;
+	
+	%c#1%
+	[u5$1-u8$1*-1];
+
+	%c#2%
+	[u5$1-u8$1*1];
+	
+
+model:
+	
+	%overall%
+
+	f by u1@1 u2-u4*1;
+	f*1;
+	c#1 on f*1;
+	
+	%c#1%
+	[u5$1-u8$1*-1];
+
+	%c#2%
+	[u5$1-u8$1*1];
+	
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

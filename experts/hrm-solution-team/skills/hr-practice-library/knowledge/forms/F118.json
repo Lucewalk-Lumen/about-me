@@ -1,0 +1,66 @@
+{
+  "form_id": "F118",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "员工保险记录表",
+  "file": "templates/COM/form/F118.docx",
+  "n_tables": 1,
+  "n_rows": 19,
+  "outline": [
+    "员工参保情况确认 日期：______年_____月_____日",
+    "姓名",
+    "隶属公司",
+    "入职时间",
+    "户口关系",
+    "社会保险经历",
+    "是否曾参加过社会保险：（必填）",
+    "申请在本公司参加社会保险：（必填）",
+    "一级单位人事行政部门",
+    "人力资源部确认（第二联）",
+    "参加险种",
+    "人力资源部回执单（第三联）",
+    "注：此回执单经由人力资源部确认后，交由参保员工本人留存。 人力资源部确认："
+  ],
+  "n_outline": 13,
+  "body": "员工参保情况确认 日期：______年_____月_____日\n姓名 | 性别 | 员工编号\n隶属公司 | 隶属一级单位 | 岗位/职务\n入职时间 | 正常转正日期 | 联系电话\n户口关系 | □城镇     □农村 | 身份证号码\n社会保险经历\n是否曾参加过社会保险：（必填） | □否    □是，参保起始时间：______年____月\n申请在本公司参加社会保险：（必填） | □是 | 申请本公司参保时间：______年_____月_____日\n申请参保单位（必填）：___________ □总部          □下属分支机构\n□否 | 原因：\n一级单位人事行政部门 | 填表人\n注：1.本表中表一栏由转正员工本人亲笔填写,同时由所在一级单位人事行政部门审核后签字确认，于每月20日前附于《超大员工转正审批表》交至集团人力资源部；表二栏由人力资源部审核后填写。 2.若继续在其他单位参保的人员，为避免因在两个单位重复参保 ,造成企业及个人损失，请将自愿放弃在本单位参保的证明原件和已办理参保的证明、近年对账单复印件等附于本表后，一并交至集团人力资源部备档，逾期将视为同意在本公司参保，造成损失由员工本人自行承担。 3.原则上工资关系在总部的员工在总部相应单位参保,工资关系不在总部的员工则在相应所在分支机构参保。\n人力资源部确认（第二联）\n姓名 | 员工编号 | 隶属一级单位\n参加险种 | □社会保险 | 公司参保起始日期 | 社保基数\n人力资源部回执单（第三联）\n姓名 | 员工编号 | 隶属一级单位\n参加险种 | □社会保险 | 公司参保起始日期 | 社保手册办理情况\n注：此回执单经由人力资源部确认后，交由参保员工本人留存。 人力资源部确认：",
+  "body_chars": 731,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-28T07:51:00Z",
+    "modified": "2019-03-28T08:32:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

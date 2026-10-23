@@ -1,0 +1,28 @@
+TITLE:	this is an example of modeling with data 
+		not missing at random (NMAR) using the 
+		Diggle-Kenward selection model        
+DATA:		FILE = ex11.3.dat;
+VARIABLE:	NAMES = z1-z5 y0 y1-y5;
+		USEVARIABLES = y0-y5 d1-d5;
+		MISSING = ALL (999);
+		CATEGORICAL = d1-d5;
+DATA MISSING:	
+		NAMES = y0-y5;
+		TYPE = SDROPOUT;
+		BINARY = d1-d5;
+ANALYSIS:	ESTIMATOR = ML;
+		ALGORITHM = INTEGRATION;
+		INTEGRATION = MONTECARLO;
+		PROCESSORS = 2;
+MODEL:	i s | y0@0 y1@1 y2@2 y3@3 y4@4 y5@5;
+		d1 ON y0 (1)
+		y1 (2);
+		d2 ON y1 (1)
+		y2 (2);
+		d3 ON y2 (1)
+		y3 (2);
+		d4 ON y3 (1)
+		y4 (2);
+		d5 ON y4 (1)
+		y5 (2);
+OUTPUT:	TECH1;

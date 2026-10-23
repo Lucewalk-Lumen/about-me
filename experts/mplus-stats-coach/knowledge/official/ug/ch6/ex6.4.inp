@@ -1,0 +1,6 @@
+TITLE:	this is an example of a linear growth
+	model for a categorical outcome 
+DATA:	FILE IS ex6.4.dat;
+VARIABLE:	NAMES ARE u11-u14;
+	CATEGORICAL ARE u11-u14;
+MODEL:	i s | u11@0 u12@1 u13@2 u14@3;

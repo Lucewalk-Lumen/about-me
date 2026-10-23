@@ -1,0 +1,7 @@
+TITLE:	this is an example of a probit regression
+        for a binary or categorical observed
+        dependent variable with two covariates
+DATA:	FILE IS ex3.4.dat;
+VARIABLE:	NAMES ARE u1 x1 x3;
+	CATEGORICAL = u1;
+MODEL:	u1 ON x1 x3;

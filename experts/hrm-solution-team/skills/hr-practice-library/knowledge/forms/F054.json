@@ -1,0 +1,95 @@
+{
+  "form_id": "F054",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "面试记录表",
+  "file": "templates/REC/form/F054.docx",
+  "n_tables": 1,
+  "n_rows": 27,
+  "outline": [
+    "申请人姓名",
+    "性别",
+    "年龄",
+    "最高学历",
+    "应聘岗位",
+    "面试项目",
+    "1.体能、体态状况",
+    "2.仪表、穿着与服饰",
+    "3.举止及应对礼仪",
+    "4.语言表达与口齿清晰",
+    "5.机智及反应能力",
+    "6.知识面宽广和渊博程度",
+    "7.性格特征与人际沟通",
+    "8.生活工作阅历是否丰富",
+    "9.外语能力（英、日）",
+    "10.学历、学位",
+    "11.对申请职位之经验",
+    "12.相关专业知识支撑",
+    "13.对新工作环境适应性",
+    "14.对新工作之稳定性",
+    "15.对新工作的信心与毅力",
+    "16.个人理想与企业一致",
+    "17.未来之可塑性",
+    "面试总体评价",
+    "现行工资",
+    "可提供待遇",
+    "拟受聘岗位",
+    "部门经理意见",
+    "人力资源部门意见",
+    "领导意见"
+  ],
+  "n_outline": 30,
+  "body": "申请人姓名 | 性别 | 年龄 | 最高学历\n应聘岗位 | 主试人 | 面试时间 | 面试地点\n面试项目 | 优 | 良 | 好 | 可 | 差 | 备注\n1.体能、体态状况\n2.仪表、穿着与服饰\n3.举止及应对礼仪\n4.语言表达与口齿清晰\n5.机智及反应能力\n6.知识面宽广和渊博程度\n7.性格特征与人际沟通\n8.生活工作阅历是否丰富\n9.外语能力（英、日）\n10.学历、学位\n11.对申请职位之经验\n12.相关专业知识支撑\n13.对新工作环境适应性\n14.对新工作之稳定性\n15.对新工作的信心与毅力\n16.个人理想与企业一致\n17.未来之可塑性\n面试总体评价\n现行工资 | 期望工资\n可提供待遇 | 确认工资\n拟受聘岗位 | 拟确定级别 | 拟聘用开始时间\n部门经理意见 | 年     月     日\n人力资源部门意见 | 年     月     日\n领导意见 | 年     月     日\n填表人：                                                  审核人：\n填表说明：此表由面试组长在征求招聘小组意见之后填写。面试评估的“备注”一栏用来填写面试过程中有用的信息或数据。",
+  "body_chars": 515,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T02:47:00Z",
+    "modified": "2019-03-18T02:47:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

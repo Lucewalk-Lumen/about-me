@@ -1,0 +1,126 @@
+TITLE:	
+    this is an example of multiple imputation 
+    using a two-level factor model 
+    with categorical outcomes 
+    
+    Data are generated in line with mcex9.15 as
+    a two-level multiple indicator growth model 
+    with categorical outcomes (three-level analysis), but
+    adding missingness for the outcomes and using Bayes
+    estimation
+
+montecarlo:
+	names are u11 u21 u31 u12 u22 u32 u13 u23 u33;
+    generate = u11-u33(1);
+    categorical = u11-u33;
+	nobservations = 1000;
+	ncsizes = 1;
+	csizes = 20 (50);
+	seed = 58476;
+	nreps = 1;
+    missing = u12-u33;
+	save = ex11.7.dat;
+
+
+model population:
+
+	%within%
+	
+	f1w BY	u11@1 
+			u21*.9 (1)
+			u31*.8 (2);
+	f2w BY 	u12@1 
+			u22*.9 (1)
+			u32*.8 (2);
+	f3w BY 	u13@1 
+			u23*.9 (1)
+			u33*.8 (2);
+
+	iw sw | f1w@0 f2w@1 f3w@2;    
+
+	iw*1; sw*.5; f1w-f3w*.5;  
+ 
+
+	%between%
+	
+	f1b BY	u11@1 
+			u21*.9 (1)
+			u31*.8 (2);
+	f2b BY 	u12@1 
+			u22*.9 (1)
+			u32*.8 (2);
+	f3b BY 	u13@1 
+			u23*.9 (1)
+			u33*.8 (2);
+
+	[u11$1*0 u12$1*0 u13$1*0] (3);
+	[u21$1*-.5 u22$1*-.5 u23$1*-.5] (4);
+	[u31$1*.5 u32$1*.5 u33$1*.5] (5);
+
+	u11-u33*.5;
+
+	ib sb | f1b@0 f2b@1 f3b@2;    
+
+	[f1b-f3b@0 ib@0 sb*1];
+	ib*.5; sb*.3; 
+	f1b-f3b*.5 (6);  
+     
+
+MODEL MISSING:
+	[u12-u33@-2];
+	u12-u32 on u11-u31*.4;
+    u13-u33 on u11-u31*.5;
+
+
+ANALYSIS:	
+	TYPE = TWOLEVEL;
+    estimator = bayes;
+    process = 2;
+
+
+model:
+
+	%within%
+	
+	f1w BY	u11@1 
+			u21*.9 (1)
+			u31*.8 (2);
+	f2w BY 	u12@1 
+			u22*.9 (1)
+			u32*.8 (2);
+	f3w BY 	u13@1 
+			u23*.9 (1)
+			u33*.8 (2);
+
+	iw sw | f1w@0 f2w@1 f3w@2;    
+
+	iw*1; sw*.5; f1w-f3w*.5;  
+ 
+
+	%between%
+	
+	f1b BY	u11@1 
+			u21*.9 (1)
+			u31*.8 (2);
+	f2b BY 	u12@1 
+			u22*.9 (1)
+			u32*.8 (2);
+	f3b BY 	u13@1 
+			u23*.9 (1)
+			u33*.8 (2);
+
+	[u11$1*0 u12$1*0 u13$1*0] (3);
+	[u21$1*-.5 u22$1*-.5 u23$1*-.5] (4);
+	[u31$1*.5 u32$1*.5 u33$1*.5] (5);
+
+	u11-u33*.5;
+
+	ib sb | f1b@0 f2b@1 f3b@2;    
+
+	[f1b-f3b@0 ib@0 sb*1];
+	ib*.5; sb*.3; 
+	f1b-f3b*.5 (6);   
+
+
+output:
+	tech8 tech9;

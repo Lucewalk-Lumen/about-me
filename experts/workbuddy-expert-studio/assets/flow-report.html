@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkBuddy 专家开发工坊 · 九阶段流水线可视化</title>
+<style>
+:root{
+  --bg:#f7f8fa; --card:#ffffff; --ink:#1f2933; --muted:#6b7280;
+  --line:#e5e7eb; --accent:#2563eb; --accent-soft:#eff4ff;
+  --ok:#16a34a; --warn:#d97706; --rail:#cbd5e1;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.6;padding:32px 20px}
+.wrap{max-width:920px;margin:0 auto}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 24px;font-size:14px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.legend .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:4px 12px;font-size:12px;color:var(--muted)}
+.flow{position:relative;padding-left:28px}
+.flow::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--rail)}
+.stage{position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:0 0 16px}
+.stage::before{content:"";position:absolute;left:-21px;top:22px;width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg)}
+.stage .head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.stage .no{font-weight:700;color:var(--accent);font-size:13px}
+.stage .name{font-size:17px;font-weight:600}
+.stage .owner{margin-left:auto;font-size:12px;color:var(--muted)}
+.stage .summary{margin:8px 0 10px;font-size:14px}
+.stage ul{margin:0 0 10px;padding-left:18px;font-size:13px;color:#374151}
+.stage .disc{font-size:12px;background:var(--accent-soft);color:var(--accent);
+  border-radius:8px;padding:6px 10px;display:inline-block}
+footer{color:var(--muted);font-size:12px;margin-top:8px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>WorkBuddy 专家开发工坊 · 九阶段流水线</h1>
+  <p class="sub">九阶段一步步推进：先对齐需求，再设计、撰写、检查、打包与验收；每一步都可复跑、可追溯。</p>
+  <div class="legend"><span class="chip">齐衡 · 交付总监（主理人）</span><span class="chip">沈证 · 立项诊断官</span><span class="chip">高构 · 结构设计官</span><span class="chip">柯码 · 实现分片官</span><span class="chip">严证 · 取证核查官</span><span class="chip">包洁 · 干净落位官</span><span class="chip">史衡 · 验收沉淀官</span></div>
+  <div class="flow">
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 1</span>
+      <span class="name">立项与诊断</span>
+      <span class="owner">负责：沈证</span>
+    </div>
+    <p class="summary">拿到被驳回的包，第一件事不是改，是证伪用户的猜测。</p>
+    <ul><li>解包 → 全量静态分析（不抽查）</li><li>本机实测关键命令，保留原始输出</li><li>按多维标准推演，三档标注（实测 / 静态推断 / 推断待验证）</li></ul>
+    <span class="disc">纪律：结论分三档标注，推测不与根因混淆</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 2</span>
+      <span class="name">结构设计</span>
+      <span class="owner">负责：高构</span>
+    </div>
+    <p class="summary">定包骨架与协作拓扑，把结构纪律落成清晰约定。</p>
+    <ul><li>包骨架：目录结构、清单、成员与技能组织</li><li>成员结构六要素：角色 / 领域 / 框架 / 数据 / 输出 / 回传</li><li>协作拓扑：建团 → 路由 → 中转（成员不直连）→ 回传 → 质量把关</li></ul>
+    <span class="disc">纪律：设计红线：禁用 emoji 图标、渐变发光毛玻璃、AI 模板味文案</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 3</span>
+      <span class="name">实现与分片</span>
+      <span class="owner">负责：柯码</span>
+    </div>
+    <p class="summary">长文档会自动拆分，确保不超出平台能完整读取的长度。</p>
+    <ul><li>主文件按平台口径估算长度，超限即规划拆分</li><li>正文只留流程、规则与索引，长细则移入分片</li><li>能力边界具体到数字，不写「可优化」</li></ul>
+    <span class="disc">纪律：长度按平台口径统计，确保拆分判断准确</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 4</span>
+      <span class="name">质量校验</span>
+      <span class="owner">负责：柯码</span>
+    </div>
+    <p class="summary">把每一步的检查标准写成自动校验，随流程一起运行。</p>
+    <ul><li>检查文件是否齐全、用词是否规范、篇幅是否超限、分片是否完整</li><li>新增功能时，同轮补上对应校验</li><li>确保校验真的会拦住问题：缺失文件必报错、复原后必通过</li></ul>
+    <span class="disc">纪律：每条校验都要验证：既会正确拦截、也不误伤</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 5</span>
+      <span class="name">审计与取证</span>
+      <span class="owner">负责：严证</span>
+    </div>
+    <p class="summary">审查脚本必须真跑一遍，拿产物清单逐个核对。</p>
+    <ul><li>结构化文件写完再读回核对（先写后检等于没检）</li><li>静态扫描命中逐条甄别，不甩命中数</li><li>报告零命中时，必须用反例自证</li></ul>
+    <span class="disc">纪律：误报与漏报同等对待，不为通过而放宽标准</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 6</span>
+      <span class="name">干净打包</span>
+      <span class="owner">负责：包洁</span>
+    </div>
+    <p class="summary">三条禁令：禁指向上一轮名字 / 禁相对路径 / 改完必复跑验证。</p>
+    <ul><li>换版本九步：解压隔离 → 比对 → 排查风险 → 备份 → 回读</li><li>校验在副本环境进行，不在正式产物上直接改</li><li>替换与复核分离（另写独立复核）</li></ul>
+    <span class="disc">纪律：校验在副本进行；替换后另写独立复核</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 7</span>
+      <span class="name">验收放行</span>
+      <span class="owner">负责：史衡</span>
+    </div>
+    <p class="summary">官方校验器通过 ≠ 可以上线；深度审查仍可能发现实质缺陷。</p>
+    <ul><li>验收清单可脚本复跑（期望值 / 当前值 / 严重度）</li><li>一键复跑，结果分通过 / 告警 / 失败</li></ul>
+    <span class="disc">纪律：官方校验通过不等于无缺陷，深度审查不可省</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 8</span>
+      <span class="name">版本治理</span>
+      <span class="owner">负责：史衡</span>
+    </div>
+    <p class="summary">版本号以插件清单为唯一真源；更新日志不作为版本依据。</p>
+    <ul><li>计数类数字实时取自校验结果，不手写</li><li>文档引用校验结果，不手写口径</li></ul>
+    <span class="disc">纪律：版本单一真源；四处一致性核对</span>
+  </section>
+  <section class="stage">
+    <div class="head">
+      <span class="no">阶段 9</span>
+      <span class="name">沉淀资产</span>
+      <span class="owner">负责：史衡</span>
+    </div>
+    <p class="summary">把可复用做法落成经验卡片，回灌演进环。</p>
+    <ul><li>蒸馏六段资产 R/I/A1/A2/E/B，三关：可操作 / 可复用 / 独特</li><li>经验卡片字段：场景 / 方法 / 避坑 / 效果 / 延伸 / 标签</li></ul>
+    <span class="disc">纪律：删除是红线：默认移动代替删除，删除先征求同意</span>
+  </section>
+  </div>
+  <footer>WorkBuddy 专家开发工坊 · 九阶段协作流程一览</footer>
+</div>
+</body>
+</html>

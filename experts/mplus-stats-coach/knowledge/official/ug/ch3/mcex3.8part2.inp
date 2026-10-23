@@ -1,0 +1,22 @@
+TITLE:	this is an example of a negative binomial 
+		model for a count dependent variable with 
+		two covariates
+MONTECARLO:			
+		NAMES = u1 x1 x3;
+		NOBSERVATIONS = 500;
+		NREPS = 1;
+		SEED = 53487;
+		GENERATE = u1(nb);
+		COUNT = u1(nb);
+		SAVE = ex3.8b.dat;	
+MODEL POPULATION:
+		[x1-x3@0];
+		x1-x3@1;
+		u1 ON x1*.5 x3*.3;
+		[u1*1];
+        u1*2;
+MODEL:
+		u1 ON x1*.5 x3*.3;
+		[u1*1];
+        u1*2;
+OUTPUT:	TECH8;

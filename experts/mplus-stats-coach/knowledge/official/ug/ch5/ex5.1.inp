@@ -1,0 +1,6 @@
+TITLE:	this is an example of a CFA with
+	continuous factor indicators 
+DATA:	FILE IS ex5.1.dat;
+VARIABLE:	NAMES ARE y1-y6;
+MODEL:	f1 BY y1-y3;
+	f2 BY y4-y6;

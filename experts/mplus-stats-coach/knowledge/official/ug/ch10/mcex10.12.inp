@@ -1,0 +1,91 @@
+TITLE:	this is an example of a Monte Carlo simulation study for a 
+        two-level LTA with a covariate 
+
+montecarlo:
+	names are u11-u14 u21-u24 x w;
+	generate = u11-u14 u21-u24(1);
+	categorical = u11-u14 u21-u24;
+	genclasses = c1(2) c2(2);
+	classes = c1(2) c2(2);
+	nobservations = 2000;
+	ncsizes = 1;
+	csizes = 100 (20);
+	within = x;
+	between = w;
+	seed = 3454367;
+	nrep = 1;
+	save = ex10.12.dat;
+
+ANALYSIS:   TYPE = twolevel MIXTURE;
+
+MODEL population:
+			%within%
+            %OVERALL%
+			[x@0]; x@1;
+
+            c2#1 ON c1#1*.5 x*1;
+			c1#1 on x*.5;
+
+			%between%
+			%overall%
+			w*1; [w*0];
+			c1#1 on w*1;
+			c2#1 on c1#1*1 w*.5; 
+			c1#1*.5;
+			c2#1*.5;
+
+MODEL population-c1:
+			%between%
+            %c1#1%
+			[u11$1-u14$1*1] (1-4);
+            
+            %c1#2%
+            [u11$1-u14$1*-1] (5-8);
+
+MODEL population-c2:
+			%between%
+            %c2#1%
+            [u21$1-u24$1*1] (1-4);
+            
+            %c2#2%
+            [u21$1-u24$1*-1] (5-8);
+
+
+			
+           
+MODEL:
+			%within%
+            %OVERALL%
+		
+
+            c2#1 ON c1#1*.5 x*1;
+			c1#1 on x*.5;
+
+			%between%
+			%overall%
+		
+			c1#1 on w*1;
+			c2#1 on c1#1*1 w*.5; 
+
+			c1#1*.5;
+			c2#1*.5;
+
+
+MODEL c1:
+			%between%
+            %c1#1%
+			[u11$1-u14$1*1] (1-4);
+            
+            %c1#2%
+            [u11$1-u14$1*-1] (5-8);
+
+MODEL c2:
+			%between%
+            %c2#1%
+            [u21$1-u24$1*1] (1-4);
+            
+            %c2#2%
+            [u21$1-u24$1*-1] (5-8);
+       
+
+OUTPUT:     TECH8 tech9;

@@ -1,0 +1,23 @@
+TITLE: this is an example of a 3PL item response theory (IRT) model
+	using priors for the guessing parameters
+MONTECARLO:			
+	NAMES = u1-u20;
+	NOBSERVATIONS = 5000;
+	NREPS = 1;
+	GENERATE = u1-u20(3pl);
+	CATEGORICAL = u1-u20(3pl);
+	SAVE = ex5.5part3.dat;
+MODEL POPULATION:
+    f by u1-u20*1; f@1;
+	[u1$1-u20$1*0];
+	[u1$2-u20$2*1.386];
+ANALYSIS: 
+	ESTIMATOR = MLR;
+MODEL:
+    f BY u1-u20*1; f@1;
+	[u1$1-u20$1*0];
+	[u1$2-u20$2*1.386] (a1-a20);
+MODEL PRIORS: 
+    a1-a20~N(1.386,1);
+OUTPUT:	
+	TECH8; 

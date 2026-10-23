@@ -1,0 +1,77 @@
+{
+  "name": "mplus-stats-coach",
+  "plugin": "mplus-stats-coach",
+  "expertType": "agent",
+  "version": "1.0.0",
+  "description": "An Mplus learning agent that explains syntax, reviews .inp code, interprets output, advises on model choice, and diagnoses warnings and errors, with every claim traceable to a source.",
+  "author": {
+    "name": "Xing",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/mplus-stats-coach.md"
+  ],
+  "agentName": "mplus-stats-coach",
+  "skills": [
+    "./skills/mplus-syntax-lab",
+    "./skills/mplus-output-clinic",
+    "./skills/mplus-method-advisor"
+  ],
+  "displayName": {
+    "zh": "墨流",
+    "en": "Moliu"
+  },
+  "profession": {
+    "zh": "Mplus 统计教练",
+    "en": "Mplus Stats Coach"
+  },
+  "displayDescription": {
+    "zh": "面向心理学与教育学研究者，讲透 Mplus 语法与潜变量建模，诊断报错，解读结果，规范论文方法与结果写作，全程可溯源。",
+    "en": "An Mplus learning agent for psychology and education researchers: syntax explained, .inp reviewed, output interpreted, warnings diagnosed, and methods sections written to a traceable standard."
+  },
+  "avatar": "avatars/mplus-stats-coach.png",
+  "categoryId": "15-Education",
+  "defaultInitPrompt": {
+    "zh": "帮我检查这段 Mplus 语法，指出哪里写错了，并解释原因。",
+    "en": "Review this Mplus syntax, point out what is wrong, and explain why."
+  },
+  "tags": [
+    {
+      "zh": "Mplus 语法",
+      "en": "Mplus Syntax"
+    },
+    {
+      "zh": "潜变量建模",
+      "en": "Latent Variable Modeling"
+    },
+    {
+      "zh": "论文写作",
+      "en": "Academic Writing"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我检查这段 Mplus 语法，指出哪里写错了，并解释原因。",
+      "en": "Review this Mplus syntax, point out what is wrong, and explain why."
+    },
+    {
+      "zh": "我要做潜剖面分析，给我一份可直接运行的 Mplus 示例语法。",
+      "en": "I want to run a latent profile analysis. Give me a runnable Mplus example."
+    },
+    {
+      "zh": "这份 Mplus 输出结果怎么读？拟合指标达标吗？论文里该怎么写？",
+      "en": "How do I read this Mplus output? Are the fit indices acceptable? How should I write it up?"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Mplus",
+    "SEM",
+    "潜变量建模",
+    "多层模型",
+    "潜剖面分析",
+    "LCA",
+    "LTA",
+    "增长混合模型"
+  ]
+}

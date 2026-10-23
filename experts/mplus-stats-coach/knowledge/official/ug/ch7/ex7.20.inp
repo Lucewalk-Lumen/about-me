@@ -1,0 +1,15 @@
+TITLE:	this is an example of SEM mixture modeling
+DATA:	FILE IS ex7.20.dat;
+VARIABLE:	NAMES ARE y1-y6 c;
+	USEVARIABLES ARE y1-y6;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:
+	%OVERALL%
+	f1 BY y1-y3;
+	f2 BY y4-y6;
+	f2 ON f1;
+	%c#1%
+	[f1*1 f2];
+	f2 ON f1;
+OUTPUT:	TECH1 TECH8;

@@ -1,0 +1,63 @@
+{
+  "form_id": "F113",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "一周出差预订报告表",
+  "file": "templates/COM/form/F113.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "星期",
+    "出差地点",
+    "事由",
+    "备注",
+    "星期一 月       日",
+    "星期二 月       日",
+    "星期三 月       日",
+    "星期四 月       日",
+    "星期五 月       日",
+    "星期六 月       日"
+  ],
+  "n_outline": 10,
+  "body": "星期 | 出差地点 | 事由 | 备注\n星期一 月       日\n星期二 月       日\n星期三 月       日\n星期四 月       日\n星期五 月       日\n星期六 月       日",
+  "body_chars": 103,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-29T07:05:00Z",
+    "modified": "2019-03-29T07:05:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

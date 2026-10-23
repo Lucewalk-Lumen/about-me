@@ -1,0 +1,23 @@
+TITLE:	this is an example of a path analysis
+		with continuous dependent variables
+MONTECARLO:			
+		NAMES = y1-y3 x1-x3;
+		NOBSERVATIONS = 500;
+		NREPS = 1;
+		SEED = 53487;
+		SAVE = ex3.11.dat;	
+MODEL POPULATION:
+		[x1-x3@0];
+		x1-x3@1;
+		y1 ON x1*1 x2*2 x3*3;
+		y2 ON x1*3 x2*2 x3*1;
+		y3 ON y1*.5 y2*.75 x2*1;
+		[y1*-1 y2*0 y3*1];
+		y1*1 y2*1.5 y3*2;
+MODEL:
+		y1 ON x1*1 x2*2 x3*3;
+		y2 ON x1*3 x2*2 x3*1;
+		y3 ON y1*.5 y2*.75 x2*1;
+		[y1*-1 y2*0 y3*1];
+		y1*1 y2*1.5 y3*2;
+OUTPUT:	TECH9;

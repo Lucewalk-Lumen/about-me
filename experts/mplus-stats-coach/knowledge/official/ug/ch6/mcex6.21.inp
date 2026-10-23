@@ -1,0 +1,27 @@
+title:	this is an example of a continuous-time 
+    survival analysis using a parametric model
+montecarlo:
+	names = t x;
+	generate = t(s 20*1);
+	hazardc = t (.05);
+    survival = t(20*1);
+	nobs = 500;
+	nreps = 1;
+	save = ex6.21.dat;
+
+model population:
+    x@0;
+    x@1;
+    [t#1-t#21*.05];
+    t on x*.1;
+
+analysis:
+    basehazard = on;
+ 
+model:
+    [t#1-t#21*.05];
+    t on x*.1;
+
+output:
+	tech8 tech9;
+

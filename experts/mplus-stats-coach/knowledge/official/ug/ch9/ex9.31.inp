@@ -1,0 +1,27 @@
+TITLE:	this is an example of a two-level time
+	series analysis with a univariate first-order autoregressive AR(1) model 
+    for a continuous dependent variable with a covariate, random intercept, 
+    random AR(1) slope, random slope, and random residual variance 
+DATA:	FILE = ex9.31.dat;
+VARIABLE:	NAMES = y x w xm subject;
+	WITHIN = x;
+	BETWEEN = w xm;
+	CLUSTER = subject;
+	LAGGED = y(1);
+DEFINE:	CENTER X (GROUPMEAN);
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+	ESTIMATOR = BAYES;  
+	PROCESSORS = 2;
+	BITERATIONS = (2000);
+MODEL:	%WITHIN%
+	sy | y ON y&1;
+	sx | y ON x;
+	logv | y;  
+	%BETWEEN%
+	y ON w xm;
+	sy ON w xm;
+	sx ON w xm;
+	logv ON w xm;
+	y sy sx logv WITH y sy sx logv; 
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE= PLOT3;

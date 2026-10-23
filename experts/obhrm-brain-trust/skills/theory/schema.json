@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "obhrm://theory-library/schema.json",
+  "title": "OBHRM 理论库 Schema",
+  "description": "定义理论条目合并存储 knowledge/theories/entities.json 与理论索引 knowledge/_theory_index.json 的结构契约。合并存储为条目唯一来源：entities.json 是以 theory_id 为键的对象，每个键的值是一个符合 entry 子 schema 的理论条目。",
+  "$defs": {
+    "theory_id": {
+      "type": "string",
+      "pattern": "^T[0-9]{3}$",
+      "description": "理论稳定主键，形如 T001。为合并存储 entities.json 中的键名。"
+    },
+    "construct_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "构念稳定键（理论名归一化 slug），用于与量表库 / R 库跨库串联。"
+    },
+    "status": {
+      "enum": ["verified", "draft", "deprecated"],
+      "description": "条目生命周期状态。verified = 已核验可用于学术产出。"
+    },
+    "bilingual": {
+      "type": "object",
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "zh": { "type": "string", "minLength": 1 }
+      },
+      "required": ["en", "zh"],
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "title": "理论条目记录（合并存储 knowledge/theories/entities.json 中的单条）",
+      "description": "what / processes / structure / application / references 五段式。允许为空字符串（原始文献未覆盖该段），但键必须存在 —— 索引中的 has_what / has_processes / has_struct / has_app 布尔标记必须与之一致。",
+      "properties": {
+        "theory_id": { "$ref": "#/$defs/theory_id" },
+        "construct_id": { "$ref": "#/$defs/construct_id" },
+        "name": { "$ref": "#/$defs/bilingual" },
+        "title": { "type": "string", "minLength": 1 },
+        "what": { "type": "string", "description": "理论是什么（核心命题）。" },
+        "processes": { "type": "string", "description": "作用机制 / 过程。" },
+        "structure": { "type": "string", "description": "构念结构与关系。" },
+        "application": { "type": "string", "description": "在 OB/HRM 场景中的应用边界。" },
+        "references": { "type": "string", "description": "参考文献原文块。出处追溯必需。" },
+        "status": { "$ref": "#/$defs/status" },
+        "note": { "type": "string" }
+      },
+      "required": [
+        "theory_id", "construct_id", "name", "title", "what",
+        "processes", "structure", "application", "references", "status", "note"
+      ],
+      "additionalProperties": false
+    },
+    "store": {
+      "type": "object",
+      "title": "理论合并存储（knowledge/theories/entities.json）",
+      "description": "条目唯一来源。以 theory_id 为键的对象，每个值符合 entry 子 schema；键名必须与值内 theory_id 一致。",
+      "propertyNames": { "pattern": "^T[0-9]{3}$" },
+      "additionalProperties": { "$ref": "#/$defs/entry" }
+    },
+    "index_node": {
+      "type": "object",
+      "title": "理论索引节点（_theory_index.json.nodes[]）",
+      "description": "has_what / has_processes / has_struct / has_app 必须等于合并存储条目对应字段（what / processes / structure / application）的非空性；n_refs 为 references 的非空行数（「文献未登记」说明段记 0 篇）。",
+      "properties": {
+        "theory_id": { "$ref": "#/$defs/theory_id" },
+        "construct_id": { "$ref": "#/$defs/construct_id" },
+        "name_en": { "type": "string" },
+        "name_zh": { "type": "string" },
+        "has_what": { "type": "boolean" },
+        "has_processes": { "type": "boolean" },
+        "has_struct": { "type": "boolean" },
+        "has_app": { "type": "boolean" },
+        "n_refs": { "type": "integer", "minimum": 0 },
+        "status": { "$ref": "#/$defs/status" },
+        "note": { "type": "string" }
+      },
+      "required": [
+        "theory_id", "construct_id", "name_en", "name_zh",
+        "has_what", "has_processes", "has_struct", "has_app", "n_refs", "status", "note"
+      ],
+      "additionalProperties": false
+    },
+    "index": {
+      "type": "object",
+      "title": "理论索引文件（knowledge/_theory_index.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": { "const": "theory" },
+            "fields": { "type": "string" },
+            "flags": { "type": "string", "description": "索引节点提供的布尔旗标清单，须与 fields 中的四段正文一一对应。" },
+            "count": { "type": "integer", "minimum": 0, "description": "必须等于 nodes 长度且等于合并存储 entities.json 中的条目数。" }
+          },
+          "required": ["schema", "count"],
+          "additionalProperties": true
+        },
+        "nodes": { "type": "array", "items": { "$ref": "#/$defs/index_node" } }
+      },
+      "required": ["_meta", "nodes"],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "form_id": "F102",
+  "module_code": "PER",
+  "module_zh": "绩效管理",
+  "module_order": 4,
+  "kind": "表格",
+  "title": "述职报告评价表",
+  "file": "templates/PER/form/F102.docx",
+  "n_tables": 1,
+  "n_rows": 13,
+  "outline": [
+    "被考核人",
+    "所在部门",
+    "述职报告内容",
+    "期初绩效目标完成情况",
+    "考核期内成功事项分析",
+    "考核期内失败事例分析",
+    "面临的挑战与机会分析",
+    "绩效改进要点与措施",
+    "能力提升要点及方法",
+    "要求得到的支持与帮助",
+    "目标调整及新目标的确定",
+    "其他"
+  ],
+  "n_outline": 12,
+  "body": "被考核人 | 所在部门\n述职报告内容 | 权重 | 评价\n评委A | 评委B | 评委C | 评委D | 评委E\n期初绩效目标完成情况 | %\n考核期内成功事项分析 | %\n考核期内失败事例分析 | %\n面临的挑战与机会分析 | %\n绩效改进要点与措施 | %\n能力提升要点及方法 | %\n要求得到的支持与帮助 | %\n目标调整及新目标的确定 | %\n其他\n考核人签字：                           时间：         年      月      日",
+  "body_chars": 239,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-25T05:35:00Z",
+    "modified": "2019-03-25T05:36:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "performance-management",
+    "owner_agent": "performance-management",
+    "primary_engines": [
+      "okr_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/performance.md"
+      },
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/okr-template-library.md"
+      }
+    ]
+  }
+}

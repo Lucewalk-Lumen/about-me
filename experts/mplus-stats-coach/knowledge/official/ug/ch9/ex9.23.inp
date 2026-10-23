@@ -1,0 +1,20 @@
+TITLE:	    this is an example of a three-level growth model with 
+	        continuous factor indicators and one covariate on each of
+            the three levels
+DATA:       FILE = ex9.23.dat;
+VARIABLE:   NAMES = y1-y4 x w z level2 level3;
+            CLUSTER = level3 level2;
+	        WITHIN = x;
+	        BETWEEN = (level2) w (level3) z;
+ANALYSIS:	TYPE = THREELEVEL; 
+MODEL:      %WITHIN%
+	        iw sw | y1@0 y2@1 y3@2 y4@3;
+            iw sw ON x;
+            %BETWEEN level2%
+	        ib2 sb2 | y1@0 y2@1 y3@2 y4@3;
+            ib2 sb2 ON w;
+            %BETWEEN level3%
+            ib3 sb3 | y1@0 y2@1 y3@2 y4@3;
+            ib3 sb3 ON z;
+            y1-y4@0;
+OUTPUT:     TECH1 TECH8;

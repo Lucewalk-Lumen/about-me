@@ -1,0 +1,62 @@
+{
+  "form_id": "F103",
+  "module_code": "PER",
+  "module_zh": "绩效管理",
+  "module_order": 4,
+  "kind": "表格",
+  "title": "部门绩效考核表",
+  "file": "templates/PER/form/F103.docx",
+  "n_tables": 1,
+  "n_rows": 11,
+  "outline": [
+    "部门：",
+    "考核时间段：",
+    "填表时间：",
+    "考核得分：       分",
+    "序号",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "加分",
+    "减分",
+    "合计与备注"
+  ],
+  "n_outline": 13,
+  "body": "部门： | 考核时间段： | 填表时间： | 考核得分：       分\n序号 | KPI考核指标 | 指标定义 | 权重 | 目标值 | 计分标准 | 责任部门数据提供 | 责任部门数据提供确认 | 得分 | 被考核者确认 | 考核者确认\n基础目标 | 理想目标\n1 | 财务类\n2\n3 | 客户类\n4 | 内部管理\n5 | 学习与成长\n加分\n减分\n合计与备注 | 最高得分不得超过110分。",
+  "body_chars": 197,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-25T09:03:00Z",
+    "modified": "2019-03-25T09:03:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "performance-management",
+    "owner_agent": "performance-management",
+    "primary_engines": [
+      "okr_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/performance.md"
+      },
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/okr-template-library.md"
+      }
+    ]
+  }
+}

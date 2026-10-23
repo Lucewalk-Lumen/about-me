@@ -1,0 +1,18 @@
+TITLE:	this is an example of a two-level growth
+	model for a continuous outcome (three-
+	level analysis)
+DATA:	FILE IS ex9.12.dat;
+VARIABLE:	NAMES ARE y1-y4 x w clus;
+	WITHIN = x;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL;
+MODEL:
+	%WITHIN%
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4 (1);
+	iw sw ON x;
+	%BETWEEN%
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib sb ON w;

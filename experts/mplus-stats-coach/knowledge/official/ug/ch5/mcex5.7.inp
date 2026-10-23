@@ -1,0 +1,32 @@
+TITLE:	this is an example of a Monte Carlo
+		simulation study for a non-linear CFA
+
+MONTECARLO:			
+		NAMES = y1-y5;
+		NOBSERVATIONS = 500;
+		NREPS = 1;
+		SEED = 53487;
+		save = ex5.7.dat;
+
+ANALYSIS:
+		TYPE = RANDOM;
+		algorithm = integration;
+
+MODEL MONTECARLO:
+		
+		f BY y1@1 y2-y5*1;		
+		f*1;
+		fxf | f XWITH f;
+		y1-y5 ON fxf*-.25;
+		y1-y5*1;
+
+MODEL:	
+		
+		f BY y1@1 y2-y5*1;		
+		f*1;
+		fxf | f XWITH f;
+		y1-y5 ON fxf*-.25;
+		y1-y5*1;
+
+OUTPUT:
+		TECH8 TECH9;

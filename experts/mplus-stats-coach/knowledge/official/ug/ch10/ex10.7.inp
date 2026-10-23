@@ -1,0 +1,36 @@
+TITLE:	this is an example of a two-level LCA with
+        categorical latent class indicators and a
+        between-level categorical latent variable
+DATA:	FILE = ex10.7.dat;
+VARIABLE:	NAMES ARE u1-u10 dumb dumw clus;
+	USEVARIABLES = u1-u10;
+	CATEGORICAL = u1-u10;
+          	CLASSES = cb(5) cw(4);
+          	WITHIN = u1-u10;
+          	BETWEEN = cb;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE; 
+	PROCESSORS = 2;
+	STARTS = 100 10;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	%BETWEEN%
+	%OVERALL%
+	cw#1-cw#3 ON cb;
+MODEL cw:
+	%WITHIN%
+	%cw#1%
+	[u1$1-u10$1];
+	[u1$2-u10$2];
+	%cw#2%
+	[u1$1-u10$1];
+	[u1$2-u10$2];
+	%cw#3%
+	[u1$1-u10$1];
+	[u1$2-u10$2];
+	%cw#4%
+	[u1$1-u10$1];
+	[u1$2-u10$2];
+OUTPUT:	TECH1 TECH8;
+

@@ -1,0 +1,27 @@
+TITLE:	this is an example of a two-level mixture
+	regression for a continuous dependent variable
+DATA:	FILE IS ex10.1.dat;
+VARIABLE:	NAMES ARE y x1 x2 w class clus;
+	USEVARIABLES = y x1 x2 w;
+	CLASSES = c (2);
+	WITHIN = x1 x2;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+	STARTS = 0;
+MODEL:	
+	%WITHIN%
+	%OVERALL%
+	y ON x1 x2;
+	c ON x1;
+	%c#1%
+	y ON x2;
+	y;
+	%BETWEEN%
+	%OVERALL% 
+	y ON w; 	
+	c#1 ON w; 
+	c#1*1;
+	%c#1%	
+	[y*2];
+OUTPUT:	TECH1 TECH8;

@@ -1,0 +1,64 @@
+{
+  "form_id": "F098",
+  "module_code": "PER",
+  "module_zh": "绩效管理",
+  "module_order": 4,
+  "kind": "表格",
+  "title": "绩效数据收集通知单",
+  "file": "templates/PER/form/F098.docx",
+  "n_tables": 1,
+  "n_rows": 8,
+  "outline": [
+    "序号",
+    "职务/岗位",
+    "所在公司或部门",
+    "考核指标",
+    "需提供考核数据的项目",
+    "基本目标值",
+    "实际完成值",
+    "备注",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "……"
+  ],
+  "n_outline": 15,
+  "body": "：\n根据绩效管理需要，现需收集/反馈              部门        年     月有关绩效指标完成情况（详见下表）：\n序号 | 职务/岗位 | 所在公司或部门 | 考核指标 | 需提供考核数据的项目 | 基本目标值 | 实际完成值 | 备注\n1\n2\n3\n4\n5\n6\n……\n请及时组织贵部相关员工做好绩效数据收集工作，并于考核月度结束后次月3日内填写完毕后反馈使用部门。\n特此通知。\n绩效数据来源部门签收人：                              绩效数据来源部门签名：                           绩效数据接部门位签名：\n时间：        年       月      日                              数据提交时间：        年       月      日          接受数据时间：        年       月      日",
+  "body_chars": 420,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-25T03:49:00Z",
+    "modified": "2019-03-25T03:50:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "performance-management",
+    "owner_agent": "performance-management",
+    "primary_engines": [
+      "okr_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/performance.md"
+      },
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/okr-template-library.md"
+      }
+    ]
+  }
+}

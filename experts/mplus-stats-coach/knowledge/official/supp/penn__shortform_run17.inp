@@ -1,0 +1,61 @@
+title: 
+    Nominal M, Continuous Y
+    Using a latent class variable to represent M
+    Simulating x-m interaction effect on y by class-varying y on x
+    Step 1: Saving the data for external Monte Carlo analysis
+   
+montecarlo:
+    names = y x;
+    genclasses = c(3);
+    classes = c(3);
+    nobs = 800;
+    nreps = 500;
+    repsave = all;
+    save = n800xmrep*.dat;
+    cutpoints = x(0);
+   
+model population:
+    %overall%
+    x@1;
+    [c#1*-1];
+    [c#2*-.5];
+    c#1 on x*.7;
+    c#2 on x*.3;
+    y on x*0;
+    y*.75;
+    %c#1%
+    [y*-2];
+    y on x*-.5;
+    %c#2% 
+    [y*0];
+    y on x*-.3;
+    %c#3%
+    [y*2];
+    y on x*-.2;
+
+   
+analysis:
+    type = mixture;
+    estimator = ml;
+
+model:
+    %overall%
+    [c#1*-1];
+    [c#2*-.5];
+    c#1 on x*.7;
+    c#2 on x*.3;
+    y on x*0;
+    y*.75;
+    %c#1%
+    [y*-2];
+    y on x*-.5;
+    %c#2% 
+    [y*0];
+    y on x*-.3;
+    %c#3%
+    [y*2];
+    y on x*-.2;
+
+    
+
+

@@ -1,0 +1,28 @@
+title:		this is an example of a linear growth 
+	model for a continuous outcome 
+
+montecarlo:
+	names = y11-y14;
+	nobs = 500;
+	nreps = 1;
+	save = ex6.1.dat;
+
+model population:
+
+	i s | y11@0 y12@1 y13@2 y14@3;
+	[y11-y14@0]; ! this is actually default in MC
+	y11-y14*.5;
+	[i*.5 s*1];
+	i*1; s*.2; i with s*.1;
+
+model:
+	
+	i s | y11@0 y12@1 y13@2 y14@3;
+
+	y11-y14*.5;
+	[i*.5 s*1];
+	i*1; s*.2; i with s*.1;
+
+output:
+	tech9;
+

@@ -1,0 +1,16 @@
+TITLE:	this is an example of a zero-inflated 
+	Poisson regression carried out as a two-
+	class model
+DATA:	FILE IS ex7.25.dat;
+VARIABLE:	NAMES ARE u1 x1 x3;
+	COUNT IS u1;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	
+	%OVERALL%
+	u1 ON x1 x3;
+	c ON x1 x3;
+	%c#1%
+	[u1@-15];
+	u1 ON x1@0 x3@0; 
+OUTPUT:	TECH1 TECH8;

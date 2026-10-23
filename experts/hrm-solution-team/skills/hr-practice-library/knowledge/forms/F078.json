@@ -1,0 +1,60 @@
+{
+  "form_id": "F078",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "新员工培训跟踪评估表",
+  "file": "templates/TRN/form/F078.docx",
+  "n_tables": 1,
+  "n_rows": 13,
+  "outline": [
+    "姓名",
+    "部门",
+    "岗位",
+    "入职日期",
+    "一、入职以来所感受到公司的企业文化？请用几个字概括。",
+    "二、新员工参加培训以后的出勤状况和工作表现？",
+    "三、新进人员对各项规章制度的了解情况？",
+    "四、新进人员对本职工作的了解和掌握情况？",
+    "五、目前在工作中所表现出来的优势？",
+    "六、目前在工作中所表现出来的不足？",
+    "七、目前在工作中是否遇到困难？是否需要提供协助？",
+    "八、在以后的工作中针对自己的不足采取的改进措施？如何落实这些改进措施？",
+    "直接主管"
+  ],
+  "n_outline": 13,
+  "body": "姓名 | 部门 | 岗位\n入职日期 | 培训日期 | 部门负责人\n一、入职以来所感受到公司的企业文化？请用几个字概括。\n二、新员工参加培训以后的出勤状况和工作表现？\n三、新进人员对各项规章制度的了解情况？\n四、新进人员对本职工作的了解和掌握情况？\n五、目前在工作中所表现出来的优势？\n六、目前在工作中所表现出来的不足？\n七、目前在工作中是否遇到困难？是否需要提供协助？\n八、在以后的工作中针对自己的不足采取的改进措施？如何落实这些改进措施？\n九、根据目前你对公司的了解，是否有在公司发展的规划？你准备怎样规划自己的发展通道？\n十、对新员工专业知识和专业技能进行评核，分析其工作专长，判断其适合何种工作？并列举理由说明。\n直接主管 | 培训专员 | 人力资源部",
+  "body_chars": 329,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-22T03:12:00Z",
+    "modified": "2019-04-26T07:11:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "form_id": "F077",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "年度部门培训需求表",
+  "file": "templates/TRN/form/F077.docx",
+  "n_tables": 1,
+  "n_rows": 5,
+  "outline": [
+    "部门",
+    "部门员工数",
+    "序号",
+    "合计",
+    "其他培训需求建议：",
+    "部门负责人意见： 填写日期：     年     月     日"
+  ],
+  "n_outline": 6,
+  "body": "部门 | 部门员工数\n序号 | 所需培训内容（或课程名称） | 培训方式 | 培训岗位 | 培训时间 | 培训人数 | 培训需求原因 | 备注\n合计\n其他培训需求建议：\n部门负责人意见： 填写日期：     年     月     日\n填表说明：1.培训方式：内部培训、外部培训。\n2.培训需求原因：持证上岗、新技术培训、岗位职责变动要求、绩效改进，其他（请注明）。\n3.本需求计划表由各部门经理统一填写后，总经理审核后，交到行政部统一汇总制订下一年度培训计划。",
+  "body_chars": 231,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-21T05:50:00Z",
+    "modified": "2019-03-21T05:50:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

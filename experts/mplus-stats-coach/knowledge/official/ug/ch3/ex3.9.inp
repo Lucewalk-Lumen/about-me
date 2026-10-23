@@ -1,0 +1,9 @@
+TITLE:	this is an example of a random coefficient
+          regression
+DATA:	FILE IS ex3.9.dat;
+VARIABLE:	NAMES ARE y x1 x2;
+DEFINE:	CENTER x1 x2 (GRANDMEAN);
+ANALYSIS:	TYPE = RANDOM;
+MODEL:	s | y ON x1;
+	s WITH y;
+	y s ON x2; 

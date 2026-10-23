@@ -1,0 +1,89 @@
+title:	this is an example of a hidden Markov 
+	model with four time points
+
+montecarlo:
+	names are u1-u4;
+	generate = u1-u4(1);
+	categorical = u1-u4;
+	genclasses = c1(2) c2(2) c3(2) c4(2);
+	classes = c1(2) c2(2) c3(2) c4(2);
+	nobs = 5000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex8.12.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	[c2#1-c4#1*0] (4);
+	
+	c4#1 on c3#1*2 (3);	
+	c3#1 on c2#1*2 (3);
+	c2#1 on c1#1*2 (3);
+
+model population-c1:
+	%c1#1%
+	[u1$1*1] (1);
+	%c1#2%
+	[u1$1*-1] (2);
+
+model population-c2:
+	%c2#1%
+	[u2$1*1] (1);
+	%c2#2%
+	[u2$1*-1] (2);
+
+model population-c3:
+	%c3#1%
+	[u3$1*1] (1);
+	%c3#2%
+	[u3$1*-1] (2);
+
+model population-c4:
+	%c4#1%
+	[u4$1*1] (1);
+	%c4#2%
+	[u4$1*-1] (2);
+
+
+model:
+
+	%overall%
+	
+	[c2#1-c4#1*0] (4);
+	
+	c4#1 on c3#1*2 (3);	
+	c3#1 on c2#1*2 (3);
+	c2#1 on c1#1*2 (3);
+
+model c1:
+	%c1#1%
+	[u1$1*1] (1);
+	%c1#2%
+	[u1$1*-1] (2);
+
+model c2:
+	%c2#1%
+	[u2$1*1] (1);
+	%c2#2%
+	[u2$1*-1] (2);
+
+model c3:
+	%c3#1%
+	[u3$1*1] (1);
+	%c3#2%
+	[u3$1*-1] (2);
+
+model c4:
+	%c4#1%
+	[u4$1*1] (1);
+	%c4#2%
+	[u4$1*-1] (2);
+
+
+output:
+	tech8 tech9;	

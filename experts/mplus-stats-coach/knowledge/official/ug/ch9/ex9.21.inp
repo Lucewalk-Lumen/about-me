@@ -1,0 +1,31 @@
+TITLE:	    this an example of a Monte Carlo simulation
+            for a three-level path analysis model with a
+            continuous and a categorical dependent variable 
+DATA:       FILE = ex9.21.dat;
+VARIABLE:   NAMES = u y2 y y3 x w z level2 level3;
+            CATEGORICAL  = u;
+		    WITHIN = x;
+		    BETWEEN = y2 (level2) w (level3) z y3;
+            CLUSTER = level3 level2;
+ANALYSIS:   TYPE = threelevel;
+            ESTIMATOR = BAYES;
+            PROCESSORS = 2;
+            BITERATIONS = (1000);
+MODEL:      %WITHIN%
+	        u ON y x;
+	        y ON x;
+	        %BETWEEN level2%
+            u ON w y y2;
+	        y ON w;
+            y2 ON w;
+            y WITH y2;
+	        y; y2; u;
+            %BETWEEN level3%
+            u ON y y2;
+            y ON z;
+            y2 ON z;
+            y3 ON y y2;
+            y WITH y2;
+	        y; y2; u; y3;
+            u WITH y3;
+OUTPUT: 	TECH1 TECH8;

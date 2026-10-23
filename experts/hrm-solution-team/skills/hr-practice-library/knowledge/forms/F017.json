@@ -1,0 +1,57 @@
+{
+  "form_id": "F017",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "人力资源需求分析表",
+  "file": "templates/HRP/form/F017.docx",
+  "n_tables": 1,
+  "n_rows": 6,
+  "outline": [
+    "部门",
+    "填写人",
+    "分析年度",
+    "需求分析详情",
+    "序号",
+    "意见审批",
+    "部门经理意见"
+  ],
+  "n_outline": 7,
+  "body": "编号：                                        填表时间：\n部门 | 填写人 | 分析年度\n需求分析详情\n序号 | 岗位设置 | 在岗人员情况/评价 | 人力资源需求分析\n岗位名称 | 编制数量 | 现有人数 | 在岗人数 | 评价结果 | 综合评价 | 需补充人数 | 需求到位时间 | 需求人员特殊要求\n意见审批\n部门经理意见 | 人力资源意见",
+  "body_chars": 193,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-11T03:48:00Z",
+    "modified": "2019-03-11T03:49:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

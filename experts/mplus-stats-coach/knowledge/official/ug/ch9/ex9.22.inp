@@ -1,0 +1,30 @@
+TITLE:	    this is an example of a three-level MIMIC with 
+	        continuous factor indicators, two covariates on within,
+            one covariate on between 2, one covariate on between 3,
+	        and random slopes on both within and between 2
+DATA:       FILE = ex9.22.dat;
+VARIABLE:   NAMES = y1-y6 x1 x2 w z level2 level3;
+            CLUSTER = level3 level2;
+	        WITHIN = x1 x2;
+	        BETWEEN = (level2) w (level3) z;
+ANALYSIS:	TYPE = THREELEVEL RANDOM; 
+MODEL:      %WITHIN%
+	        fw1 BY y1-y3;
+            fw2 BY y4-y6;
+            fw1 ON x1;
+	        s | fw2 ON x2;
+            %BETWEEN level2%
+            fb2 BY y1-y6;
+	        sf2 | fb2 ON w;
+	        ss | s ON w;
+            fb2 WITH s;
+            %BETWEEN level3%
+            fb3 BY y1-y6;
+            fb3 ON z;
+            s ON z;
+            sf2 ON z;
+            ss ON z;
+            fb3 WITH s sf2 ss;
+            s WITH sf2 ss;
+            sf2 WITH ss;
+OUTPUT:     TECH1 TECH8;

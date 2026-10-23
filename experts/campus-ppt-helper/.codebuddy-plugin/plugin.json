@@ -1,0 +1,168 @@
+{
+  "name": "campus-ppt-helper",
+  "version": "1.0.3",
+  "description": "A campus presentation expert team covering teaching, thesis-defense, internship and Party-building scenarios, from information collection and structure planning to official-skill PPT building and four-dimension quality assurance.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/campus-ppt-lead.md",
+    "./agents/campus-ppt-collector.md",
+    "./agents/campus-ppt-asset-retriever.md",
+    "./agents/campus-ppt-content-architect.md",
+    "./agents/campus-ppt-maker.md",
+    "./agents/campus-ppt-qa.md"
+  ],
+  "skills": [
+    "./skills/campus-ppt-core",
+    "./skills/campus-ppt-collect",
+    "./skills/campus-ppt-media",
+    "./skills/campus-ppt-design",
+    "./skills/campus-ppt-make",
+    "./skills/campus-ppt-qa"
+  ],
+  "dependencies": {
+    "connectors": ["tencent-docs"]
+  },
+  "expertType": "team",
+  "agentName": "campus-ppt-lead",
+  "teamInfo": {
+    "leadAgent": "campus-ppt-lead",
+    "memberAgents": [
+      "campus-ppt-collector",
+      "campus-ppt-asset-retriever",
+      "campus-ppt-content-architect",
+      "campus-ppt-maker",
+      "campus-ppt-qa"
+    ]
+  },
+  "displayName": {
+    "en": "Campus PPT Helper Team",
+    "zh": "校园演示帮手团"
+  },
+  "profession": {
+    "en": "Campus PPT Helper Team",
+    "zh": "校园演示帮手团"
+  },
+  "displayDescription": {
+    "en": "A lead and five specialists run the pipeline: source collection, structure planning, deck build, 4-dimension QA - covering teaching, defense, internship and Party-building; 15 built-in brand templates apply automatically.",
+    "zh": "主理人带五位成员：采集资料、定结构、生成PPT、四维质检，覆盖教学答辩实习党建；内置15套品牌模板，出片即可用。"
+  },
+  "license": "MIT",
+  "avatar": "avatars/campus-ppt-team.png",
+  "categoryId": "15-Education",
+  "defaultInitPrompt": {
+    "zh": "做一份教学课件：先收集资料、定好结构，再用内置品牌模板生成 PPT 并做质检。",
+    "en": "Build a teaching deck: gather sources, plan the structure, then build the PPT with the built-in brand templates and run QA."
+  },
+  "plugin": "campus-ppt-helper",
+  "tags": [
+    {
+      "en": "Info Collect & Retrieve",
+      "zh": "信息采集与检索"
+    },
+    {
+      "en": "Structure & Layout",
+      "zh": "结构与版式策划"
+    },
+    {
+      "en": "Official Build & QA",
+      "zh": "官方技能制作与质检"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "做一份教学课件：先收集资料、定好结构，再用内置品牌模板生成 PPT 并做质检。",
+      "en": "Build a teaching deck: gather sources, plan the structure, then build the PPT with the built-in brand templates and run QA."
+    },
+    {
+      "zh": "我是广财学生，用内置品牌模板出一份毕业答辩 PPT。",
+      "en": "I'm a GDUFE student; build my thesis-defense deck with the built-in brand templates."
+    },
+    {
+      "zh": "用内置党政模板出一份党课 PPT，做完全面质检一遍。",
+      "en": "Build a Party lecture deck with the built-in Party-government templates, then run a full quality check."
+    }
+  ],
+  "members": [
+    {
+      "id": "campus-ppt-lead",
+      "name": {
+        "en": "Qi Cheng",
+        "zh": "主理人·齐呈"
+      },
+      "profession": {
+        "en": "Think Tank Director",
+        "zh": "智囊团总监"
+      },
+      "avatar": "avatars/campus-ppt-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "campus-ppt-collector",
+      "name": {
+        "en": "Cai Zhen",
+        "zh": "采集员·采真"
+      },
+      "profession": {
+        "en": "Information Collection Specialist",
+        "zh": "资料采集专员"
+      },
+      "avatar": "avatars/campus-ppt-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "campus-ppt-asset-retriever",
+      "name": {
+        "en": "Zhen Ku",
+        "zh": "检索员·甄库"
+      },
+      "profession": {
+        "en": "Asset Retrieval Specialist",
+        "zh": "资产检索专员"
+      },
+      "avatar": "avatars/campus-ppt-asset-retriever.png",
+      "role": "member"
+    },
+    {
+      "id": "campus-ppt-content-architect",
+      "name": {
+        "en": "Li Gang",
+        "zh": "设计师·立纲"
+      },
+      "profession": {
+        "en": "Content Structure Specialist",
+        "zh": "内容结构专员"
+      },
+      "avatar": "avatars/campus-ppt-content-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "campus-ppt-maker",
+      "name": {
+        "en": "Cheng Zhang",
+        "zh": "制作员·成章"
+      },
+      "profession": {
+        "en": "Official Build Specialist",
+        "zh": "官方制作专员"
+      },
+      "avatar": "avatars/campus-ppt-maker.png",
+      "role": "member"
+    },
+    {
+      "id": "campus-ppt-qa",
+      "name": {
+        "en": "Yan Jian",
+        "zh": "质检员·严检"
+      },
+      "profession": {
+        "en": "4-Dimension QA Specialist",
+        "zh": "四维质检专员"
+      },
+      "avatar": "avatars/campus-ppt-qa.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+title: 
+    Simulating x-m interaction effect on y using a random slope    
+    Count Y, continuous M
+    Step 1: saving the data for external Monte Carlo analysis
+
+montecarlo:
+    names = y m x;
+    generate = y(p);
+    count = y(p);
+    nobs = 400;
+    nreps = 500;
+    repsave = all;
+    save = xmrep*.dat;
+    cutpoints = x(0);
+   
+model population:
+    x@1;
+    [y*-.7]; ! this log rate gives a rate of about 0.5
+    y on x*.3;
+    beta1 | y on m;
+    beta1 on x*.2;
+    [beta1*.4];
+    beta1@0;
+    [m*.5];
+    m on x*.5;
+    m*.75;
+
+analysis:
+    type = random;
+    estimator = ml;
+
+model:
+    [y*-.7] (beta0);
+    y on x*.3 (beta2);
+    beta1 | y on m;
+    beta1 on x*.2 (beta3);
+    [beta1*.4] (beta1);
+    beta1@0;
+    [m*.5] (gamma0);
+    m on x*.5 (gamma1);
+    m*.75 (sig);
+
+model constraint:
+    new(ind*.45 dir*.4
+    ey1 ey0 mum1 mum0 ay1 ay0 bym11 bym10 bym01 bym00
+    eym11 eym10 eym01 eym00 tie de total pie);
+    ind=beta1*gamma1+beta3*gamma1;
+    dir=beta3*gamma0+beta2;
+    ey1=exp(beta0+beta2);
+    ey0=exp(beta0);
+    mum1=gamma0+gamma1;
+    mum0=gamma0;
+    ay1=2*sig*(beta1+beta3);
+    ay0=2*sig*beta1;
+    bym11=(ay1/mum1+2)/2;
+    bym10=(ay1/mum0+2)/2;
+    bym01=(ay0/mum1+2)/2;
+    bym00=(ay0/mum0+2)/2;
+    eym11=exp((bym11*bym11-1)*mum1*mum1/(2*sig));
+    eym10=exp((bym10*bym10-1)*mum0*mum0/(2*sig));
+    eym01=exp((bym01*bym01-1)*mum1*mum1/(2*sig));
+    eym00=exp((bym00*bym00-1)*mum0*mum0/(2*sig));
+    tie=ey1*eym11-ey1*eym10;
+    de=ey1*eym10-ey0*eym00;
+    total=ey1*eym11-ey0*eym00;
+    pie=ey0*eym01-ey0*eym00;
+
+
+
+

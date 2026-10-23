@@ -1,0 +1,250 @@
+{
+  "name": "hrm-solution-team",
+  "version": "1.1.2",
+  "description": "China-market HRM team: one orchestrator plus eight specialists across org planning, talent sourcing, recruitment, talent, performance, compensation, compliance and SBTI assessment, gated by a unified compliance layer.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/hrm-solution-team-lead.md",
+    "./agents/org-planning.md",
+    "./agents/recruitment-pipeline.md",
+    "./agents/talent-development.md",
+    "./agents/performance-management.md",
+    "./agents/compensation-strategy.md",
+    "./agents/labor-compliance.md",
+    "./agents/personality-assessment.md",
+    "./agents/talent-sourcing.md"
+  ],
+  "skills": [
+    "./skills/hrm-solution",
+    "./skills/org-planning",
+    "./skills/recruitment-pipeline",
+    "./skills/talent-development",
+    "./skills/performance-management",
+    "./skills/compensation-strategy",
+    "./skills/labor-compliance",
+    "./skills/personality-assessment",
+    "./skills/hr-practice-library",
+    "./skills/talent-sourcing"
+  ],
+  "expertType": "team",
+  "agentName": "hrm-solution-team-lead",
+  "teamInfo": {
+    "leadAgent": "hrm-solution-team-lead",
+    "memberAgents": [
+      "org-planning",
+      "recruitment-pipeline",
+      "talent-development",
+      "performance-management",
+      "compensation-strategy",
+      "labor-compliance",
+      "personality-assessment",
+      "talent-sourcing"
+    ]
+  },
+  "displayName": {
+    "en": "HRM Smart Team",
+    "zh": "HRM智能方案团"
+  },
+  "profession": {
+    "zh": "HRM智能方案团",
+    "en": "HRM Smart Team"
+  },
+  "displayDescription": {
+    "en": "Covering the six HR modules from org planning to labor compliance, plus proactive talent sourcing, interview coaching, training design and HR digitalization, with built-in SBTI assessment under a unified compliance gate",
+    "zh": "组织规划到劳动合规六大模块，含寻访、面试陪练、培训设计与数字化落地，内置人才测评，统一合规把关。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "09-OperationsHR",
+  "license": "MIT",
+  "defaultInitPrompt": {
+    "zh": "帮我做一次组织人效诊断，输出六大模块健康度评分与改进优先级。",
+    "en": "Run an HR efficiency diagnosis: health scores across the six modules and ranked improvement priorities."
+  },
+  "plugin": "hrm-solution-team",
+  "tags": [
+    {
+      "en": "Human Resources",
+      "zh": "人力资源"
+    },
+    {
+      "en": "Talent & Organization",
+      "zh": "人才与组织"
+    },
+    {
+      "en": "Labor Compliance",
+      "zh": "劳动合规"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我做一次组织人效诊断，输出六大模块健康度评分与改进优先级。",
+      "en": "Run an HR efficiency diagnosis: health scores across the six modules and ranked improvement priorities."
+    },
+    {
+      "en": "Design a compensation and performance linkage plan for a 200-person tech company.",
+      "zh": "帮我为一个 200 人的技术公司设计薪酬绩效联动方案。"
+    },
+    {
+      "en": "Review this employment contract for compliance risks under China labor law.",
+      "zh": "帮我审查这份劳动合同在中国劳动法下的合规风险。"
+    }
+  ],
+  "members": [
+    {
+      "id": "hrm-solution-team-lead",
+      "name": {
+        "en": "He Hongtu",
+        "zh": "何鸿图"
+      },
+      "displayName": {
+        "en": "He Hongtu",
+        "zh": "何鸿图"
+      },
+      "profession": {
+        "zh": "方案总调度",
+        "en": "Solution Lead"
+      },
+      "avatar": "avatars/lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "org-planning",
+      "name": {
+        "en": "Zu Zhiyuan",
+        "zh": "祖知远"
+      },
+      "displayName": {
+        "en": "Zu Zhiyuan",
+        "zh": "祖知远"
+      },
+      "profession": {
+        "zh": "组织规划师",
+        "en": "Organization Planning Specialist"
+      },
+      "avatar": "avatars/org-planning.png",
+      "role": "member"
+    },
+    {
+      "id": "recruitment-pipeline",
+      "name": {
+        "en": "Zhao Guwen",
+        "zh": "招顾闻"
+      },
+      "displayName": {
+        "en": "Zhao Guwen",
+        "zh": "招顾闻"
+      },
+      "profession": {
+        "zh": "招聘总监",
+        "en": "Recruitment Director"
+      },
+      "avatar": "avatars/recruitment-pipeline.png",
+      "role": "member"
+    },
+    {
+      "id": "talent-development",
+      "name": {
+        "en": "Pei Yucai",
+        "zh": "裴育才"
+      },
+      "displayName": {
+        "en": "Pei Yucai",
+        "zh": "裴育才"
+      },
+      "profession": {
+        "zh": "人才发展总监",
+        "en": "Talent Development Director"
+      },
+      "avatar": "avatars/talent-development.png",
+      "role": "member"
+    },
+    {
+      "id": "performance-management",
+      "name": {
+        "en": "Ji Xiaoping",
+        "zh": "纪晓评"
+      },
+      "displayName": {
+        "en": "Ji Xiaoping",
+        "zh": "纪晓评"
+      },
+      "profession": {
+        "zh": "绩效管理总监",
+        "en": "Performance Management Director"
+      },
+      "avatar": "avatars/performance-management.png",
+      "role": "member"
+    },
+    {
+      "id": "compensation-strategy",
+      "name": {
+        "en": "Xin Chouda",
+        "zh": "辛酬达"
+      },
+      "displayName": {
+        "en": "Xin Chouda",
+        "zh": "辛酬达"
+      },
+      "profession": {
+        "zh": "薪酬福利总监",
+        "en": "Compensation & Benefits Director"
+      },
+      "avatar": "avatars/compensation-strategy.png",
+      "role": "member"
+    },
+    {
+      "id": "labor-compliance",
+      "name": {
+        "en": "Fa Shouzheng",
+        "zh": "法守正"
+      },
+      "displayName": {
+        "en": "Fa Shouzheng",
+        "zh": "法守正"
+      },
+      "profession": {
+        "zh": "劳动合规总监",
+        "en": "Labor Compliance Director"
+      },
+      "avatar": "avatars/labor-compliance.png",
+      "role": "member"
+    },
+    {
+      "id": "personality-assessment",
+      "name": {
+        "en": "Tao Xintong",
+        "zh": "陶欣彤"
+      },
+      "displayName": {
+        "en": "Tao Xintong",
+        "zh": "陶欣彤"
+      },
+      "profession": {
+        "zh": "人才测评师",
+        "en": "Talent Assessor"
+      },
+      "avatar": "avatars/personality-assessment.png",
+      "role": "member"
+    },
+    {
+      "id": "talent-sourcing",
+      "name": {
+        "en": "Kuang Xuncai",
+        "zh": "邝寻才"
+      },
+      "displayName": {
+        "en": "Kuang Xuncai",
+        "zh": "邝寻才"
+      },
+      "profession": {
+        "zh": "寻访总监",
+        "en": "Talent Sourcing Director"
+      },
+      "avatar": "avatars/talent-sourcing.png",
+      "role": "member"
+    }
+  ]
+}

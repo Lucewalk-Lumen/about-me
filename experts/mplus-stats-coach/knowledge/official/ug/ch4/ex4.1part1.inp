@@ -1,0 +1,7 @@
+TITLE:	this is an example of an exploratory 
+		factor analysis with continuous 
+		factor indicators
+DATA:		FILE IS ex4.1a.dat;
+VARIABLE:	NAMES ARE y1-y12;
+ANALYSIS:	TYPE = EFA 1 4;
+OUTPUT:	MODINDICES;

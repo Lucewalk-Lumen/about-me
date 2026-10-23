@@ -1,0 +1,63 @@
+TITLE:	this is an example of a two-level SEM with 
+	continuous factor indicators and a random 
+	slope for a factor
+
+montecarlo:
+	names are y1-y5 w;
+	nobservations = 500;
+	ncsizes = 3;
+	csizes = 10 (5) 50 (3) 30 (10);
+	seed = 58459;
+	nreps = 1;
+	save = ex9.10.dat;
+	between = w;
+
+ANALYSIS:	
+	TYPE = TWOLEVEL RANDOM; 
+
+	algo = int;
+
+	integration = 10;
+
+MODEL POPULATION: 
+
+	%WITHIN%
+	fw BY y1@1 y2-y4*1;
+	y1-y4*1;
+	fw*1;
+	s | y5 on fw;
+	y5*.5;
+
+	%BETWEEN%
+	[w@0]; w*1;
+	fb BY y1@1 y2-y4*1;
+	y1-y4@0;
+	fb*.5;
+	y5 on fb*.5 w*.6;
+	y5*.3;
+	s on fb*.2 w*.3;
+	[s*1]; s*.5;
+
+MODEL: 
+
+	%WITHIN%
+	fw BY y1@1 y2-y4*1;
+	y1-y4*1;
+	fw*1;
+	s | y5 on fw;
+	y5*.5;
+
+	%BETWEEN%
+
+	fb BY y1@1 y2-y4*1;
+	y1-y4@0;
+	fb*.5;
+	y5 on fb*.5 w*.6;
+	y5*.3;
+	s on fb*.2 w*.3;
+	[s*1]; s*.5;
+
+
+
+output:
+	tech8 tech9;

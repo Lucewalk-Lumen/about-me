@@ -1,0 +1,62 @@
+title: 
+    Nominal M, Continuous Y
+    Using a latent class variable to represent M
+    Simulating x-m interaction effect on y by class-varying y on x
+    Step 2: External Monte Carlo analysis
+data:
+    file = n800xmreplist.dat;
+    type = montecarlo;
+
+variable:
+    names = y x m;
+    usev = y x;
+    classes = c(3);
+    knownclass = c(m=1 m=2 m=3);
+
+analysis:
+    type = mixture;
+    estimator = ml;
+
+model:
+    %overall%
+    [c#1*-1] (gamma01);
+    [c#2*-.5] (gamma02);
+    c#1 on x*.7 (gamma11);
+    c#2 on x*.3 (gamma12);
+    y on x*0;
+    y*.75;
+    %c#1%
+    [y*-2] (beta01);
+    y on x*-.5 (beta11);
+    %c#2% 
+    [y*0] (beta02);
+    y on x*-.3 (beta12);
+    %c#3%
+    [y*2] (beta03);
+    y on x*-.2 (beta13);
+
+model constraint:
+    new(denom0*1.9744 denom1*2.5595 p10*.1863 p11*.2894 p20*.3072 
+    p21*.3199 p30*.5065 p31*.3907 term11*-.1162 term10*.3538 
+    term01*.2026 term00*.6404
+    de*-.2866 tie*-.47 total*-.7566 pie*-.4378);
+    ! index is x' for multinomial denominator
+    denom0=exp(gamma01)+exp(gamma02)+1;
+    denom1=exp(gamma01+gamma11)+exp(gamma02+gamma12)+1;
+    ! first index is class, second x' for probabilities
+    p10=exp(gamma01)/denom0;
+    p11=exp(gamma01+gamma11)/denom1;
+    p20=exp(gamma02)/denom0;
+    p21=exp(gamma02+gamma12)/denom1;
+    p30=1/denom0;
+    p31=1/denom1;
+    ! first index is x, second x', summing over class
+    term11=(beta01+beta11)*p11+(beta02+beta12)*p21+(beta03+beta13)*p31;
+    term10=(beta01+beta11)*p10+(beta02+beta12)*p20+(beta03+beta13)*p30;
+    term01=(beta01)*p11+(beta02)*p21+(beta03)*p31;
+    term00=(beta01)*p10+(beta02)*p20+(beta03)*p30;
+    de=term10-term00;
+    tie=term11-term10;
+    total=term11-term00;
+    pie=term01-term00;
+    

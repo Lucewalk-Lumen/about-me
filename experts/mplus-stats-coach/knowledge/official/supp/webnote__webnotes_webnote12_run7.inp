@@ -1,0 +1,12 @@
+title: M0 model
+
+variable:  NAMES ARE y1-y5;
+           GROUPING IS y5 (0 = g1 1 = g2);
+
+data: file=2.dat;
+
+analysis: estimator=mlr; 
+
+model: f1 BY y1-y4; 
+
+output: svalues;

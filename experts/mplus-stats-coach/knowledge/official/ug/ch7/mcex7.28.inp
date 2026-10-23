@@ -1,0 +1,65 @@
+title:	this is an example of a MZ-DZ AE twin model 
+    for a binary outcome using logit and ML and doing
+    the 2 groups via 2 classes
+	
+montecarlo:
+	names = u1 u2 dz;
+	nobs = 5000;
+    generate = u1-u2(1 p) dz(1);
+	categorical = u1 u2 dz;
+    genclasses = cdz(2);
+    classes = cdz(2);
+	nreps = 1;
+	save = ex7.28.dat;
+
+model population:
+    %overall%
+    [u1$1-u2$1*0] (1);
+    ! factors are needed to correlate u1 and u2
+    ! because off-diagonal Theta is not available
+    ! with ML for categorical outcomes
+    f1 by u1@1; 
+    f2 by u2@1;
+    [f1-f2@0]; 
+    f1-f2*2.7 (varf);
+    %cdz#1% ! mz class
+    [dz$1@15]; ! P(dz=1)=0
+    f1 WITH f2*2.69999(covmz); ! reduce true value of 2.7 
+    ! to avoid generating singular cov matrix for f
+    %cdz#2% ! dz class
+    [dz$1@-15]; ! P(dz=1)=1
+    f1 WITH f2*1.52(covdz);
+
+analysis:
+    type = mixture;
+    algorithm = integration;
+    link = probit;
+    estimator = mlf;
+
+model:
+    %overall%
+    [u1$1-u2$1*0] (1);
+    ! factors are needed to correlate u1 and u2
+    ! because off-diagonal Theta is not available
+    ! with ML for categorical outcomes
+    f1 by u1;
+    f2 by u2;
+    [f1-f2@0]; 
+    f1-f2*2.7 (varf);
+    %cdz#1% ! mz class
+    [dz$1@15]; ! P(dz=1)=0
+    f1 WITH f2*2.7(covmz); 
+    %cdz#2% ! dz class
+    [dz$1@-15]; ! P(dz=1)=1
+    f1 WITH f2*1.52(covdz);
+
+model constraint:
+    NEW(a*2.36 c*.34 h*.64); ! a and c are variances here
+    ! e is not a free parameter but is fixed at 1
+    varf = a + c + .001;  ! add a ridge to avoid singularity
+    covmz = a + c;
+    covdz = 0.5*a + c;
+    h = a/(a + c + 1);
+
+output:
+	tech8 tech9;

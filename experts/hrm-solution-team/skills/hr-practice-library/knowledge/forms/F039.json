@@ -1,0 +1,76 @@
+{
+  "form_id": "F039",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "员工晋升推荐表",
+  "file": "templates/REC/form/F039.docx",
+  "n_tables": 1,
+  "n_rows": 9,
+  "outline": [
+    "被推荐人姓名",
+    "性别",
+    "年龄",
+    "加入公司时间",
+    "毕业学校",
+    "现任部门、职位",
+    "工作经历（本人填写）",
+    "工作业绩及自我评价（本人填写）",
+    "部门负责人意见",
+    "行政人事部意见",
+    "总经理（室）意见"
+  ],
+  "n_outline": 11,
+  "body": "被推荐人姓名 | 性别 | 年龄\n加入公司时间 | 文化程度 | 专业\n毕业学校 | 毕业时间\n现任部门、职位 | 拟推荐部门、职位\n工作经历（本人填写） | （请从您最后毕业时间起开始填写。此处如填写不下，请另附说明）\n工作业绩及自我评价（本人填写） | （重点填写您在本公司的工作业绩。若此处填写不下，请另附说明）\n部门负责人意见 | （推荐意见包括：对该员工工作表现的基本评价；职业素质、工作能力、工作态度、就任新职位的潜力等；该员工对新岗位的工作意愿）\n行政人事部意见 | （是否符合岗位基本要求、以往的绩效考核情况） 签字：     年     月     日\n总经理（室）意见 | 签字：     年     月     日",
+  "body_chars": 318,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-19T05:33:00Z",
+    "modified": "2019-03-19T05:33:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

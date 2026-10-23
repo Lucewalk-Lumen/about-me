@@ -1,0 +1,93 @@
+Title:
+    this is an example of modeling with data 
+    not missing at random (NMAR) using a 
+    pattern-mixture model 
+
+    Generating missing data indicators m
+    (analyzed as an arbitrary model)
+
+    Note that the m's are renamed as z's
+    in the real-data run of ex11.4
+
+    Note that the Monte Carlo setup is the same as
+    for mcex11.2 and mcex11.3
+
+MonteCarlo:
+    names = y0 y1-y5 m1-m5;
+    nobs = 1000;
+    nreps = 1;
+    missing = y1-y5;
+    generate =  m1-m5(1);
+    categorical = m1-m5;
+    
+    save = ex11.4.dat;
+
+Model population:
+   
+    i s | y0@0 y1@1 y2@2 y3@3 y4@4 y5@5;
+    i*.25 s*.1;
+    y0*.4 y1*.4 y2*.35 y3*.3 y4*.4 y5*.5;
+
+     [m1$1*2];
+     [m2$1*1];
+     [m3$1*0];
+     [m4$1*0];
+     [m5$1*-1];
+
+!   Missing at t as a function of y_t-1, y_t, and previous m's
+
+    m1 on y0*-.1 y1*1;
+    m2 on y1*-.1 y2*1 m1*.5;
+    m3 on y2*-.1 y3*1 m1-m2*.5;
+    m4 on y3*-.1 y4*1 m1-m3*.5;
+    m5 on y4*-.1 y5*1 m1-m4*.5;
+
+    [i*2 s*-1];
+ 
+Model missing:
+    
+    ! missing on y if m=1 (high logit)
+    [y1-y5@-15];
+    y1 on m1@30;
+    y2 on m2@30;
+    y3 on m3@30;
+    y4 on m4@30;
+    y5 on m5@30;
+
+Analysis:
+    algo = int;
+    integ = montecarlo;
+
+Model:
+    ! analyzed as Diggle-Kenward selection
+    ! which is not the model that generated
+    ! the data, and the m's are not scored
+    ! as survival dropout indicators so DK
+    ! analysis is not achieved
+   
+    i s | y0@0 y1@1 y2@2 y3@3 y4@4 y5@5;
+    i*.25 s*.1;
+    y0*.4 y1*.4 y2*.35 y3*.3 y4*.4 y5*.5;
+
+    [m1$1*2];
+     [m2$1*1];
+     [m3$1*0];
+     [m4$1*0];
+     [m5$1*-1];
+
+    m1 on y0*-1 (11)
+    y1*1 (12);
+    m2 on y1*-1 (11)
+    y2*1 (12);
+    m3 on y2*-1 (11)
+    y3*1 (12);
+    m4 on y3*-1 (11)
+    y4*1 (12);
+    m5 on y4*-1 (11)
+    y5*1 (12);
+   
+    [i*2 s*-1];
+  
+Output:
+    tech9;
+

@@ -1,0 +1,9 @@
+# SAMPLE PLACEHOLDER — NOT real data. Generated for package completeness.
+# Tab-separated, header=TRUE. Replace with your own extraversion item responses before running the §5.1 R snippet.
+# Column names match data$q_262 / $q_1480 / $q_819 / $q_1180 / $q_1740 used by r-language-data-analysis-manual.md. Likert 1-5.
+q_262	q_1480	q_819	q_1180	q_1740
+4	2	5	3	4
+3	3	4	2	5
+5	1	5	4	3
+2	4	3	5	2
+4	3	4	3	4

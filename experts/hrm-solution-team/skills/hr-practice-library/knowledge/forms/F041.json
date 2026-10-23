@@ -1,0 +1,84 @@
+{
+  "form_id": "F041",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "员工试用期考核表",
+  "file": "templates/REC/form/F041.docx",
+  "n_tables": 1,
+  "n_rows": 43,
+  "outline": [
+    "姓名",
+    "入职时间",
+    "职位",
+    "期满总评",
+    "项目",
+    "适应性",
+    "工作能力",
+    "理解能力",
+    "人际关系",
+    "责任心",
+    "判断力",
+    "进取心",
+    "合作性",
+    "勤奋性",
+    "工作效果",
+    "得分标准：A：正式任用70～100；B：延长试用50～70；C：停止试用50以下",
+    "考核意见"
+  ],
+  "n_outline": 17,
+  "body": "姓名 | 入职时间 | 职位 | 期满总评\n项目 | 考核目标 | 评分标准 | 初评 | 复评 | 用人部门 | 人力部\n适应性 | 是否了解并遵守公司的各项规章制度，是否了解本职工作职责、工作程序及工作情况。 10分 | 被动接受公司各种信息，不主动了解工作职责和工作程序。（1～4分）\n基本了解工作职责和工作程序，能够遵照执行。（5～7分）\n主动搜集与本岗位有关信息，了解并遵守公司各种规章制度。（8～9分）\n主动搜集与公司有关的各种信息，能够对工作职责和工作程序提出建设性意见。熟知并遵守公司的各项规章制度。（10分）\n工作能力 | 在工作实践是否掌握了业务知识，并把理论知识与业务知识更好的结合起来。 12分 | 知识和经验不足，常常出错，需要加以指点。（1～6分）\n具备目前工作所必需的知识和经验。（7～9分）\n具备丰富的知识和经验，能克服困难，做好工作。（10～11分）\n具备丰富的知识和经验，能够胜任比目前更重要的工作。（12分）\n理解能力 | 对上级指示、指导的理解能力。 12分 | 理解能力较差，需要反复指导。（1～3分）\n理解能力一般，需要加以提示。（4～6分）\n对上级的指导、训示能够理解，不需要他人帮助。（7～9分）\n理解能力较高。（10～11分）\n理解力超群，并能举一反三。（12分）\n人际关系 | 是否能尽快融入新环境与他人友好交往。 10分 | 沉默寡言，不善与人交谈。（1～5分）\n与他人交谈较少，仅限于工作往来。（6～7分）\n很快与同事和其他部门的员工建立友好的往来。（8～9分）\n善于广泛与他人交往，建立良好的人际关系。（10分）\n责任心 | 对履行责任的态度如何，在实际工作中是否敢于承担责任。 12分 | 对工作漫不经心，没有责任感。（1～3分）\n能够完成任务，但有时较草率。（4～7分）\n工作认真，并能克服困难完成任务。（8～10分）\n有责任感，工作尽心，敢于承担责任。（11～12分）\n判断力 | 对工作中出现的问题能做出判断与估计的能力。 4分 | 常出现判断失误，琐碎之事举棋不定。（1～2分）\n判断过程需要较长时间，并偶有失误。（3分）\n判断正确、迅速（4分）\n进取心 | 不断学习工作有关的新知识，接受新观念的能力。 10分 | 常常在困难面前退缩。（1～4分）\n满足现状，不思进取。（5～6分）\n能运用所学的知识，做好本职工作。（7～9分）\n工作精益求精，善于学习与工作有关的新知识，提高工作能力。（10分）\n合作性 | 能否与周围同事配合好，齐心协力做好工作。 10分 | 经常关心自我利益，与同事合作共事有困难。（1～3分）\n能够与同事合作，不产生摩擦和冲突。（4～6分）\n乐于与他人合作共同完成本部门工作。（7～9分）\n以集体利益为重，与任何人都能合作，并对他人施以好的影响。（10分）\n勤奋性 | 工作是否勤奋努力，是否遵守工作纪律。 8分 | 缺乏工作热情，工作不主动。（1～4分）\n能够遵守工作纪律，完成工作任务。（5～7分）\n工作勤恳认真，经常提前完成工作任务。（8分）\n工作效果 | 工作效果如何。 12分 | 经常出错或失误，不能单独工作。（1～4分）\n偶尔出错或失误，需要加以指导。（5～8分）\n工作效果良好，能够胜任。（9～11分）\n工作成绩优秀，有发展潜力。（12分）\n得分标准：A：正式任用70～100；B：延长试用50～70；C：停止试用50以下\n考核意见 | 用人部门意见： 签名： | 总经理意见： 签名：",
+  "body_chars": 1448,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T08:31:00Z",
+    "modified": "2019-04-26T07:00:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [
+      "okr_tracker.sh"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

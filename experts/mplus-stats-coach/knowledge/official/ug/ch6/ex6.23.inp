@@ -1,0 +1,12 @@
+TITLE:	this is an example of an N=1 time series analysis 
+    with a univariate first-order autoregressive AR(1) model 
+    for a continuous dependent variable
+DATA:	FILE = ex6.23.dat;
+VARIABLE:	NAMES = y;
+	LAGGED = y(1);
+ANALYSIS:	ESTIMATOR = BAYES;  
+	PROCESSORS = 2;
+	BITERATIONS = (2000); 
+MODEL:	y ON y&1;
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE = PLOT3;

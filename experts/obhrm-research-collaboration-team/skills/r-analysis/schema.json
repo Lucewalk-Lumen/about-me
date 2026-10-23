@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "obhrm://r-analysis/schema.json",
+  "title": "OBHRM R 分析库 Schema",
+  "description": "定义 R 方法索引 knowledge/_r_index.json 的结构契约。R 库不使用逐条 JSON（无 Rxxx.json），条目实体是 scripts/**/<method_no>.R 脚本本体；因此索引节点的 file 字段必须指向真实存在的脚本。",
+  "$defs": {
+    "method_no": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$",
+      "description": "方法编号，形如 1.1 / 9.2.1 / 10.3.8。同时作为跨库 R 方法适用性映射的主键。"
+    },
+    "index_node": {
+      "type": "object",
+      "title": "R 方法索引节点（_r_index.json.nodes[]）",
+      "properties": {
+        "method_no": { "$ref": "#/$defs/method_no" },
+        "title": { "type": "string", "minLength": 1 },
+        "stage": {
+          "type": "string",
+          "pattern": "^[0-9]{2}-[a-z-]+$",
+          "description": "所属分析阶段目录名，如 01-env / 07-sem / 15-glmm。必须与 file 的目录段一致。"
+        },
+        "deps": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "所需 R 包清单。"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^scripts/[0-9]{2}-[a-z-]+/.+\\.R$",
+          "description": "相对 r-analysis/ 的脚本路径。必须真实存在，否则为悬空引用。"
+        },
+        "use_condition": { "type": "string", "description": "方法适用条件（统计前提）。" }
+      },
+      "required": ["method_no", "title", "stage", "deps", "file", "use_condition"],
+      "additionalProperties": false
+    },
+    "index": {
+      "type": "object",
+      "title": "R 方法索引文件（knowledge/_r_index.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": { "const": "r-script" },
+            "gate": { "type": "string" },
+            "count": { "type": "integer", "minimum": 0, "description": "必须等于 nodes 长度且等于 scripts/ 下 .R 文件数。" }
+          },
+          "required": ["schema", "count"],
+          "additionalProperties": true
+        },
+        "nodes": { "type": "array", "items": { "$ref": "#/$defs/index_node" } }
+      },
+      "required": ["_meta", "nodes"],
+      "additionalProperties": false
+    }
+  }
+}

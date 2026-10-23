@@ -1,0 +1,12 @@
+{
+  "name": "minutes-organizer",
+  "version": "1.0.2",
+  "private": true,
+  "description": "会议纪要 Word 生成（scripts/generate_docx.js）的 Node 依赖清单，docx 锁定版本。",
+  "scripts": {
+    "install:docx": "npm install"
+  },
+  "dependencies": {
+    "docx": "8.5.0"
+  }
+}

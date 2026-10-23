@@ -1,0 +1,24 @@
+TITLE:	two-level time series analysis with a bivariate cross-lagged model 
+    for two factors and continuous factor indicators with random intercepts 
+    and random slopes 
+DATA:	FILE = ex9.36.dat;
+VARIABLE:	NAMES = y11-y14 y21-y24 subject;
+	CLUSTER = subject;
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+	ESTIMATOR = BAYES;  
+	PROCESSORS = 2;
+	BITERATIONS = (2000); 
+MODEL:	%WITHIN%
+	f1 BY y11-y14(&1); 
+	f2 BY y21-y24(&1); 
+	s11 | f1 ON f1&1;
+	s22 | f2 ON f2&1;
+	s12 | f1 ON f2&1;
+	s21 | f2 ON f1&1;       
+	%BETWEEN%
+	fb1 BY y11-y14*;
+	fb2 BY y21-y24*;
+	fb1-fb2@1;
+	fb1 fb2 s11-s21 WITH fb1 fb2 s11-s21;
+OUTPUT:	TECH1 TECH8;
+PLOT:	TYPE = PLOT3;

@@ -1,0 +1,22 @@
+TITLE:	this is an example of a factor (IRT)
+		mixture analysis with binary latent class
+		and factor indicators
+DATA:		FILE = ex7.27.dat;
+VARIABLE:	NAMES = u1-u8;
+	CATEGORICAL = u1-u8;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+	ALGORITHM = INTEGRATION;
+	STARTS = 50 5;
+MODEL:	%OVERALL%
+	f BY u1-u8;
+	[f@0];	
+	%c#1%
+	f BY u1@1 u2-u8;
+	f;
+	[u1$1-u8$1];
+	%c#2%
+	f BY u1@1 u2-u8;
+	f;
+	[u1$1-u8$1];
+OUTPUT:	TECH1 TECH8;

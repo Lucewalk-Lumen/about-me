@@ -1,0 +1,2668 @@
+{
+  "_meta": {
+    "schema": "cross-library-index",
+    "purpose": "串联 量表库 / 理论库 / R分析库；关联均为源文档文本真实匹配，未编造。",
+    "link_keys": {
+      "scale_theory": "量表 background 文本包含理论名称",
+      "theory_scale": "理论文本包含量表变量名",
+      "r_libraries": "R 方法按语义关键词归类为适用量表库/理论库",
+      "stable_key": "construct_id（变量名/理论名的归一化 slug），已填充并用于 construct_index 主键"
+    },
+    "note": "已补全 construct_id：每个 scale/theory 均带稳定构念键；construct_index 以构念聚合跨库节点，有向边携带 construct_id 溯源。边数口径：scale_to_theory/theory_to_scale 按链接总数计（62/7）；58/6 为带关联对象数（键数）。",
+    "counts": {
+      "scale_nodes": 599,
+      "theory_nodes": 134,
+      "r_nodes": 108,
+      "edges_scale_theory": 62,
+      "edges_theory_scale": 7,
+      "r_applicable_scale": 54,
+      "r_applicable_theory": 80,
+      "construct_index_entries": 134
+    }
+  },
+  "libraries": {
+    "scale": {
+      "index": "scale-library/knowledge/_scale_index.json",
+      "dir": "scale-library/knowledge/scales/"
+    },
+    "theory": {
+      "index": "theory-library/knowledge/_theory_index.json",
+      "dir": "theory-library/knowledge/theories/"
+    },
+    "r": {
+      "index": "r-analysis/knowledge/_r_index.json",
+      "dir": "r-analysis/scripts/"
+    }
+  },
+  "construct_index": {
+    "consequences_norms_inaction_model": {
+      "construct_id": "consequences_norms_inaction_model",
+      "label_zh": "CNI模型",
+      "label_en": "Consequences-Norms-Inaction Model",
+      "theory_ids": [
+        "T001"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "person_affect_cognition_execution": {
+      "construct_id": "person_affect_cognition_execution",
+      "label_zh": "I-PACE理论模型",
+      "label_en": "Person-Affect-Cognition-Execution",
+      "theory_ids": [
+        "T002"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "jd_r模型": {
+      "construct_id": "jd_r模型",
+      "label_zh": "工作需求-资源",
+      "label_en": "JD-R模型",
+      "theory_ids": [
+        "T003"
+      ],
+      "scale_ids": [
+        "S329"
+      ],
+      "r_methods": []
+    },
+    "perma_theory_of_well_being": {
+      "construct_id": "perma_theory_of_well_being",
+      "label_zh": "PERMA幸福理论",
+      "label_en": "PERMA Theory of Well-Being",
+      "theory_ids": [
+        "T004"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "stimulus_organism_response": {
+      "construct_id": "stimulus_organism_response",
+      "label_zh": "SOR理论",
+      "label_en": "stimulus-organism-response",
+      "theory_ids": [
+        "T005"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "person_environment_fit_theory_p_e_fit": {
+      "construct_id": "person_environment_fit_theory_p_e_fit",
+      "label_zh": "个人-环境匹配理论",
+      "label_en": "Person-Environment Fit Theory，P-E Fit",
+      "theory_ids": [
+        "T006"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "interaction_ritual_chain_theory": {
+      "construct_id": "interaction_ritual_chain_theory",
+      "label_zh": "互动仪式链理论",
+      "label_en": "Interaction Ritual Chain Theory",
+      "theory_ids": [
+        "T007"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "transactive_memory_system": {
+      "construct_id": "transactive_memory_system",
+      "label_zh": "交互记忆系统",
+      "label_en": "Transactive Memory System",
+      "theory_ids": [
+        "T008"
+      ],
+      "scale_ids": [
+        "S594"
+      ],
+      "r_methods": []
+    },
+    "transactional_leadership": {
+      "construct_id": "transactional_leadership",
+      "label_zh": "交易型领导理论",
+      "label_en": "Transactional Leadership",
+      "theory_ids": [
+        "T009"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "information_processing_theory": {
+      "construct_id": "information_processing_theory",
+      "label_zh": "信息加工理论",
+      "label_en": "Information Processing Theory",
+      "theory_ids": [
+        "T010"
+      ],
+      "scale_ids": [
+        "S184",
+        "S293",
+        "S355",
+        "S476"
+      ],
+      "r_methods": []
+    },
+    "comprehensive_model_of_information_seeking": {
+      "construct_id": "comprehensive_model_of_information_seeking",
+      "label_zh": "信息寻求综合模型",
+      "label_en": "Comprehensive Model of Information Seeking",
+      "theory_ids": [
+        "T011"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "information_cascade": {
+      "construct_id": "information_cascade",
+      "label_zh": "信息流瀑",
+      "label_en": "Information Cascade",
+      "theory_ids": [
+        "T012"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "gaze_theory": {
+      "construct_id": "gaze_theory",
+      "label_zh": "凝视理论",
+      "label_en": "Gaze Theory",
+      "theory_ids": [
+        "T013"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "innovation_resistance_theory": {
+      "construct_id": "innovation_resistance_theory",
+      "label_zh": "创新抵抗理论",
+      "label_en": "Innovation Resistance Theory",
+      "theory_ids": [
+        "T014"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "stereotype_content_model": {
+      "construct_id": "stereotype_content_model",
+      "label_zh": "刻板印象内容模型",
+      "label_en": "Stereotype Content Model",
+      "theory_ids": [
+        "T015"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "dual_process_theory": {
+      "construct_id": "dual_process_theory",
+      "label_zh": "双过程理论",
+      "label_en": "Dual Process Theory",
+      "theory_ids": [
+        "T016"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "transformational_leadership": {
+      "construct_id": "transformational_leadership",
+      "label_zh": "变革型领导理论",
+      "label_en": "Transformational Leadership",
+      "theory_ids": [
+        "T017"
+      ],
+      "scale_ids": [
+        "S446",
+        "S595"
+      ],
+      "r_methods": []
+    },
+    "narrative_transportation_theory": {
+      "construct_id": "narrative_transportation_theory",
+      "label_zh": "叙述传输理论",
+      "label_en": "Narrative Transportation Theory",
+      "theory_ids": [
+        "T018"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "affordance_theory": {
+      "construct_id": "affordance_theory",
+      "label_zh": "可供性理论",
+      "label_en": "Affordance Theory",
+      "theory_ids": [
+        "T019"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "schema_theory": {
+      "construct_id": "schema_theory",
+      "label_zh": "图式理论",
+      "label_en": "Schema Theory",
+      "theory_ids": [
+        "T020"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "field_theory": {
+      "construct_id": "field_theory",
+      "label_zh": "场域理论",
+      "label_en": "Field Theory",
+      "theory_ids": [
+        "T021"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "scene_theory": {
+      "construct_id": "scene_theory",
+      "label_zh": "场景理论",
+      "label_en": "Scene Theory",
+      "theory_ids": [
+        "T022"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "complex_adaptive_systems": {
+      "construct_id": "complex_adaptive_systems",
+      "label_zh": "复杂适应系统",
+      "label_en": "Complex Adaptive Systems",
+      "theory_ids": [
+        "T023"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "media_richness_theory_mrt": {
+      "construct_id": "media_richness_theory_mrt",
+      "label_zh": "媒介丰富性理论",
+      "label_en": "Media Richness Theory, MRT",
+      "theory_ids": [
+        "T024"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "media_multiplexity_theory": {
+      "construct_id": "media_multiplexity_theory",
+      "label_zh": "媒介多重性理论",
+      "label_en": "Media Multiplexity Theory",
+      "theory_ids": [
+        "T025"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "medium_theory": {
+      "construct_id": "medium_theory",
+      "label_zh": "媒介情景理论",
+      "label_en": "Medium Theory",
+      "theory_ids": [
+        "T026"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "objectification_theory": {
+      "construct_id": "objectification_theory",
+      "label_zh": "客体化理论",
+      "label_en": "Objectification Theory",
+      "theory_ids": [
+        "T027"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "family_systems_theory": {
+      "construct_id": "family_systems_theory",
+      "label_zh": "家庭系统理论",
+      "label_en": "Family Systems Theory",
+      "theory_ids": [
+        "T028"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "attribution_theory": {
+      "construct_id": "attribution_theory",
+      "label_zh": "归因理论",
+      "label_en": "Attribution theory",
+      "theory_ids": [
+        "T029"
+      ],
+      "scale_ids": [
+        "S306",
+        "S512",
+        "S582",
+        "S598"
+      ],
+      "r_methods": []
+    },
+    "flow": {
+      "construct_id": "flow",
+      "label_zh": "心流理论",
+      "label_en": "Flow",
+      "theory_ids": [
+        "T030"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "mental_accounting_theory": {
+      "construct_id": "mental_accounting_theory",
+      "label_zh": "心理账户理论",
+      "label_en": "Mental Accounting Theory",
+      "theory_ids": [
+        "T031"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "situated_learning_theory": {
+      "construct_id": "situated_learning_theory",
+      "label_zh": "情境学习理论",
+      "label_en": "Situated Learning Theory",
+      "theory_ids": [
+        "T032"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "affective_events_theory": {
+      "construct_id": "affective_events_theory",
+      "label_zh": "情感事件理论",
+      "label_en": "Affective Events Theory",
+      "theory_ids": [
+        "T033"
+      ],
+      "scale_ids": [
+        "S582"
+      ],
+      "r_methods": []
+    },
+    "affect_as_information_theory": {
+      "construct_id": "affect_as_information_theory",
+      "label_zh": "情感信息理论",
+      "label_en": "Affect-as-Information Theory",
+      "theory_ids": [
+        "T034"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "theory_of_emotional_intelligence": {
+      "construct_id": "theory_of_emotional_intelligence",
+      "label_zh": "情绪智力理论",
+      "label_en": "Theory of Emotional Intelligence",
+      "theory_ids": [
+        "T035"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "sensemaking_theory": {
+      "construct_id": "sensemaking_theory",
+      "label_zh": "意义构建理论",
+      "label_en": "Sensemaking Theory",
+      "theory_ids": [
+        "T036"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "sensory_marketing": {
+      "construct_id": "sensory_marketing",
+      "label_zh": "感官营销",
+      "label_en": "Sensory Marketing",
+      "theory_ids": [
+        "T037"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "technology_organization_environment_toe": {
+      "construct_id": "technology_organization_environment_toe",
+      "label_zh": "技术-组织-环境框架",
+      "label_en": "Technology-Organization-Environment, TOE",
+      "theory_ids": [
+        "T038"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "technology_acceptance_model": {
+      "construct_id": "technology_acceptance_model",
+      "label_zh": "技术接受模型",
+      "label_en": "Technology Acceptance Model",
+      "theory_ids": [
+        "T039"
+      ],
+      "scale_ids": [
+        "S033"
+      ],
+      "r_methods": []
+    },
+    "dramaturgical_theory": {
+      "construct_id": "dramaturgical_theory",
+      "label_zh": "拟剧理论",
+      "label_en": "Dramaturgical Theory",
+      "theory_ids": [
+        "T040"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "policy_network_theory": {
+      "construct_id": "policy_network_theory",
+      "label_zh": "政策网络理论",
+      "label_en": "Policy Network Theory",
+      "theory_ids": [
+        "T041"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cultural_discount": {
+      "construct_id": "cultural_discount",
+      "label_zh": "文化折扣理论",
+      "label_en": "Cultural Discount",
+      "theory_ids": [
+        "T042"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cultural_dimensions_theory": {
+      "construct_id": "cultural_dimensions_theory",
+      "label_zh": "文化维度理论",
+      "label_en": "Cultural Dimensions Theory",
+      "theory_ids": [
+        "T043"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cultural_identity": {
+      "construct_id": "cultural_identity",
+      "label_zh": "文化认同",
+      "label_en": "Cultural Identity",
+      "theory_ids": [
+        "T044"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cultural_capital_theory": {
+      "construct_id": "cultural_capital_theory",
+      "label_zh": "文化资本理论",
+      "label_en": "Cultural Capital Theory",
+      "theory_ids": [
+        "T045"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "textual_poachers": {
+      "construct_id": "textual_poachers",
+      "label_zh": "文本盗猎者",
+      "label_en": "Textual Poachers",
+      "theory_ids": [
+        "T046"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "expectation_confirmation_theory_ect": {
+      "construct_id": "expectation_confirmation_theory_ect",
+      "label_zh": "期望确认理论",
+      "label_en": "Expectation-Confirmation Theory, ECT",
+      "theory_ids": [
+        "T047"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "framing_theory": {
+      "construct_id": "framing_theory",
+      "label_zh": "框架理论",
+      "label_en": "Framing Theory",
+      "theory_ids": [
+        "T048"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "elaborated_intrusion_theory": {
+      "construct_id": "elaborated_intrusion_theory",
+      "label_zh": "欲望侵入理论",
+      "label_en": "Elaborated Intrusion Theory",
+      "theory_ids": [
+        "T049"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "theory_of_consumption_values": {
+      "construct_id": "theory_of_consumption_values",
+      "label_zh": "消费价值理论",
+      "label_en": "Theory of Consumption Values",
+      "theory_ids": [
+        "T050"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cultivation_analysis": {
+      "construct_id": "cultivation_analysis",
+      "label_zh": "涵化理论",
+      "label_en": "cultivation analysis",
+      "theory_ids": [
+        "T051"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "imprinting_theory": {
+      "construct_id": "imprinting_theory",
+      "label_zh": "烙印理论",
+      "label_en": "Imprinting Theory",
+      "theory_ids": [
+        "T052"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "trait_activation_theory": {
+      "construct_id": "trait_activation_theory",
+      "label_zh": "特质激活理论",
+      "label_en": "Trait Activation Theory",
+      "theory_ids": [
+        "T053"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "theory_of_reasoned_action_tra": {
+      "construct_id": "theory_of_reasoned_action_tra",
+      "label_zh": "理性行为理论",
+      "label_en": "Theory of Reasoned Action, TRA",
+      "theory_ids": [
+        "T054"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "goal_setting_theory": {
+      "construct_id": "goal_setting_theory",
+      "label_zh": "目标设定理论",
+      "label_en": "Goal-Setting Theory",
+      "theory_ids": [
+        "T055"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "relative_deprivation_theory": {
+      "construct_id": "relative_deprivation_theory",
+      "label_zh": "相对剥夺理论",
+      "label_en": "Relative Deprivation Theory",
+      "theory_ids": [
+        "T056"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "seci_model_of_knowledge_dimensions": {
+      "construct_id": "seci_model_of_knowledge_dimensions",
+      "label_zh": "知识创造与转换的SECI模型",
+      "label_en": "SECI Model of Knowledge Dimensions",
+      "theory_ids": [
+        "T057"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_presence_theory": {
+      "construct_id": "social_presence_theory",
+      "label_zh": "社会临场感理论",
+      "label_en": "Social Presence Theory",
+      "theory_ids": [
+        "T058"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_facilitation_theory": {
+      "construct_id": "social_facilitation_theory",
+      "label_zh": "社会促进理论",
+      "label_en": "Social Facilitation Theory",
+      "theory_ids": [
+        "T059"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_learning_theory": {
+      "construct_id": "social_learning_theory",
+      "label_zh": "社会学习理论",
+      "label_en": "Social Learning Theory",
+      "theory_ids": [
+        "T060"
+      ],
+      "scale_ids": [
+        "S176"
+      ],
+      "r_methods": []
+    },
+    "social_penetration_theory": {
+      "construct_id": "social_penetration_theory",
+      "label_zh": "社会渗透理论",
+      "label_en": "Social Penetration Theory",
+      "theory_ids": [
+        "T061"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_role_theory": {
+      "construct_id": "social_role_theory",
+      "label_zh": "社会角色理论",
+      "label_en": "Social Role Theory",
+      "theory_ids": [
+        "T062"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_identity_theory": {
+      "construct_id": "social_identity_theory",
+      "label_zh": "社会认同理论",
+      "label_en": "Social Identity Theory",
+      "theory_ids": [
+        "T063"
+      ],
+      "scale_ids": [
+        "S001",
+        "S351",
+        "S418"
+      ],
+      "r_methods": []
+    },
+    "social_capital_theory": {
+      "construct_id": "social_capital_theory",
+      "label_zh": "社会资本理论",
+      "label_en": "Social Capital Theory",
+      "theory_ids": [
+        "T064"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "algorithmic_imaginary": {
+      "construct_id": "algorithmic_imaginary",
+      "label_zh": "算法想象",
+      "label_en": "Algorithmic Imaginary",
+      "theory_ids": [
+        "T065"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "organizational_information_processing_theory_oipt": {
+      "construct_id": "organizational_information_processing_theory_oipt",
+      "label_zh": "组织信息加工理论",
+      "label_en": "Organizational Information Processing Theory, OIPT",
+      "theory_ids": [
+        "T066"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "organization_change_theory": {
+      "construct_id": "organization_change_theory",
+      "label_zh": "组织变革理论",
+      "label_en": "Organization Change Theory",
+      "theory_ids": [
+        "T067"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "structuration_theory": {
+      "construct_id": "structuration_theory",
+      "label_zh": "结构化理论",
+      "label_en": "Structuration Theory",
+      "theory_ids": [
+        "T068"
+      ],
+      "scale_ids": [
+        "S012"
+      ],
+      "r_methods": []
+    },
+    "com_b": {
+      "construct_id": "com_b",
+      "label_zh": "能力、机会、动机和行为模型",
+      "label_en": "COM-B",
+      "theory_ids": [
+        "T069"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "self_determination_theory": {
+      "construct_id": "self_determination_theory",
+      "label_zh": "自我决定理论",
+      "label_en": "Self-determination theory",
+      "theory_ids": [
+        "T070"
+      ],
+      "scale_ids": [
+        "S168",
+        "S330",
+        "S393",
+        "S466",
+        "S522",
+        "S596"
+      ],
+      "r_methods": []
+    },
+    "self_categorization_theory": {
+      "construct_id": "self_categorization_theory",
+      "label_zh": "自我分类理论",
+      "label_en": "Self-Categorization Theory",
+      "theory_ids": [
+        "T071"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "self_presentation_theory": {
+      "construct_id": "self_presentation_theory",
+      "label_zh": "自我呈现理论",
+      "label_en": "Self-Presentation Theory",
+      "theory_ids": [
+        "T072"
+      ],
+      "scale_ids": [
+        "S543"
+      ],
+      "r_methods": []
+    },
+    "self_directed_learning": {
+      "construct_id": "self_directed_learning",
+      "label_zh": "自我导向学习",
+      "label_en": "Self-Directed Learning",
+      "theory_ids": [
+        "T073"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "self_regulation_theory": {
+      "construct_id": "self_regulation_theory",
+      "label_zh": "自我调节理论",
+      "label_en": "Self-Regulation Theory",
+      "theory_ids": [
+        "T074"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "role_stress": {
+      "construct_id": "role_stress",
+      "label_zh": "角色压力",
+      "label_en": "Role Stress",
+      "theory_ids": [
+        "T075"
+      ],
+      "scale_ids": [
+        "S410"
+      ],
+      "r_methods": []
+    },
+    "construal_level_theory": {
+      "construct_id": "construal_level_theory",
+      "label_zh": "解释水平理论",
+      "label_en": "Construal Level Theory",
+      "theory_ids": [
+        "T076"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "speech_act_theory": {
+      "construct_id": "speech_act_theory",
+      "label_zh": "言语行为理论",
+      "label_en": "Speech Act Theory",
+      "theory_ids": [
+        "T077"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "computers_are_social_actors_casa": {
+      "construct_id": "computers_are_social_actors_casa",
+      "label_zh": "计算机为社会行动者",
+      "label_en": "Computers are Social Actors, CASA",
+      "theory_ids": [
+        "T078"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cognition_affect_conation_perspective": {
+      "construct_id": "cognition_affect_conation_perspective",
+      "label_zh": "认知-情感-意动框架",
+      "label_en": "Cognition-Affect-Conation Perspective",
+      "theory_ids": [
+        "T079"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cognitive_load_theory": {
+      "construct_id": "cognitive_load_theory",
+      "label_zh": "认知负荷理论",
+      "label_en": "Cognitive Load Theory",
+      "theory_ids": [
+        "T080"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "elaboration_likelihood_model": {
+      "construct_id": "elaboration_likelihood_model",
+      "label_zh": "详尽可能性模型",
+      "label_en": "Elaboration Likelihood Model",
+      "theory_ids": [
+        "T081"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "fiedler_contingency_model": {
+      "construct_id": "fiedler_contingency_model",
+      "label_zh": "费德勒权变领导理论",
+      "label_en": "Fiedler Contingency Model",
+      "theory_ids": [
+        "T082"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "conservation_of_resources_theory": {
+      "construct_id": "conservation_of_resources_theory",
+      "label_zh": "资源保存理论",
+      "label_en": "Conservation of Resources Theory",
+      "theory_ids": [
+        "T083"
+      ],
+      "scale_ids": [
+        "S038"
+      ],
+      "r_methods": []
+    },
+    "cyborg": {
+      "construct_id": "cyborg",
+      "label_zh": "赛博格",
+      "label_en": "Cyborg",
+      "theory_ids": [
+        "T084"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "path_goal_theory": {
+      "construct_id": "path_goal_theory",
+      "label_zh": "路径-目标领导理论",
+      "label_en": "Path-Goal Theory",
+      "theory_ids": [
+        "T085"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "boundary_theory": {
+      "construct_id": "boundary_theory",
+      "label_zh": "边界理论",
+      "label_en": "Boundary Theory",
+      "theory_ids": [
+        "T086"
+      ],
+      "scale_ids": [
+        "S038"
+      ],
+      "r_methods": []
+    },
+    "privacy_paradox": {
+      "construct_id": "privacy_paradox",
+      "label_zh": "隐私悖论",
+      "label_en": "Privacy Paradox",
+      "theory_ids": [
+        "T087"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "privacy_calculus_theory": {
+      "construct_id": "privacy_calculus_theory",
+      "label_zh": "隐私计算理论",
+      "label_en": "Privacy Calculus Theory",
+      "theory_ids": [
+        "T088"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "collective_memory_theory": {
+      "construct_id": "collective_memory_theory",
+      "label_zh": "集体记忆理论",
+      "label_en": "Collective Memory Theory",
+      "theory_ids": [
+        "T089"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "face_negotiation_theory": {
+      "construct_id": "face_negotiation_theory",
+      "label_zh": "面子协商理论",
+      "label_en": "Face-Negotiation Theory",
+      "theory_ids": [
+        "T090"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "leader_member_exchange_lmx": {
+      "construct_id": "leader_member_exchange_lmx",
+      "label_zh": "领导-成员交换理论",
+      "label_en": "Leader-Member Exchange, LMX",
+      "theory_ids": [
+        "T091"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "risk_information_seeking_and_processing_model_risp": {
+      "construct_id": "risk_information_seeking_and_processing_model_risp",
+      "label_zh": "风险信息寻求与加工模型",
+      "label_en": "Risk Information Seeking and Processing Model , RISP",
+      "theory_ids": [
+        "T092"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "high_and_low_context_theory": {
+      "construct_id": "high_and_low_context_theory",
+      "label_zh": "高低语境理论",
+      "label_en": "High and Low Context Theory",
+      "theory_ids": [
+        "T093"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "charismatic_leadership": {
+      "construct_id": "charismatic_leadership",
+      "label_zh": "魅力型领导理论",
+      "label_en": "Charismatic Leadership",
+      "theory_ids": [
+        "T094"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "bounded_rationality": {
+      "construct_id": "bounded_rationality",
+      "label_zh": "有限理性",
+      "label_en": "Bounded Rationality",
+      "theory_ids": [
+        "T095"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "fundamental_interpersonal_relations_orientation": {
+      "construct_id": "fundamental_interpersonal_relations_orientation",
+      "label_zh": "人际关系三维理论",
+      "label_en": "Fundamental interpersonal relations orientation",
+      "theory_ids": [
+        "T096"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "task_technology_fit_ttf": {
+      "construct_id": "task_technology_fit_ttf",
+      "label_zh": "任务技术适配理论",
+      "label_en": "Task-Technology Fit, TTF",
+      "theory_ids": [
+        "T097"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "embodied_cognition_theory": {
+      "construct_id": "embodied_cognition_theory",
+      "label_zh": "具身认知理论",
+      "label_en": "Embodied Cognition Theory",
+      "theory_ids": [
+        "T098"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "mediatized_society": {
+      "construct_id": "mediatized_society",
+      "label_zh": "媒介化社会",
+      "label_en": "Mediatized Society",
+      "theory_ids": [
+        "T099"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "emotional_contagion_theory": {
+      "construct_id": "emotional_contagion_theory",
+      "label_zh": "情绪传染理论",
+      "label_en": "Emotional Contagion Theory",
+      "theory_ids": [
+        "T100"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "perceived_value_theory": {
+      "construct_id": "perceived_value_theory",
+      "label_zh": "感知价值理论",
+      "label_en": "Perceived Value Theory",
+      "theory_ids": [
+        "T101"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "expectancy_violations_theory": {
+      "construct_id": "expectancy_violations_theory",
+      "label_zh": "期望违背理论",
+      "label_en": "Expectancy Violations Theory",
+      "theory_ids": [
+        "T102"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "socio_technical_systems_theory_sts": {
+      "construct_id": "socio_technical_systems_theory_sts",
+      "label_zh": "社会技术系统理论",
+      "label_en": "Socio-technical Systems Theory, STS",
+      "theory_ids": [
+        "T103"
+      ],
+      "scale_ids": [
+        "S018"
+      ],
+      "r_methods": []
+    },
+    "social_support_theory": {
+      "construct_id": "social_support_theory",
+      "label_zh": "社会支持理论",
+      "label_en": "Social Support Theory",
+      "theory_ids": [
+        "T104"
+      ],
+      "scale_ids": [
+        "S293"
+      ],
+      "r_methods": []
+    },
+    "regulatory_focus_theory": {
+      "construct_id": "regulatory_focus_theory",
+      "label_zh": "调节定向理论",
+      "label_en": "Regulatory Focus Theory",
+      "theory_ids": [
+        "T105"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "gamification": {
+      "construct_id": "gamification",
+      "label_zh": "游戏化理论",
+      "label_en": "Gamification",
+      "theory_ids": [
+        "T106"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "coordinated_management_of_meaning": {
+      "construct_id": "coordinated_management_of_meaning",
+      "label_zh": "意义协调管理理论",
+      "label_en": "Coordinated Management of Meaning",
+      "theory_ids": [
+        "T107"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "utaut_utaut2": {
+      "construct_id": "utaut_utaut2",
+      "label_zh": "技术接受和使用统一模型",
+      "label_en": "UTAUT、UTAUT2",
+      "theory_ids": [
+        "T108"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_network_theory": {
+      "construct_id": "social_network_theory",
+      "label_zh": "社会网络理论",
+      "label_en": "Social Network Theory",
+      "theory_ids": [
+        "T109"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "actor_network_theory": {
+      "construct_id": "actor_network_theory",
+      "label_zh": "行动者网络理论",
+      "label_en": "Actor Network Theory",
+      "theory_ids": [
+        "T110"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "theory_of_planned_behavior_tpb": {
+      "construct_id": "theory_of_planned_behavior_tpb",
+      "label_zh": "计划行为理论",
+      "label_en": "Theory of Planned Behavior, TPB",
+      "theory_ids": [
+        "T111"
+      ],
+      "scale_ids": [
+        "S265",
+        "S357",
+        "S523",
+        "S559"
+      ],
+      "r_methods": []
+    },
+    "para_social_interaction_theory": {
+      "construct_id": "para_social_interaction_theory",
+      "label_zh": "：准社会交往理论",
+      "label_en": "Para-social Interaction Theory",
+      "theory_ids": [
+        "T112"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "trust_transfer_theory": {
+      "construct_id": "trust_transfer_theory",
+      "label_zh": "信任转移理论",
+      "label_en": "Trust Transfer Theory",
+      "theory_ids": [
+        "T113"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "information_foraging_theory": {
+      "construct_id": "information_foraging_theory",
+      "label_zh": "信息觅食理论",
+      "label_en": "Information Foraging Theory",
+      "theory_ids": [
+        "T114"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "innovation_diffusion_theory": {
+      "construct_id": "innovation_diffusion_theory",
+      "label_zh": "创新扩散理论",
+      "label_en": "Innovation Diffusion Theory",
+      "theory_ids": [
+        "T115"
+      ],
+      "scale_ids": [
+        "S045",
+        "S266",
+        "S310",
+        "S367",
+        "S591"
+      ],
+      "r_methods": []
+    },
+    "stakeholder_theory": {
+      "construct_id": "stakeholder_theory",
+      "label_zh": "利益相关者",
+      "label_en": "Stakeholder Theory",
+      "theory_ids": [
+        "T116"
+      ],
+      "scale_ids": [
+        "S062",
+        "S138",
+        "S147",
+        "S247",
+        "S392",
+        "S394",
+        "S408",
+        "S447",
+        "S448",
+        "S536",
+        "S551",
+        "S552"
+      ],
+      "r_methods": []
+    },
+    "the_media_equation": {
+      "construct_id": "the_media_equation",
+      "label_zh": "媒介等同理论",
+      "label_en": "The Media Equation",
+      "theory_ids": [
+        "T117"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "platform_capitalism": {
+      "construct_id": "platform_capitalism",
+      "label_zh": "平台资本主义",
+      "label_en": "Platform Capitalism",
+      "theory_ids": [
+        "T118"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "psychological_resilience": {
+      "construct_id": "psychological_resilience",
+      "label_zh": "心理韧性",
+      "label_en": "Psychological Resilience",
+      "theory_ids": [
+        "T119"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "the_circuit_of_culture": {
+      "construct_id": "the_circuit_of_culture",
+      "label_zh": "文化循环理论",
+      "label_en": "The Circuit of Culture",
+      "theory_ids": [
+        "T120"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "carnivalesque_theory": {
+      "construct_id": "carnivalesque_theory",
+      "label_zh": "狂欢理论",
+      "label_en": "Carnivalesque Theory",
+      "theory_ids": [
+        "T121"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_baseline_theory": {
+      "construct_id": "social_baseline_theory",
+      "label_zh": "社会基线理论",
+      "label_en": "Social Baseline Theory",
+      "theory_ids": [
+        "T122"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_comparison_theory": {
+      "construct_id": "social_comparison_theory",
+      "label_zh": "社会比较理论",
+      "label_en": "Social Comparison Theory",
+      "theory_ids": [
+        "T123"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "cognitive_development_theory": {
+      "construct_id": "cognitive_development_theory",
+      "label_zh": "认知发展理论",
+      "label_en": "Cognitive Development Theory",
+      "theory_ids": [
+        "T124"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "moral_licensing_theory": {
+      "construct_id": "moral_licensing_theory",
+      "label_zh": "道德许可理论",
+      "label_en": "Moral Licensing Theory",
+      "theory_ids": [
+        "T125"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "social_exchange_theory": {
+      "construct_id": "social_exchange_theory",
+      "label_zh": "社会交换理论",
+      "label_en": "Social Exchange Theory",
+      "theory_ids": [
+        "T126"
+      ],
+      "scale_ids": [
+        "S001",
+        "S059",
+        "S076",
+        "S188",
+        "S363",
+        "S540"
+      ],
+      "r_methods": []
+    },
+    "social_cognition_theory": {
+      "construct_id": "social_cognition_theory",
+      "label_zh": "社会认知理论",
+      "label_en": "Social Cognition Theory",
+      "theory_ids": [
+        "T127"
+      ],
+      "scale_ids": [
+        "S320",
+        "S389",
+        "S485",
+        "S563"
+      ],
+      "r_methods": []
+    },
+    "hierarchy_of_needs": {
+      "construct_id": "hierarchy_of_needs",
+      "label_zh": "需要层次理论",
+      "label_en": "Hierarchy of Needs",
+      "theory_ids": [
+        "T128"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "two_factor_theory": {
+      "construct_id": "two_factor_theory",
+      "label_zh": "双因素理论",
+      "label_en": "Two-Factor Theory",
+      "theory_ids": [
+        "T129"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "theory_of_needs": {
+      "construct_id": "theory_of_needs",
+      "label_zh": "成就需要理论",
+      "label_en": "Theory of Needs",
+      "theory_ids": [
+        "T130"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "erg_theory": {
+      "construct_id": "erg_theory",
+      "label_zh": "ERG理论",
+      "label_en": "ERG Theory",
+      "theory_ids": [
+        "T131"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "expectancy_theory": {
+      "construct_id": "expectancy_theory",
+      "label_zh": "期望理论",
+      "label_en": "Expectancy Theory",
+      "theory_ids": [
+        "T132"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "equity_theory": {
+      "construct_id": "equity_theory",
+      "label_zh": "公平理论",
+      "label_en": "Equity Theory",
+      "theory_ids": [
+        "T133"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    },
+    "reinforcement_theory": {
+      "construct_id": "reinforcement_theory",
+      "label_zh": "强化理论",
+      "label_en": "Reinforcement Theory",
+      "theory_ids": [
+        "T134"
+      ],
+      "scale_ids": [],
+      "r_methods": []
+    }
+  },
+  "scale_to_theory": {
+    "S001": [
+      {
+        "theory_id": "T063",
+        "construct_id": "social_identity_theory",
+        "via": "社会认同理论"
+      },
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S012": [
+      {
+        "theory_id": "T068",
+        "construct_id": "structuration_theory",
+        "via": "Structuration Theory"
+      }
+    ],
+    "S018": [
+      {
+        "theory_id": "T103",
+        "construct_id": "socio_technical_systems_theory_sts",
+        "via": "社会技术系统理论"
+      }
+    ],
+    "S033": [
+      {
+        "theory_id": "T039",
+        "construct_id": "technology_acceptance_model",
+        "via": "技术接受模型"
+      }
+    ],
+    "S038": [
+      {
+        "theory_id": "T083",
+        "construct_id": "conservation_of_resources_theory",
+        "via": "资源保存理论"
+      },
+      {
+        "theory_id": "T086",
+        "construct_id": "boundary_theory",
+        "via": "边界理论"
+      }
+    ],
+    "S045": [
+      {
+        "theory_id": "T115",
+        "construct_id": "innovation_diffusion_theory",
+        "via": "创新扩散理论"
+      }
+    ],
+    "S059": [
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S062": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S076": [
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S138": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S147": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S168": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S176": [
+      {
+        "theory_id": "T060",
+        "construct_id": "social_learning_theory",
+        "via": "社会学习理论"
+      }
+    ],
+    "S184": [
+      {
+        "theory_id": "T010",
+        "construct_id": "information_processing_theory",
+        "via": "信息加工理论"
+      }
+    ],
+    "S188": [
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S247": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S265": [
+      {
+        "theory_id": "T111",
+        "construct_id": "theory_of_planned_behavior_tpb",
+        "via": "Theory of Planned Behavior, TPB"
+      }
+    ],
+    "S266": [
+      {
+        "theory_id": "T115",
+        "construct_id": "innovation_diffusion_theory",
+        "via": "创新扩散理论"
+      }
+    ],
+    "S293": [
+      {
+        "theory_id": "T010",
+        "construct_id": "information_processing_theory",
+        "via": "信息加工理论"
+      },
+      {
+        "theory_id": "T104",
+        "construct_id": "social_support_theory",
+        "via": "社会支持理论"
+      }
+    ],
+    "S306": [
+      {
+        "theory_id": "T029",
+        "construct_id": "attribution_theory",
+        "via": "归因理论"
+      }
+    ],
+    "S310": [
+      {
+        "theory_id": "T115",
+        "construct_id": "innovation_diffusion_theory",
+        "via": "创新扩散理论"
+      }
+    ],
+    "S320": [
+      {
+        "theory_id": "T127",
+        "construct_id": "social_cognition_theory",
+        "via": "社会认知理论"
+      }
+    ],
+    "S329": [
+      {
+        "theory_id": "T003",
+        "construct_id": "jd_r模型",
+        "via": "工作需求-资源"
+      }
+    ],
+    "S330": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S351": [
+      {
+        "theory_id": "T063",
+        "construct_id": "social_identity_theory",
+        "via": "社会认同理论"
+      }
+    ],
+    "S355": [
+      {
+        "theory_id": "T010",
+        "construct_id": "information_processing_theory",
+        "via": "信息加工理论"
+      }
+    ],
+    "S357": [
+      {
+        "theory_id": "T111",
+        "construct_id": "theory_of_planned_behavior_tpb",
+        "via": "计划行为理论"
+      }
+    ],
+    "S363": [
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S367": [
+      {
+        "theory_id": "T115",
+        "construct_id": "innovation_diffusion_theory",
+        "via": "创新扩散理论"
+      }
+    ],
+    "S389": [
+      {
+        "theory_id": "T127",
+        "construct_id": "social_cognition_theory",
+        "via": "社会认知理论"
+      }
+    ],
+    "S392": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S393": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S394": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S408": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S410": [
+      {
+        "theory_id": "T075",
+        "construct_id": "role_stress",
+        "via": "角色压力"
+      }
+    ],
+    "S418": [
+      {
+        "theory_id": "T063",
+        "construct_id": "social_identity_theory",
+        "via": "社会认同理论"
+      }
+    ],
+    "S446": [
+      {
+        "theory_id": "T017",
+        "construct_id": "transformational_leadership",
+        "via": "变革型领导理论"
+      }
+    ],
+    "S447": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S448": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S466": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S476": [
+      {
+        "theory_id": "T010",
+        "construct_id": "information_processing_theory",
+        "via": "信息加工理论"
+      }
+    ],
+    "S485": [
+      {
+        "theory_id": "T127",
+        "construct_id": "social_cognition_theory",
+        "via": "社会认知理论"
+      }
+    ],
+    "S512": [
+      {
+        "theory_id": "T029",
+        "construct_id": "attribution_theory",
+        "via": "归因理论"
+      }
+    ],
+    "S522": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S523": [
+      {
+        "theory_id": "T111",
+        "construct_id": "theory_of_planned_behavior_tpb",
+        "via": "计划行为理论"
+      }
+    ],
+    "S536": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S540": [
+      {
+        "theory_id": "T126",
+        "construct_id": "social_exchange_theory",
+        "via": "社会交换理论"
+      }
+    ],
+    "S543": [
+      {
+        "theory_id": "T072",
+        "construct_id": "self_presentation_theory",
+        "via": "自我呈现理论"
+      }
+    ],
+    "S551": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S552": [
+      {
+        "theory_id": "T116",
+        "construct_id": "stakeholder_theory",
+        "via": "利益相关者"
+      }
+    ],
+    "S559": [
+      {
+        "theory_id": "T111",
+        "construct_id": "theory_of_planned_behavior_tpb",
+        "via": "计划行为理论"
+      }
+    ],
+    "S563": [
+      {
+        "theory_id": "T127",
+        "construct_id": "social_cognition_theory",
+        "via": "社会认知理论"
+      }
+    ],
+    "S582": [
+      {
+        "theory_id": "T029",
+        "construct_id": "attribution_theory",
+        "via": "归因理论"
+      },
+      {
+        "theory_id": "T033",
+        "construct_id": "affective_events_theory",
+        "via": "情感事件理论"
+      }
+    ],
+    "S591": [
+      {
+        "theory_id": "T115",
+        "construct_id": "innovation_diffusion_theory",
+        "via": "创新扩散理论"
+      }
+    ],
+    "S594": [
+      {
+        "theory_id": "T008",
+        "construct_id": "transactive_memory_system",
+        "via": "交互记忆系统"
+      }
+    ],
+    "S595": [
+      {
+        "theory_id": "T017",
+        "construct_id": "transformational_leadership",
+        "via": "Transformational Leadership"
+      }
+    ],
+    "S596": [
+      {
+        "theory_id": "T070",
+        "construct_id": "self_determination_theory",
+        "via": "自我决定理论"
+      }
+    ],
+    "S598": [
+      {
+        "theory_id": "T029",
+        "construct_id": "attribution_theory",
+        "via": "归因理论"
+      }
+    ]
+  },
+  "theory_to_scale": {
+    "T003": [
+      {
+        "scale_id": "S343",
+        "construct_id": "jd_r模型",
+        "via": "组织公民行为"
+      },
+      {
+        "scale_id": "S469",
+        "construct_id": "jd_r模型",
+        "via": "工作家庭冲突"
+      }
+    ],
+    "T008": [
+      {
+        "scale_id": "S594",
+        "construct_id": "transactive_memory_system",
+        "via": "Transactive Memory Systems"
+      }
+    ],
+    "T091": [
+      {
+        "scale_id": "S343",
+        "construct_id": "leader_member_exchange_lmx",
+        "via": "组织公民行为"
+      }
+    ],
+    "T103": [
+      {
+        "scale_id": "S053",
+        "construct_id": "socio_technical_systems_theory_sts",
+        "via": "Challenge"
+      }
+    ],
+    "T123": [
+      {
+        "scale_id": "S474",
+        "construct_id": "social_comparison_theory",
+        "via": "职场排斥"
+      }
+    ],
+    "T070": [
+      {
+        "scale_id": "S332",
+        "construct_id": "self_determination_theory",
+        "via": "需求满足量表"
+      }
+    ]
+  },
+  "r_applicability": {
+    "1.1": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.2.1": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.2.2": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.3.1": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.3.2": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.3.3": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.3.4": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "1.3.5": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "10.1": {
+      "categories": [
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "11.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "12.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.2": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.3": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.4": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.5": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "13.1.6": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "14.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.2": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.3": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.4": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.4.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.4.2": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "15.5": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "16.1.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "16.1.2": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "16.1.3": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "17.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "17.2": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "17.3": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "18.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "19.1": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "2.1": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.2.1": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.2.2": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.2.3": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.2.4": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.3.1": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.3.2": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.3.3": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.3.4": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.3.5": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.4": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.5": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.6": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "2.7": {
+      "categories": [
+        "general",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "3.2": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "3.3": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "4.1": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "4.2": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "4.3": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "4.4": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "4.5": {
+      "categories": [
+        "general"
+      ],
+      "construct_ids": []
+    },
+    "5.1": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.10": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.2": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.2.1": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.3": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.4": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.5": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.6": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.7": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.8": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "5.9": {
+      "categories": [
+        "general",
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.1": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.10": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.11": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.12": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.2": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.3": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.4": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.5": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.6": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.7": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.8": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "6.9": {
+      "categories": [
+        "scale",
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "7.1": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2.1": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2.2": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2.3": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2.4": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.2.5": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.3": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.4": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.5": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "7.6": {
+      "categories": [
+        "general",
+        "scale"
+      ],
+      "construct_ids": []
+    },
+    "8.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "8.2": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.1.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.1.2": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.1.3": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.1.4": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.1.5": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.2.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.2.2": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.2.3": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.2.4": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.2.5": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.1": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.2": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.3": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.4": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.5": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.6": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.7": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    },
+    "9.3.8": {
+      "categories": [
+        "theory"
+      ],
+      "construct_ids": []
+    }
+  }
+}

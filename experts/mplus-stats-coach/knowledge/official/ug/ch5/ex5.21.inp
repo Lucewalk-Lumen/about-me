@@ -1,0 +1,16 @@
+TITLE:	this is an example of a two-group twin
+	model for  continuous outcomes using parameter 
+    constraints 
+DATA:	FILE = ex5.21.dat;	
+VARIABLE:	NAMES = y1 y2 g;
+	GROUPING = g(1=mz 2=dz);
+MODEL:	[y1-y2]    (1);
+	y1-y2      (var);
+	y1 WITH y2 (covmz);
+MODEL dz:	y1 WITH y2 (covdz);
+MODEL CONSTRAINT:
+	NEW(a c e h);
+	var = a**2 + c**2 + e**2;
+	covmz = a**2 + c**2;
+	covdz = 0.5*a**2 + c**2;
+	h = a**2/(a**2 + c**2 + e**2);

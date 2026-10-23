@@ -1,0 +1,62 @@
+{
+  "form_id": "F007",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "制度",
+  "title": "岗位职级管理制度",
+  "file": "templates/HRP/policy/F007.docx",
+  "n_tables": 1,
+  "n_rows": 9,
+  "outline": [
+    "职务",
+    "职级",
+    "申请",
+    "审批权限",
+    "总监",
+    "经理",
+    "副经理",
+    "主管",
+    "高级专员",
+    "专员",
+    "助理",
+    "文员"
+  ],
+  "n_outline": 12,
+  "body": "岗位职级管理制度\n一、总则\n1.目的\n为规范公司的岗位设置，建立适应公司业务发展需要的组织结构，控制人工成本；规范公司的职系职级管理，为员工拓展职业生涯发展空间，建立有序的晋升体系；规范公司的岗位管理权限和程序，建立有效的内控机制，特制定本制度。\n2.适用范围\n本制度适用于公司及各部门的所有岗位的职责评定。\n二、岗位职级管理\n1.岗位职责划分\n一般来说，公司员工职务分为总监、经理、副经理、主管、高级专员、专员、助理和文员；职级划分为总监级、经理级、主任级、主管级、高级专员级、专员级、助理级、文员级和初级文员级；每一级划分为一档、二档、三档、四档和五档5个档次。\n2.岗位职级管理原则\n坚持严控制编制、公平、良性竞争和专业化原则。\n3.岗位职级调整标准\n岗位职级调整标准包括升级和降级两种调整标准。其中升级调整标准包括认同公司文化，严格遵守公司各项规章制度者；按要求完成本岗位工作，并得到领导和部门同事的赞成者；个人能力能够胜任更高级别的岗位者。降级调整标准包括严格违反公司规章制度者；不能按期完成本岗位工作，影响其他同事工作进度者；个人能力明显不能达到岗位说明书要求者。\n4.岗位职级调整审批权限\n岗位职级调整审批权限具体如下表所示。\n职务 | 职级 | 申请 | 审批权限\n总监 | 总监级 | 公司管理层 | 董事会\n经理 | 经理级\n副经理 | 主任级\n主管 | 主管级\n高级专员 | 高级专员级 | 本岗位人员 | 公司管理层\n专员 | 专员级\n助理 | 助理级\n文员 | 文员初级人员级\n5.岗位职级调整流程\n岗位职级调整流程中，岗位降级调整流程比较简单，一般由需要降职的员工的直接领导提出，然后交由人力资源部审批，最后由管理层审批。总监级别以上的职级，要经过董事会审批，审批通过后实施。\n三、附则\n1.本制度自发布之日起开始执行。\n2.本制度的编写、修改及解释权归人力资源部所有。",
+  "body_chars": 799,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-06T09:29:00Z",
+    "modified": "2019-03-07T02:44:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

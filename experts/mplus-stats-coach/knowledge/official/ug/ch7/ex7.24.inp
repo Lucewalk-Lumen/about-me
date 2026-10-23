@@ -1,0 +1,26 @@
+TITLE:	this is an example of mixture randomized
+	trials modeling using CACE estimation with
+	missing data on the latent class indicator
+DATA:	FILE IS ex7.24.dat;
+VARIABLE:	NAMES ARE u y x1 x2 c;
+	USEVARIABLES ARE u-x2;
+	CLASSES = c (2);
+	CATEGORICAL = u;
+	MISSING = u (999);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	
+	%OVERALL%
+	y ON x1 x2;
+	c ON x1;
+
+	%c#1%
+	[u$1@15];
+	[y];
+	y;
+	y ON x2@0;
+
+	%c#2%
+	[u$1@-15];
+	[y*.5];
+	y;
+OUTPUT:	TECH1 TECH8;

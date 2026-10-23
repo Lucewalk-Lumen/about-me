@@ -1,0 +1,25 @@
+TITLE:	this is an example of a confirmatory LCA
+	with two categorical latent variables
+DATA:	FILE IS ex7.14.dat;
+VARIABLE:	NAMES ARE u1-u4 y1-y4 cu cy;
+	USEVARIABLES ARE u1-y4;
+	CLASSES = cu (2) cy (3);
+	CATEGORICAL = u1-u4;
+ANALYSIS:	TYPE = MIXTURE;
+	PARAMETERIZATION = LOGLINEAR;
+MODEL:
+	%OVERALL%
+	cu WITH cy;
+MODEL cu:
+	%cu#1%
+	[u1$1-u4$1];
+	%cu#2%
+	[u1$1-u4$1];
+MODEL cy:
+	%cy#1%
+	[y1-y4];
+	%cy#2%
+	[y1-y4];
+	%cy#3%
+	[y1-y4];
+OUTPUT:	TECH1 TECH8;

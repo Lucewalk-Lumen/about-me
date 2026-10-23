@@ -1,0 +1,26 @@
+TITLE:	this is an example of a censored-inflated 
+		regression for a censored dependent 
+		variable with two covariates
+MONTECARLO:			
+			NAMES = y1 x1 x3;
+			NOBSERVATIONS = 500;
+			NREPS = 1;
+			SEED = 53487;
+			GENERATE = y1(cbi 0);
+			CENSORED = y1(bi);
+			SAVE = ex3.3.dat;	
+MODEL POPULATION:
+			[x1-x3@0];
+			x1-x3@1;
+			y1 ON x1*1 x3*.5;
+			y1*1;
+			[y1*.5];
+			y1#1 ON x1*.5 x3*1;
+			[y1#1*-1];
+MODEL:
+			y1 ON x1*1 x3*.5;
+			y1*1;
+			[y1*.5];
+			y1#1 ON x1*.5 x3*1;
+			[y1#1*-1];
+OUTPUT:		TECH8 TECH9;

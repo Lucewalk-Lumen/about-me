@@ -1,0 +1,24 @@
+{
+  "schema": "talent-map",
+  "schema_version": "1.1.0",
+  "count": 1,
+  "id_prefix": "M",
+  "fields": [
+    "map_id",
+    "target_company",
+    "target_function",
+    "entries",
+    "tiers.benchmark",
+    "tiers.direct_competitor",
+    "tiers.high_potential",
+    "red_lines.exclude_client",
+    "red_lines.exclude_abnormal_operation",
+    "red_lines.same_city_ratio_min",
+    "hiring_signal",
+    "baseline_date",
+    "verification"
+  ],
+  "searchable_filters": ["target_function", "verification"],
+  "note": "仅收录公开职业信息，不含私人联系方式；tiers 默认基准为头部标杆 10 / 直接竞品 8 / 高潜力 2，可按岗位层级调整",
+  "updated_at": "2026-09-29"
+}

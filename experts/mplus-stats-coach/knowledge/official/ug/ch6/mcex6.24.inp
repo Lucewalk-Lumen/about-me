@@ -1,0 +1,23 @@
+Title: this is an example of time-series regression of y on x 
+        with lag-1 autoregressive effects
+MONTECARLO:  NAMES ARE y x;
+             NOBS = 100;
+             NREP = 1;
+             LAGGED = y(1) x(1);
+             SAVE = ex6.24.dat;
+MODEL POPULATION:
+            x*1;
+            y ON x*.7;
+            y ON y&1*.2 x&1*.4; 
+            y*1;
+            x ON x&1*.5;
+ANALYSIS: 
+    		ESTIMATOR = BAYES;  
+            BITERATIONS = (500); 
+            PROCESSORS = 2;
+MODEL:
+            y ON x*.7;
+            y ON y&1*.2 x&1*.4; 
+            y*1;
+            x ON x&1*.5;
+OUTPUT:     TECH8;

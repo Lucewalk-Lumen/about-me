@@ -1,0 +1,19 @@
+TITLE:	this is an example of a mixture regression
+	analysis for a count variable using a
+	zero-inflated Poisson model using
+	automatic starting values with random
+	starts
+DATA:	FILE IS ex7.2.dat;
+VARIABLE:	NAMES ARE u x1 x2 c;
+	USEVARIABLES ARE u x1 x2;
+	CLASSES = c (2);
+	COUNT = u (i);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	
+	%OVERALL%
+	u ON x1 x2;
+	u#1 ON x1 x2;
+	c ON x1;
+	%c#2%
+	u ON x2;
+OUTPUT:	TECH1 TECH8;

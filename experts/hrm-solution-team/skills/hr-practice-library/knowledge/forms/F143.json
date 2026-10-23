@@ -1,0 +1,73 @@
+{
+  "form_id": "F143",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "制度",
+  "title": "员工退休管理制度",
+  "file": "templates/ER/policy/F143.docx",
+  "n_tables": 0,
+  "n_rows": 0,
+  "outline": [
+    "第一章 总则",
+    "第一条 为健全和完善公司人员退休管理，保障员工的合法权益，特制定本制度。",
+    "第二条 本制度适用于公司及下属分公司。",
+    "第三条 集团公司人力资源部为员工退休的归口管理部门。",
+    "第二章 退休条件、时间认定",
+    "第六条 员工退休时间的认定，以身份证记载的出生时间为准。",
+    "第三章 退休程序",
+    "第九条 人力资源部在员工退休次月，停缴社会保险及住房公积金。",
+    "第四章 退休待遇",
+    "第五章 附则",
+    "第十三条 本制度由集团公司人力资源部负责解释和修订。",
+    "第十四条 本制度自2019年1月1日起实行。"
+  ],
+  "n_outline": 12,
+  "body": "员工退休管理制度\n第一章 总则\n第一条 为健全和完善公司人员退休管理，保障员工的合法权益，特制定本制度。\n第二条 本制度适用于公司及下属分公司。\n第三条 集团公司人力资源部为员工退休的归口管理部门。\n第二章 退休条件、时间认定\n第四条 与公司签订正式劳动合同的员工，已达到国家法定退休年龄（男年龄满60周岁，女年龄满50周岁）的员工，劳动合同终止并办理正常退休手续。\n第五条 超过法定退休年龄条件的人员如公司工作需要待返聘的，须按相关规定办理劳务协议手续，但最长返聘期限不得超过下述年龄条件（专业技术职称人员除外）。\n1.男性员工：\n（1）行政后勤线、辅助生产线的二、三线岗位年龄满65周岁。\n（2）生产一线员工、从事国家规定的特殊工种年龄满60周岁。\n2.女性员工：\n（1）行政后勤线、辅助生产线的二、三线岗位年龄满55周岁。\n（2）生产一线员工、从事国家规定的特殊工种年龄满50周岁。\n第六条 员工退休时间的认定，以身份证记载的出生时间为准。\n第三章 退休程序\n第七条 员工符合退休条件的，由人力资源部提前60天启动退休审批流程，由人力资源部填写《员工退休审批表》，交员工所在部门或分公司领导会签，经人力资源部经理确认后，报集团公司行政副总经理审核，最后报集团公司董事长审批。如需继续聘用的，适用第十条。\n第八条 人力资源部完成《员工退休审批表》审批流程后，提前30天向员工发出《员工退休通知单》。员工根据通知单要求办理退休手续。\n第九条 人力资源部在员工退休次月，停缴社会保险及住房公积金。\n第十条 退休员工的继续聘用，应根据工作需要及退休员工的健康状况，严格把关，确实需要继续聘用的，由员工所在部门填写《退休员工返聘申请表》，明确聘任理由、聘用期限、服务岗位及劳动报酬，并约定相关权利及义务。《退休员工返聘申请表》经业务分管领导及人力资源部会签后，报集团公司行政副总经理审核，最后报集团公司董事长审批。\n第四章 退休待遇\n第十一条 参加社会保险的员工，人力资源部协助本人到社保局办理退休手续。本人自退休次月起可根据国家规定领取养老金。\n第十二条 返聘员工在与公司签订《退休人员返聘协议》后，根据协议约定享受公司相关福利待遇。\n第五章 附则\n第十三条 本制度由集团公司人力资源部负责解释和修订。\n第十四条 本制度自2019年1月1日起实行。\n第十五条 已超过本制度规定的退休年龄在岗职工，自制度实行后办理退休离岗手续。由所属部门、分公司负责清退或继续聘用工作，人力资源部监督实施。",
+  "body_chars": 1043,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T07:45:00Z",
+    "modified": "2019-04-26T02:17:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}
