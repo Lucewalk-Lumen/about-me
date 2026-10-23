@@ -7,13 +7,13 @@
 
 两条落点：
   1. 本地：~/.workbuddy/course-tutor/usage_log.md（跨会话留存，教师随时可查）；
-  2. 云端（可选）：若教师已建 `usage_log` 子表，SKILL 可把同一条记录再写回中枢（本脚本只产出记录对象，
-     实际写表由 SKILL 负责，避免脚本直接持有 smartsheet 调用）。
+  2. 云端（可选）：若教师已建 `usage_log` 子表，主指令 可把同一条记录再写回中枢（本脚本只产出记录对象，
+     实际写表由 主指令 负责，避免脚本直接持有 smartsheet 调用）。
 
 用法：
   python3 <本脚本路径> --action <功能名> [--course <课程>] [--detail <一句话>]
   python3 <本脚本路径> --report                    # 打印「功能使用说明书」摘要
-  python3 <本脚本路径> --export-json               # 导出全部记录为 JSON（供 SKILL 写回中枢）
+  python3 <本脚本路径> --export-json               # 导出全部记录为 JSON（供 主指令 写回中枢）
 """
 
 import argparse
@@ -116,7 +116,7 @@ def export_json():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="使用说明记录（）")
+    ap = argparse.ArgumentParser(description="使用说明记录")
     ap.add_argument("--action", default="")
     ap.add_argument("--course", default="")
     ap.add_argument("--detail", default="")

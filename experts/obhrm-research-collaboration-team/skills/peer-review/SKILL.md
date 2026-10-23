@@ -1,6 +1,6 @@
 ---
 name: peer-review
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 诊断审稿域（C 路径）。以审稿人视角对论文 / 基金进行八维度诊断，输出结构化修改报告与返修路线图（量化版 + 质性版）。
 ---

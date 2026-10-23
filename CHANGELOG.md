@@ -22,3 +22,10 @@
 1. 版本号只增不复用;包内 `plugin.json` 的 `version` 为唯一真源;
 2. 更名包在旧名后括注「(原 xxx)」保留一个版本的说明,之后不再保留旧名目录;
 3. 每次跨包发布在 `docs/` 附当次预检记录。
+
+## 2026-10-24 · 归属清理与版本修正
+
+- 移除 10 个非本人署名/不需要的包(experts 6 + skills 4),依据 `plugin.json` 的 author 字段判定;
+- mplus-stats-coach 署名统一为 `Xing Bu`(原为 "Xing");
+- course-tutor 升级 2.3.1 → **2.4.0**(桌面交付版);
+- obhrm-research-collaboration-team 对齐交付版 **1.0.1**(仓库曾误用 1.0.0 源码)。

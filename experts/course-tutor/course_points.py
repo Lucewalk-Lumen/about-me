@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""任务积分与游戏化（）。
+"""任务积分与游戏化（积分计算与排行榜）。
 
 输入：已从数据中枢取出并本地聚合的学情 JSON（积分与看板共用同一份聚合口径）。
 输出：按课程的**积分排行榜**，前三名标注「奖励」；可写回 `points` 子表（若已建）。
@@ -69,10 +69,10 @@ def aggregate_from_csv(path, exclude_test=True):
     期望列（缺列则该指标按 0 计并标注，**不编造**）：
       学号 / 姓名 / 时间 / 知识点 / 结果（可选：环节）
     - sessions  = 去重 (学号, 日期) 组合数——按 ISO 日期前缀聚合，
-                  秒级递进的多条记录同日只算 1 个会话（修复）
+                  秒级递进的多条记录同日只算 1 个会话
     - converged / partial / stuck = 按「知识点」去重后的**最高结果**计数
-                  （同一 KP 多环节重复记录只计一次，防重复计分—— 修复①）
-    - 题目生成环节：只计 bonus（+1/条），**不作为 KP 收敛证据**（防刷题库—— 修复③；
+                  （同一 KP 多环节重复记录只计一次，防重复计分）
+    - 题目生成环节：只计 bonus（+1/条），**不作为 KP 收敛证据**（防刷题库；
                   与 socratic_agent_prompt.md §3.2「权重很低」的承诺对齐）
     - kp_distinct = 该生去重知识点数
     """
@@ -94,7 +94,7 @@ def aggregate_from_csv(path, exclude_test=True):
         if not col:
             notes.append(f"CSV 缺「{label}」列 → 相关指标按 0 计（不编造）")
     if not f_stage:
-        notes.append("CSV 缺「环节」列 → 无法识别题目生成环节，全部结果行按 KP 收敛证据计（旧口径）")
+        notes.append("CSV 缺「环节」列 → 无法识别题目生成环节，全部结果行按 KP 收敛证据计")
 
     def _res_rank(res):
         """结果 → 去重排序值：已收敛 2 > 部分收敛 1 > 卡住 0；非法值 -1（不计）。"""
@@ -129,10 +129,10 @@ def aggregate_from_csv(path, exclude_test=True):
             "_bonus": 0,   # 题目生成条数（每条 +1 分 bonus）
         })
         if f_time:
-            # ：按日期聚合会话（YYYY-MM-DD 前缀），秒级递进不再虚增
+            # 按日期聚合会话（YYYY-MM-DD 前缀），秒级递进不再虚增
             a["_sessions"].add(((r.get(f_time) or "").strip())[:10])
         kp = (r.get(f_kp) or "").strip() if f_kp else ""
-        # ：章 / 节级行（CH-1、SEC-1-2）只计会话与活跃度，不计知识点收敛，
+        # 章 / 节级行（CH-1、SEC-1-2）只计会话与活跃度，不计知识点收敛，
         # 否则一整章的努力会被错误归因到一个知识点上、并虚增覆盖率
         chapter_level = kp.startswith(("CH-", "SEC-"))
         if kp and not chapter_level:
@@ -142,7 +142,7 @@ def aggregate_from_csv(path, exclude_test=True):
             rank = _res_rank(res)
             stage = (r.get(f_stage) or "").strip() if f_stage else ""
             if "题目生成" in stage:
-                # ：题目生成只计 bonus，不做 KP 收敛证据
+                # 题目生成只计 bonus，不做 KP 收敛证据
                 a["_bonus"] += 1
             elif rank >= 0 and not chapter_level:
                 if kp:
@@ -174,7 +174,7 @@ def aggregate_from_csv(path, exclude_test=True):
 
 
 def _usage(course, detail):
-    """自动埋点（）：调用即记录，失败不影响功能。"""
+    """自动埋点（使用记录）：调用即记录，失败不影响功能。"""
     try:
         import course_usage_log
         course_usage_log.auto_record("积分计算", course, detail)
@@ -206,7 +206,7 @@ def compute(students):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="任务积分与游戏化排行榜（）")
+    ap = argparse.ArgumentParser(description="任务积分与游戏化排行榜")
     ap.add_argument("data_json", nargs="?", default="", help="聚合后的学情 JSON（与 --from-csv 二选一）")
     ap.add_argument("--from-csv", default="", help="Usage 表导出的原始 CSV（推荐：直接吃原始数据自动聚合）")
     ap.add_argument("--course", default="")

@@ -1,6 +1,6 @@
 ---
 name: knowledge-graph
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 跨库索引（桥接层资产）。以 construct_id 为跨库主键，串联 量表库(599)/理论库(134)/R方法库(108) 三库：scale→theory 62 条（58 个量表）、theory→scale 7 条（6 个理论）、134 个构念聚合节点，悬空=0。支持按 construct_id / scale_id / theory_id / method_no / 关键词查询关联。
 ---

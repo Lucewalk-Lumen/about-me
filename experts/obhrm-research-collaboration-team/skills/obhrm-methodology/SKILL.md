@@ -1,6 +1,6 @@
 ---
 name: obhrm-methodology
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: |
   OBHRM 研究协作团 — 共享方法论与资源基座。提供跨 6 条业务路径与薄路由技能 obhrm-research-base 共享的单一方法论知识库、输出工具链与质量闸门。
@@ -61,4 +61,4 @@ description: |
 
 ## 版本
 
-当前版本：**1.0.0**（与包版本 `plugin.json` 的 `version` 保持一致）。版本策略与历史见 `../../CHANGELOG.md`。
+当前版本：**1.0.1**（与包版本 `plugin.json` 的 `version` 保持一致）。版本策略与历史见 `../../CHANGELOG.md`。

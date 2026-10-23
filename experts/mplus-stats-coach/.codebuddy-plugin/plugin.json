@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "description": "An Mplus learning agent that explains syntax, reviews .inp code, interprets output, advises on model choice, and diagnoses warnings and errors, with every claim traceable to a source.",
   "author": {
-    "name": "Xing",
+    "name": "Xing Bu",
     "email": "buxing@gdufe.edu.cn"
   },
   "agents": [

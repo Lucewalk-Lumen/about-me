@@ -117,6 +117,42 @@ BASE = None           # ROOT 的别名（输出相对路径起点）
 T_DIR = S_DIR = R_ROOT = None
 T_IDX = S_IDX = R_IDX = TEXTBOOK = None
 
+# ---------------------------------------------------------------- 合并存储
+# 复用 ../kernel/library_query.py 的 entities.json 合并存储实现，避免双份实现漂移。
+# 单点真源：entities.json 优先、单文件回退的判定与缓存全部集中在 library_query。
+_KERNEL_DIR = os.path.normpath(os.path.join(HERE, "..", "kernel"))
+if _KERNEL_DIR not in sys.path:
+    sys.path.insert(0, _KERNEL_DIR)
+from library_query import _load_store  # noqa: E402
+
+
+def _store_lookup(records_dir, rec_id):
+    """从 entities.json 按键取记录；未命中返回 None（不抛错）。"""
+    store = _load_store(records_dir)
+    if store is None or not rec_id:
+        return None
+    rec = store.get(rec_id)
+    if rec is None and isinstance(rec_id, str) and rec_id.isdigit():
+        rec = store.get(int(rec_id))
+    return rec if isinstance(rec, dict) else None
+
+
+def _display_path(records_dir, rel_base, rec_id):
+    """生成对用户展示的「记录出处路径」。
+
+    单文件存在 → 单文件相对路径（保持向后兼容）。
+    否则若 entities.json 存在 → `<rel_base>/entities.json#<id>`，明示记录落在合并存储，
+    避免用户沿着不存在的单文件路径寻找。
+    """
+    fp = _safe_join(records_dir, rec_id, ".json")
+    if fp and os.path.exists(fp):
+        return lib_path(rel_base, rec_id + ".json")
+    store = _load_store(records_dir)
+    if store is not None and rec_id in store:
+        return lib_path(rel_base, f"entities.json#{rec_id}")
+    # 记录缺失时仍回单文件路径，配合下游 exists / 文件缺失标注
+    return lib_path(rel_base, rec_id + ".json")
+
 
 def _resolve_roots(root=None):
     """解析并返回 (ROOT, LIB_ROOT, REF_ROOT)。
@@ -262,23 +298,36 @@ def by_id(q):
     # 用户输入中的路径穿越字符依旧被这些正则挡住（既有安全边界不变）。
     q = norm(q)
     if RE_THEORY_ID.match(q):
-        fp = os.path.join(T_DIR, q.upper() + ".json")
+        tid = q.upper()
+        # 合并存储优先；单文件回退
+        rec = _store_lookup(T_DIR, tid)
+        if rec is not None:
+            return {"mode": "id", "kind": "theory", "id": tid,
+                    "path": _display_path(T_DIR, "theory-library/knowledge/theories", tid),
+                    "record": rec}
+        fp = os.path.join(T_DIR, tid + ".json")
         if os.path.exists(fp):
             # 记录级损坏不致命：跳过该条并继续（load_json 已打 stderr 告警）
             rec = load_json(fp, fatal=False)
             if rec is not None:
-                return {"mode": "id", "kind": "theory", "id": q.upper(),
+                return {"mode": "id", "kind": "theory", "id": tid,
                         "path": lib_path("theory-library/knowledge/theories",
-                                         q.upper() + ".json"),
+                                         tid + ".json"),
                         "record": rec}
     if RE_SCALE_ID.match(q):
-        fp = os.path.join(S_DIR, q.upper() + ".json")
+        sid = q.upper()
+        rec = _store_lookup(S_DIR, sid)
+        if rec is not None:
+            return {"mode": "id", "kind": "scale", "id": sid,
+                    "path": _display_path(S_DIR, "scale-library/knowledge/scales", sid),
+                    "record": rec}
+        fp = os.path.join(S_DIR, sid + ".json")
         if os.path.exists(fp):
             rec = load_json(fp, fatal=False)
             if rec is not None:
-                return {"mode": "id", "kind": "scale", "id": q.upper(),
+                return {"mode": "id", "kind": "scale", "id": sid,
                         "path": lib_path("scale-library/knowledge/scales",
-                                         q.upper() + ".json"),
+                                         sid + ".json"),
                         "record": rec}
     if RE_METHOD_NO.match(q):
         for n in load_index("r", R_IDX):
@@ -350,12 +399,12 @@ def enrich(b):
                  has_processes=m.get("has_processes", False),
                  has_struct=m.get("has_struct", False), has_app=m.get("has_app", False),
                  note=m.get("note", ""),
-                 path=lib_path("theory-library/knowledge/theories", t["id"] + ".json"))
+                 path=_display_path(T_DIR, "theory-library/knowledge/theories", t["id"]))
     for s in b.get("scales", []):
         m = smeta.get(s["id"], {})
         s.update(n_dims=m.get("n_dims", 0), n_items=m.get("n_items", 0),
                  status=m.get("status", ""),
-                 path=lib_path("scale-library/knowledge/scales", s["id"] + ".json"))
+                 path=_display_path(S_DIR, "scale-library/knowledge/scales", s["id"]))
     for mth in b.get("methods", []):
         rel = mth.get("file") or ""
         # 同 by_id：索引 file 字段须做包含性校验，越界视为文件缺失
@@ -391,28 +440,34 @@ def read_full(b, limit):
       包含性校验，越界即视为记录缺失（无正文），不得读取包外文件。
     - 记录级 JSON 损坏只跳过该条并告警（stderr，仅 basename），不让一条坏记录
       带走整批结果；顶层索引仍是致命错误。
+    - 存储形态：优先读合并存储 entities.json（本包当前形态），缺失时回退逐文件读取；
+      与 library_query._full_record 同一约定。
     """
     for t in b.get("theories", [])[:limit]:
-        fp = _safe_join(T_DIR, t.get("id", ""), ".json")
-        if fp and os.path.exists(fp):
-            r = load_json(fp, fatal=False)
-            if r is None:
-                continue
-            # 四段正文完整保留（不再静默截断）；是否截断交由展示层 _clip 显式标注
-            t["what"] = r.get("what") or ""
-            t["processes"] = r.get("processes") or ""
-            t["structure"] = r.get("structure") or ""
-            t["application"] = r.get("application") or ""
-            t["references"] = r.get("references") or ""
+        r = _store_lookup(T_DIR, t.get("id", ""))
+        if r is None:
+            fp = _safe_join(T_DIR, t.get("id", ""), ".json")
+            if fp and os.path.exists(fp):
+                r = load_json(fp, fatal=False)
+        if r is None:
+            continue
+        # 四段正文完整保留（不再静默截断）；是否截断交由展示层 _clip 显式标注
+        t["what"] = r.get("what") or ""
+        t["processes"] = r.get("processes") or ""
+        t["structure"] = r.get("structure") or ""
+        t["application"] = r.get("application") or ""
+        t["references"] = r.get("references") or ""
     for s in b.get("scales", [])[:limit]:
-        fp = _safe_join(S_DIR, s.get("id", ""), ".json")
-        if fp and os.path.exists(fp):
-            r = load_json(fp, fatal=False)
-            if r is None:
-                continue
-            s["dimensions"] = r.get("dimensions", [])
-            s["items"] = r.get("items", [])
-            s["reference_used"] = r.get("reference_used", "")
+        r = _store_lookup(S_DIR, s.get("id", ""))
+        if r is None:
+            fp = _safe_join(S_DIR, s.get("id", ""), ".json")
+            if fp and os.path.exists(fp):
+                r = load_json(fp, fatal=False)
+        if r is None:
+            continue
+        s["dimensions"] = r.get("dimensions", [])
+        s["items"] = r.get("items", [])
+        s["reference_used"] = r.get("reference_used", "")
     for mth in b.get("methods", [])[:limit]:
         fp = _safe_join(R_ROOT, mth.get("file", ""))
         if fp and os.path.exists(fp):

@@ -1,6 +1,6 @@
 ---
 name: grant-writing
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 基金申报域（B 路径）。覆盖从立项依据 B1 到全文整合 B9 的基金项目书全流程，适用国自科 / 国社科 / 教育部 / 省市各类基金。
 ---

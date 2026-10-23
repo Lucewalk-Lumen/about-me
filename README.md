@@ -25,13 +25,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | obhrm-brain-trust | OBHRM 智囊团 | team | 1.0.3 |
 | hrm-solution-team | HRM 智能方案团 | team | 1.1.2 |
 | workbuddy-expert-studio | WorkBuddy 专家开发工坊 | team | 1.0.2 |
-| enterprise-docs-organizer | 企业资料整理专家 | team | 1.0.0 |
-| obsidian-knowledge-governance-team | Obsidian 知识库治理专家团 | team | 2.0.0 |
-| system-setup-team | 体系搭建专家团 | team | 1.0.1 |
-| wiki-kb-team | Wiki 知识库管理团 | team | 1.0.0 |
-| workbuddy-universal-mentor | 全能导师 | agent | 1.2.1 |
-| course-companion | 耘知(课程伴学专家) | agent | 2.4.0 |
-| course-tutor | 蒲公英(课程导师) | agent | 2.3.1 |
+| course-tutor | 蒲公英(课程导师) | agent | 2.4.0 |
 | campus-ppt-helper | 校园 PPT 助手 | agent | 1.0.3 |
 | touyan-expert-team | 投产专家团 | team | 1.0.0 |
 | mplus-stats-coach | Mplus 统计教练 | agent | 1.0.0 |
@@ -42,7 +36,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 
 ### 技能(skills/)
 
-brand-knowledge-base · ima-kb-ops-team · kb-organizer · llm-wiki · personal-knowledge-architect · obsidian-mind-vault · schedule-planner · kb-library-team(1.0.5)
+ima-kb-ops-team · obsidian-mind-vault · schedule-planner · kb-library-team(1.0.5)
 
 ## 如何只下载一个智能体 / 技能
 

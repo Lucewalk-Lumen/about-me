@@ -1,6 +1,6 @@
 ---
 name: journal-library
-version: 1.0.0
+version: 1.0.1
 description: "OBHRM 期刊评级库数据资产 — 28,241 刊 / 149,117 评级 / 13 套评级体系，只读真源，由 skills/obhrm-methodology/scripts/query.py 查询。"
 ---
 

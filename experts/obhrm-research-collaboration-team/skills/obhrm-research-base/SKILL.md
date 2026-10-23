@@ -1,6 +1,6 @@
 ---
 name: obhrm-research-base
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: |
   OBHRM 研究协作团 — 团队概念入口与路由总控（薄路由）。本技能仅保留团队哲学（心智模型/生命周期/自治度档位/运行状态契约）、路由总控与三份路由文档（skill_router / skill_refs / skill_rules）；共享方法论资源（98 篇方法论文档 + 24 个工具链脚本 + 4 通用域 + 论文模板 + 机器可读质量闸门）由兄弟技能 obhrm-methodology 承载。6 业务路径为独立兄弟技能，统一经相对路径共享 obhrm-methodology 基座。
@@ -305,6 +305,6 @@ python skills/obhrm-methodology/scripts/writing_lint.py draft.md --mode word --l
 
 ## 版本
 
-当前版本：**1.0.0**（与包版本 `plugin.json` 的 `version` 保持一致，全包单一版本号）。版本策略与历史见 `skills/obhrm-methodology/references/governance.md` 与 `../../CHANGELOG.md`。
+当前版本：**1.0.1**（与包版本 `plugin.json` 的 `version` 保持一致，全包单一版本号）。版本策略与历史见 `skills/obhrm-methodology/references/governance.md` 与 `../../CHANGELOG.md`。
 
 > 本技能为随包维护的内部子模块，遵循 SemVer 版本策略（见 `skills/obhrm-methodology/references/governance.md`）。

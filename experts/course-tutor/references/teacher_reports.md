@@ -1,6 +1,6 @@
 # 课程伴学专家 · 参考细则（teacher_reports.md）
 
-> 本文件由 `agents/course-tutor.md` 按无损分片拆出，**内容与原 SKILL 逐字一致**。
+> 本文件是教师端主指令（`agents/course-tutor.md`）的外置参考细则，与主指令配套使用。
 > 引用方式：`${CODEBUDDY_PLUGIN_ROOT}/references/teacher_reports.md`。
 >
 > **report 子表（懒创建）**：首次生成周/月报时，在 Usage 文件新建 `report` 子表（配置键
@@ -96,7 +96,7 @@
 4. **上行（可选）**：教师开启「学情异常上报」时，连续两周滞后的学生**匿名**汇总进周报异常模块
  （见 §6.2「需要关注」），仅聚合、不出个人名单。
 
-> `course_warn.py` / `course_calendar.py` 随学生包根分发（与 `course_tdoc.py` 同级），由构建脚本注入。
+> `course_warn.py` / `course_calendar.py` 已随学生端包提供（与 `course_tdoc.py` 同级）。
 >
 > [!] **预警自动生效，不依赖老师先配置**：`term_config` 缺失或缺键时，`course_warn.py`
 > **自动使用内置默认**（`warn_idle_days=7` / `warn_deficit_ratio=0.7` / `required_hours_per_week=3.0`）

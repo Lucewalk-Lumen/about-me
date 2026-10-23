@@ -1,6 +1,6 @@
 ---
 name: journal-selection
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 选刊助手域（J 路径）。基于本地期刊库（28,241 刊 / 149,117 条评级 / 13 套标准体系）做稿件→候选刊的匹配与 13 项评级画像，纯标准库零外部依赖。
 ---

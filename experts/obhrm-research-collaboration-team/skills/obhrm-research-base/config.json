@@ -1,6 +1,6 @@
 {
   "name": "obhrm-research-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OBHRM 研究协作团 — 团队概念入口与路由总控（v1.1.0 已拆分为薄路由）。仅保留团队哲学、概念入口与三份路由文档（skill_router / skill_refs / skill_rules）；全部共享方法论资源已独立为兄弟技能 obhrm-methodology。",
   "databases": {
     "journals": {

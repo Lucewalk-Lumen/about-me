@@ -1,6 +1,6 @@
 ---
 name: reference-import
-version: 1.0.0
+version: 1.0.1
 description: "Import literature libraries exported from EndNote or Zotero (reviews / supplementary materials) and convert them into READINGS-compatible corpus for the literature-review workflow."
 ---
 

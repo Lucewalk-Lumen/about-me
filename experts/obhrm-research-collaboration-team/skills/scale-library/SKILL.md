@@ -1,6 +1,6 @@
 ---
 name: scale-library
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 量表知识库（测量域资产）。599 个组织行为/人力资源管理量表（中英变量名+构念+维度+条目+计分方式+取用文献，条目带 verified/draft 生命周期），支持按 construct_id / 关键词 / scale_id 精确检索，供问卷设计、假设变量操作化、量表选型与引用。
 ---

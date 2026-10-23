@@ -64,7 +64,7 @@ def _norm(s):
 
 
 def _norm_rows(x):
-    """ 修复：把数据通道取回的原始结构展平成扁平行。
+    """把数据通道取回的原始结构展平成扁平行。
 
     支持三种入参：
       - 扁平行数组：[{"学号":"0000", ...}, ...] —— 原样返回；
@@ -334,7 +334,7 @@ def goal_progress(summaries, usage_rows, student_id, today,
     """本周目标进度：学时（summaries 时长合计）+ 知识点数（usage 去重）对比学生自定目标。
 
     周口径与预警一致（当前教学周，无校历回退 ISO 周）。
-    返回 {"week": 标签, "hours": n, "hours_ratio": f|None,
+    返回 {"week": 标签, "minutes": n（分钟，summaries 时长合计）, "hours_ratio": f|None,
           "kps": n, "kps_ratio": f|None, "met": bool}。
     """
     tw_label = "未知周"
@@ -359,13 +359,13 @@ def goal_progress(summaries, usage_rows, student_id, today,
         except Exception:
             return False
 
-    hours = 0.0
+    minutes = 0.0
     for r in _student_rows(summaries, student_id):
         rdt = _parse_dt(_row_get(r, "时间", "session_time", "date"))
         if rdt is None or not _in_week(rdt):
             continue
         try:
-            hours += float(_row_get(r, "时长", "duration_min") or 0)
+            minutes += float(_row_get(r, "时长", "duration_min") or 0)
         except (TypeError, ValueError):
             continue
 
@@ -380,19 +380,19 @@ def goal_progress(summaries, usage_rows, student_id, today,
         if kp:
             kps.add(kp)
 
-    hours_ratio = (hours / 60.0 / float(target_hours)) if target_hours else None
+    hours_ratio = (minutes / 60.0 / float(target_hours)) if target_hours else None
     kps_ratio = (len(kps) / float(target_kps)) if target_kps else None
     met = True
     if target_hours:
-        met = met and hours >= float(target_hours) * 60.0
+        met = met and minutes >= float(target_hours) * 60.0
     if target_kps:
         met = met and len(kps) >= int(target_kps)
-    return {"week": tw_label, "hours": hours, "hours_ratio": hours_ratio,
+    return {"week": tw_label, "minutes": minutes, "hours_ratio": hours_ratio,
             "kps": len(kps), "kps_ratio": kps_ratio, "met": met}
 
 
 def _coerce_val(v):
-    """ 修复：云端 term_config 的「值」列类型化（'7'→7.0 / 'true'→True / 其余原样）。"""
+    """云端 term_config 的「值」列类型化（'7'→7.0 / 'true'→True / 其余原样）。"""
     if isinstance(v, str):
         s = v.strip()
         low = s.lower()
@@ -408,7 +408,7 @@ def _coerce_val(v):
 
 
 def _norm_term_config(x):
-    """ 修复：云端读出的 [{参数,值}] 行列表 → {参数:值} dict；dict 原样透传。"""
+    """云端读出的 [{参数,值}] 行列表 → {参数:值} dict；dict 原样透传。"""
     if isinstance(x, dict):
         return x
     if isinstance(x, list):
@@ -426,7 +426,7 @@ def _norm_term_config(x):
 
 
 def _norm_calendar(x, tc=None):
-    """ 修复：云端读出的 [{week_no,week_start,...}] 行列表 → {term, weeks:[...]}；dict 原样透传。"""
+    """云端读出的 [{week_no,week_start,...}] 行列表 → {term, weeks:[...]}；dict 原样透传。"""
     if isinstance(x, dict):
         return x
     if isinstance(x, list):
@@ -460,7 +460,7 @@ def _cmd_check(args):
 
 
 def _cmd_review(args):
-    #  修复：数据源首选 usage（「结果」列在 usage 表；summaries 无结果列会恒空转）。
+    # 数据源首选 usage（「结果」列在 usage 表；summaries 无结果列会恒空转）。
     # --summaries 保留向后兼容，但仅当未提供 --usage 时使用。
     if getattr(args, "usage", ""):
         rows = _norm_rows(json.load(open(args.usage, "r", encoding="utf-8-sig")))
@@ -499,9 +499,9 @@ def _cmd_goal(args):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(description="课程伴学学生端学习预警（）与间隔复习/目标进度（）")
+    parser = argparse.ArgumentParser(description="课程伴学学生端学习预警（check）与间隔复习/目标进度（review / goal）")
     sub = parser.add_subparsers(dest="cmd")
-    pc = sub.add_parser("check", help="评估某生预警")
+    pc = sub.add_parser("check", help="评估某生预警（数据源用 --summaries，不需要 --usage）")
     pc.add_argument("--summaries", required=True, help="summaries JSON")
     pc.add_argument("--student", required=True, help="学号")
     pc.add_argument("--calendar", help="校历 JSON")
@@ -510,7 +510,7 @@ def main(argv):
     pc.add_argument("--last-warn", dest="last_warn", help="上次提醒时间（ISO），用于 24h 去重")
     pc.set_defaults(func=_cmd_check)
 
-    pr = sub.add_parser("review", help="到期复习清单（部分/卡住知识点 1/3/7 天）")
+    pr = sub.add_parser("review", help="到期复习清单（部分/卡住知识点 1/3/7 天；数据源用 --usage 首选，或 --summaries 向后兼容）")
     pr.add_argument("--usage", default="", help="usage JSON（注：首选数据源，「结果」列在此表）")
     pr.add_argument("--summaries", default="", help="summaries JSON（向后兼容；无 --usage 时使用）")
     pr.add_argument("--student", required=True, help="学号")
@@ -518,7 +518,7 @@ def main(argv):
     pr.add_argument("--intervals", default="1,3,7", help="到期天数，逗号分隔（默认 1,3,7）")
     pr.set_defaults(func=_cmd_review)
 
-    pg = sub.add_parser("goal", help="本周目标进度（学时 + 知识点数）")
+    pg = sub.add_parser("goal", help="本周目标进度（学时 + 知识点数；需 --summaries 与 --usage）")
     pg.add_argument("--summaries", help="summaries JSON（算学时）")
     pg.add_argument("--usage", help="usage 表 JSON（算知识点数）")
     pg.add_argument("--student", required=True, help="学号")
@@ -536,7 +536,7 @@ def main(argv):
         parser.print_help(sys.stderr)
         return 2
     rc = args.func(args)
-    # 自动埋点（）：调用即记录，失败不影响功能
+    # 自动埋点（使用记录）：调用即记录，失败不影响功能
     # 学生包布局：course_warn.py 在包根、course_usage_log.py 在 scripts/——两个位置都试
     try:
         import os as _os

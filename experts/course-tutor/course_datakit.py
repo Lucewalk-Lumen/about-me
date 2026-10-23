@@ -59,14 +59,14 @@ def cmd_profile(args):
     out = {"rows": len(rows), "cols": list(cols), "fields": {}}
     for c in cols:
         raw = [r.get(c) for r in rows]
-        # 缺失 = None 或空白串（文本列口径； 修复：文本列不再经过 _to_num 统计缺失）
+        # 缺失 = None 或空白串（文本列口径；文本列不再经过 _to_num 统计缺失）
         blanks = sum(1 for v in raw
                      if v is None or (isinstance(v, str) and not v.strip()))
         nonblank = len(raw) - blanks
         nums = [n for n in (_to_num(v) for v in raw) if n is not None]
         non_num = nonblank - len(nums)
         f = {"missing": blanks, "missing_ratio": round(blanks / max(len(rows), 1), 3)}
-        # 判型：非空值全部可数值化 → numeric；否则 text（修复：按列类型选统计口径）
+        # 判型：非空值全部可数值化 → numeric；否则 text（按列类型选统计口径）
         if nonblank and non_num == 0:
             f.update({
                 "type": "numeric", "min": min(nums), "max": max(nums),
@@ -244,7 +244,7 @@ def main():
                "cohort": cmd_cohort, "rfm": cmd_rfm, "abc": cmd_abc, "sig": cmd_sig}
     result = dispatch[args.cmd](args)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    # 自动埋点（）：调用即记录，失败不影响功能
+    # 自动埋点（使用记录）：调用即记录，失败不影响功能
     try:
         import course_usage_log
         course_usage_log.auto_record("数据分析·%s" % args.cmd, "", "")
