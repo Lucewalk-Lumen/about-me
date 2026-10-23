@@ -35,3 +35,8 @@
 - HRM 线更正:移除 hrm-solution-team 1.1.2,现役为 **hrm-advisory-corps(HRM 实战参谋团)v1.0.1**(线上审核中版);
 - 新增 fde-frontline-team(FDE 前线部署团)v1.0.0、distill(蒸馏师·甄澄)v1.0.3、ai-butler(教师工作台·启明星)v1.1.4(UMAS 通用卡片格式);
 - course-tutor 2.4.0 确认为源码形态(已含全部 course_*.py 与 data_hub_config.json)。
+
+## 2026-10-24 · 闭源与归属清理
+
+- obhrm-research-collaboration-team 改为**闭源分发**(目录移出公开仓,索引保留,仅经 WorkBuddy 专家中心获取);
+- 移除 3 个非本人署名的技能(ima-kb-ops-team / obsidian-mind-vault / schedule-planner,署名为工具默认值)。
