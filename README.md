@@ -39,7 +39,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 
 ### 技能(skills/)
 
-kb-library-team(1.0.5,智博资料室) · ghost-workspace-hunter(幽灵工作空间猎手)
+kb-library-team(1.0.5,智博资料室,agent 型) · ghost-workspace-hunter(幽灵工作空间猎手)
 
 ## 如何只下载一个智能体 / 技能
 

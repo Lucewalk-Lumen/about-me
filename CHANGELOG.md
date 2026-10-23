@@ -40,3 +40,9 @@
 
 - obhrm-research-collaboration-team 改为**闭源分发**(目录移出公开仓,索引保留,仅经 WorkBuddy 专家中心获取);
 - 移除 3 个非本人署名的技能(ima-kb-ops-team / obsidian-mind-vault / schedule-planner,署名为工具默认值)。
+
+## 2026-10-24 · kb-library-team 结构修复
+
+- 修复 1.0.5 包缺失 `.codebuddy-plugin/plugin.json` 的问题(源 zip 即残缺);
+- 按线上形态重构为 **agent 型**:六官(罗采/林归类/苏航/关晋/齐证/安档)职责内化为单 Agent 六域,原成员 md 移除、职责表并入主智能体;
+- `agentName: kb-library-team`,其余元数据(智博资料室、MIT、04-DataAI)不变。

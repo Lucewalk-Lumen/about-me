@@ -1,126 +1,16 @@
 {
   "name": "kb-library-team",
-  "expertType": "team",
+  "expertType": "agent",
   "version": "1.0.5",
-  "description": "A 7-member expert team for knowledge-base management across the full lifecycle: ingest, classification, maturity promotion, indexing, grounded Q&A, quality inspection, archiving and metrics.",
+  "description": "A single chief knowledge officer with six internalized domains - ingest, classify, promote, index, grounded Q&A, archive - turning scattered files into a query-ready knowledge base.",
   "author": {
     "name": "Xing Bu",
     "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
-    "./agents/kb-library-team-lead.md",
-    "./agents/kb-ingest-officer.md",
-    "./agents/kb-classify-officer.md",
-    "./agents/kb-promotion-reviewer.md",
-    "./agents/kb-index-navigator.md",
-    "./agents/kb-answer-quality-officer.md",
-    "./agents/kb-archive-metrics-officer.md"
+    "./agents/kb-library-team.md"
   ],
-  "agentName": "kb-library-team-lead",
-  "teamInfo": {
-    "leadAgent": "kb-library-team-lead",
-    "memberAgents": [
-      "kb-ingest-officer",
-      "kb-classify-officer",
-      "kb-promotion-reviewer",
-      "kb-index-navigator",
-      "kb-answer-quality-officer",
-      "kb-archive-metrics-officer"
-    ]
-  },
-  "members": [
-    {
-      "id": "kb-library-team-lead",
-      "name": {
-        "en": "Ku Zheng",
-        "zh": "库正"
-      },
-      "profession": {
-        "en": "Chief Knowledge Manager",
-        "zh": "首席知识管理官"
-      },
-      "avatar": "avatars/kb-library-team-lead.png",
-      "role": "lead"
-    },
-    {
-      "id": "kb-ingest-officer",
-      "name": {
-        "en": "Luo Cai",
-        "zh": "罗采"
-      },
-      "profession": {
-        "en": "Ingest Officer",
-        "zh": "采集入库官"
-      },
-      "avatar": "avatars/kb-ingest-officer.png",
-      "role": "member"
-    },
-    {
-      "id": "kb-classify-officer",
-      "name": {
-        "en": "Lin Guilei",
-        "zh": "林归类"
-      },
-      "profession": {
-        "en": "Classification Officer",
-        "zh": "分类组织官"
-      },
-      "avatar": "avatars/kb-classify-officer.png",
-      "role": "member"
-    },
-    {
-      "id": "kb-promotion-reviewer",
-      "name": {
-        "en": "Guan Jin",
-        "zh": "关晋"
-      },
-      "profession": {
-        "en": "Promotion Reviewer",
-        "zh": "晋级评审官"
-      },
-      "avatar": "avatars/kb-promotion-reviewer.png",
-      "role": "member"
-    },
-    {
-      "id": "kb-index-navigator",
-      "name": {
-        "en": "Su Hang",
-        "zh": "苏航"
-      },
-      "profession": {
-        "en": "Index Navigator",
-        "zh": "索引导航官"
-      },
-      "avatar": "avatars/kb-index-navigator.png",
-      "role": "member"
-    },
-    {
-      "id": "kb-answer-quality-officer",
-      "name": {
-        "en": "Qi Zheng",
-        "zh": "齐证"
-      },
-      "profession": {
-        "en": "Answer & Quality Officer",
-        "zh": "问答质量官"
-      },
-      "avatar": "avatars/kb-answer-quality-officer.png",
-      "role": "member"
-    },
-    {
-      "id": "kb-archive-metrics-officer",
-      "name": {
-        "en": "An Dang",
-        "zh": "安档"
-      },
-      "profession": {
-        "en": "Archive & Metrics Officer",
-        "zh": "归档度量官"
-      },
-      "avatar": "avatars/kb-archive-metrics-officer.png",
-      "role": "member"
-    }
-  ],
+  "agentName": "kb-library-team",
   "skills": [
     "./skills/kb-governance-playbook"
   ],
@@ -129,20 +19,20 @@
     "zh": "智博资料室"
   },
   "profession": {
-    "en": "kb-library-team",
-    "zh": "智博资料室"
+    "en": "Chief Knowledge Officer",
+    "zh": "首席知识管理官"
   },
   "displayDescription": {
-    "zh": "7人专家团队覆盖采集分类晋级索引问答巡检归档度量，把散落的资料整理成随问随答的知识库。",
-    "en": "A 7-member knowledge-management expert team covering the full lifecycle of your knowledge base: ingest, classify, promote, index, grounded Q&A, inspection, archiving and metrics — turning scattered materials into a queryable personal knowledge library."
+    "zh": "一名首席知识管理官,内化采集、分类、晋级、索引、问答、归档六域职能,把散落资料整理成随问随答的知识库。",
+    "en": "One chief knowledge officer with six internalized domains turning scattered files into a query-ready knowledge base."
   },
-  "avatar": "avatars/team.png",
+  "avatar": "avatars/kb-library-team-lead.png",
   "categoryId": "04-DataAI",
+  "license": "MIT",
   "defaultInitPrompt": {
-    "zh": "我还没接入自己的知识库，先用你内置的示例库给我演示一次体检：找出死链、孤儿和过期内容并给出整改清单，看完我再决定要不要接入自己的库实测。",
-    "en": "I haven't connected my own vault yet — demo a checkup on your built-in sample vault first: find dead links, orphans and stale content with a fix list, then I'll decide whether to connect my own vault for a real run."
+    "zh": "帮我把这个知识库做一次全面体检,找出分类混乱、死链和过期内容,给出整改清单。",
+    "en": "Run a full checkup on my knowledge base: find messy categories, dead links and stale content, then give me a fix list."
   },
-  "plugin": "kb-library-team",
   "tags": [
     {
       "zh": "知识库",
@@ -159,16 +49,12 @@
   ],
   "quickPrompts": [
     {
-      "zh": "我还没接入自己的知识库，先用你内置的示例库给我演示一次体检：找出死链、孤儿和过期内容并给出整改清单，看完我再决定要不要接入自己的库实测。",
-      "en": "I haven't connected my own vault yet — demo a checkup on your built-in sample vault first: find dead links, orphans and stale content with a fix list, then I'll decide whether to connect my own vault for a real run."
+      "zh": "帮我把这个知识库做一次全面体检,找出分类混乱、死链和过期内容,给出整改清单。",
+      "en": "Run a full checkup on my knowledge base: find messy categories, dead links and stale content, then give me a fix list."
     },
     {
-      "zh": "我还没接入自己的库，先用你内置的示例库演示一次问答：处理客户投诉的标准动作是什么？逐条标注出处和置信度，看完我想接入自己的库提问。",
-      "en": "I haven't connected my vault yet — demo a grounded Q&A on your built-in sample vault first: what are the standard steps for handling customer complaints? Cite sources and confidence, then I'll connect my own vault to ask."
-    },
-    {
-      "zh": "我还没接入自己的库，先用你内置的示例库演示一次归档：示例库里的旧版投诉流程该如何归档并登记替代关系？看完我想接入自己的库实操。",
-      "en": "I haven't connected my vault yet — demo the archiving flow on your built-in sample vault first: how should the outdated complaint-handling process be archived with its replacement registered? Then I'll connect my own vault to do it for real."
+      "zh": "这批新资料帮我登记入库:先出归类清单,我确认后再放进知识库。",
+      "en": "Register this batch of new material: give me a classification list first, then file it after my confirmation."
     }
   ],
   "keywords": [
@@ -178,5 +64,5 @@
     "maturity",
     "archiving"
   ],
-  "license": "MIT"
+  "plugin": "kb-library-team"
 }
