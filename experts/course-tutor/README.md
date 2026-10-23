@@ -1,4 +1,4 @@
-# 课程伴学 · 教师使用说明（v2.4.0）
+# 课程伴学精灵 · 教师使用说明(Course Companion · v2.4.0)
 <!-- 同步提醒：本文件与另一端的 README（companion/README.md ↔ src/student/README.md）由 build_student.py 复制同步；改一处须同步另一处。 -->
 
 ## 这是什么
