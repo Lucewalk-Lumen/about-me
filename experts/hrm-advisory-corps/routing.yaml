@@ -1,0 +1,127 @@
+# HRM 实战参谋团 · 意图路由表（外部化，单一基准）
+# 由 lead 在编排时加载；MD 中的路由描述以本文件为准。
+#
+# ── agent 取值约定（本文件为单一基准，取值即 agents/*.md 的文件名，不含 .md）──
+#   合法取值：org-planning / recruitment-pipeline / talent-development /
+#            performance-management / compensation-strategy / labor-compliance /
+#            personality-assessment / talent-sourcing
+#   别名：`lead` 是主理人 `agents/hrm-advisory-corps-lead.md` 的简写别名，
+#        语义为「回到主理人自身继续编排（不再下发给 specialist）」，
+#        **不是**独立 agent 文件，也不存在 agents/lead.md。
+#
+# ── 匹配规则（确定性，必须逐字执行）──────────────────────────────────────────
+# 归一化：对「用户原文」与「关键词」同时执行 → 去除全部空格 + 转小写。
+# 子串匹配：收集所有「关键词 ⊂ 归一化原文」的命中项。
+# 裁决三层，自上而下先满足者胜出：
+#   ① 成品意图层：命中任一 `intent: artifact` 的路由（practice_forms / digital_build）
+#      → 走该路由（多个命中时按「最长关键词优先 → `priority` 数值小者 → 文件顺序靠前」裁决）。
+#   ② 跨模块层：`cross_module[].trigger.all_of` 全部满足 → 走该跨模块编排。
+#   ③ 单模块层：① 关键词最长者；② 长度相同取 `priority` 数值最小者；
+#              ③ 仍相同取本文件中出现顺序靠前者。
+# 一句话：**先判成品意图（多个命中时同样按「最长关键词优先 → `priority` 小者 → 文件顺序靠前」），再判跨模块联动，最后单模块「最长关键词优先、同长比 priority」。**
+#
+# priority 越小优先级越高；仅在关键词长度完全相同时用于裁决。
+# intent: artifact 表示「检索/搭建一件成品」的意图，优先于领域方法论与跨模块联动。
+version: 1
+default_route: lead
+
+# 单模块路由：命中即路由到 agent
+routes:
+  - id: org_planning
+    agent: org-planning
+    priority: 100
+    confirm_backend: false
+    keywords: [编制, 组织架构, 组织规划, 组织设计, 人力预算, 管理幅度, 管理跨度, 层级深度, 组织健康, 组织人效, 人效诊断, 组织诊断, Headcount, 定岗定编]
+  - id: ops_brief
+    agent: org-planning
+    priority: 100
+    confirm_backend: false
+    keywords: [经营快照, 经营简报, 周报, 季评, 季度复盘, 一页纸, QBR, 月度复盘, 经营分析]
+  - id: recruitment
+    agent: recruitment-pipeline
+    priority: 100
+    confirm_backend: false
+    keywords: [招聘, JD, 岗位说明书, 渠道, 面试, 候选人, ATS, 简历, 录用, Offer, 校招, 管培, 猎头, 雇主品牌, 写简历, 美化简历, 简历优化, 简历模板, 面试准备, 面试题]
+  - id: mock_interview
+    agent: recruitment-pipeline
+    priority: 90
+    confirm_backend: false
+    keywords: [模拟面试, 面试陪练, MockInterview, 记分卡]
+  - id: job_seeker
+    agent: recruitment-pipeline
+    priority: 90
+    confirm_backend: false
+    keywords: [求职信, coverletter, offer对比, 对比offer, 求职追踪, 求职进度, 薪资期望, 薪资谈判, 谈薪资, 跳槽, 换工作, 找工作, 电梯演讲, 自我介绍, 面试跟进, 跟进邮件, followup, follow-up, 职业规划, JD匹配, 简历评分, 简历诊断, 简历自评]
+  - id: digital_interview
+    agent: recruitment-pipeline
+    priority: 80
+    # 数字人面试：先确认后端，再按 integration-catalog.md 落地
+    confirm_backend: true
+    keywords: [数字人面试, AI面试官, 数字面试官, 虚拟面试官, 岗位画像, 面试题设计]
+  - id: talent_sourcing
+    agent: talent-sourcing
+    priority: 90
+    confirm_backend: false
+    keywords: [人才寻访, 定向寻访, 主动寻访, 人才库, 人才库运营, 人才地图, 人才画像库, 寻访画像, 寻源, sourcing, 人才搜寻, 候选人搜寻, 被动候选人, 人才挖掘, shortlist, 寻访报告, 人才储备, 人才池]
+  - id: personality_assessment
+    agent: personality-assessment
+    priority: 100
+    confirm_backend: false
+    keywords: [人格测评, SBTI, 人才测评, 职场人格, 性格测试, 职业性格, 职业测评, 职场性格, 人格画像]
+  - id: talent_dev
+    agent: talent-development
+    priority: 100
+    confirm_backend: false
+    keywords: [培训, 入职, 入职培训, 30-60-90, 人才梯队, 职业发展, 继任, 继任者, Buddy, 内训师, TTT, 培训体系, 课程开发, 教学设计, 领导力发展]
+  - id: performance
+    agent: performance-management
+    priority: 100
+    confirm_backend: false
+    keywords: [绩效, KPI, OKR, 自评, 校准, 校准会, 晋升, 评级, PIP, 面谈提纲, 绩效面谈, 目标拆解]
+  - id: compensation
+    agent: compensation-strategy
+    priority: 95
+    confirm_backend: false
+    keywords: [薪酬, 工资, 个税, 社保, 公积金, 年终奖, 定薪, band, 五险一金, 薪酬对标, 薪资核算, 薪酬带宽]
+  - id: compliance
+    agent: labor-compliance
+    priority: 100
+    confirm_backend: false
+    keywords: [离职, 合同, 员工手册, 竞业, 竞业限制, 解除, 劳动法, 合规, 仲裁, 辞退, 补偿金, 二倍工资, 政策生成, 劳动争议, 试用期解除]
+  # 实务模板检索：命中后由 lead 按归属模块调度到对应 specialist；不新增 agent。
+  # 关键词一律为「成品模板/产物名词」，确保仅在显式模板意图时命中，不抢领域方法论查询。
+  - id: practice_forms
+    agent: lead
+    intent: artifact
+    priority: 50
+    confirm_backend: false
+    keywords: [表单, 表单模板, 制度模板, 制度范本, 表格模板, 模板库, 实务工具, 范例, 入职表, 请假表, 考核表, 薪酬表, 转正表, 交接单, 台账, 花名册]
+
+# 数字化落地：无代码/搭建类，先确认后端平台
+# 关键词一律为「平台/系统搭建」显式词，避免抢走「搭建培训体系」「离职流程」等领域查询。
+digital_build:
+  agent: lead   # 由总调度协调业务模块 + integration-catalog.md
+  intent: artifact
+  priority: 60
+  confirm_backend: true
+  keywords: [无代码, 零代码, 低代码, 表单系统, 在线表单, 流程引擎, 审批流引擎, 流程自动化, 看板系统, 门户搭建, 系统搭建, 平台搭建, 数字化落地, 系统集成, 无代码平台]
+
+# 跨模块编排：按 sequence 串行调度，final_gate 为必经合规终检
+# trigger：先于单模块判定；all_of 命中全部路由 id 时触发本编排（比单模块更高优先）。
+cross_module:
+  - id: comp_perf_linkage
+    trigger: {all_of: [compensation, performance]}
+    sequence: [compensation-strategy, performance-management]
+    final_gate: labor-compliance
+  - id: recruit_onboard
+    trigger: {all_of: [recruitment, talent_dev]}
+    sequence: [recruitment-pipeline, talent-development]
+    final_gate: labor-compliance
+  - id: org_health_brief
+    trigger: {all_of: [org_planning, ops_brief]}
+    sequence: [org-planning]
+    final_gate: labor-compliance
+  - id: sourcing_to_pipeline
+    trigger: {all_of: [talent_sourcing, recruitment]}
+    sequence: [talent-sourcing, recruitment-pipeline]
+    final_gate: labor-compliance

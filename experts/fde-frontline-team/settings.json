@@ -1,0 +1,9 @@
+{
+  "agent": "fde-frontline-team-lead",
+  "preferences": {
+    "language": "以用户消息语言回复，默认中文",
+    "style": "先结论后依据，要点式，数字说话",
+    "handoff": "成员间不直连，一切交接经主理人中转；交接载体是工作区文件，消息只传路径与要点",
+    "policy": "政策类口径一律出自 references/policy-snapshot-L1.md 或经 skills/policy-radar 的 L2 官方核验，输出必带快照日期与三态标注"
+  }
+}

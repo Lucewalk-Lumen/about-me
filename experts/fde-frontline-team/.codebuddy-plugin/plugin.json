@@ -1,0 +1,162 @@
+{
+  "plugin": "fde-frontline-team",
+  "name": "fde-frontline-team",
+  "version": "1.0.0",
+  "description": "A frontline-deployment (FDE) consultant team: loop scoring, loop specification design, acceptance audit, FDE coaching and education workshops.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "buxing@gdufe.edu.cn"
+  },
+  "license": "MIT",
+  "agents": [
+    "./agents/fde-frontline-team-lead.md",
+    "./agents/fde-scenario-diagnostician.md",
+    "./agents/fde-loop-architect.md",
+    "./agents/fde-acceptance-auditor.md",
+    "./agents/fde-coach.md",
+    "./agents/fde-workshop-mentor.md"
+  ],
+  "skills": [
+    "./skills/policy-radar",
+    "./skills/loop-scoring",
+    "./skills/edu-material-kit"
+  ],
+  "expertType": "team",
+  "agentName": "fde-frontline-team-lead",
+  "teamInfo": {
+    "leadAgent": "fde-frontline-team-lead",
+    "memberAgents": [
+      "fde-scenario-diagnostician",
+      "fde-loop-architect",
+      "fde-acceptance-auditor",
+      "fde-coach",
+      "fde-workshop-mentor"
+    ]
+  },
+  "displayName": {
+    "zh": "FDE 前线部署团",
+    "en": "FDE Frontline Deployment Team "
+  },
+  "profession": {
+    "zh": "FDE 前线部署团",
+    "en": "FDE Frontline Deployment Team "
+  },
+  "displayDescription": {
+    "zh": "FDE 前线部署团：业务环节评分排序、环规格书设计与验收审计，兼顾人才培养与高校教育专场。",
+    "en": "An FDE consulting team for enterprise AI adoption: scenario scoring and ranking, loop specification design and acceptance audit, plus FDE talent development and university education workshops."
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "请评估我司哪些业务环节适合 AI 落地，并按优先级排出顺序。",
+    "en": "Evaluate which of my company's business loops are ready for AI and rank them by priority."
+  },
+  "tags": [
+    {
+      "en": "FDE",
+      "zh": "前线部署"
+    },
+    {
+      "en": "AI Implementation",
+      "zh": "落地陪跑"
+    },
+    {
+      "en": "Team Enablement",
+      "zh": "人才培养"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "请评估我司哪些业务环节适合 AI 落地，并按优先级排出顺序。",
+      "en": "Evaluate which of my company's business loops are ready for AI and rank them by priority."
+    },
+    {
+      "zh": "请为我的团队设计一套 30/60/90 天 FDE 前线部署培养计划。",
+      "en": "Design a 30/60/90-day FDE frontline-deployment development plan for my team."
+    },
+    {
+      "zh": "请按四问自证法，审计一个已上线的 AI 应用是否真正闭环。",
+      "en": "Use the four-question closure test to audit whether a live AI app truly closes its loop."
+    }
+  ],
+  "members": [
+    {
+      "id": "fde-frontline-team-lead",
+      "name": {
+        "en": "Fu ",
+        "zh": "傅拓"
+      },
+      "profession": {
+        "en": "Frontline Lead",
+        "zh": "前线主理人"
+      },
+      "avatar": "avatars/fde-frontline-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "fde-scenario-diagnostician",
+      "name": {
+        "en": "Jian ",
+        "zh": "简鉴"
+      },
+      "profession": {
+        "en": "Scenario Diagnostician",
+        "zh": "场景诊断师"
+      },
+      "avatar": "avatars/fde-scenario-diagnostician.png",
+      "role": "member"
+    },
+    {
+      "id": "fde-loop-architect",
+      "name": {
+        "en": "Luo ",
+        "zh": "罗枢"
+      },
+      "profession": {
+        "en": "Loop Architect",
+        "zh": "环架构师"
+      },
+      "avatar": "avatars/fde-loop-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "fde-acceptance-auditor",
+      "name": {
+        "en": "Yan ",
+        "zh": "严核"
+      },
+      "profession": {
+        "en": "Acceptance Auditor",
+        "zh": "验收审计师"
+      },
+      "avatar": "avatars/fde-acceptance-auditor.png",
+      "role": "member"
+    },
+    {
+      "id": "fde-coach",
+      "name": {
+        "en": "Cheng ",
+        "zh": "程锻"
+      },
+      "profession": {
+        "en": "FDE Coach",
+        "zh": "培养教练"
+      },
+      "avatar": "avatars/fde-coach.png",
+      "role": "member"
+    },
+    {
+      "id": "fde-workshop-mentor",
+      "name": {
+        "en": "Shi ",
+        "zh": "师阅"
+      },
+      "profession": {
+        "en": "Edu Workshop Mentor",
+        "zh": "教育工作坊导师"
+      },
+      "avatar": "avatars/fde-workshop-mentor.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ai-butler",
+  "version": "1.1.4",
+  "description": "Teacher Workbench — a generic single-agent expert for university faculty: single-file PWA workbench covering teaching, meetings, research and admin + local Node bridge, pure-local offline by default, optional E2E-encrypted cloud sync.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "buxing@gdufe.edu.cn"
+  },
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "bridge": "node bridge/teacher-workbench-bridge.js"
+  }
+}

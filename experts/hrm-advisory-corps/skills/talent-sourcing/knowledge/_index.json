@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "schema": "talent-sourcing-knowledge",
+    "version": "1.0.0",
+    "description": "talent-sourcing 五库总索引。每库一个目录，库内每份档案一个 JSON，库级一份 _index.json。当前为结构示例与空库骨架，真实数据须按合规来源灌入。",
+    "updated_at": "2026-09-29"
+  },
+  "libraries": [
+    {
+      "name": "resumes",
+      "path": "resumes/",
+      "schema": "talent-resume",
+      "schema_version": "1.0.0",
+      "id_prefix": "R",
+      "count": 1,
+      "pii_restricted": true,
+      "note": "PII 受限库：档案只存脱敏视图，入库必须有 source.consent 同意记录",
+      "updated_at": "2026-09-29"
+    },
+    {
+      "name": "requisitions",
+      "path": "requisitions/",
+      "schema": "job-requisition",
+      "schema_version": "1.0.0",
+      "id_prefix": "J",
+      "count": 1,
+      "pii_restricted": false,
+      "note": "含 JD 六要素字段与关键词三级分类结构（v1.1）",
+      "updated_at": "2026-09-29"
+    },
+    {
+      "name": "talent-personas",
+      "path": "talent-personas/",
+      "schema": "talent-persona",
+      "schema_version": "1.0.0",
+      "id_prefix": "P",
+      "count": 1,
+      "pii_restricted": false,
+      "note": "群体统计特征，不含个人 PII；市场数据须标「需人工核实」",
+      "updated_at": "2026-09-29"
+    },
+    {
+      "name": "talent-maps",
+      "path": "talent-maps/",
+      "schema": "talent-map",
+      "schema_version": "1.1.0",
+      "id_prefix": "M",
+      "count": 1,
+      "pii_restricted": false,
+      "note": "只收职业公开信息；含 tiers 梯队与 red_lines 三条红线（v1.1）",
+      "updated_at": "2026-09-29"
+    },
+    {
+      "name": "channels",
+      "path": "channels/",
+      "schema": "sourcing-channel",
+      "schema_version": "1.0.0",
+      "id_prefix": "C",
+      "count": 1,
+      "pii_restricted": false,
+      "note": "渠道合规要点、产出与负责人",
+      "updated_at": "2026-09-29"
+    }
+  ]
+}

@@ -1,0 +1,5874 @@
+{
+  "_meta": {
+    "schema": "solution-links",
+    "version": "1.0.0",
+    "count": 199,
+    "note": "实务表单 → hrm-advisory-corps 既有技能/agent/SOP 引擎的可追踪连接总索引。"
+  },
+  "module_owner": {
+    "HRP": {
+      "skill": "org-planning",
+      "agent": "org-planning",
+      "engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ]
+    },
+    "REC": {
+      "skill": "recruitment-pipeline",
+      "agent": "recruitment-pipeline",
+      "engines": [
+        "candidate_scorer.py"
+      ]
+    },
+    "TRN": {
+      "skill": "talent-development",
+      "agent": "talent-development",
+      "engines": []
+    },
+    "PER": {
+      "skill": "performance-management",
+      "agent": "performance-management",
+      "engines": [
+        "okr_tracker.sh"
+      ]
+    },
+    "COM": {
+      "skill": "compensation-strategy",
+      "agent": "compensation-strategy",
+      "engines": [
+        "payroll_engine.py"
+      ]
+    },
+    "ER": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engines": [
+        "compliance_gate.py"
+      ]
+    },
+    "ARC": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engines": [
+        "compliance_gate.py"
+      ]
+    }
+  },
+  "gate": {
+    "skill": "labor-compliance",
+    "agent": "labor-compliance",
+    "engine": "compliance_gate.py"
+  },
+  "links": {
+    "F001": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F002": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F003": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F004": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F005": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F006": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F007": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F008": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F009": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F010": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F011": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F012": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F013": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F014": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F015": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F016": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F017": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F018": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F019": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F020": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [
+        "payroll_engine.py"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F021": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F022": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F023": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F024": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F025": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F026": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F027": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F028": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F029": {
+      "owner_skill": "org-planning",
+      "owner_agent": "org-planning",
+      "primary_engines": [
+        "org_health.py",
+        "workforce_plan_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/org-health.md"
+        },
+        {
+          "skill": "org-planning",
+          "path": "skills/org-planning/references/workforce-planning.md"
+        }
+      ]
+    },
+    "F030": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F031": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F032": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F033": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F034": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F035": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F036": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F037": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F038": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F039": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F040": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F041": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F042": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F043": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F044": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F045": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F046": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F047": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F048": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F049": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F050": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F051": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F052": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F053": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F054": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F055": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F056": {
+      "owner_skill": "recruitment-pipeline",
+      "owner_agent": "recruitment-pipeline",
+      "primary_engines": [
+        "candidate_scorer.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/interview-framework.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/workflow-details.md"
+        },
+        {
+          "skill": "recruitment-pipeline",
+          "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+        }
+      ]
+    },
+    "F057": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F058": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F059": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F060": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F061": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F062": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F063": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F064": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F065": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F066": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F067": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F068": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F069": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F070": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F071": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F072": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F073": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F074": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F075": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F076": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F077": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F078": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F079": {
+      "owner_skill": "talent-development",
+      "owner_agent": "talent-development",
+      "primary_engines": [],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/talent-development.md"
+        },
+        {
+          "skill": "talent-development",
+          "path": "skills/talent-development/references/training-program-design.md"
+        }
+      ]
+    },
+    "F080": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F081": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F082": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F083": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F084": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F085": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F086": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F087": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F088": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F089": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F090": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F091": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F092": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F093": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F094": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F095": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F096": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F097": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F098": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F099": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F100": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F101": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F102": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F103": {
+      "owner_skill": "performance-management",
+      "owner_agent": "performance-management",
+      "primary_engines": [
+        "okr_tracker.sh"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/performance.md"
+        },
+        {
+          "skill": "performance-management",
+          "path": "skills/performance-management/references/okr-template-library.md"
+        }
+      ]
+    },
+    "F104": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F105": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F106": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F107": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F108": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F109": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F110": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F111": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F112": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F113": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F114": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F115": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F116": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F117": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F118": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F119": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F120": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F121": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F122": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F123": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F124": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F125": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F126": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F127": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F128": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F129": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F130": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F131": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F132": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F133": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F134": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F135": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F136": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F137": {
+      "owner_skill": "compensation-strategy",
+      "owner_agent": "compensation-strategy",
+      "primary_engines": [
+        "payroll_engine.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-band.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+        },
+        {
+          "skill": "compensation-strategy",
+          "path": "skills/compensation-strategy/references/payroll-china.md"
+        }
+      ]
+    },
+    "F138": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F139": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F140": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F141": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F142": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F143": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F144": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F145": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F146": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F147": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F148": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F149": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [
+        "okr_tracker.sh"
+      ],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F150": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F151": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F152": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F153": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F154": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F155": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F156": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F157": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F158": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F159": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F160": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F161": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F162": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F163": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F164": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/clause-rewrite.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F165": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F166": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F167": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F168": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F169": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F170": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F171": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F172": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F173": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F174": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F175": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F176": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F177": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F178": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F179": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F180": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F181": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F182": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F183": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F184": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F185": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F186": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F187": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F188": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F189": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F190": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F191": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F192": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F193": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F194": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F195": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F196": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F197": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F198": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    },
+    "F199": {
+      "owner_skill": "labor-compliance",
+      "owner_agent": "labor-compliance",
+      "primary_engines": [
+        "compliance_gate.py"
+      ],
+      "extra_engines": [],
+      "gate": {
+        "skill": "labor-compliance",
+        "agent": "labor-compliance",
+        "engine": "compliance_gate.py",
+        "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+      },
+      "related_refs": [
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/policy-generation.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/compliance-baseline.md"
+        },
+        {
+          "skill": "labor-compliance",
+          "path": "skills/labor-compliance/references/dispute-handling.md"
+        }
+      ]
+    }
+  }
+}
