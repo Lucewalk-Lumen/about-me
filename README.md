@@ -37,11 +37,12 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | fde-frontline-team | FDE 前线部署团 | team | 1.0.0 |
 | distill | 蒸馏师(甄澄) | agent | 1.0.3 |
 | ai-butler | 教师工作台(启明星) | agent(UMAS) | 1.1.4 |
+| kb-library-team | 智博资料室 | team | 1.0.5 |
 | endnote-analysis-expert | EndNote 分析专家 | agent | 0.3.1 |
 
 ### 技能(skills/)
 
-kb-library-team(1.0.5,智博资料室,team 型) · ghost-workspace-hunter(幽灵工作空间猎手)
+ghost-workspace-hunter(幽灵工作空间猎手)
 
 ## 如何只下载一个智能体 / 技能
 
