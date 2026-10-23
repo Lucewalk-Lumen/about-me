@@ -1,3 +1,7 @@
+# Precheck Report
+
+> **Note**: this document is the author's internal audit record (written in Chinese) for the 2026-10-23 baseline — sensitive-info scan, ownership attribution and packaging residue checks across 28 candidate assets.
+
 # 专家包 GitHub 发布预检报告
 
 > 扫描日期:2026-10-23 | 扫描器:Python 3.13 正则批量扫描(4 类规则 + 残留文件检测)
