@@ -46,3 +46,7 @@
 - 修复 1.0.5 包缺失 `.codebuddy-plugin/plugin.json` 的问题(源 zip 即残缺);
 - 按线上形态重构为 **agent 型**:六官(罗采/林归类/苏航/关晋/齐证/安档)职责内化为单 Agent 六域,原成员 md 移除、职责表并入主智能体;
 - `agentName: kb-library-team`,其余元数据(智博资料室、MIT、04-DataAI)不变。
+
+### 更正(同日)
+
+- 上一条中「重构为 agent 型」有误:kb-library-team 1.0.5 应为 **team 型**(7 agents)。已恢复 7 成员结构,保留缺失清单的修复与 gdufe 署名,版本仍为 1.0.5。
