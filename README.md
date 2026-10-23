@@ -1,6 +1,6 @@
 # WorkBuddy Experts
 
-A collection of **expert teams, agents and skills** built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform — OB & HRM research packs, teaching assistants, and productivity tools. Each package is independently versioned; grab individual packages from the [Releases](https://github.com/Lucewalk/WorkBuddy-Experts/releases/latest) page.
+A collection of **expert teams, agents and skills** built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform — OB & HRM research packs, teaching assistants, and productivity tools. Maintained by **Xing Bu** (Guangdong University of Finance & Economics). Each package is independently versioned; grab individual packages from the [Releases](https://github.com/Lucewalk/WorkBuddy-Experts/releases/latest) page.
 
 ## Repository Layout
 
@@ -57,16 +57,6 @@ A collection of **expert teams, agents and skills** built for the [WorkBuddy](ht
 2. Unzip **keeping the `.codebuddy-plugin/` manifest structure intact** — note: `ai-butler` uses an `agent-card.json` UMAS manifest instead;
 3. Import/register in WorkBuddy (custom connector → trust & enable);
 4. A quick security review before use is recommended — see `docs/PRECHECK.md` for the author's own audit record.
-
-## Rename History
-
-- `obhrm-knowledge-compass` → `obhrm-research-brain-trust` → `obhrm-hub-team` → **`obhrm-brain-trust`**
-- `obhrm-research-think-tank` → **`obhrm-research-collaboration-team`**
-- `course-tutor-student` → **`course-companion`** *(not open-sourced)*
-- `knowledge-management-studio` → **`kb-library-team`**
-- `hrm-solution-team` → **`hrm-advisory-corps`** *(current)*
-
-Old-named packages are archived and no longer published in this repository.
 
 ## Citation
 
@@ -129,16 +119,6 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 2. 解压后**保持目录名与包内 `.codebuddy-plugin/` 结构不变**(`ai-butler` 为 agent-card.json UMAS 格式);
 3. 在 WorkBuddy 中按平台流程导入/注册(自定义连接器入口 → 信任并启用);
 4. 建议导入前对包内容做一次安全审计(`docs/PRECHECK.md` 提供作者自检记录)。
-
-## 更名历史
-
-- `obhrm-knowledge-compass` → `obhrm-research-brain-trust` → `obhrm-hub-team` → **`obhrm-brain-trust`**
-- `obhrm-research-think-tank` → **`obhrm-research-collaboration-team`**
-- `course-tutor-student` → **`course-companion`**(未开源)
-- `knowledge-management-studio` → **`kb-library-team`**
-- `hrm-solution-team` → **`hrm-advisory-corps`**(现役)
-
-旧命名安装包不再发布,请以上表基准版本为准。
 
 ## 许可
 
