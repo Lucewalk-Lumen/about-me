@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: WorkBuddy Experts — 专家团、专家与技能合集
+message: >-
+  如果你在研究或教学中使用了本仓库中的专家包或技能,
+  请引用此仓库。
+type: software
+authors:
+  - given-names: Bu
+    family-names: Xing
+    email: buxing@gdufe.edu.cn
+    affiliation: Guangdong University of Finance & Economics
+    orcid: "https://orcid.org/"
+version: baseline-20261023
+date-released: "2026-10-23"
+license: MIT
+repository-code: "https://github.com/Lucewalk/WorkBuddy-Experts"
+abstract: >-
+  A collection of 16 expert teams, agents and skills built for the
+  WorkBuddy platform, covering OB & HRM research (theory and scale
+  knowledge bases, literature analysis), teaching assistants, and
+  personal productivity tools.
+keywords:
+  - WorkBuddy
+  - expert-team
+  - OBHRM
+  - knowledge-base
+  - LLM-agents
