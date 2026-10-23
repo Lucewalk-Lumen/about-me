@@ -1,5 +1,7 @@
 # WorkBuddy Experts
 
+![WorkBuddy Experts — repository banner](docs/social-preview.png)
+
 A collection of **expert teams, agents and skills** built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform — OB & HRM research packs, teaching assistants, and productivity tools. Maintained by **Xing Bu** (Guangdong University of Finance & Economics). Each package is independently versioned; grab individual packages from the [Releases](https://github.com/Lucewalk/WorkBuddy-Experts/releases/latest) page.
 
 ## Repository Layout
