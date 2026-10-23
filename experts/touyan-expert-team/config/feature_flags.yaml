@@ -1,0 +1,39 @@
+# 投研星图团 · 功能开关（灰度发布与回滚）
+# 默认全部开启（本包以"拷贝目录即装"的零容器、纯脚本体验为主）。
+# 灰度：按需关闭某个功能即回滚到降级路径，无副作用；改动后由 lead 在编排时读取。
+
+version: 1
+
+# 数据守门（全团统一硬约束）：A股实时行情必须先经 market_data_guard.py 核验
+data_guard:
+  enabled: true
+  script: skills/astock-report/scripts/market_data_guard.py
+
+# K线 CSV 离线复盘：无网络时允许用户粘贴 CSV 直接解析
+kline_csv:
+  enabled: true
+
+# 持仓监控守护进程（claw-stock-watcher-pro）：常驻监控与预警推送
+monitor_daemon:
+  enabled: true
+
+# 企业微信推送（astock-report 晨报/晚报/收盘小结/盘中预警）：依赖 wecom webhook 配置
+wecom_push:
+  enabled: true
+  webhook_source: env_vars_or_ini   # env.vars 优先，回退 keys/*.ini
+
+# 东方财富妙想数据套件：依赖 MX_APIKEY 环境变量
+mx_skills:
+  enabled: true
+  api_key_env: MX_APIKEY
+
+# 交易 / 行情 / 妙想 MCP 接入（v0.1.5–0.1.6 新增，默认全部关闭，详见 TRADER_MCP.md）
+# 唯一实盘执行类（操盘手）为东方财富 EMTL；东方财富妙想为数据+模拟交易（模拟盘，非实盘）；
+# 腾讯自选股 westock-mcp / 通达信 tdx-mcp 为数据/行情类，用户可接入自己账号查看自选股，无执行能力。
+trader_mcp:
+  enabled: false                       # 总开关：是否暴露任何 MCP 交易/连接 tool
+  emtl_enabled: false                 # 东方财富 EMTL（交易/账户，含 create_order/cancel_order，唯一实盘）
+  emtl_account_query_only: true       # EMTL 仅允许查询，禁止实盘（fail-closed 默认）
+  mx_mcp_enabled: false               # 东方财富妙想 MCP（数据+模拟交易，非实盘）
+  westock_connector_enabled: false    # 腾讯自选股 westock-mcp 连接器（数据，用户接自己账号看自选股，经连接器面板连接）
+  tdx_enabled: false                  # 通达信 tdx-mcp 行情/K线（数据，无需 Key）

@@ -1,0 +1,156 @@
+{
+  "name": "touyan-expert-team",
+  "version": "1.0.0",
+  "description": "Investment Star-map Team covering hotspot scanning, deep company research, K-line technical review, portfolio strategy and event interpretation, with built-in data-reliability guardrails against hallucination.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/touyan-expert-team-lead.md",
+    "./agents/hotspot.md",
+    "./agents/stock.md",
+    "./agents/kline.md"
+  ],
+  "skills": [
+    "./skills/hotspot-discovery",
+    "./skills/company-deep-analysis",
+    "./skills/industry-theme-research",
+    "./skills/compare-decide",
+    "./skills/portfolio-strategy",
+    "./skills/claw-stock",
+    "./skills/eastmoney-mx-skills-suite",
+    "./skills/xiaodi-financial-analysis-team",
+    "./skills/akshare-finance-data",
+    "./skills/mx-stocks-screener",
+    "./skills/astock-report",
+    "./skills/china-stock-analysis",
+    "./skills/claw-stock-watcher-pro",
+    "./skills/akshare-stock",
+    "./skills/stock-monitor-skill",
+    "./skills/kline-candlestick-reader",
+    "./skills/us-market-data",
+    "./skills/strategy-backtest"
+  ],
+  "dependencies": {
+    "connectors": ["westock-mcp"]
+  },
+  "expertType": "team",
+  "agentName": "touyan-expert-team-lead",
+  "teamInfo": {
+    "leadAgent": "touyan-expert-team-lead",
+    "memberAgents": [
+      "hotspot",
+      "stock",
+      "kline"
+    ]
+  },
+  "displayName": {
+    "en": "Investment Star-map Team",
+    "zh": "投研星图团"
+  },
+  "profession": {
+    "en": "Investment Star-map Team",
+    "zh": "投研星图团"
+  },
+  "displayDescription": {
+    "en": "Investment Star-map Team covering hotspot scanning, deep company research, K-line technical review, portfolio strategy and event interpretation, with data reliability guardrails.",
+    "zh": "投研星图团：热点扫描、个股深研、K线技术复盘、组合策略与事件解读，内置数据守门防幻觉约束。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "08-FinanceInvestment",
+  "defaultInitPrompt": {
+    "zh": "你好，我是投研星图团的主理人。本团由三位专家协同：热点扫描官捕捉市场机会，个股深研官负责基本面与持仓研究，K线技术复盘官解读量价结构；组合策略、事件解读与跨市场对比由我统筹。请问你想研究什么方向或标的？",
+    "en": "Hello, I am the lead of the Investment Star-map Team. We coordinate three specialists: the Hotspot Scanner surfaces market opportunities, the Deep Research Officer handles fundamentals and holdings research, and the K-Line Review Officer reads price-volume structure; portfolio strategy, event interpretation and cross-market comparison are coordinated by me. What would you like to research?"
+  },
+  "plugin": "touyan-expert-team",
+  "tags": [
+    { "en": "Hotspot Scanning", "zh": "热点扫描" },
+    { "en": "Deep Company Research", "zh": "个股深研" },
+    { "en": "K-Line Technical Review", "zh": "K线技术复盘" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Hello, I am the lead of the Investment Star-map Team. We coordinate three specialists: the Hotspot Scanner surfaces market opportunities, the Deep Research Officer handles fundamentals and holdings research, and the K-Line Review Officer reads price-volume structure; portfolio strategy, event interpretation and cross-market comparison are coordinated by me. What would you like to research?",
+      "zh": "你好，我是投研星图团的主理人。本团由三位专家协同：热点扫描官捕捉市场机会，个股深研官负责基本面与持仓研究，K线技术复盘官解读量价结构；组合策略、事件解读与跨市场对比由我统筹。请问你想研究什么方向或标的？"
+    },
+    {
+      "en": "Write a deep research report on {company name} covering the past 5 years across 8 dimensions.",
+      "zh": "帮我做一份{公司名称}的深度研报：回溯近 5 年，覆盖财务、资产、变化、观点、展望、风险、事件、行业对标 8 个维度。"
+    },
+    {
+      "en": "Review 510300 (CSI 300 ETF) daily K-line over the last 120 bars: trend position, volume-price, key levels and risk boundaries.",
+      "zh": "用交易员复盘风格解读 510300 沪深300ETF 的日 K：基于最近 120 根，分析趋势位置、量价关系、关键支撑压力与风险边界。"
+    }
+  ],
+  "members": [
+    {
+      "id": "touyan-expert-team-lead",
+      "name": {
+        "en": "Pei Lan",
+        "zh": "裴览"
+      },
+      "displayName": {
+        "en": "Pei Lan",
+        "zh": "裴览"
+      },
+      "profession": {
+        "en": "Investment Research Lead",
+        "zh": "投研总览官"
+      },
+      "avatar": "avatars/team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "hotspot",
+      "name": {
+        "en": "Wen Feng",
+        "zh": "闻烽"
+      },
+      "displayName": {
+        "en": "Wen Feng",
+        "zh": "闻烽"
+      },
+      "profession": {
+        "en": "Hotspot Scanner",
+        "zh": "热点扫描官"
+      },
+      "avatar": "avatars/hotspot.png",
+      "role": "member"
+    },
+    {
+      "id": "stock",
+      "name": {
+        "en": "Shen Qian",
+        "zh": "沈潜"
+      },
+      "displayName": {
+        "en": "Shen Qian",
+        "zh": "沈潜"
+      },
+      "profession": {
+        "en": "Deep Research Officer",
+        "zh": "个股深研官"
+      },
+      "avatar": "avatars/stock.png",
+      "role": "member"
+    },
+    {
+      "id": "kline",
+      "name": {
+        "en": "Qin Li",
+        "zh": "秦砺"
+      },
+      "displayName": {
+        "en": "Qin Li",
+        "zh": "秦砺"
+      },
+      "profession": {
+        "en": "K-Line Review Officer",
+        "zh": "K线技术复盘官"
+      },
+      "avatar": "avatars/kline.png",
+      "role": "member"
+    }
+  ]
+}
