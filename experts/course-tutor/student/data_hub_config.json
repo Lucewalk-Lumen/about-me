@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "note": "课程伴学（通用版）占位配置：本智能体不预置任何课程，courses 初始为空。教师把课程知识库空间共享后，由 discover_hub.py 自动发现并把每课定位按课分组写入 courses.<course_id> 条目（含 hub_file_id / hub_sheets / usage_file_id / usage_sheet）。",
+  "courses": {}
+}
