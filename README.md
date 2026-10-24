@@ -29,7 +29,8 @@ Every product here is shaped by three disciplines I bring from my daily work:
 | [mplus-stats-coach](https://github.com/Lucewalk-Lumen/mplus-stats-coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
 | [endnote-analysis](https://github.com/Lucewalk-Lumen/endnote-analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
 
-> **obhrm-research-collaboration-team** (closed-source · WorkBuddy Expert Center only) — the full research pipeline: literature review, paper writing, methods, data analysis, peer review and journal selection, with EndNote/Zotero library import. Not open-source; install it from the WorkBuddy Expert Center.
+> **obhrm-research-collaboration-team** (closed-source · WorkBuddy Expert Center only)
+> The full OBHRM research pipeline, run by **seven agents** across the whole lifecycle: topic modeling → literature review → paper writing → grant proposals → data analysis → journal selection & submission → revision / response to reviewers (with EndNote/Zotero library import throughout). Ships with a grounded asset library — 599 scales, 134 theories, 108 R analysis scripts — and a security baseline: no hardcoded keys, least-privilege, input-bounds checks, operation audit. Not open-source; install it from the WorkBuddy Expert Center.
 
 ### 🎓 Teaching line — built on real classrooms, semester after semester
 
@@ -122,7 +123,8 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [fde-frontline-team](https://github.com/Lucewalk-Lumen/fde-frontline-team):FDE 前线部署团——场景诊断、闭环重设计与工作坊辅导
 - [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team):投研星图团——多角色投研流水线(A股/美股数据、公司深研、回测),内容仅供信息参考非投资建议
 
-> **obhrm-research-collaboration-team**（闭源 · 仅经 WorkBuddy 专家中心分发）—— 完整研究流水线:文献综述、论文写作、方法、数据分析、同行评审与选刊,支持 EndNote/Zotero 题录导入。不开源,请从 WorkBuddy 专家中心安装。
+> **obhrm-research-collaboration-team**（闭源 · 仅经 WorkBuddy 专家中心分发）
+> OBHRM 全流程研究流水线,由**七位智能体**覆盖研究全生命周期:选题建模 → 文献综述 → 论文写作 → 基金申报 → 数据分析 → 选刊投稿 → 返修回应(全程支持 EndNote/Zotero 题录导入)。内置溯源资产库——量表 599、理论 134、R 分析脚本 108——与安全基线:无硬编码密钥、最小权限、输入越界校验、操作审计。不开源,请从 WorkBuddy 专家中心安装。
 
 ## 如何使用(任一产品)
 
