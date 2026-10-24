@@ -1,0 +1,9 @@
+TITLE:	this is an example of a second-order
+	factor analysis 
+DATA:	FILE IS ex5.6.dat;
+VARIABLE:	NAMES ARE y1-y12;
+MODEL:	f1 BY y1-y3; 
+	f2 BY y4-y6;
+	f3 BY y7-y9;
+	f4 BY y10-y12;
+	f5 BY f1-f4;

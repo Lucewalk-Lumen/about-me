@@ -1,0 +1,171 @@
+{
+  "name": "obsidian-knowledge-governance-team",
+  "version": "2.0.0",
+  "description": "A multi-agent Obsidian knowledge governance team that researches PKM methods and turns complex vaults into maintainable, linked Markdown systems.",
+  "author": {
+    "name": "WorkBuddy",
+    "email": "an_zige@163.com"
+  },
+  "agents": [
+    "./agents/obsidian-knowledge-governance-team-team-lead.md",
+    "./agents/vault-auditor.md",
+    "./agents/para-lifecycle-manager.md",
+    "./agents/zettelkasten-curator.md",
+    "./agents/metadata-taxonomist.md",
+    "./agents/link-moc-architect.md",
+    "./agents/content-quality-reviewer.md"
+  ],
+  "expertType": "team",
+  "agentName": "obsidian-knowledge-governance-team-team-lead",
+  "teamInfo": {
+    "leadAgent": "obsidian-knowledge-governance-team-team-lead",
+    "memberAgents": [
+      "vault-auditor",
+      "para-lifecycle-manager",
+      "zettelkasten-curator",
+      "metadata-taxonomist",
+      "link-moc-architect",
+      "content-quality-reviewer"
+    ]
+  },
+  "displayName": {
+    "en": "Obsidian Knowledge Governance Team",
+    "zh": "Obsidian 知识库治理专家团"
+  },
+  "profession": {
+    "en": "Obsidian Knowledge Governance Team",
+    "zh": "Obsidian 知识库治理专家团"
+  },
+  "displayDescription": {
+    "en": "A seven-role team that audits vault data, applies PARA and CODE, cultivates atomic linked notes, governs metadata, builds MOCs, and validates safe change plans.",
+    "zh": "七角色协作完成盘点、PARA治理、原子笔记、元数据规范、双链MOC与质量审计，适配复杂知识库整理。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "en": "Please run a full audit of my Obsidian vault and produce a theory-based governance plan, MOCs, metadata rules, and a safe change list.",
+    "zh": "请对我的 Obsidian 知识库做一次全面审计，基于知识管理理论输出治理方案、MOC、元数据规则和安全变更清单。"
+  },
+  "plugin": "obsidian-knowledge-governance-team",
+  "tags": [
+    {
+      "en": "Knowledge Governance",
+      "zh": "知识库治理"
+    },
+    {
+      "en": "Obsidian PKM",
+      "zh": "Obsidian知识管理"
+    },
+    {
+      "en": "Linked Knowledge",
+      "zh": "关联式知识"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Please run a full audit of my Obsidian vault and produce a theory-based governance plan, MOCs, metadata rules, and a safe change list.",
+      "zh": "请对我的 Obsidian 知识库做一次全面审计，基于知识管理理论输出治理方案、MOC、元数据规则和安全变更清单。"
+    },
+    {
+      "en": "My vault has thousands of mixed notes. Design a staged migration plan without losing links, sources, or history.",
+      "zh": "我的知识库有数千篇混杂笔记，请设计分阶段迁移方案，避免丢失链接、来源和历史记录。"
+    },
+    {
+      "en": "Build a connected system combining PARA, Zettelkasten, progressive summarization, and MOC navigation for my vault.",
+      "zh": "请为我的知识库融合 PARA、Zettelkasten、渐进式总结与 MOC 导航，建立可长期维护的体系。"
+    }
+  ],
+  "members": [
+    {
+      "id": "obsidian-knowledge-governance-team-team-lead",
+      "profession": {
+        "en": "Knowledge Governance Orchestrator",
+        "zh": "知识治理编排师"
+      },
+      "avatar": "avatars/obsidian-knowledge-governance-team-team-lead.png",
+      "role": "lead",
+      "name": {
+        "en": "Governance Team Lead",
+        "zh": "知识库治理主理人"
+      }
+    },
+    {
+      "id": "vault-auditor",
+      "profession": {
+        "en": "Vault Inventory and Risk Auditor",
+        "zh": "知识库盘点与风险审计师"
+      },
+      "avatar": "avatars/vault-auditor.png",
+      "role": "member",
+      "name": {
+        "en": "Vault Auditor",
+        "zh": "Vault盘点审计师"
+      }
+    },
+    {
+      "id": "para-lifecycle-manager",
+      "profession": {
+        "en": "Actionability and Lifecycle Architect",
+        "zh": "行动性与生命周期架构师"
+      },
+      "avatar": "avatars/para-lifecycle-manager.png",
+      "role": "member",
+      "name": {
+        "en": "PARA Lifecycle Manager",
+        "zh": "PARA生命周期管理员"
+      }
+    },
+    {
+      "id": "zettelkasten-curator",
+      "profession": {
+        "en": "Atomic and Evergreen Note Curator",
+        "zh": "原子与常青笔记策展师"
+      },
+      "avatar": "avatars/zettelkasten-curator.png",
+      "role": "member",
+      "name": {
+        "en": "Zettelkasten Curator",
+        "zh": "原子笔记策展师"
+      }
+    },
+    {
+      "id": "metadata-taxonomist",
+      "profession": {
+        "en": "Metadata and Taxonomy Architect",
+        "zh": "元数据与分类体系架构师"
+      },
+      "avatar": "avatars/metadata-taxonomist.png",
+      "role": "member",
+      "name": {
+        "en": "Metadata Taxonomist",
+        "zh": "元数据分类师"
+      }
+    },
+    {
+      "id": "link-moc-architect",
+      "profession": {
+        "en": "Knowledge Graph and Navigation Architect",
+        "zh": "知识图谱与导航架构师"
+      },
+      "avatar": "avatars/link-moc-architect.png",
+      "role": "member",
+      "name": {
+        "en": "Link and MOC Architect",
+        "zh": "双链与MOC架构师"
+      }
+    },
+    {
+      "id": "content-quality-reviewer",
+      "profession": {
+        "en": "Source, Duplication, and Quality Reviewer",
+        "zh": "来源、重复与质量审校师"
+      },
+      "avatar": "avatars/content-quality-reviewer.png",
+      "role": "member",
+      "name": {
+        "en": "Content Quality Reviewer",
+        "zh": "内容质量审校师"
+      }
+    }
+  ]
+}

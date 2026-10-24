@@ -1,0 +1,16 @@
+TITLE:	this is an example of a multiple indicator
+	linear growth model for continuous outcomes
+DATA:	FILE IS ex6.14.dat;
+VARIABLE:	NAMES ARE y11 y21 y31 y12 y22 y32 y13 
+	y23 y33;
+MODEL:	f1 BY	y11 
+                	y21-y31 (1-2);
+	f2 BY 	y12 
+			y22-y32 (1-2);
+	f3 BY 	y13 
+			y23-y33 (1-2);
+	[y11 y12 y13] (3);
+	[y21 y22 y23] (4);
+	[y31 y32 y33] (5);
+	i s | f1@0 f2@1 f3@2; 
+        

@@ -1,0 +1,63 @@
+{
+  "form_id": "F027",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "年度公司人力资源各项费用预算额与实际发生额比对表",
+  "file": "templates/HRP/form/F027.docx",
+  "n_tables": 1,
+  "n_rows": 17,
+  "outline": [
+    "费用项目",
+    "具体项目",
+    "预算金额",
+    "实际支出金额",
+    "预算比实际差异额",
+    "备注",
+    "薪资 福利 费用",
+    "培训费用",
+    "招聘费用",
+    "劳动保护费用",
+    "员工活动费用",
+    "劳动法律费用",
+    "累计（元）"
+  ],
+  "n_outline": 13,
+  "body": "费用项目 | 具体项目 | 预算金额 | 实际支出金额 | 预算比实际差异额 | 备注\n薪资 福利 费用 | 工资 费用 | 核心人员\n临时工\n基本工资\n绩效工资\n加班工资\n福利 工资 | 津贴补助\n社会保险\n公积金\n培训费用 | 内部培训\n外部培训\n招聘费用 | 网络招聘\n现场招聘\n劳动保护费用\n员工活动费用\n劳动法律费用\n累计（元）",
+  "body_chars": 169,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-13T07:14:00Z",
+    "modified": "2019-03-13T07:15:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

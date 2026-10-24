@@ -1,0 +1,104 @@
+{
+  "name": "wiki-kb-team",
+  "version": "1.0.0",
+  "description": "LLM Wiki knowledge base management team: setup, ingestion, update, review, and retirement of Chinese knowledge-base documents.",
+  "author": {
+    "name": "jszx",
+    "email": "jszx@local"
+  },
+  "agents": [
+    "./agents/wiki-kb-team-team-lead.md",
+    "./agents/kb-architect.md",
+    "./agents/doc-ingestor.md",
+    "./agents/doc-updater.md",
+    "./agents/doc-reviewer.md",
+    "./agents/doc-archivist.md"
+  ],
+
+  "expertType": "team",
+  "agentName": "wiki-kb-team-team-lead",
+  "teamInfo": {
+    "leadAgent": "wiki-kb-team-team-lead",
+    "memberAgents": [
+      "kb-architect",
+      "doc-ingestor",
+      "doc-updater",
+      "doc-reviewer",
+      "doc-archivist"
+    ]
+  },
+
+  "displayName": {
+    "en": "Wiki Knowledge Base Management Team",
+    "zh": "Wiki 知识库管理团"
+  },
+  "profession": {
+    "en": "Wiki Knowledge Base Management Team",
+    "zh": "Wiki 知识库管理团"
+  },
+  "displayDescription": {
+    "en": "Coordinates setup and operation of a Chinese LLM Wiki knowledge base, managing document ingestion, updates, review, and retirement across the full lifecycle.",
+    "zh": "统筹搭建与运营中文 LLM Wiki 知识库，完成文档入库、更新、审核与废除，确保可溯源、不杂乱。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "按规范初始化我的 LLM Wiki 知识库目录结构",
+    "en": "Initialize my LLM Wiki knowledge base directory structure per the standard."
+  },
+  "plugin": "wiki-kb-team",
+  "tags": [
+    { "en": "Knowledge Base Management", "zh": "知识库管理" },
+    { "en": "Document Ingestion", "zh": "文档入库" },
+    { "en": "Content Review", "zh": "内容审核" }
+  ],
+  "quickPrompts": [
+    { "en": "Initialize my LLM Wiki knowledge base directory structure per the standard.", "zh": "按规范初始化我的 LLM Wiki 知识库目录结构" },
+    { "en": "Ingest this policy document and distill concept and entity pages.", "zh": "把这份政策文件入库，提炼概念和实体页" },
+    { "en": "Review recently updated knowledge base pages for compliance.", "zh": "审核最近更新的知识库页面是否符合规范" }
+  ],
+  "members": [
+    {
+      "id": "wiki-kb-team-team-lead",
+      "name": { "en": "Wen Shuheng", "zh": "文枢衡" },
+      "profession": { "en": "KB Operations Director", "zh": "知识库运营总监" },
+      "avatar": "avatars/wiki-kb-team-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "kb-architect",
+      "name": { "en": "Liang Zhuji", "zh": "梁筑基" },
+      "profession": { "en": "KB Architect", "zh": "知识库架构师" },
+      "avatar": "avatars/kb-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "doc-ingestor",
+      "name": { "en": "Chen Naxin", "zh": "陈纳新" },
+      "profession": { "en": "Document Ingestion Specialist", "zh": "文档入库专员" },
+      "avatar": "avatars/doc-ingestor.png",
+      "role": "member"
+    },
+    {
+      "id": "doc-updater",
+      "name": { "en": "Hou Xiuwen", "zh": "侯修文" },
+      "profession": { "en": "Content Maintenance Engineer", "zh": "内容维护工程师" },
+      "avatar": "avatars/doc-updater.png",
+      "role": "member"
+    },
+    {
+      "id": "doc-reviewer",
+      "name": { "en": "Yan Hezhen", "zh": "严核真" },
+      "profession": { "en": "Content Reviewer", "zh": "内容审核员" },
+      "avatar": "avatars/doc-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "doc-archivist",
+      "name": { "en": "Chu Jiu'an", "zh": "储久安" },
+      "profession": { "en": "Document Archivist", "zh": "文档归档管理员" },
+      "avatar": "avatars/doc-archivist.png",
+      "role": "member"
+    }
+  ]
+}

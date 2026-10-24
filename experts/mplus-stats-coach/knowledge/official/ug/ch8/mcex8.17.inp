@@ -1,0 +1,46 @@
+title: this is an example of a Monte Carlo simulation of 
+        Cox mixture regression
+
+montecarlo: names are t u1-u5 x;
+            generate=t(s 10*1) u1-u5(1);
+            hazardc = t (1);
+            survival=t(all);
+            categorical=u1-u5;
+            nobs=1000;
+            class=c(2);
+            genclass=c(2); 
+            nrep=1;
+            save = ex8.17.dat;
+
+model population: 
+%overall%
+x*1;
+t on x*0.3;  
+c#1 on x*1.0;
+
+%c#1%
+[t#1-t#11*1];
+[u1$1-u5$1*1];
+t on x*0.3;
+
+%c#2%
+[t#1-t#11*0.5];
+[u1$1-u5$1*-1];
+t on x*0.8;
+
+analysis: type=mixture; 
+
+model: 
+%overall%
+t on x*0.3; 
+c#1 on x*1.0;
+
+%c#1%
+[u1$1-u5$1*1];
+t on x*0.3;
+
+%c#2%
+[u1$1-u5$1*-1];
+t on x*0.8;
+
+output: tech8;

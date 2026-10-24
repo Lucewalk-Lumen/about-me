@@ -1,0 +1,56 @@
+TITLE:	this is an example of a two-level CFA with 
+	continuous factor indicators, two covariates,
+	and random slopes
+
+montecarlo:
+	names are y1-y4 x1 x2 w;
+	nobservations = 1000;
+	ncsizes = 3;
+	csizes = 40 (5) 50 (10) 20 (15);
+	seed = 58459;
+	nreps = 1;
+        save = ex9.8.dat;
+	WITHIN = x1 x2;
+	BETWEEN = w;
+
+ANALYSIS:	TYPE = TWOLEVEL RANDOM; 
+
+MODEL POPULATION: 
+
+	%WITHIN%
+	x1-x2@1;
+	fw BY y1@1 y2-y4*1;
+	s1 | fw ON x1;
+	s2 | fw ON x2;
+	fw*1;
+	y1-y4*1;
+
+	%BETWEEN%
+	[w@0]; w*1;
+	fb BY y1@1 y2-y4*1;
+	y1-y4@0;
+	fb*.5;
+	fb on w*1;
+	s1 on w*.5;
+	s2 on w*.3; 
+	[s1*.5 s2*.6]; s1*.5; s2*.6;
+
+MODEL: 
+	%WITHIN%
+	fw BY y1@1 y2-y4*1;
+	s1 | fw ON x1;
+	s2 | fw ON x2;
+	fw*1;
+	y1-y4*1;
+
+	%BETWEEN%
+	fb BY y1@1 y2-y4*1;
+	y1-y4@0;
+	fb*.5;
+	fb on w*1;
+	s1 on w*.5;
+	s2 on w*.3; 
+	[s1*.5 s2*.6]; s1*.5; s2*.6;
+
+output:
+	tech9;

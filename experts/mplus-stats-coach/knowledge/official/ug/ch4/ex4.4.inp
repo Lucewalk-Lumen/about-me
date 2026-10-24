@@ -1,0 +1,14 @@
+TITLE:	this is an example of an exploratory factor 
+mixture analysis with continuous latent class indicators 
+DATA:	FILE = ex4.4.dat;
+VARIABLE:	NAMES = y1-y8;
+	CLASSES = c(2);
+ANALYSIS:	TYPE = MIXTURE EFA 1 2;
+
+
+	
+	
+	
+
+	
+	

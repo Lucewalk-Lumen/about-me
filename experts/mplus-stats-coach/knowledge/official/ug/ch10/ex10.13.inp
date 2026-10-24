@@ -1,0 +1,40 @@
+TITLE:	this is an example of a two-level LTA with a covariate
+        and a between-level categorical latent variable
+DATA:	FILE = ex10.13.dat;
+VARIABLE:	NAMES ARE u11-u14 u21-u24 x w dumb dum1 dum2 clus;
+	USEVARIABLES = u11-w;
+	CATEGORICAL = u11-u14 u21-u24;
+	CLASSES = cb(2) c1(2) c2(2);
+	WITHIN = x;
+	BETWEEN = cb w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+	PROCESSORS = 2;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	c2 ON c1 x;
+	c1 ON x;
+	%BETWEEN%
+	%OVERALL%
+	c1#1 ON cb;
+	c2#1 ON cb;
+	cb ON w;
+MODEL cb:
+	%WITHIN%
+        %cb#1%
+	c2 ON c1;
+MODEL c1:
+	%BETWEEN%
+	%c1#1%
+	[u11$1-u14$1] (1-4);
+	%c1#2%
+	[u11$1-u14$1] (5-8);
+MODEL c2:
+	%BETWEEN%
+	%c2#1%
+	[u21$1-u24$1] (1-4);
+	%c2#2%
+	[u21$1-u24$1] (5-8);
+OUTPUT:	TECH1 TECH8;
+

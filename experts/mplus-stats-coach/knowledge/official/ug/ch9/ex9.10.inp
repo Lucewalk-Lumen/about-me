@@ -1,0 +1,19 @@
+TITLE:	this is an example of a two-level SEM with 
+	continuous factor indicators and a random 
+	slope for a factor
+DATA: 	FILE IS ex9.10.dat;
+VARIABLE:	NAMES ARE y1-y5 w clus;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL RANDOM; 
+	ALGORITHM = INTEGRATION;
+	INTEGRATION = 10;
+MODEL: 
+	%WITHIN%
+	fw BY y1-y4;
+	s | y5 ON fw;
+	%BETWEEN%
+	fb BY y1-y4;
+	y1-y4@0;
+	y5 s ON fb w;
+OUTPUT:	TECH1 TECH8;

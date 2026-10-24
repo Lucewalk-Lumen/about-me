@@ -1,0 +1,9 @@
+TITLE:	this is an example of a bi-factor EFA
+DATA:	FILE = ex5.29.dat;
+VARIABLE:	NAMES = y1-y10;
+ANALYSIS:	ROTATION = BI-GEOMIN;
+MODEL:	fg f1 f2 BY y1-y10 (*1);
+OUTPUT:	STDY;
+
+
+   

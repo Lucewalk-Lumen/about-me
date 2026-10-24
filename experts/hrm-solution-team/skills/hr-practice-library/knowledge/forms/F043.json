@@ -1,0 +1,78 @@
+{
+  "form_id": "F043",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "员工转正考核表",
+  "file": "templates/REC/form/F043.docx",
+  "n_tables": 1,
+  "n_rows": 22,
+  "outline": [
+    "姓名",
+    "部门",
+    "职务",
+    "试用日期",
+    "项目",
+    "称职能力",
+    "工作态度",
+    "考核结果",
+    "考核总分：    分",
+    "用人部门确认： 经理签名/日期：",
+    "管理中心确认： 经理签名/日期："
+  ],
+  "n_outline": 11,
+  "body": "姓名 | 部门 | 职务\n试用日期 | 年     月     日至      年    月    日\n项目 | 考核内容 | 分值 | 员工自评（权重20%） | 直接上级评价（权重60%） | 管理中心评价（权重20%）\n称职能力 | 1.沟通与协调能力 | 10\n2.团队建设与领导能力 | 10\n3.决策与判断能力 | 10\n4.按时、保质完成工作任务 | 10\n5.工作效率 | 10\n6.实际工作经验和解决问题能力 | 10\n7.工作计划与条理性 | 10\n称职能力 | 8.工作技能 | 6\n9.专业知识 | 5\n10.工作中提出创新见解和方法 | 5\n11.对本岗位职能和职责的认识程度 | 4\n工作态度 | 12.责任感和敬业精神 | 3\n13.对公司价值及企业文化的认知度 | 3\n14.工作主动性与积极性 | 2\n15.遵守公司制度及出勤情况 | 2\n考核结果\n考核总分：    分 | □优秀（85分以上）；□良好（70分以上）；□一般（60分以上）；□很差（60分以下）。\n用人部门确认： 经理签名/日期：\n管理中心确认： 经理签名/日期：",
+  "body_chars": 483,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T09:28:00Z",
+    "modified": "2019-03-18T09:44:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [
+      "okr_tracker.sh"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+title: 
+    Simulating x-m interaction effect on y using a random slope,
+    Step 2: External Monte Carlo analysis
+
+data:
+    file = xmreplist.dat;
+    type = montecarlo;
+
+variable:
+    names = y m x;
+    usev = y m x xm;
+
+define:
+    xm = x*m;
+  
+analysis:
+
+model:
+    [y*1] (beta0);
+    y on x*.4 (beta2);
+    y on xm*.2 (beta3);
+    y on m*.5 (beta1);  
+    [m*2] (gamma0);
+    m on x*.5 (gamma1);
+    y*.5;
+    m*1;
+
+model constraint:
+    new(tie*.35 pie*.25 de*.8);
+    tie=beta1*gamma1+beta3*gamma1;
+    pie=beta1*gamma1;
+    de=beta2+beta3*gamma0;
+

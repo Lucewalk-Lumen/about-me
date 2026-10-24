@@ -1,0 +1,70 @@
+{
+  "form_id": "F152",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "员工离职交接单",
+  "file": "templates/ER/form/F152.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "姓名",
+    "岗位",
+    "部门",
+    "离职日期",
+    "离职原因",
+    "行政",
+    "财务部",
+    "行政人事部",
+    "总经理"
+  ],
+  "n_outline": 9,
+  "body": "填表日期：      年    月    日\n姓名 | 岗位 | 部门 | 离职日期\n离职原因\n部门 | 1.公用账户信息等交接具体内容（如账号等）： 2.文件资料及工作交接具体内容： 接收人签字： 部门负责人签字： 年     月     日\n行政 | 物品退回情况（包括办公电脑交接、钥匙、工作牌、工作服和办公用品等）： 行政人员签字： 年     月     日\n财务部 | 员工差错扣款情况： 财务人员签字： 年     月     日\n行政人事部 | 1.工资及补贴结算： 2.奖金结算： 3.保险金结算： 4.其它 行政人事部经理签字： 年     月     日\n总经理",
+  "body_chars": 292,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T09:22:00Z",
+    "modified": "2019-04-02T09:22:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

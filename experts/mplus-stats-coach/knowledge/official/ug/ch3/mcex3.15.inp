@@ -1,0 +1,31 @@
+TITLE:		this is an example of a Monte Carlo
+			simulation study this is an example of a path analysis
+			with a combination of censored, categorical, 
+			and unordered categorical dependent variables
+MONTECARLO:			
+			NAMES = y1 u1 u2 x1-x3;
+			NOBSERVATIONS = 500;
+			NREPS = 1;
+			SEED = 53487;
+			GENERATE = y1(ca 1) u1(1) u2(n 2);
+			CENSORED = y1(a);
+			CATEGORICAL = u1;
+			NOMINAL = u2;
+			SAVE = ex3.15.dat;	
+MODEL POPULATION:
+			[x1-x3@0];
+			x1-x3@1;
+			y1 ON x1*-1 x2*.5 x3*1;
+			y1*1;
+			[y1*.5];
+			u1 ON x1*1 x2*-.5 x3*-1;
+			u2#1 ON y1*.5 u1*1 x2*-1;
+			u2#2 ON y1*.-5 u1*-1 x2*1;
+MODEL:
+			y1 ON x1*-1 x2*.5 x3*1;
+			y1*1;
+			[y1*.5];
+			u1 ON x1*1 x2*-.5 x3*-1;
+			u2#1 ON y1*.5 u1*1 x2*-1;
+			u2#2 ON y1*.-5 u1*-1 x2*1;
+OUTPUT:		TECH8 TECH9;

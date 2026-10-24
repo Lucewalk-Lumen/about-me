@@ -1,0 +1,33 @@
+TITLE:	this is an example of a multiple group 
+	multiple cohort growth model
+DATA: FILE = ex6.18.dat;
+VARIABLE:	NAMES = y1-y4 x a21-a24 g;
+	GROUPING = g (1=1990 2=1989 3=1988);
+MODEL:	i s |y1@0 y2@.2 y3@.4 y4@.6;
+	[i] (1); [s] (2);
+	i (3); s (4);
+	i WITH s (5);
+	i ON x (6);
+	s ON x (7);
+	y1 ON a21;
+	y2 ON a22 (12);
+	y3 ON a23 (14);
+	y4 ON a24 (16);
+	y2-y4 (22-24);	
+MODEL 1989:	
+	i s |y1@.1 y2@.3 y3@.5 y4@.7;
+	y1 ON a21;
+	y2 ON a22;
+	y3 ON a23;
+	y4 ON a24;
+	y1-y4;
+MODEL 1988:
+	i s |y1@.2 y2@.4 y3@.6 y4@.8;
+	y1 ON a21 (12);
+	y2 ON a22 (14);
+	y3 ON a23 (16);
+	y4 ON a24;
+	y1-y3 (22-24);
+	y4;
+OUTPUT: TECH1 MODINDICES(3.84);
+

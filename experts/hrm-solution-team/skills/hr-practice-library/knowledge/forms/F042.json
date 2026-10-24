@@ -1,0 +1,76 @@
+{
+  "form_id": "F042",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "员工转正申请表",
+  "file": "templates/REC/form/F042.docx",
+  "n_tables": 1,
+  "n_rows": 11,
+  "outline": [
+    "姓名",
+    "部门",
+    "职务",
+    "职级",
+    "申请类别",
+    "试用期自评",
+    "直接上级考评结果",
+    "分管领导意见",
+    "间接领导意见",
+    "管理中心意见",
+    "总经理意见"
+  ],
+  "n_outline": 11,
+  "body": "姓名 | 部门 | 职务\n职级 | 入职日期 | 申请日期\n申请类别 | □提前转正；            □期满转正；           □延期转正\n试用期自评 | 见《新员工试用期自评表》\n直接上级考评结果 | 试用期工作完成情况： 签名/日期：\n分管领导意见 | 签名/日期：\n间接领导意见 | 签名/日期：\n管理中心意见\n转正薪资/福利\n执行日期 | 签名/日期：\n总经理意见 | 签名/日期：",
+  "body_chars": 203,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T09:15:00Z",
+    "modified": "2019-03-18T09:26:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

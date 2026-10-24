@@ -1,0 +1,48 @@
+TITLE:	this is an example of a two-level 
+		regression analysis for a continuous 
+		dependent variable
+
+montecarlo:
+		names are y x w;
+		nobservations = 1000;
+		ncsizes = 3;
+		csizes = 40 (5) 50 (10) 20 (15);
+		seed = 58459;
+		nreps = 1;
+!		within = x;
+        between = w;
+		save = ex9.1b.dat;
+
+ANALYSIS:  TYPE = TWOLEVEL;
+
+model population:
+		%within%
+		x@1;
+		y on x*.75;
+		y*1;
+		%between%
+        [w@0]; w@1;
+		[x@0]; x@.5;
+        w with x@.5;
+		y on w*.5 x*1;
+		[y*2];
+		y*.5; 
+		
+model:
+        %within%
+	
+		y on x*.75 (gamma10);
+		y*1;
+		%between%
+      
+		y on w*.5 
+            x*1 (gamma01);
+		[y*2];
+		y*.5; 
+
+model constraint:
+        new(betac*.25);
+        betac = gamma01 - gamma10;
+
+output:
+		tech9;

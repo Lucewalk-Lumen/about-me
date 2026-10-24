@@ -1,0 +1,56 @@
+{
+  "form_id": "F079",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "计划外培训费用申请表",
+  "file": "templates/TRN/form/F079.docx",
+  "n_tables": 1,
+  "n_rows": 12,
+  "outline": [
+    "申请部门",
+    "申请日期",
+    "培训方式",
+    "培训对象及人数",
+    "培训内容",
+    "需要说明事项（实施计划外培训事由等）",
+    "培训费用",
+    "申请部门领导意见",
+    "总经理意见"
+  ],
+  "n_outline": 9,
+  "body": "申请部门 | 申请日期\n培训方式 | 培训时间 | 培训类型\n培训对象及人数 | 培训地点\n培训内容\n需要说明事项（实施计划外培训事由等）\n培训费用 | 教师授课费\n教材费、资料费\n教学用品费\n其他费用\n合计\n申请部门领导意见 | 综合各管理部意见\n总经理意见\n注：1.培训类别包括:①学历教育，②上岗证培训，③专业知识技能提高培训，④意识培训，⑤其他培训。\n2.培训方式包括：①外派，②专家授课，③部门内部培训。",
+  "body_chars": 207,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-20T08:34:00Z",
+    "modified": "2019-03-20T08:34:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "form_id": "F148",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "劳动合同顺延确认表",
+  "file": "templates/ER/form/F148.docx",
+  "n_tables": 1,
+  "n_rows": 10,
+  "outline": [
+    "填制部门：",
+    "档案编号：",
+    "员工姓名",
+    "出生年月",
+    "原合同期限",
+    "顺延期限",
+    "顺延原因",
+    "人力资源部审核意见",
+    "总经理审核意见",
+    "备注"
+  ],
+  "n_outline": 10,
+  "body": "填制部门： | 档案编号：\n员工姓名 | 性别 | 工号 | 职位\n出生年月 | 入职日期 | 合同编号\n原合同期限 | 自     年    月    日起至     年    月    日止。\n顺延期限 | 自     年    月    日起至     年    月    日止。\n顺延原因\n人力资源部审核意见 | 人力资源部经理（签章）： 日期：     年    月    日\n总经理审核意见 | 总经理（签章）： 日期：     年    月    日\n备注 | 1.本确认表视作双方对原劳动合同的书面续签行为。 2.除履行期限外，原劳动合同内容其他不变。 3.本续签表经双方签章后即日生效，与原劳动合同有同等法律效力。 4.本确认书一式两份，双方各执一份。\n公司签章：                                                       员工签名： 日期： 年 月 日",
+  "body_chars": 411,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T06:13:00Z",
+    "modified": "2019-04-02T06:14:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

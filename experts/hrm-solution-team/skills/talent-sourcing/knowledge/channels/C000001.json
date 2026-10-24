@@ -1,0 +1,13 @@
+{
+  "schema": "sourcing-channel",
+  "schema_version": "1.0.0",
+  "channel_id": "C000001",
+  "name": "技术社区定向寻访",
+  "type": "community",
+  "compliance_notes": "仅通过平台官方私信/活动触达；遵守平台用户协议；禁止批量抓取用户资料",
+  "typical_yield": "每周 5-10 个有效对话（示例，须按实际更新）",
+  "cost": "人力时间成本",
+  "owner": "寻访专员",
+  "status": "active",
+  "_note": "示例档案：渠道产出为占位样例，部署后按实际运营数据更新。"
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "source": "本包自研框架：综述写作的 Red Flags 失败模式库。",
+  "description": "Red Flags 停止检查系统 + 验证机制：声称完成必须有验证证据",
+  "core_principle": "声称完成而没有验证，是不诚实的表现。没有验证证据，就不能声称完成",
+  "verification_gate": {
+    "steps": [
+      "确认：什么命令/操作能证明这个声称？",
+      "执行：运行完整的验证操作",
+      "读取：完整输出，检查结果",
+      "验证：输出是否确认声称？（否→说明实际状态和证据；是→说明声称和证据）",
+      "然后才能：做出声称"
+    ],
+    "scenarios": [
+      {
+        "claim": "综述完成",
+        "required": "字数统计、结构检查、引证核查脚本通过",
+        "insufficient": "应该写完了"
+      },
+      {
+        "claim": "引用真实",
+        "required": "DOI 可访问、CrossRef API 确认",
+        "insufficient": "看起来像真的"
+      },
+      {
+        "claim": "论点有支撑",
+        "required": "evidence-claim map 中有段落级证据",
+        "insufficient": "这段写得像综述"
+      },
+      {
+        "claim": "论断有引用即算可信",
+        "required": "对每条引用做证据链核查（已获取原文、已证实归属、DOI 可核实）→ 未核查一律 [红/不通过]",
+        "insufficient": "有引用就当作已验证"
+      },
+      {
+        "claim": "格式正确",
+        "required": "运行格式检查脚本",
+        "insufficient": "目测检查"
+      },
+      {
+        "claim": "无AI痕迹",
+        "required": "运行风格检查/闭环检查脚本",
+        "insufficient": "读起来还行"
+      },
+      {
+        "claim": "文献搜索完成",
+        "required": "结果数量、DOI 列表、JSON 文件存在",
+        "insufficient": "搜过了"
+      }
+    ]
+  },
+  "red_flags": {
+    "process": [
+      {
+        "thought": "用户说得很清楚了，直接开始写",
+        "correct": "必须先确认综述类型、主题范围和范式"
+      },
+      {
+        "thought": "这只是修改一小段",
+        "correct": "检查是否需要更新 evidence-claim map"
+      },
+      {
+        "thought": "先写一段看看效果",
+        "correct": "必须先确认选题方向和章节结构"
+      },
+      {
+        "thought": "用户很着急，跳过讨论",
+        "correct": "流程可以加速，但不能跳过关键确认"
+      },
+      {
+        "thought": "这章内容很简单，不用确认",
+        "correct": "每章写完都必须让用户确认"
+      }
+    ],
+    "literature": [
+      {
+        "thought": "文献我可以补充一些",
+        "correct": "绝不编造文献，必须可追溯"
+      },
+      {
+        "thought": "我记得这个领域的经典文献",
+        "correct": "记忆不可靠，必须验证"
+      },
+      {
+        "thought": "这个引用看起来很合理",
+        "correct": "没有来源的引用一律不写"
+      },
+      {
+        "thought": "用户应该知道这个领域",
+        "correct": "不假设用户知识，问清楚再写"
+      }
+    ],
+    "verification": [
+      {
+        "thought": "应该写完了",
+        "correct": "运行验证命令确认"
+      },
+      {
+        "thought": "章节看起来完整",
+        "correct": "执行字数统计和结构检查"
+      },
+      {
+        "thought": "引用应该是真的",
+        "correct": "调用 CrossRef API 或搜索验证"
+      },
+      {
+        "thought": "格式应该没问题",
+        "correct": "运行格式检查脚本"
+      },
+      {
+        "thought": "我很确信",
+        "correct": "确信 != 证据，运行验证"
+      },
+      {
+        "thought": "就这一次跳过验证",
+        "correct": "没有例外"
+      }
+    ]
+  },
+  "excuses_vs_facts": [
+    {
+      "excuse": "应该行了",
+      "fact": "运行验证命令"
+    },
+    {
+      "excuse": "我很确信",
+      "fact": "确信 != 证据"
+    },
+    {
+      "excuse": "就这一次",
+      "fact": "没有例外"
+    },
+    {
+      "excuse": "格式检查过了",
+      "fact": "格式检查 != 内容正确"
+    },
+    {
+      "excuse": "我累了",
+      "fact": "疲劳不是借口"
+    },
+    {
+      "excuse": "部分检查够了",
+      "fact": "部分证明不了什么"
+    },
+    {
+      "excuse": "未获取原文",
+      "fact": "未获取原文 = 不得成稿引用，须置于报告顶部标注待补"
+    },
+    {
+      "excuse": "未证实归属",
+      "fact": "未证实归属 = 观点不得归到该作者，标红待研究者核实"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "form_id": "F069",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "培训合作证书",
+  "file": "templates/TRN/form/F069.docx",
+  "n_tables": 1,
+  "n_rows": 4,
+  "outline": [
+    "姓名",
+    "性别",
+    "出生年月",
+    "文化程度"
+  ],
+  "n_outline": 4,
+  "body": "姓名 | 性别 | 说明 一、本证发给参加岗位培训，经考试（考核）合格的人员，作为上岗、任职的依据之一。 二、本证由××公司人事部制定发放，培训承办部门填写持证人所参加培训的名称、内容、学时和考试（考核）成绩等，最后报人事部加盖公章。 三、本证应妥善保存，不得擅自转让、伪造或涂改，如有损坏或遗失，应及时向发证部门申报补发。\n出生年月 | 民族\n文化程度 | 岗位\n在岗于     年     月至     年     月参加岗位培训班学习，修完规定全部课程，经考试（考核）成绩合格，特此证明。 承办部门         负责人签字 （公司盖章） 年    月     日（签发）",
+  "body_chars": 290,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-22T03:57:00Z",
+    "modified": "2019-03-22T03:58:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

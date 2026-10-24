@@ -1,0 +1,27 @@
+{
+  "name": "obhrm-research-base",
+  "version": "1.0.0",
+  "description": "OBHRM 研究协作团 — 团队概念入口与路由总控（v1.1.0 已拆分为薄路由）。仅保留团队哲学、概念入口与三份路由文档（skill_router / skill_refs / skill_rules）；全部共享方法论资源已独立为兄弟技能 obhrm-methodology。",
+  "databases": {
+    "journals": {
+      "path": "../journal-library/db/journals.db",
+      "description": "期刊/评级综合数据库（28,241 刊 / 149,117 评级 / 6,259 学科分类 / 13 套评级体系），真源位于独立数据资产技能 journal-library"
+    }
+  },
+  "communication": {
+    "defaultLanguage": "zh-CN",
+    "fallbackLanguage": "en-US",
+    "preferredTone": "academic-professional",
+    "stdioEncoding": "utf-8",
+    "stdioEncodingPolicy": "force-utf8-on-pipe"
+  },
+  "metadata": {
+    "minPythonVersion": "3.10",
+    "requiresFonts": [
+      "PingFang SC",
+      "Heiti SC",
+      "Microsoft YaHei",
+      "Arial Unicode MS"
+    ]
+  }
+}

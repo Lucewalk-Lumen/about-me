@@ -1,0 +1,59 @@
+{
+  "form_id": "F024",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "岗位变动通知单",
+  "file": "templates/HRP/form/F024.docx",
+  "n_tables": 1,
+  "n_rows": 11,
+  "outline": [
+    "姓   名",
+    "入职时间",
+    "新岗位到岗时间",
+    "部   门",
+    "岗   位",
+    "岗   位级   别",
+    "薪   酬标   准",
+    "行政人事部意见： 签字： 年    月    日",
+    "总经理签字： 年    月    日"
+  ],
+  "n_outline": 9,
+  "body": "姓   名 | 入职时间 | 新岗位到岗时间\n部   门 | 变动前\n变动后\n岗   位 | 变动前\n变动后\n岗   位级   别 | 变动前\n变动后\n薪   酬标   准 | 变动前\n变动后\n行政人事部意见： 签字： 年    月    日\n总经理签字： 年    月    日",
+  "body_chars": 140,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-08T02:04:00Z",
+    "modified": "2019-03-08T02:31:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

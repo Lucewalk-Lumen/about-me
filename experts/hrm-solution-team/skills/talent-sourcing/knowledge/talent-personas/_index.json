@@ -1,0 +1,22 @@
+{
+  "schema": "talent-persona",
+  "schema_version": "1.0.0",
+  "count": 1,
+  "id_prefix": "P",
+  "fields": [
+    "persona_id",
+    "name",
+    "segment.industry",
+    "segment.function",
+    "segment.years_range",
+    "supply.hot_cities",
+    "comp_benchmark.p50_k",
+    "comp_benchmark.p75_k",
+    "switch_triggers",
+    "sourcing_difficulty",
+    "baseline_date"
+  ],
+  "searchable_filters": ["segment.industry", "segment.function", "sourcing_difficulty"],
+  "note": "画像为群体统计特征，不含任何个人 PII；市场数据引用时须标注出处与基准日期，未核实值一律标「需人工核实」",
+  "updated_at": "2026-09-29"
+}

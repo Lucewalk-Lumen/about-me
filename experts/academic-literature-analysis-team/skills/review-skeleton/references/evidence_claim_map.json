@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "source": "本包自研框架：证据与论断的映射关系。",
+  "description": "证据-论点映射协议：文献综述的硬门控——无映射不得声称完成",
+  "hard_gate": "写引言、相关工作、研究现状前，必须先建立证据-论点映射（evidence-claim map）。没有映射，不得声称文献综述已完成",
+  "evidence_map": {
+    "description": "为每条可用文献创建一行，记录其可支撑的具体论点",
+    "columns": [
+      {
+        "name": "Source ID",
+        "desc": "文献编号（与 READINGS.md 对应）"
+      },
+      {
+        "name": "Citation",
+        "desc": "作者(年份) 引用格式"
+      },
+      {
+        "name": "Source type",
+        "desc": "理论根基/实证研究/方法参考/综述文章"
+      },
+      {
+        "name": "Abstract-level finding",
+        "desc": "摘要级发现（一句话）"
+      },
+      {
+        "name": "Usable fact",
+        "desc": "可用事实（可写进正文的具体信息）"
+      },
+      {
+        "name": "Supported claim",
+        "desc": "支撑的论点（必须是可写进正文的一句话，不是'这篇文献很相关'）"
+      },
+      {
+        "name": "Citation slot",
+        "desc": "引用位置（具体到段落角色，如'引言-P2 理论谱系'或'主体-P3 自变量 A 的局限'）"
+      },
+      {
+        "name": "Risk",
+        "desc": "风险标记（direct/indirect/weak）"
+      }
+    ],
+    "rules": [
+      "优先使用用户的文献池",
+      "仅使用题名、摘要、DOI 元数据或用户提供摘录中的信息，除非已读全文",
+      "一条引用必须支撑一个具体论点，不是模糊的领域陈述",
+      "弱支撑或间接支撑标记为 Risk: indirect",
+      "每个核心论点至少 1 条强支撑；关键研究空白至少 2 条文献共同支撑"
+    ]
+  },
+  "paragraph_blueprint": {
+    "description": "为每个段落定义蓝图，蓝图完成后才可写正文",
+    "template": "### 段落 N\n- 角色：context / method landscape / limitation / gap / contribution\n- 主张：[本段核心论点]\n- 证据 ID：[引用的 Source ID 列表]\n- 对比或过渡：[与上一段/下一段的衔接]\n- 禁止内容：[本段不应出现的信息]"
+  },
+  "introduction_pattern": {
+    "description": "可发表的综述引言通常遵循此链条",
+    "chain": [
+      "应用情境与问题重要性（基础性或综述性引用支撑）",
+      "已有研究路径（按方法族/理论流派分组，而非逐篇罗列）",
+      "瓶颈级联：每条路径解决了什么、仍遗留什么",
+      "具体研究空白（本研究/本综述可以现实地回应的）",
+      "贡献声明（散文式或短列表，取决于目标风格）"
+    ],
+    "note": "引言结尾不要用冗长的章节地图。一段简洁的综述组织说明即可"
+  },
+  "body_firewall": {
+    "rule": "用户需求和过程笔记不得进入正文。'自然写作''避免空泛''讨论提示''待填写''用户应替换''本节为模板'等短语属于计划文件，不属于正文",
+    "compression_principle": "压缩不等于删除。缩短时保留论点、证据、方法条件和局限"
+  }
+}

@@ -1,0 +1,17 @@
+TITLE:	this is an example of modeling with data 
+		not missing at random (NMAR) using a 
+		pattern-mixture model        
+DATA:		FILE = ex11.4.dat;
+VARIABLE:	NAMES = z1-z5 y0 y1-y5;
+		USEVARIABLES = y0-y5 d1-d5;
+		MISSING = ALL (999);
+DATA MISSING:
+		NAMES = y0-y5;
+		TYPE = DDROPOUT;
+		BINARY = d1-d5;
+MODEL:	i s | y0@0 y1@1 y2@2 y3@3 y4@4 y5@5;
+		i ON d1-d5;
+		s ON d3-d5;
+		s ON d1 (1);
+		s ON d2 (1);
+OUTPUT:	TECH1;

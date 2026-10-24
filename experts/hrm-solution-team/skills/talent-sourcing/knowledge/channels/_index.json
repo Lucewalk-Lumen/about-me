@@ -1,0 +1,18 @@
+{
+  "schema": "sourcing-channel",
+  "schema_version": "1.0.0",
+  "count": 1,
+  "id_prefix": "C",
+  "fields": [
+    "channel_id",
+    "name",
+    "type",
+    "compliance_notes",
+    "typical_yield",
+    "cost",
+    "owner",
+    "status"
+  ],
+  "searchable_filters": ["type", "status"],
+  "updated_at": "2026-09-29"
+}

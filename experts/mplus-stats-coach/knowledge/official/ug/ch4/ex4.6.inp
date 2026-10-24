@@ -1,0 +1,11 @@
+TITLE:	this is an example of a two-level exploratory 
+factor analysis with both individual- and 
+cluster-level factor indicators 
+DATA:	FILE = ex4.6.dat;
+VARIABLE:	NAMES = u1-u6 y1-y4 x1 x2 w clus;
+	USEVARIABLES = u1-u6 y1-y4;
+	CATEGORICAL = u1-u6;
+	CLUSTER = clus;
+	BETWEEN = y1-y4;
+ANALYSIS:	TYPE = TWOLEVEL EFA 1 2 UW 1 2 UB; 
+SAVEDATA:	SWMATRIX = ex4.6sw.dat;

@@ -1,0 +1,8 @@
+TITLE:	this is an example of a bi-factor exploratory factor analysis with 
+		continuous indicators 
+DATA:		FILE = ex4.7.dat;
+VARIABLE:	NAMES = y1-y10;
+ANALYSIS:	TYPE = EFA 2 3;
+		ROTATION = BI-GEOMIN;
+
+   

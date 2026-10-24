@@ -1,0 +1,67 @@
+{
+  "form_id": "F149",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "员工劳动合同到期考核表",
+  "file": "templates/ER/form/F149.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "考核对象",
+    "所在部门（基层单位/项目部）",
+    "分管领导意见",
+    "薪酬委员会意见"
+  ],
+  "n_outline": 4,
+  "body": "考核对象 | 所在部门（基层单位/项目部）\n部门意见（依据员工日常工作情况、季度和年度考核，对员工履行劳动合同期内的表现进行考核评价，并提出建议）\n1.该员工本合同期内考核结果为： □优秀    □称职    □基本称职    □不称职 2.根据考核结果，建议对该员工： □续签劳动合同     □终止劳动合同 3.续签合同期限： □3年     □5年     □10年     □无固定期限 负责人签名：                         年     月     日\n分管领导意见\n1.该员工本合同期内考核结果为： □优秀    □称职    □基本称职    □不称职 2.根据考核结果，建议对该员工： □续签劳动合同     □终止劳动合同 3.续签合同期限： □3年     □5年     □10年     □无固定期限 分管领导签字：                        年     月     日\n薪酬委员会意见\n1.该员工本合同期内考核结果为： □优秀    □称职    □基本称职    □不称职 2.根据考核结果，建议对该员工： □续签劳动合同     □终止劳动合同 3.续签合同期限： □3年     □5年     □10年     □无固定期限 薪酬委员会签章：                      年     月     日",
+  "body_chars": 594,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T06:26:00Z",
+    "modified": "2019-04-26T02:11:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [
+      "okr_tracker.sh"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

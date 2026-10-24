@@ -1,0 +1,21 @@
+TITLE:	this is an example of a two-level CFA
+	mixture model with continuous factor
+	indicators
+DATA:	FILE IS ex10.4.dat;
+VARIABLE:	NAMES ARE y1-y5 class clus;
+	USEVARIABLES = y1-y5;
+	CLASSES = c (2);
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+	STARTS = 0;
+MODEL:	
+	%WITHIN%
+	%OVERALL%
+	fw BY y1-y5;	
+	%BETWEEN%
+	%OVERALL%
+	fb BY y1-y5; 
+	c#1*1;
+	%c#1%
+	[fb*2];
+OUTPUT:	TECH1 TECH8;

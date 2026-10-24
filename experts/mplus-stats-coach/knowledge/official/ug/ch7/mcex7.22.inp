@@ -1,0 +1,61 @@
+title:
+	this is an example of a mixture model with
+	different means for continuous outcomes 
+
+montecarlo:
+	names are y1-y4;
+	genclasses = c(3);
+	classes = c(3);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.22.dat;
+
+analysis:
+	type = mixture;
+
+model population:
+
+	%overall%
+
+	[c#1*0 c#2*0];
+
+	y1 with y2-y4*.5;
+	y2 with y3-y4*.25;
+	y3 with y4*.10;
+
+	[y1-y4*0];
+
+	y1-y4*1;
+	
+	%c#2%
+	[y1-y4*-2];
+	
+	%c#3%
+	[y1-y4*2];
+
+
+model:
+
+	%overall%
+
+	[c#1*0 c#2*0];
+
+	y1 with y2-y4*.5;
+	y2 with y3-y4*.25;
+	y3 with y4*.10;
+
+	[y1-y4*0];
+
+	y1-y4*1;
+	
+	%c#2%
+	[y1-y4*-2];
+	
+	%c#3%
+	[y1-y4*2];
+
+
+output:
+	tech8 tech9;	
+	

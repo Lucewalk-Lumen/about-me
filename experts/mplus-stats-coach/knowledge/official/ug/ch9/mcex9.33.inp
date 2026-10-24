@@ -1,0 +1,38 @@
+TITLE:	this is an example of a two-level, 
+single-indicator measurement error model
+
+montecarlo:
+	names are y;
+    NOBS = 20000;
+    NREP = 1;
+    NCSIZES = 1;
+    CSIZES = 200(100);
+    save = ex9.33.dat;
+     
+ANALYSIS:   
+    TYPE = TWOLEVEL RANDOM;
+    		estimator=bayes;  
+            biter=(5000); 
+            proc=2;
+
+model population:
+    %within%
+    f by y@1(&1); y*.5; 
+    s | f on f&1; f*1;
+    %between%
+    y*.5;
+    [s*0.3]; s*.02;
+    [y*0];
+
+model:
+     %within%
+    f by y@1(&1); y*.5; 
+    s | f on f&1; f*1;
+    %between%
+    y*.5;
+    [s*0.3]; s*.02;
+    [y*0];
+
+output:
+	tech8 tech9;	
+	

@@ -1,0 +1,77 @@
+title: 
+
+	nlsy36425x25dep.inp
+
+	cohort 64
+
+	centering at 25
+
+	hd82-hd89 (ages 18 - 25)
+
+	3-class - dep
+
+	regressed on the reduced set of x's
+
+	
+	log age scale: x_t = a*(ln(t-b) - ln(c-b)),
+		where t is time, a and b are constants to fit the mean curve
+		(chosen as a = 2 and b = 16),
+		and c is the centering age, here set at 25.
+data: 
+	file is big.dat;
+	format is 
+  2f5,f2,t14,5f7,t50,f8,t60,6f1.0,t67,2f2.0,t71,8f1.0,t79,f2.0,t82,4f2.0;
+
+data twopart:
+    names = hd82-hd89;
+    binary = bin1-bin5;
+    continuous = cont1-cont5;
+
+variable: 
+	names are 
+		id houseid cohort 
+		weight82 weight83 weight84 weight88 weight89 weight94 
+		hd82 hd83 hd84 hd88 hd89 hd94
+		dep89 dep94 male black hisp es fh1 fh23 fh123 hsdrp coll
+		ed89 ed94 cd89 cd94;
+
+    useobservations = cohort EQ 64 AND (coll GT 0 AND coll LT 20);
+
+    usev are male black hisp es fh123 
+		hsdrp coll bin1-bin5 cont1-cont5;
+
+    categorical = bin1-bin5;
+
+    missing are .;	  
+
+    auxiliary = hd82-hd89;
+
+define:
+
+	cut coll(12.1);
+
+
+analysis: 
+	type = missing;
+    estimator = bayes;
+    process = 2;
+
+
+model:  
+
+    iu su qu | bin1@-3.008 bin2@-2.197 bin3@-1.621 bin4@-.235 bin5@.000;
+
+	iy sy qy | cont1@-3.008 cont2@-2.197 cont3@-1.621 cont4@-.235 cont5@.000;
+
+
+    iu-qy on male black hisp es fh123 hsdrp coll;
+
+
+
+output:
+
+	tech1 tech8 standardized;
+
+plot:
+    type = plot3;
+    series = cont1-cont5(sy) | bin1-bin5(su);

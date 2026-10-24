@@ -1,0 +1,16 @@
+TITLE:	this is an example of a mixture regression analysis
+for a continuous dependent variable 
+using automatic starting values with random starts
+DATA:	FILE IS ex7.1.dat;
+VARIABLE:	NAMES ARE y x1 x2;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	
+	%OVERALL%
+	y ON x1 x2;
+	c ON x1;
+	%c#2%
+	y ON x2;
+	y;
+OUTPUT:	TECH1 TECH8;
+

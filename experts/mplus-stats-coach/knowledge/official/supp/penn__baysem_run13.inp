@@ -1,0 +1,62 @@
+title:
+
+montecarlo:
+      names = y1-y15;
+      nobs = 500;
+      nreps = 500;
+
+model population:
+      f1 by y1-y5*.8 y6-y10@.0 y11-y15@0;
+      f2 by y1-y5@0 y6-y10*.8 y11-y15@0;
+      f3 by y1-y5@.0 y6-y10@0 y11-y15*.8;
+      f1-f3@1;
+      f1 with f2-f3*.5;
+      f2 with f3*.5;
+     
+      y1-y15*.36;
+
+
+    f1 by y6*.1;
+    f2 by y11*.1;
+    f3 by y1*.1;
+    
+
+analysis:
+    estimator = bayes;
+    process = 2;
+
+
+model:
+
+      f1 by y1@.8 y2-y5*.8 y6-y15@0;
+      f2 by y1-y5@0 y6@.8 y7-y10*.8 y11-y15@0;
+      f3 by y1-y10@0 y11@.8 y12-y15*.8;
+      f1-f3*1 (v1-v3);
+      f1 with f2*.5 (c21);
+      f1 with f3*.5 (c31);
+      f2 with f3*.5 (c32);
+     
+      y1-y15*.36;
+
+      
+      f1 by y6*.1 y7-y15*0 (a1-a10);
+      f2 by y1-y5*0 (b1-b5);
+      f2 by y11*.1 y12-y15*0 (b6-b10);
+      f3 by y1*.1 y2-y10*0 (c1-c10);
+
+
+model priors:
+    a1-a10~N(0,0.01);
+    b1-b5~N(0,0.01);
+    b6-b10~N(0,0.01);
+    c1-c10~N(0,0.01);
+
+model constraint:
+    new(r21*.5 r31*.5 r32*.5);
+    r21 = c21/(sqrt(v1)*sqrt(v2));
+    r31 = c31/(sqrt(v1)*sqrt(v3));
+    r32 = c32/(sqrt(v2)*sqrt(v3));
+
+output:
+      tech9;
+

@@ -1,0 +1,67 @@
+{
+  "form_id": "F135",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "薪资调整申请表",
+  "file": "templates/COM/form/F135.docx",
+  "n_tables": 1,
+  "n_rows": 12,
+  "outline": [
+    "姓名",
+    "现部门",
+    "现岗位",
+    "到职日期",
+    "薪资调整原因",
+    "考核记录",
+    "原工资",
+    "原职务/业务津贴",
+    "原岗位技能要求",
+    "现岗位技能要求",
+    "自我鉴定",
+    "部门主管意见",
+    "人力资源部意见",
+    "总经理审核"
+  ],
+  "n_outline": 14,
+  "body": "姓名 | 现部门 | 现岗位\n到职日期 | 原部门 | 原岗位\n薪资调整原因 | □调整工作      □考绩优良      □年资增长\n考核记录 | □优   □良   □普通   □差 | 调整生效日期\n原工资 | 现工资\n原职务/业务津贴 | 现职务/业务津贴\n原岗位技能要求\n现岗位技能要求\n自我鉴定\n部门主管意见\n人力资源部意见\n总经理审核 | 人力资源主管意见 | 部门主管意见",
+  "body_chars": 195,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-27T08:49:00Z",
+    "modified": "2019-04-26T07:28:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

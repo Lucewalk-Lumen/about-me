@@ -1,0 +1,15 @@
+title: M0 model
+
+variable:  NAMES ARE y1-y5;
+
+data: file=1.dat;
+
+analysis: estimator=mlr; 
+
+model: f1 BY y1-y5; 
+y1 with y2; 
+y2 with y3; 
+y4 with y5; 
+y1 with y5;
+
+output: residual;

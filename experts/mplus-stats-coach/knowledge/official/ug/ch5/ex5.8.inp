@@ -1,0 +1,8 @@
+TITLE:	this is an example of a CFA with
+	covariates (MIMIC) with continuous factor
+	indicators 
+DATA:	FILE IS ex5.8.dat;
+VARIABLE:	NAMES ARE y1-y6 x1-x3;
+MODEL:	f1 BY y1-y3;
+	f2 BY y4-y6;
+	f1 f2 ON x1-x3;

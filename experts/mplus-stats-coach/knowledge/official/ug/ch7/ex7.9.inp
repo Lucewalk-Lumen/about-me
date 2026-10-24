@@ -1,0 +1,10 @@
+TITLE:	this is an example of a LCA with
+	continuous latent class indicators using
+	automatic starting values with random
+	starts
+DATA:	FILE IS ex7.9.dat;
+VARIABLE:	NAMES ARE y1-y4 c;
+	USEVARIABLES ARE y1-y4;
+	CLASSES = c (2);
+ANALYSIS:	TYPE = MIXTURE;
+OUTPUT:	TECH1 TECH8;

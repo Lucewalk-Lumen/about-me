@@ -1,0 +1,25 @@
+TITLE:	this is an example of a two-level time series analysis 
+    with a bivariate cross- lagged model for continuous dependent variables 
+    with random intercepts and random slopes
+    and random residual variances and covariance
+DATA:	FILE = ex9.32.dat;
+VARIABLE:	NAMES = y1 y2 subject;
+	CLUSTER = subject;
+	LAGGED = y1(1) y2(1); 
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+	ESTIMATOR = BAYES;  
+	PROCESSORS = 2;
+	BITERATIONS = (2000);
+MODEL:	%WITHIN%
+	s1 | y1 ON y1&1;
+	s2 | y2 ON y2&1;
+	s12 | y1 ON y2&1;
+	s21 | y2 ON y1&1;
+	logv1 | y1;
+	logv2 | y2;
+	f BY y1@1 y2@1;
+	logvf | f;
+	%BETWEEN%
+	y1 y2 s1-logvf WITH y1 y2 s1-logvf;
+OUTPUT:	TECH1 TECH8 STANDARDIZED (CLUSTER);
+PLOT:	TYPE = PLOT3;

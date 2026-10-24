@@ -1,0 +1,72 @@
+{
+  "form_id": "F049",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "新员工试用申请及核定表",
+  "file": "templates/REC/form/F049.docx",
+  "n_tables": 1,
+  "n_rows": 14,
+  "outline": [
+    "试 用 申 请",
+    "姓名",
+    "性别",
+    "□男   □女",
+    "事业关系室",
+    "人事部门",
+    "直接主管意见"
+  ],
+  "n_outline": 7,
+  "body": "试 用 申 请 | 姓名 | 性别 | □男   □女 | 部                   厂处 依         字第            号奉准增补 拟派任工作： 拟训练计划 主管：          经办\n籍贯 | （1） 试 用 部 门\n年龄\n地址\n服役\n学历\n专长 | （2）甄选主办部门 | 甄选方式：□公开招考 □推荐挑选 甄选日期：     年    月    日 办理经过： 评语：\n资历\n直接主管意见 | （3） 人事 部门 | 预定试用日期：自    年    月    日                         至     年   月    日 拟暂工资：自试用日起暂支      元 其他意见：\n董事长意见 | （4）经理意见\n事业关系室 | 试用部门 | 试用期间：自     年    月    日 至     年    月    日 工作项目： 工作情形： 评语： □拟下式任用          □拟予辞退 拟给职位：自   月   日起以     任用拟给工资：自   月   日起支      元 其他： 主管 经办：\n人事部门 | 考勤记录： 意见：职位： 薪资： 其他：\n直接主管意见\n董事长                  总经理                     经理",
+  "body_chars": 572,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T07:23:00Z",
+    "modified": "2019-03-18T07:50:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

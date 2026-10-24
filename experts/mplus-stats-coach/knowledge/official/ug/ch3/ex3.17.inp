@@ -1,0 +1,13 @@
+TITLE:	this is an example of a path analysis
+	with a categorical dependent variable and
+	a continuous mediating variable with
+	missing data
+DATA:	FILE IS ex3.17.dat;
+VARIABLE:	NAMES ARE u y x;
+	CATEGORICAL IS u;
+	MISSING IS y (999);
+ANALYSIS:ESTIMATOR = MLR;
+	INTEGRATION = MONTECARLO;
+MODEL:	y ON x;	
+	u ON y x;
+OUTPUT:	TECH1 TECH8;

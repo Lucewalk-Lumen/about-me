@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 备份与临时
+*.bak*
+*.tmp
+*~
+*.swp
+
+# 平台本地痕迹
+.created-by-session
+
+# 编辑器
+.vscode/
+.idea/
+
+# 交付中间产物(发布 zip 由 Release 提供,不入库)
+dist/
+out/
+06-打包/

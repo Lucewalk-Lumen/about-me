@@ -1,0 +1,32 @@
+TITLE:	this is an example of a two-level growth 
+        model for a continuous outcome (three level analysis)
+        with a between-level  categorical latent variable
+DATA:	FILE = ex10.8.dat;
+VARIABLE:	NAMES ARE y1-y4 x w dummy clus;
+	USEVARIABLES = y1-w;
+	CLASSES = cb(2);
+	WITHIN = x;
+	BETWEEN = cb w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE IS TWOLEVEL MIXTURE RANDOM;
+	PROCESSORS = 2;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4 (1);
+	iw sw ON x;
+	s | sw ON iw;
+	%BETWEEN%
+	%OVERALL%
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib sb ON w;
+	cb ON w;
+	s@0;
+	%cb#1%
+	[ib sb s];
+	%cb#2%
+	[ib sb s];
+OUTPUT:	TECH1 TECH8;
+

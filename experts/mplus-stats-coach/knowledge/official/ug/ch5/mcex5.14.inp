@@ -1,0 +1,49 @@
+title:	this is an example of a multiple group CFA 
+	with covariates (MIMIC) with continuous 
+	factor indicators
+
+montecarlo:
+	names = y1-y6 x1-x3;
+	ngroups = 2;
+	nobs = 500 600;
+	nreps = 1;
+	save = ex5.14.dat;
+
+model population:
+
+	[x1@0 x2@1 x3@2]; x1@3 x2@2 x3@1;
+	
+	f1 by y1@1 y2-y3*1;
+	f2 by y4@1 y5-y6*1;
+	f1 on x1*.5 x2*.6 x3*.7;
+	f2 on x1*.7 x2*.6 x3*.5;
+
+	f1-f2*.7;
+	f1 with f2*.25;
+	
+	y1-y6*.5;
+	
+model population-g2:
+
+	f1 by y3*.5;
+
+model:
+
+	
+	f1 by y1@1 y2-y3*1;
+	f2 by y4@1 y5-y6*1;
+	f1 on x1*.5 x2*.6 x3*.7;
+	f2 on x1*.7 x2*.6 x3*.5;
+
+	f1-f2*.7;
+	f1 with f2*.25;
+	
+	y1-y6*.5;
+	
+model g2:
+
+	f1 by y3*.5;
+
+output:
+	tech9;
+

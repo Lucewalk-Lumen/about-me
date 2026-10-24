@@ -1,0 +1,61 @@
+{
+  "form_id": "F025",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "岗位增补申请表",
+  "file": "templates/HRP/form/F025.docx",
+  "n_tables": 1,
+  "n_rows": 10,
+  "outline": [
+    "部门",
+    "拟增补岗位名称",
+    "增补岗位起始日期",
+    "目前存在的问题",
+    "申请理由",
+    "直接上级",
+    "增补岗位人员要求",
+    "增补岗位的工作内容",
+    "申请部门意见",
+    "人力资源部门意见",
+    "领导意见"
+  ],
+  "n_outline": 11,
+  "body": "填表日期：      年      月      日\n部门 | 拟增补岗位名称\n增补岗位起始日期 | 增补岗位所需人数\n目前存在的问题\n申请理由\n直接上级 | 直接下级\n增补岗位人员要求\n增补岗位的工作内容\n申请部门意见\n人力资源部门意见\n领导意见\n填表人：                                      审核人：",
+  "body_chars": 171,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-08T01:43:00Z",
+    "modified": "2019-03-08T01:52:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

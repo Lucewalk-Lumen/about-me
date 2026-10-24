@@ -1,0 +1,24 @@
+TITLE:	this is an example of non-linear 
+	constraint on the logit parameters of an 
+	unordered categorical (nominal) variable.
+	the example draws on the classic Rao animal 
+	genetics example on page 2 of Dempster,
+	Laird & Rubin (1977) in JRSS B
+MONTECARLO:			
+	NAMES = u;
+	NOBSERVATIONS = 500;
+	generate = u(n 3);
+	nominal = u;
+	NREPS = 1;
+	SEED = 53487;
+	SAVE = ex3.10.dat;
+MODEL POPULATION:
+	[u#1*1.433 u#2*-.519 u#3*-.519];
+MODEL:	
+	[u#1*1.433] (p1);
+	[u#2*-.519] (p2);
+	[u#3*-.519] (p2);
+MODEL CONSTRAINT:
+	p2 = log ((exp (p1) - 1)/2 - 1);
+OUTPUT:
+	TECH8 TECH9;

@@ -1,0 +1,59 @@
+{
+  "form_id": "F100",
+  "module_code": "PER",
+  "module_zh": "绩效管理",
+  "module_order": 4,
+  "kind": "表格",
+  "title": "绩效考核申诉表",
+  "file": "templates/PER/form/F100.docx",
+  "n_tables": 1,
+  "n_rows": 8,
+  "outline": [
+    "申诉人姓名",
+    "职位",
+    "部门",
+    "直接上级",
+    "申诉考核类型",
+    "申诉事件",
+    "申诉理由",
+    "申诉处理意见",
+    "申诉处理结果",
+    "说明"
+  ],
+  "n_outline": 10,
+  "body": "申诉人姓名 | 职位 | 部门 | 直接上级\n申诉考核类型 | □季度考核              □年度考核             □试用期考核\n申诉事件\n申诉理由 | （可以附页）\n申诉处理意见 | 考核决策者签名：                 日期：\n申诉处理意见 | 人力资源经理签名：                 日期：\n申诉处理结果 | 人力资源经理签名：                日期： 总经理签名：                日期：\n说明 | 1.申诉人必须在知道考核结果2日内提出申诉，否则无效。 2.申诉人直接将该表交人力资源部负责人或考核决策人。 3.人力资源部或考核决策人须在接到申述的3个工作日内提出处理意见和处理结果。 4.本表一式三份，一份人力资源部存档，一份交申述人考核决策者，一份交申述人。",
+  "body_chars": 373,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-26T07:30:00Z",
+    "modified": "2019-03-26T07:38:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "performance-management",
+    "owner_agent": "performance-management",
+    "primary_engines": [
+      "okr_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/performance.md"
+      },
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/okr-template-library.md"
+      }
+    ]
+  }
+}

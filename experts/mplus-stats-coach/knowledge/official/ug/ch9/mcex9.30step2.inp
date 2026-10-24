@@ -1,0 +1,46 @@
+Title: analyzing the ex9.30step1 data
+        which has missing data.
+        Not using Tinterval
+        analyzing/saving not missing observations
+        by commenting out missing= and using Useobs
+        and not using Lagged so that y&1 is not saved
+
+Data:
+    file = ex9.30step1.dat;
+    
+Variable:
+    names = u z y w time subject; 
+    ! don't read y-lag because then all records have missing
+    usev = z y w;
+ !   missing = all(999);
+    cluster = subject;
+    between = z w;
+ !   lagged = y(1);
+!    Tinterval = time(1);
+    useobs = y ne 999;
+
+    auxiliary = time;
+
+ANALYSIS:   
+    TYPE = twolevel RANDOM;
+      		estimator=bayes;
+            proc=2;
+              biter=(1000);  
+
+MODEL: ! just apply a simple model:
+
+    %WITHIN%
+    y;
+
+    %BETWEEN%
+    y on w;
+    z on y;
+
+Output:
+      tech1 tech8;
+
+Plot:
+    type = plot3;
+
+Savedata: ! this will be the "real data":
+    file = ex9.30.dat;

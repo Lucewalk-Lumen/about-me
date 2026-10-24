@@ -1,0 +1,57 @@
+{
+  "form_id": "F021",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "员工免职通知单",
+  "file": "templates/HRP/form/F021.docx",
+  "n_tables": 1,
+  "n_rows": 9,
+  "outline": [
+    "姓名",
+    "卡号",
+    "填表日期",
+    "部门",
+    "免职原因： 部门主管：",
+    "分管副总：",
+    "总经理"
+  ],
+  "n_outline": 7,
+  "body": "姓名 | 卡号 | 填表日期\n部门 | 职务 | 生效日期\n免职原因： 部门主管： | 免职手续 | 经办人\n□工作移交 | 服务部门\n□上岗证 □服装 | 人事部\n分管副总： | □办理退舍 □其它 | 行政部\n□归还量具 | 计量室\n□财务结清 | 财务部\n总经理 | 分管人事副总 | 人事主管 | 填表人\n备注：1、本表格一式两份，一份交人事部，一份交免职员工。\n2、各部门经办人签字系指免职员工与各部门已办理移交手续的确认。",
+  "body_chars": 217,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-07T07:31:00Z",
+    "modified": "2019-03-07T07:31:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+TITLE:	this is an example of non-linear
+	constraint on the logit parameters of an
+	unordered categorical (nominal) variable
+DATA:	FILE IS ex3.10.dat;
+VARIABLE:	NAMES ARE u;
+	NOMINAL = u;
+MODEL:	[u#1] (p1);
+	[u#2] (p2);
+	[u#3] (p2);
+MODEL CONSTRAINT:
+	p2 = log ((exp (p1) - 1)/2 - 1);

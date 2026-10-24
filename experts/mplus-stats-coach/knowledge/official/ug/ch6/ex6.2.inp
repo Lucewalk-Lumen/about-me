@@ -1,0 +1,9 @@
+TITLE:	this is an example of a linear growth
+	model for a censored outcome using a
+	censored model 
+DATA:	FILE IS ex6.2.dat;
+VARIABLE:	NAMES ARE y11-y14;
+	CENSORED ARE y11-y14 (b);
+ANALYSIS:	ESTIMATOR = MLR;
+MODEL:	i s | y11@0 y12@1 y13@2 y14@3;
+OUTPUT:	TECH1 TECH8;

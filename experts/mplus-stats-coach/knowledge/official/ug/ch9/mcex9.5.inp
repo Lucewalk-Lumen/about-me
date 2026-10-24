@@ -1,0 +1,64 @@
+TITLE:	Monte Carlo for a two-level path 
+	analysis model with continuous dependent variables
+	and random slopes
+
+montecarlo:
+	names are y1 y2 x1 x2 w;
+	nobservations = 500;
+	ncsizes = 3;
+	csizes = 10 (5) 50 (3) 30 (10);
+	seed = 58459;
+	nreps = 1;
+	within = x1 x2;
+	between = w;
+	save = ex9.5.dat;
+
+ANALYSIS:
+	TYPE = TWOLEVEL RANDOM;
+	algorithm = integration;
+
+model population:
+
+	%WITHIN%
+
+	x1-x2@1;
+
+	s2 | y2 on y1;
+	y2 on x2*.5;
+	s1 | y1 on x2;
+	y1 on x1*.25;
+	y1-y2*1;
+
+	%BETWEEN%
+	w@1;
+	y1 on w*1;
+	y2 on w*1;
+	y1-y2*.5;
+	s1 on w*.3;
+	s2 on w*.6;
+	s1*.5; s2*.75;
+	[s2*.75 s1*.5];
+
+model:
+
+	%WITHIN%
+
+
+	s2 | y2 on y1;
+	y2 on x2*.5;
+	s1 | y1 on x2;
+	y1 on x1*.25;
+	y1-y2*1;
+
+	%BETWEEN%
+
+	y1 on w*1;
+	y2 on w*1;
+	y1-y2*.5;
+	s1 on w*.3;
+	s2 on w*.6;
+	s1*.5; s2*.75;
+	[s2*.75 s1*.5];
+
+output:
+	tech8 tech9;

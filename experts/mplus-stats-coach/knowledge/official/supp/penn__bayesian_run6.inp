@@ -1,0 +1,103 @@
+title:
+	
+	Raw data from Holzinger-Swineford 
+	as entered by the students of Muthen's Fall 1993 
+	UCLA Education 210E class:
+
+	Grades VII and VIII of the
+	Grant-White elementary school in Forest Park, Illinois
+	n=145
+
+	The 24 tests and the 2 revised/new tests.
+	Gender, grade, and age information
+	
+	Sources:
+	Holzinger, K. J. & Swineford, F. (1939). 
+	A study in Factor Analysis: The Stability of a Bi-Factor
+	Solution. Supplementary Educational Monographs.
+	Chicago, Ill.: The University of Chicago.
+
+	Harman, H.H. (1976). Modern Factor Analysis.
+	Third Edition. Chicago: The University of Chicago Press
+
+data: 
+	file is holzingr.dat;
+	format is
+	f3,2f2,f3,2f2/3x,13(1x,f3)/3x,13(1x,f3);
+
+variable: 
+	names are id female grade agey agem school 
+	visual cubes paper flags general paragrap
+	sentence wordc wordm addition code counting straight wordr
+	numberr figurer object numberf figurew deduct
+	numeric problemr series arithmet paperrev flagssub;
+
+!	id is student record; these data are the n=145 students
+!	in records 201-351 given in the 1939 monograph.
+!	agey is age in years, agem is age in months.
+!	school = 0 is Grant-White
+
+!   flags = lozenges
+
+	usev are  visual cubes paper flags general paragrap
+	sentence wordc wordm addition code counting straight 
+    wordr numberr figurer object numberf figurew; 
+
+    useobs = school eq 0;
+
+Define:
+	visual = visual/sqrt(47.471);
+    cubes = cubes /sqrt(19.622);
+    paper = paper /sqrt(7.908);
+    flags = flags/sqrt(68.695);
+    general = general/sqrt(134.970);
+    paragrap = paragrap/sqrt(11.315);
+    sentence = sentence/sqrt(21.467);
+    wordc = wordc/sqrt(28.505);
+    wordm = wordm/sqrt(62.727);
+    addition = addition/sqrt(561.692);
+    code = code/sqrt(275.759);
+    counting = counting/sqrt(437.752);
+    straight = straight/sqrt(1362.158);
+    wordr = wordr/sqrt(116.448);
+    numberr = numberr/sqrt(56.496);
+    figurer = figurer/sqrt(45.937);
+    object = object/sqrt(20.730);
+    numberf = numberf/sqrt(20.150);
+    figurew = figurew/sqrt(12.845);
+
+Analysis:
+    estimator = bayes;
+    process = 2;
+    fbiter = 10000;
+	
+Model:  
+    spatial by visual* cubes paper flags;
+    verbal by general* paragrap sentence wordc wordm;
+    speed by addition* code counting straight;
+    memory by wordr* numberr figurer object numberf figurew;
+
+    spatial-memory@1;
+
+    spatial  by general-figurew*0 (a1-a15);
+    verbal by visual-flags*0 (b1-b4);
+    verbal by addition-figurew*0 (b5-b14);
+    speed by visual-wordm*0 (c1-c9);
+    speed by wordr-figurew*0 (c10-c15);
+    memory by visual-straight*0 (d1-d13);
+
+model priors:
+    a1-a15 ~ n(0,.01);
+    b1-b14 ~ n(0,.01);
+    c1-c15 ~ n(0,.01);
+    d1-d13 ~ n(0,.01);
+
+Output:
+    tech1 tech8 stdyx;
+
+Plot:
+    type = plot2;
+
+
+
+

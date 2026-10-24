@@ -1,0 +1,17 @@
+TITLE:	this is an example of a Bayesian MIMIC model with cross-loadings and direct effects with zero-mean and small-variance priors
+DATA:	FILE = ex5.32.dat;
+VARIABLE:	NAMES = y1-y6 x1-x3;
+ANALYSIS:	ESTIMATOR = BAYES;
+	PROCESSORS = 2;
+MODEL:	f1 BY y1-y3
+	y4-y6 (xload4-xload6);              
+	f2 BY y4-y6
+	y1-y3 (xload1-xload3);
+	f1-f2 ON x1-x3;
+	y1-y6 ON x1-x3 (dir1-dir18);
+MODEL PRIORS:
+	xload1-xload6~N(0,0.01);
+	dir1-dir18~N(0,0.01);
+PLOT:	TYPE = PLOT2;	
+
+	

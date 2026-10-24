@@ -1,0 +1,46 @@
+title: 
+    Simulating x-m interaction effect on y using a random slope,
+    saving the data for external Monte Carlo analysis
+
+montecarlo:
+    names = y m x;
+    nobs = 400;
+    nreps = 500;
+    repsave = all;
+    save = xmrep*.dat;
+    cutpoints = x(0);
+   
+model population:
+    x@1;
+    [y*1];
+    y on x*.4;
+    beta1 | y on m;
+    beta1 on x*.2;
+    [beta1*.5];
+    beta1@0;
+    [m*2];
+    m on x*.5;
+    y*.5;
+    m*1;
+
+analysis:
+    type = random;
+
+model:
+    [y*1] (beta0);
+    y on x*.4 (beta2);
+    beta1 | y on m;
+    beta1 on x*.2 (beta3);
+    [beta1*.5] (beta1);
+    beta1@0;
+    [m*2] (gamma0);
+    m on x*.5 (gamma1);
+    y*.5;
+    m*1;
+
+model constraint:
+    new(tie*.35 pie*.25 de*.8);
+    tie=beta1*gamma1+beta3*gamma1;
+    pie=beta1*gamma1;
+    de=beta2+beta3*gamma0;
+

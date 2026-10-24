@@ -1,0 +1,61 @@
+{
+  "form_id": "F128",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "工资预支申请表",
+  "file": "templates/COM/form/F128.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "申请人",
+    "部门",
+    "申请日期",
+    "借款原因",
+    "申请金额",
+    "连带保证人",
+    "部门意见： 签名： 日期：",
+    "借支记录： 签名： 日期："
+  ],
+  "n_outline": 8,
+  "body": "说明：工资预支申请表主要用于员工在还没到公司发工资的时候，因个人原因需要向公司申请预支工资。要求写明预支原因以及借支记录等事项。\n申请人 | 部门 | 申请日期\n借款原因\n申请金额 | 元 | 偿还日期限 | 自本月起分        月还清\n连带保证人 | 姓名 | 单位 | 无借支或为同事担保行为记录\n姓名 | 单位\n部门意见： 签名： 日期： | 人力资源部意见： 签名： 日期：\n借支记录： 签名： 日期： | 主管领导/总经理意见： 签名： 日期：",
+  "body_chars": 230,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-28T01:24:00Z",
+    "modified": "2019-03-28T01:25:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

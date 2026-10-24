@@ -1,0 +1,42 @@
+# teaching-helper-team 运行依赖（精确锁定；版本取各技能原声明区间内的最新稳定版）
+# 由包根统一声明，技能内不再各自维护依赖清单。
+# 说明：带 == 号的为精确锁定的必装依赖；文件末尾「可选依赖」块仅列注释、不参与锁定。
+# 一致性：本文件的包集合须**覆盖** `skills/setup/scripts/setup.py` 的 PY_DEPS 中所有包，
+#        由 `scripts/verify.py` 的「依赖口径一致」节机器校验（防两处清单各自漂移）。
+
+# == 采集层（crawler · 后端静态采集）==
+beautifulsoup4==4.15.0
+lxml==6.1.3
+requests==2.34.2
+
+# == 解析层（material-extractor）：多解析器择优 ==
+# 每种格式都有 stdlib 备选解析，未安装时由其余解析器承接、仅抽取质量下降：
+#   PDF → pdftotext / pypdf；EPUB → zipfile；DOCX → zipfile+XML；HTML → html.parser
+ebooklib==0.20
+pdfminer.six==20260107
+pypdf==6.19.0
+striprtf==0.0.33
+
+# == 产出层：仅在对应产出形态时需要 ==
+#   python-pptx / pymupdf —— 仅 .pptx 与 PDF 转换路径；HTML 单文件课件是主路径、零依赖
+python-docx==1.2.0
+python-pptx==0.6.23
+pymupdf==1.28.2
+
+# == 语音合成层（text-to-speech）==
+edge-tts==7.2.8
+
+# == 图片型会议纪要 OCR（minutes-organizer）==
+opencv-python==4.14.0.94
+onnxruntime==1.30.0
+pillow-heif==0.22.0
+rapidocr-onnxruntime==1.2.3
+
+# == 图表路径（thesis-mentor）：可选，setup 默认不安装 ==
+matplotlib==3.11.1
+numpy==2.5.3
+scipy==1.18.1
+seaborn==0.13.2
+
+# ---- 可选依赖（按需安装，未锁定，不参与 setup 默认安装） ----
+# 高质量 PDF 解析：docling；动态渲染抓取：playwright（由 setup 按需安装）

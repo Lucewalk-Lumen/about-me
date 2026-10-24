@@ -1,0 +1,69 @@
+TITLE:   
+
+	bengt\Mplus\FAS\Growth\Combo1new.INP
+
+	advp: mother's drinking before pregnancy 
+	advm1-advm3: drinking in first trimester
+	momalc2-momalc3: drinking in 2nd and 3rd trimesters
+	hcirc0-hcirc36; head circumference
+
+DATA:  
+	file is  headalln.dat; format is 1f8.2,47f7.2;
+
+Variable:  
+	names are id weight0 weight8 weight18 weight36 height0 
+           height8 height18 height36 hcirc0 hcirc8 hcirc18 hcirc36
+           momalc1 momalc2 momalc3 momalc8 momalc18 momalc36
+           momcig1 momcig2 momcig3 momcig8 momcig18 momcig36
+           gender eth momht gestage age8 age18 age36 esteem8
+           esteem18 esteem36 faminc0 faminc8 faminc18 faminc36
+           momdrg36 gravid sick8 sick18 sick36
+		advp  advm1 advm2 advm3 ;
+
+           MISSING = ALL (999);
+
+           USEV = 
+		hcirc0 hcirc36 gender eth alccig;
+
+
+	useobs = id ne 1121 and  
+!		not (advp eq 0 and momalc1 eq 0 and momalc2 eq 0 
+!			and momalc3 eq 0)
+!		and 
+		not (momalc1 eq 999 and momalc2 eq 999 and momalc3 eq 999);
+
+Define:
+	standardize hcirc0 hcirc36;
+    alccig=0;
+    if(momalc3 gt 0 and momcig3 gt 5)then alccig=1;
+
+Analysis:
+
+model:
+    [hcirc36] (kappa0);
+    hcirc36 on alccig (kappa1) 
+    gender eth;
+    [hcirc0] (gamma0);
+    hcirc0 on alccig*1 (gamma1)
+    gender eth;
+    hcirc36*1 (sig);
+    hcirc0*1 (sig2);
+    hcirc36 with hcirc0 (cov);
+
+model constraint:
+    new(rho rhocurl beta1 beta2 beta0 sig1 indirect direct);
+    rhocurl=cov/(sqrt(sig)*sqrt(sig2));
+    rho=0;
+    beta1=(sqrt(sig)/sqrt(sig2))*
+    (rhocurl-rho*sqrt((1-rhocurl*rhocurl)/(1-rho*rho)));
+    beta2=kappa1-beta1*gamma1;
+    beta0=kappa0-beta1*gamma0;
+    sig1=(rhocurl*sqrt(sig)-beta1*sqrt(sig2))/0.5;
+    indirect=beta1*gamma1;
+    direct=beta2;
+
+Output:
+	sampstat standardized;
+
+Plot:
+    type=plot3;

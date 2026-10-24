@@ -1,0 +1,11 @@
+TITLE:  this is an example of mixture CFA modeling
+DATA:	FILE IS ex7.17.dat;
+VARIABLE:	NAMES ARE y1-y5 c;
+	USEVARIABLES ARE y1-y5;
+	CLASSES = c(2);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	%OVERALL%
+	f BY y1-y5;
+	%c#1%
+	[f*1];
+OUTPUT:	TECH1 TECH8;

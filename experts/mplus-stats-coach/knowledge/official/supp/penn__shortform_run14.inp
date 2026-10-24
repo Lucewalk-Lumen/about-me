@@ -1,0 +1,58 @@
+title:
+    Pearl (2011) artificial example, Prevention Science
+    Probit. Step 2
+
+data:
+    file = binbinprobreplist.dat;
+    type = montecarlo;
+
+variable:
+    names = y m x; !x: tx/ctrl, m: mediator, y: outcome
+    categorical = y m;
+    usev = y m x xm;
+ 
+define:
+    xm=x*m;
+    
+analysis:
+    estimator = ml;
+    link = probit;
+
+model:
+    [m$1*.254] (fm0); ! Negative intercept. P(m=1 | x=0)=0.40
+    m on x*.929 (fm1); ! P(m=1 | x=1)=0.75
+    [y$1*.84] (fy00); ! Negative intercept. P(y=1 | x=0,m=0)=0.20
+    y on x*.586 (fy10); ! direct effect of x on y. P(y=1 |x=1,m=0)=0.40
+    y on m*.315 (fy01); ! main effect of m on y. P(y=1 | x=0,m=1)=0.30
+    y on xm*.779 (fy11); ! interaction between x and m in their influence on y
+                    !P(y=1 | x=1,m=1)=0.80
+
+model constraint:
+    new(de*.32 tie*.14 pie*.035 te*.46 tiete*.304 piete*.07 dete*.696 compdete*.304
+    pfm0*.4 pfm1*.75 pfy00*.2 pfy10*.4 pfy01*.3 pfy11*.8
+    numde*.56 dende*.24 orde*4.0303 numind*.7 denind*.56 orind*1.8333);
+    pfm0=phi(-fm0);
+    pfm1=phi(-fm0+fm1);
+    pfy00=phi(-fy00);
+    pfy10=phi(-fy00+fy10);
+    pfy01=phi(-fy00+fy01);
+    pfy11=phi(-fy00+fy10+fy01+fy11);
+    de=(pfy10-pfy00)*(1-pfm0)+(pfy11-pfy01)*pfm0;
+    tie=(pfy11-pfy10)*(pfm1-pfm0);
+    pie=(pfy01-pfy00)*(pfm1-pfm0);
+    te=pfy11*pfm1+pfy10*(1-pfm1)
+    -(pfy01*pfm0+pfy00*(1-pfm0));
+    tiete=tie/te;
+    piete=pie/te;
+    dete=de/te;
+    compdete=1-de/te;
+    numde=pfy10*(1-pfm0)+pfy11*pfm0;
+    dende=pfy00*(1-pfm0)+pfy01*pfm0;
+    orde=(numde/(1-numde))/(dende/(1-dende));
+    numind=pfy10*(1-pfm1)+pfy11*pfm1;
+    denind=pfy10*(1-pfm0)+pfy11*pfm0;
+    orind=(numind/(1-numind))/(denind/(1-denind));
+
+
+
+

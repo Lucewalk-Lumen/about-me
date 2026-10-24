@@ -1,0 +1,36 @@
+TITLE:	this is an example of a two-level LTA with a covariate 
+DATA:	FILE = ex10.12.dat;
+VARIABLE:	NAMES ARE u11-u14 u21-u24 x w dum1 dum2 clus;
+	USEVARIABLES = u11-w;
+	CATEGORICAL = u11-u14 u21-u24;
+	CLASSES = c1(2) c2(2);
+	WITHIN = x;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL MIXTURE;
+	PROCESSORS = 2;
+	STARTS = 50 5;
+MODEL:
+	%WITHIN%
+	%OVERALL%
+	c2 ON c1 x;
+	c1 ON x;
+	%BETWEEN%
+	%OVERALL%
+	c1#1 ON w;
+	c2#1 ON c1#1 w; 
+	c1#1 c2#1;
+MODEL c1:
+	%BETWEEN%
+	%c1#1%
+	[u11$1-u14$1] (1-4);
+	%c1#2%
+	[u11$1-u14$1] (5-8);
+MODEL c2:
+	%BETWEEN%
+	%c2#1%
+	[u21$1-u24$1] (1-4);
+	%c2#2%
+	[u21$1-u24$1] (5-8);
+OUTPUT:	TECH1 TECH8;
+

@@ -1,0 +1,22 @@
+TITLE:	two-level path analysis with a continuous, 
+a categorical, and a cluster-level observed dependent variable
+DATA:	FILE = ex9.4.dat;
+VARIABLE:	NAMES ARE u z y x w clus;
+	CATEGORICAL = u;
+	WITHIN = x;
+	BETWEEN = w z;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL;
+	ESTIMATOR = WLSM;
+MODEL:	
+	%WITHIN%
+	u ON y x;
+	y ON x;
+	%BETWEEN%
+	u ON w y z;
+	y ON w;
+	z ON w;
+	y WITH z;
+OUTPUT:	TECH1;
+
+

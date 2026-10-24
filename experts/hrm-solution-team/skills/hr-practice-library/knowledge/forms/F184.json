@@ -1,0 +1,62 @@
+{
+  "form_id": "F184",
+  "module_code": "ARC",
+  "module_zh": "人事档案管理",
+  "module_order": 7,
+  "kind": "表格",
+  "title": "库藏档案状况检查记录",
+  "file": "templates/ARC/form/F184.docx",
+  "n_tables": 1,
+  "n_rows": 8,
+  "outline": [
+    "检查时间",
+    "年       月       日",
+    "检查方式",
+    "检查人",
+    "档案状况或发现问题",
+    "采取措施",
+    "处理结果",
+    "备注",
+    "说明"
+  ],
+  "n_outline": 9,
+  "body": "检查时间 | 年       月       日\n检查方式 | 全查□                   抽查□（抽查比例        %）\n检查人\n档案状况或发现问题\n采取措施\n处理结果\n备注\n说明 | 1.各级档案馆（室）要对档案进行定期检查，全查或抽查库藏档案状况，并做好库藏档案状况检查记录。 2. 在库房中一经发现虫害或受潮等问题应及时处理——必须立即对库存档案进行清查，确认发生虫害的种类、程度及分布，采取有效措施杀虫。对于那些已确认有虫害的档案，应立即加以隔离处理，防止虫害大面积扩散。",
+  "body_chars": 252,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-08T02:44:00Z",
+    "modified": "2019-04-08T02:47:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

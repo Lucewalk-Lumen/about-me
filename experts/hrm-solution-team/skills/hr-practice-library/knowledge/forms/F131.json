@@ -1,0 +1,61 @@
+{
+  "form_id": "F131",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "新员工职务工资核准表",
+  "file": "templates/COM/form/F131.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "工作部门",
+    "职别",
+    "姓名",
+    "学历",
+    "工作经验",
+    "要求待遇",
+    "核准薪资",
+    "批示"
+  ],
+  "n_outline": 8,
+  "body": "工作部门 | 职别\n姓名 | 到公司日期\n学历\n工作经验 | 相关       年，非相关       年，共       年\n要求待遇 | 公司标准\n核准薪资 | 生效日期\n批示 | 单位主管 | 人事经办",
+  "body_chars": 104,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-27T09:03:00Z",
+    "modified": "2019-03-27T09:12:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

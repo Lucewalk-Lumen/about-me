@@ -1,0 +1,33 @@
+TITLE:
+    Bayesian skeleton - SEM with diffuse priors (self-authored)
+
+DATA:
+    FILE IS mydata.dat;
+
+VARIABLE:
+    NAMES ARE y1-y6 x1 x2;
+    USEVARIABLES = y1-y6 x1 x2;
+    MISSING = ALL (-999);
+
+ANALYSIS:
+    ESTIMATOR = BAYES;
+    PROC = 4;
+    FBITER = 20000;
+
+MODEL:
+    f1 BY y1-y3;
+    f2 BY y4-y6;
+    f1 ON x1 x2;
+    f2 ON x1 x2;
+    f1 f2;
+
+MODEL PRIORS:
+    f1-f2 ~ N(0,1);
+    f1 ON x1 ~ N(0,1);
+    f2 ON x2 ~ N(0,1);
+
+OUTPUT:
+    SAMPSTAT STANDARDIZED TECH1 TECH8;
+
+! 贝叶斯下 TECH8 输出 PSR 收敛判据,是标准用法(官方 ex9.26 等 0 错误 0 警告)。
+! 不写 MODINDICES —— 与 ESTIMATOR=BAYES 不兼容。

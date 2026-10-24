@@ -1,0 +1,58 @@
+{
+  "form_id": "F074",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "培训课程计划表",
+  "file": "templates/TRN/form/F074.docx",
+  "n_tables": 1,
+  "n_rows": 29,
+  "outline": [
+    "受训对象",
+    "类别",
+    "专题或具体内容",
+    "目的",
+    "受训课时",
+    "培训方式",
+    "组织部门",
+    "备注",
+    "新入职或初级人员",
+    "中级晋升高级",
+    "高级晋升管理"
+  ],
+  "n_outline": 11,
+  "body": "受训对象 | 类别 | 专题或具体内容 | 目的 | 受训课时 | 培训方式 | 组织部门 | 备注\n新入职或初级人员 | 制度培训 | 行政人事制度培训 | 了解公司办事流程 | 4H | 集中授课 | 人资部及部门主管 | 此项每年一次（全员参与）\n相关连部门的管理制度 | 了解相关部门流程 | 2H\n本部门管理制度 | 知悉本部门操作 | 1H | 本部机动授课\n自身岗位的操作流程 | 清楚自身岗位的实操 | 1H\n职业化培训 | 职业心态 | 提高职业水平，树立良好心态 | 2H | 讲师授课或光盘讲座 | 人力资源部或部门主管\n职业礼仪 | 培养良好的行为习惯 | 2H\n团队意识 | 增强团队意识 | 2H\n时间管理 | 提高时间管理能力 | 2H\n有效沟通 | 提高沟通能力 | 2H\n事务管理 | 提高事务管理能力 | 2H\n安全培训 | 消防安全知识 | 提高消防安全意识 | 3H | 光盘 | 人力部\n中级晋升高级 | 制度培训 | 新出台的行政人事制度 | 了解新出台规章制度 | 1H | 授课 | 人力部\n专业知识 | 相关设计软件操作 | 提高团队专业水平 | 2H | 光碟 | 主管 | 不定时\n专业设计师职称培训 | 提高个人的专业水平 | 机动 | 外训 | 个人\n管理知识培训 | 执行能力 | 提高中层管理的执行力 | 1.5H | 光碟 | 人力部\n目标管理 | 提高目标管理能力 | 1.5H | 光碟 | 人资部\n成本控制 | 掌握成本控制规定 | 1.5H | 集中授课 | 人资部、财务部\n成本预算 | 掌握成本预算规定 | 1.5H\n高级晋升管理 | 制度培训 | 新出台的行政人事制度 | 了解新出台规章制度 | 1H | 集中授课 | 人资部、财务部\n成本控制 | 掌握成本控制规定 | 1.5H\n成本预算 | 掌握成本预算规定 | 1.5H\n技能培训 | 新产品销售策略培训 | 掌握新产品销售方案 | 1H | 集中授课 | 人资部、市场部\n现代市场营销知识 | 提高营销知识水平 | 2H | 不定时\n专业设计师职称培训 | 提高个人的专业水平 | 机动 | 外训 | 个人\n管理知识培训 | 领导能力培训 | 提高管理人员的领导能力 | 2H | 光碟、专家授课 | 人力资源部\n企业运营相关法律培训 | 提高管理理人员的法律意识及法律知识水平 | 2H\n非人力资源管理人员的人力资源管理培训 | 提高管理人员的人力资源知识水平 | 2H\n非财务人员的财务知识培训 | 提高管理人员的财务知识水平 | 2H",
+  "body_chars": 1089,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-21T01:23:00Z",
+    "modified": "2019-03-21T01:24:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "form_id": "F047",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "招聘费用估算表",
+  "file": "templates/REC/form/F047.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "方式  部门",
+    "费用",
+    "××部",
+    "合计"
+  ],
+  "n_outline": 4,
+  "body": "方式  部门 | 费用\n报纸方式 | 广播方式 | 招聘会方式 | 网站方式 | 最后选择\n××部\n××部\n××部\n××部\n合计",
+  "body_chars": 64,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-23T08:52:00Z",
+    "modified": "2019-04-23T08:52:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

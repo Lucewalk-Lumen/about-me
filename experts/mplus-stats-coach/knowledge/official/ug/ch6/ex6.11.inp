@@ -1,0 +1,6 @@
+TITLE:	this is an example of a piecewise growth
+	model for a continuous outcome
+DATA:	FILE IS ex6.11.dat;
+VARIABLE:	NAMES ARE y1-y5;	
+MODEL:	i s1 | y1@0 y2@1 y3@2 y4@2 y5@2;
+	i s2 | y1@0 y2@0 y3@0 y4@1 y5@2;

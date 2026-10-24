@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "obhrm://knowledge-graph/schema.json",
+  "title": "OBHRM 跨库知识图谱 Schema（M-11）",
+  "description": "定义 knowledge/cross-library-index.json 的结构契约。此文件是量表库 / 理论库 / R 库之间的唯一关联真源；其中每一条被引用的 scale_id / theory_id / construct_id / method_no 都必须在对应库中真实存在（悬空边 = 0），该引用完整性由索引校验流程断言。",
+  "$defs": {
+    "scale_id": { "type": "string", "pattern": "^S[0-9]{3}$" },
+    "theory_id": { "type": "string", "pattern": "^T[0-9]{3}$" },
+    "method_no": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)*$" },
+    "construct_id": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "library_ref": {
+      "type": "object",
+      "description": "库位置声明。index 与 dir 均为相对 skills/ 的路径，必须真实存在。",
+      "properties": {
+        "index": { "type": "string", "minLength": 1 },
+        "dir": { "type": "string", "minLength": 1 }
+      },
+      "required": ["index", "dir"],
+      "additionalProperties": false
+    },
+    "construct_node": {
+      "type": "object",
+      "title": "构念聚合节点（construct_index[construct_id]）",
+      "description": "以构念为主键聚合跨库节点。theory_ids / scale_ids / r_methods 中的每个值都必须在对应库中存在。",
+      "properties": {
+        "construct_id": { "$ref": "#/$defs/construct_id" },
+        "label_zh": { "type": "string" },
+        "label_en": { "type": "string" },
+        "theory_ids": { "type": "array", "items": { "$ref": "#/$defs/theory_id" } },
+        "scale_ids": { "type": "array", "items": { "$ref": "#/$defs/scale_id" } },
+        "r_methods": { "type": "array", "items": { "$ref": "#/$defs/method_no" } }
+      },
+      "required": ["construct_id", "label_zh", "label_en", "theory_ids", "scale_ids", "r_methods"],
+      "additionalProperties": false
+    },
+    "scale_theory_edge": {
+      "type": "object",
+      "description": "量表 → 理论 有向边。via 记录文本匹配依据，保证关联可溯源、非编造。",
+      "properties": {
+        "theory_id": { "$ref": "#/$defs/theory_id" },
+        "construct_id": { "$ref": "#/$defs/construct_id" },
+        "via": { "type": "string", "minLength": 1, "description": "匹配依据（量表 background 中出现的理论名称原文）。" }
+      },
+      "required": ["theory_id", "construct_id", "via"],
+      "additionalProperties": false
+    },
+    "theory_scale_edge": {
+      "type": "object",
+      "description": "理论 → 量表 有向边。",
+      "properties": {
+        "scale_id": { "$ref": "#/$defs/scale_id" },
+        "construct_id": { "$ref": "#/$defs/construct_id" },
+        "via": { "type": "string", "minLength": 1, "description": "匹配依据（理论文本中出现的量表变量名原文）。" }
+      },
+      "required": ["scale_id", "construct_id", "via"],
+      "additionalProperties": false
+    },
+    "r_applicability_node": {
+      "type": "object",
+      "description": "R 方法的适用性归类。categories 说明该方法适用于哪类库；construct_ids 为具体构念绑定（可为空 = 通用方法）。",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": { "enum": ["general", "scale", "theory"] },
+          "minItems": 1
+        },
+        "construct_ids": { "type": "array", "items": { "$ref": "#/$defs/construct_id" } }
+      },
+      "required": ["categories", "construct_ids"],
+      "additionalProperties": false
+    },
+    "index": {
+      "type": "object",
+      "title": "跨库索引文件（knowledge/cross-library-index.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": { "const": "cross-library-index" },
+            "purpose": { "type": "string" },
+            "link_keys": { "type": "object" },
+            "note": { "type": "string" },
+            "counts": {
+              "type": "object",
+              "description": "声明的计数。索引校验断言其与实际结构计数一致 —— 计数漂移是索引未同步的早期信号。",
+              "properties": {
+                "scale_nodes": { "type": "integer", "minimum": 0 },
+                "theory_nodes": { "type": "integer", "minimum": 0 },
+                "r_nodes": { "type": "integer", "minimum": 0 },
+                "edges_scale_theory": { "type": "integer", "minimum": 0 },
+                "edges_theory_scale": { "type": "integer", "minimum": 0 },
+                "r_applicable_scale": { "type": "integer", "minimum": 0 },
+                "r_applicable_theory": { "type": "integer", "minimum": 0 },
+                "construct_index_entries": { "type": "integer", "minimum": 0 }
+              },
+              "additionalProperties": true
+            }
+          },
+          "required": ["schema", "counts"],
+          "additionalProperties": true
+        },
+        "libraries": {
+          "type": "object",
+          "properties": {
+            "scale": { "$ref": "#/$defs/library_ref" },
+            "theory": { "$ref": "#/$defs/library_ref" },
+            "r": { "$ref": "#/$defs/library_ref" }
+          },
+          "required": ["scale", "theory", "r"],
+          "additionalProperties": false
+        },
+        "construct_index": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/construct_node" }
+        },
+        "scale_to_theory": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/scale_theory_edge" }
+          }
+        },
+        "theory_to_scale": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/theory_scale_edge" }
+          }
+        },
+        "r_applicability": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/r_applicability_node" }
+        }
+      },
+      "required": [
+        "_meta", "libraries", "construct_index",
+        "scale_to_theory", "theory_to_scale", "r_applicability"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

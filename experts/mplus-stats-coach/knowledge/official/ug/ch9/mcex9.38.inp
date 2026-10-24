@@ -1,0 +1,55 @@
+TITLE:      cross-classified regression of y on x with random AR(1),
+            random intercept, random slope, and random variance 
+Montecarlo:
+		names are y x w xm;
+		nobservations = 20000;
+		nreps = 1;
+		CSIZES = 200[100(1)];
+		ncsize = 1[1];
+        lagged = y(1);
+        Between = (level2b)w (level2b)xm;
+        within = x;
+        save = ex9.38.dat;
+
+ANALYSIS:  TYPE = CROSS random;
+		estimator=bayes; process=2;
+        fbiter = (200); ! full convergence not needed for generating the data
+
+model population:
+		%within%
+        sx | y ON x;
+        sy | y ON y&1; 
+		y*1; x*1;
+       
+		%between LEVEL2A%  ! time 
+        y*.5; sx*.2; sy@0; 
+
+		%between LEVEL2B%  ! subject
+		y*.5; [y*2];
+        w*1; xm*1;
+        w with xm*.5;
+        [sx*.5]; sx*.2;
+        [sy*.3]; sy*.02;
+        y on w*.3 xm*.4;
+        sx on w*.2 xm*.3;
+        sy on w*.05 xm*.05;
+
+model:
+       %within%
+        sx | y ON x;
+        sy | y ON y&1; 
+		y*1; x*1;
+		%between LEVEL2A%  ! time 
+        y*.5; sx*.2; sy@0; ! random AR over time takes a long time
+
+		%between LEVEL2B%  ! subject
+		y*.5; [y*2];
+        w*1; xm*1;
+        w with xm*.5;
+        [sx*.5]; sx*.2;
+        [sy*.3]; sy*.02;
+        y on w*.3 xm*.4;
+        sx on w*.2 xm*.3;
+        sy on w*.05 xm*.05;
+
+output: tech8 tech9;

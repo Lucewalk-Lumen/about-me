@@ -1,0 +1,38 @@
+title:	this is an example of a 2-group twin model 
+    for a categorical outcome using probit WLSMV
+	
+montecarlo:
+	names = u1 u2;
+	ngroups = 2;
+	nobs = 1000 1000;
+    generate = u1-u2(1);
+	categorical = u1 u2;
+	nreps = 1;
+	save = ex5.22.dat;
+
+model population:
+    [u1$1-u2$1*0];
+    u1-u2@1; ! u* variances are fixed at 1 by default in 
+             ! the analysis
+    u1 WITH u2*0.73; ! Value for MZ twins
+	
+model population-g2: 
+	u1 WITH u2*0.41;  ! Value for DZ twins
+
+model:
+    [u1$1-u2$1*0](1);
+    u1 WITH u2*0.73(covmz);
+		
+model g2:
+    u1 WITH u2*0.41(covdz);
+
+model constraint:
+    NEW(a*.8 c*.3 h*.64); 
+    ! e is not a free parameter but obtained as 1 - (a**2 + c**2)
+    covmz = a**2 + c**2;
+    covdz = 0.5*a**2 + c**2;
+    h = a**2/1;
+
+output:
+	tech9;
+

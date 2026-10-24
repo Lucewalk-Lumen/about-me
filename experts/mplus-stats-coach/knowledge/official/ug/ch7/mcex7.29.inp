@@ -1,0 +1,66 @@
+title:	this is an example of a MZ-DZ AE twin model 
+    for a factor with multiple binary outcomes using 
+    logit and ML and doing the 2 groups via 2 classes
+	
+montecarlo:
+	names = u11-u14 u21-u24 dz;
+	nobs = 4000;
+    generate = u11-u24(1) dz(1);
+	categorical = u11-dz;
+    genclasses = cdz(2);
+    classes = cdz(2);
+	nreps = 1;
+	save = ex7.29.dat;
+
+model population:
+    %overall%
+    f1 by u11@1 
+    u12-u14*1 (lam2-lam4); 
+    f2 by u21@1 
+    u22-u24*1 (lam2-lam4);
+    [f1-f2@0]; 
+    f1-f2*1 (var);
+    [u11$1-u14$1*0] (t1-t4);
+    [u21$1-u24$1*0] (t1-t4);
+
+    %cdz#1% ! mz class
+    [dz$1@15]; ! P(dz=1)=0
+    f1 WITH f2*.64(covmz); 
+
+    %cdz#2% ! dz class
+    [dz$1@-15]; ! P(dz=1)=1
+    f1 WITH f2*.32(covdz);
+
+analysis:
+    type = mixture;
+    algorithm = integration;
+
+model:
+    %overall%
+    f1 by u11@1 
+    u12-u14*1 (lam2-lam4); 
+    f2 by u21@1 
+    u22-u24*1 (lam2-lam4);
+    [f1-f2@0]; 
+    f1-f2*1 (var);
+    [u11$1-u14$1*0] (t1-t4);
+    [u21$1-u24$1*0] (t1-t4);
+
+    %cdz#1% ! mz class
+    [dz$1@15]; ! P(dz=1)=0
+    f1 WITH f2*.64(covmz); 
+
+    %cdz#2% ! dz class
+    [dz$1@-15]; ! P(dz=1)=1
+    f1 WITH f2*.32(covdz);
+
+model constraint:
+    NEW(a*.8 c*.3 e*.52 h*.64); 
+    var = a**2 + c**2 + e**2;
+    covmz = a**2 + c**2;
+    covdz = 0.5*a**2 + c**2;
+    h = a**2/(a**2 + c**2 + e**2);
+
+output:
+	tech8 tech9;
+

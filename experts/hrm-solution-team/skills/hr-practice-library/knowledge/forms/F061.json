@@ -1,0 +1,63 @@
+{
+  "form_id": "F061",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "制度",
+  "title": "培训考核管理制度",
+  "file": "templates/TRN/policy/F061.docx",
+  "n_tables": 0,
+  "n_rows": 0,
+  "outline": [
+    "培训考核管理制度",
+    "一、目的",
+    "二、适用范围",
+    "本制度适用于公司所有计划内、计划外培训项目。",
+    "三、职责权限",
+    "2.各部门协助总经办做好考核工作。",
+    "四、内容",
+    "1.部门考核",
+    "2.员工考核",
+    "3.培训师考核",
+    "内部讲师主要从培训课时、培训效果、工作态度和课件开发等方面进行考核。",
+    "五、附则",
+    "（一）本管理制度自发布之日起执行。",
+    "（二）本管理制度由总经办负责解释并修订。"
+  ],
+  "n_outline": 14,
+  "body": "培训考核管理制度\n一、目的\n为提高对培训工作的管理力度，加强对员工参加培训和培训师的考核管理，保证培训质量，提升核心竞争力，更好的适应公司发展需要，特制定本管理制度。\n二、适用范围\n本制度适用于公司所有计划内、计划外培训项目。\n三、职责权限\n1.总经办负责部门、员工、培训师、培训项目的监督、考核和评价工作，并公布考核结果、保存考核记录。\n2.各部门协助总经办做好考核工作。\n四、内容\n为督促员工培训工作扎实有效地开展，公司推行对部门、员工培训考核方式采取定期检查和不定期抽查，并以不定期抽查为主来推动员工培训工作的深入开展和提高员工对培训内容的重视程度。\n1.部门考核\n各部门于每月30日前将部门的员工培训总结、培训记录评价表、员工培训签到表、培训教材、员工培训总结、培训相关资料提交至总经办，总经办根据各部门的年度、月度培训计划对各部门培训情况进行考核，填写部门考核检查表，并在公司OA系统公布考核结果。\n2.员工考核\n（1）新进员工参加完公司级及部门级的培训后，由培训组织部门进行考核，并进行新员工培训考核成绩登记，有学习层评估的新进员工要参加相应的考试，培训后形成的考试试卷（考试试卷结合培训内容来定）等各项记录交由总经办统一存档备案。\n（2）员工参加其他类型内部培训必须提交培训工作总结，以便考查员工对培训内容的理解和掌握情况。\n（3）对于参加外部培训员工的考核，以取得相应参培合格结果证明作为考核依据，外部培训方提供的员工培训相关考核资料作为参考依据。\n3.培训师考核\n内部讲师主要从培训课时、培训效果、工作态度和课件开发等方面进行考核。\n五、附则\n（一）本管理制度自发布之日起执行。\n（二）本管理制度由总经办负责解释并修订。",
+  "body_chars": 719,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-21T08:57:00Z",
+    "modified": "2019-04-26T07:10:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [
+      "okr_tracker.sh"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

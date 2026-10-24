@@ -1,0 +1,79 @@
+TITLE:	this is an example of a mover-stayer LTA for three
+        time points using a probability parameterization
+DATA:	FILE = ex8.15.dat;
+VARIABLE:	NAMES = u11-u15 u21-u25 u31-u35;
+	CATEGORICAL = u11-u15 u21-u25 u31-u35;
+	CLASSES = c(2) c1(3) c2(3) c3(3);
+ANALYSIS:	TYPE = MIXTURE;
+	PARAMETERIZATION = PROBABILITY;
+	STARTS = 100 20;
+	PROCESSORS = 2;
+MODEL:	%OVERALL%
+	c1 ON c;
+MODEL c:	%c#1% !mover class
+	c2 ON c1;
+	c3 ON c2;
+	%c#2% ! stayer class
+	c2#1 ON c1#1@1; c2#2 ON c1#1@0;
+	c2#1 ON c1#2@0; c2#2 ON c1#2@1;
+	c2#1 ON c1#3@0; c2#2 ON c1#3@0;
+	c3#1 ON c2#1@1; c3#2 ON c2#1@0;
+	c3#1 ON c2#2@0; c3#2 ON c2#2@1;
+	c3#1 ON c2#3@0; c3#2 ON c2#3@0;
+MODEL c1:	%c1#1% 
+	[u11$1] (1);
+	[u12$1] (2);
+	[u13$1] (3);
+	[u14$1] (4);
+	[u15$1] (5);
+	%c1#2%
+	[u11$1] (6); 
+	[u12$1] (7);
+	[u13$1] (8);
+	[u14$1] (9);
+	[u15$1] (10);
+	%c1#3%
+	[u11$1] (11);
+ 	[u12$1] (12);
+	[u13$1] (13);
+	[u14$1] (14);
+	[u15$1] (15);
+MODEL c2: 	
+	%c2#1% 
+	[u21$1] (1);
+	[u22$1] (2);
+	[u23$1] (3);
+	[u24$1] (4);
+	[u25$1] (5);
+	%c2#2%
+	[u21$1] (6); 
+	[u22$1] (7);
+	[u23$1] (8);
+	[u24$1] (9);
+	[u25$1] (10);
+	%c2#3%
+	[u21$1] (11);
+	[u22$1] (12);
+	[u23$1] (13);
+ 	[u24$1] (14);
+	[u25$1] (15);
+MODEL c3:
+	%c3#1% 
+	[u31$1] (1);
+	[u32$1] (2);
+	[u33$1] (3);
+	[u34$1] (4);
+	[u35$1] (5);
+	%c3#2%
+	[u31$1] (6); 
+	[u32$1] (7);
+	[u33$1] (8);
+	[u34$1] (9);
+ 	[u35$1] (10);
+	%c3#3%
+	[u31$1] (11);
+	[u32$1] (12);
+	[u33$1] (13);
+	[u34$1] (14);
+	[u35$1] (15);
+OUTPUT:	TECH1 TECH8 TECH15;

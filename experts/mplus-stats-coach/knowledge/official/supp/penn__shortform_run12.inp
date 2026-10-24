@@ -1,0 +1,55 @@
+title:
+    Pearl (2011) artificial example, Prevention Science
+    (Model Constraint notation below vs Pearl's: fm -> h, fy->g)
+
+data:
+    file = binbinlogitreplist.dat;
+    type = montecarlo;
+
+variable:
+    names = y m x; !x: tx/ctrl, m: mediator, y: outcome
+    categorical = y m;
+    usev = y m x xm;
+ 
+define:
+    xm=x*m;
+    
+analysis:
+    estimator = ml;
+    link = logit;
+
+model:
+    [m$1*.4055] (Th0); ! Threshold=-Logit. P(m=1 | x=0)=0.40
+    m on x*1.5041 (Lh1); ! P(m=1 | x=1)=0.75
+    [y$1*1.3863] (Tg00); ! Threshold=-Logit. P(y=1 | x=0,m=0)=0.20
+    y on x*.9808 (Lg10); ! direct effect of x on y. P(y=1 |x=1,m=0)=0.40
+    y on m*.539 (Lg01); ! main effect of m on y. P(y=1 | x=0,m=1)=0.30
+    y on xm*1.2528 (Lg11); ! interaction between x and m in their influence on y
+                    !P(y=1 | x=1,m=1)=0.80
+
+model constraint:
+    new(fm0*.4 fm1*.75 fy00*.2 fy10*.4 fy01*.3 fy11*.8
+    de*.32 pie*.035 tie*.14 te*.46 iete*.07 dete*.696 compdete*.304
+    tiete*.304 numde*.56 dende*.24 orde*4.0303 numind*.7 denind*.56 
+    orind*1.8333);
+    fm0=1/(1+exp(Th0));
+    fm1=1/(1+exp(Th0-Lh1));
+    fy00=1/(1+exp(Tg00));
+    fy10=1/(1+exp(Tg00-Lg10));
+    fy01=1/(1+exp(Tg00-Lg01));
+    fy11=1/(1+exp(Tg00-Lg10-Lg01-Lg11));
+    de=(fy10-fy00)*(1-fm0)+(fy11-fy01)*fm0;
+    tie=(fy11-fy10)*(fm1-fm0);
+    pie=(fy01-fy00)*(fm1-fm0);
+    te=fy11*fm1+fy10*(1-fm1)-(fy01*fm0+fy00*(1-fm0));
+    iete=pie/te;
+    dete=de/te;
+    compdete=1-de/te;
+    tiete=tie/te;
+     numde=fy10*(1-fm0)+fy11*fm0;
+    dende=fy00*(1-fm0)+fy01*fm0;
+    orde=(numde/(1-numde))/(dende/(1-dende));
+    numind=fy10*(1-fm1)+fy11*fm1;
+    denind=fy10*(1-fm0)+fy11*fm0;
+    orind=(numind/(1-numind))/(denind/(1-denind));
+   

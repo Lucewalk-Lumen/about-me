@@ -1,0 +1,58 @@
+TITLE:	this is an example of a two-level CFA with 
+	continuous factor indicators with two 
+	factors on the within level and one factor 
+	on the between level
+
+montecarlo:
+	names are y1-y6 x1 x2 w;
+	nobservations = 1000;
+	ncsizes = 3;
+	csizes = 40 (5) 50 (10) 20 (15);
+	seed = 58459;
+	nreps = 1;
+	save = ex4.5.dat;
+	within = x1 x2;
+	between = w;
+
+ANALYSIS:	TYPE = TWOLEVEL; 
+
+MODEL POPULATION: 
+
+	%WITHIN%
+	x1-x2@1;
+	fw1 by y1@1 y2-y3*1;
+	fw2 by y4@1 y5-y6*1;
+	fw1-fw2*1;
+	y1-y6*1;
+
+	fw1 on x1*.5 x2*.7;
+	fw2 on x1*.7 x2*.5;
+
+	%BETWEEN%
+	[w@0]; w*1;
+	fb BY y1@1 y2-y6*1;
+	y1-y6*.3;
+	fb*.5;
+	fb on w*1;
+
+MODEL: 
+
+	%WITHIN%
+
+	fw1 by y1@1 y2-y3*1;
+	fw2 by y4@1 y5-y6*1;
+	fw1-fw2*1;
+	y1-y6*1;
+
+	fw1 on x1*.5 x2*.7;
+	fw2 on x1*.7 x2*.5;
+
+	%BETWEEN%
+	
+	fb BY y1@1 y2-y6*1;
+	y1-y6*.3;
+	fb*.5;
+	fb on w*1;
+
+output:
+	tech8 tech9;

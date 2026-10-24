@@ -1,0 +1,55 @@
+title: 
+    Simulating x-m interaction effect on y using a random slope
+    Binary Y, continuous M
+    Step 2:  External Monte Carlo analysis
+
+data:
+    file = xmreplist.dat;
+    type = montecarlo;
+
+variable:
+    names = y m x;
+    usev = y m x xm;
+    count = y(p);
+
+define:
+    xm = x*m;
+  
+analysis:
+    estimator = ml;
+
+model:
+    [y*-.7] (beta0);
+    y on x*.3 (beta2);
+    y on m*.4 (beta1);
+    y on xm*.2 (beta3);
+    [m*.5] (gamma0);
+    m on x*.5 (gamma1);
+    m*.75 (sig);
+
+model constraint:
+    new(ind*.45 dir*.4
+    ey1*.67032 ey0*.49658 mum1*1 mum0*.5 ay1*.9 ay0*.6 
+	bym11*1.45 bym10*1.9 bym01*1.3 bym00*1.6
+    eym11*2.0855 eym10*1.5450 eym01*1.5841 eym00*1.2969 
+	tie*.3361 de*.3916 total*.7539 pie*.1426);
+    ind=beta1*gamma1+beta3*gamma1;
+    dir=beta3*gamma0+beta2;
+    ey1=exp(beta0+beta2);
+    ey0=exp(beta0);
+    mum1=gamma0+gamma1;
+    mum0=gamma0;
+    ay1=2*sig*(beta1+beta3);
+    ay0=2*sig*beta1;
+    bym11=(ay1/mum1+2)/2;
+    bym10=(ay1/mum0+2)/2;
+    bym01=(ay0/mum1+2)/2;
+    bym00=(ay0/mum0+2)/2;
+    eym11=exp((bym11*bym11-1)*mum1*mum1/(2*sig));
+    eym10=exp((bym10*bym10-1)*mum0*mum0/(2*sig));
+    eym01=exp((bym01*bym01-1)*mum1*mum1/(2*sig));
+    eym00=exp((bym00*bym00-1)*mum0*mum0/(2*sig));
+    tie=ey1*eym11-ey1*eym10;
+    de=ey1*eym10-ey0*eym00;
+    total=ey1*eym11-ey0*eym00;
+    pie=ey0*eym01-ey0*eym00;

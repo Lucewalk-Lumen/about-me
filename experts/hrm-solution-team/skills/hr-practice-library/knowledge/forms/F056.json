@@ -1,0 +1,70 @@
+{
+  "form_id": "F056",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "面试通知单",
+  "file": "templates/REC/form/F056.docx",
+  "n_tables": 1,
+  "n_rows": 4,
+  "outline": [
+    "面试时间",
+    "年     月     日（星期    ）    午    时    分",
+    "面试地点",
+    "行车路线",
+    "个人准备"
+  ],
+  "n_outline": 5,
+  "body": "先生/女士：\n您好！\n首先感谢您对本企业的信任和大力支持。\n经过初次接触，我们认为您基本具备加盟本企业的能力，因此特别通知您于以下时间、地点到本企业进行正式面试，具体要求如下。\n面试时间 | 年     月     日（星期    ）    午    时    分\n面试地点 | 面试时限 | 小时     分钟\n行车路线\n个人准备 | 1.携带个人身份证及复印件、学历证书及复印件以及职称证书及复印件 2.资格证书及复印件、获奖证书及复印件 3.个人一寸免冠彩色照片张 4.男士着装要求： 5.女士着装要求：\n良好的开端等于成功的一半，祝您成功 !\n单位名称：（盖章）\n年     月     日",
+  "body_chars": 299,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T02:27:00Z",
+    "modified": "2019-03-18T02:27:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

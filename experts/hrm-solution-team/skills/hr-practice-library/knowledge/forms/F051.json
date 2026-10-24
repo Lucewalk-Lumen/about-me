@@ -1,0 +1,75 @@
+{
+  "form_id": "F051",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "月度招聘需求统计表",
+  "file": "templates/REC/form/F051.docx",
+  "n_tables": 1,
+  "n_rows": 6,
+  "outline": [
+    "需求部门",
+    "岗位名称",
+    "计划招聘人数",
+    "岗位职责",
+    "任职资格",
+    "全年编制人数",
+    "在岗人数",
+    "空缺人数",
+    "（示例）",
+    "……"
+  ],
+  "n_outline": 10,
+  "body": "需求部门 | 岗位名称 | 计划招聘人数 | 岗位职责 | 任职资格 | 全年编制人数 | 在岗人数 | 空缺人数\n（示例） | 招聘经理\n招聘主管\n招聘专员\n招聘助理 | 5 | 1.根据各一线部门业务发展需求，与各部门保持沟通，负责完成招聘目标。 2.负责招聘的实施工作，包括招聘信息的拟写发布、简历筛选、面试通知、初试接待、人才测评和复试安排等。 3.负责人才市场招聘安排，展位协调、布置、海报制作、参展人员安排，完成人才市场招聘数据和分析报表。 …… | 1.大专及以上学历，人力资源管理专业优先。 2.具备1～2年相关工作经验，熟悉人力资源招聘流程优先。 3.熟练使用Office，对数据敏感，具有较强的逻辑思维能力，有数据分析工作经验优先。 …… | 8 | 3 | 5\n……",
+  "body_chars": 344,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-15T07:04:00Z",
+    "modified": "2019-04-26T06:51:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

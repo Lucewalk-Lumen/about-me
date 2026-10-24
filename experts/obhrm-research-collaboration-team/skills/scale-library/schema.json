@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "obhrm://scale-library/schema.json",
+  "title": "OBHRM 量表库 Schema（M-11）",
+  "description": "定义量表条目文件 knowledge/scales/Sxxx.json 与量表索引 knowledge/_scale_index.json 的结构契约。由索引校验流程强制校验。新增/修改量表条目必须同时通过 entry 与 index 两个子 schema。",
+  "$defs": {
+    "scale_id": {
+      "type": "string",
+      "pattern": "^S[0-9]{3}$",
+      "description": "量表稳定主键，形如 S001。文件名必须为 <scale_id>.json。"
+    },
+    "construct_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "构念稳定键（变量名归一化 slug），用于与理论库 / R 库跨库串联；cross-library-index.construct_index 以此为主键。"
+    },
+    "status": {
+      "enum": [
+        "verified",
+        "draft",
+        "deprecated"
+      ],
+      "description": "条目生命周期状态。verified = 已核验可用于学术产出；draft 可在显著标记「来源未经确证」后引用，本库不保证其真实性，严禁编造出处；deprecated 保留但不再推荐。"
+    },
+    "bilingual": {
+      "type": "object",
+      "description": "变量名中英对照。en 必填非空；zh 允许为空字符串 —— 库中有 7 条纯英文来源量表尚无权威中文译名，属数据完整性缺口而非结构违例，索引校验流程 以 WARNING 报出并逐条列明，不阻断发布。",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "en",
+        "zh"
+      ],
+      "additionalProperties": false
+    },
+    "item_range": {
+      "description": "维度覆盖的题项区间 [起, 止]，闭区间。三种合法形态：① 整数对（多数量表按题号编号，允许从 0 起，库中有 2 处 0 基编号）；② 字符串对（原始量表使用带前缀的题项代码，如 ['CPI1','SI4']、['1a','6b']、['X1','X9']，库中 15 处）；③ null（源文档未给出该维度的题项映射，库中 29 处）。不得混用整数与字符串。",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "dimension": {
+      "type": "object",
+      "description": "量表维度。item_count 为 0 且 item_range 为 null 表示源文档未给出该维度的题项映射（历史数据允许，不视为违例）。",
+      "properties": {
+        "name_zh": {
+          "type": "string"
+        },
+        "name_en": {
+          "type": "string"
+        },
+        "item_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "item_range": {
+          "$ref": "#/$defs/item_range"
+        },
+        "scoring": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name_zh",
+        "name_en",
+        "item_count",
+        "item_range",
+        "scoring"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "description": "量表题项。no 允许 integer 或 string：历史数据中存在 187 个字符串型编号（如 '1a'），索引校验会以 WARNING 报出以便后续统一，但不阻断门禁。",
+      "properties": {
+        "no": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dimension": {
+          "type": "string"
+        },
+        "reverse": {
+          "type": "boolean",
+          "description": "是否反向计分题。计分时必须尊重此标记，否则信度与效度结论错误。"
+        }
+      },
+      "required": [
+        "no",
+        "text",
+        "dimension",
+        "reverse"
+      ],
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "title": "量表条目文件（knowledge/scales/Sxxx.json）",
+      "properties": {
+        "scale_id": {
+          "$ref": "#/$defs/scale_id"
+        },
+        "construct_id": {
+          "$ref": "#/$defs/construct_id"
+        },
+        "variable": {
+          "$ref": "#/$defs/bilingual"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "background": {
+          "type": "string"
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dimension"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          }
+        },
+        "reference_used": {
+          "type": "string",
+          "description": "条目文本的取用文献（作者, 年, 期刊，本库录入所据）。**不是量表的原始出处**——原始出处见 background。出处追溯必需，不得为空；正式引用须核对原始文献，不得直接引用本字段。",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "scale_id",
+        "construct_id",
+        "variable",
+        "title",
+        "background",
+        "dimensions",
+        "items",
+        "reference_used",
+        "status",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "index_node": {
+      "type": "object",
+      "title": "量表索引节点（_scale_index.json.nodes[]）",
+      "description": "索引节点是条目文件的摘要投影。n_dims / n_items 必须与条目文件实际长度一致，一致性由 索引校验断言。",
+      "properties": {
+        "scale_id": {
+          "$ref": "#/$defs/scale_id"
+        },
+        "construct_id": {
+          "$ref": "#/$defs/construct_id"
+        },
+        "variable_en": {
+          "type": "string"
+        },
+        "variable_zh": {
+          "type": "string"
+        },
+        "n_dims": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reference_used": {
+          "type": "string",
+          "description": "条目文本的取用文献（作者, 年, 期刊，本库录入所据）。**不是量表的原始出处**——原始出处见 background。出处追溯必需，不得为空；正式引用须核对原始文献，不得直接引用本字段。"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "scale_id",
+        "construct_id",
+        "variable_en",
+        "variable_zh",
+        "n_dims",
+        "n_items",
+        "reference_used",
+        "status",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "index": {
+      "type": "object",
+      "title": "量表索引文件（knowledge/_scale_index.json）",
+      "properties": {
+        "_meta": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": "scale"
+            },
+            "reference_used": {
+              "type": "string",
+              "description": "条目文本的取用文献（作者, 年, 期刊，本库录入所据）。**不是量表的原始出处**——原始出处见 background。出处追溯必需，不得为空；正式引用须核对原始文献，不得直接引用本字段。"
+            },
+            "fields": {
+              "type": "string"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "必须等于 nodes 长度且等于 scales/ 目录下条目文件数。"
+            },
+            "maintain_note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "schema",
+            "count"
+          ],
+          "additionalProperties": true
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/index_node"
+          }
+        }
+      },
+      "required": [
+        "_meta",
+        "nodes"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

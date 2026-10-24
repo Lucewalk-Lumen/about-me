@@ -1,0 +1,23 @@
+TITLE:      this is an example of regression with cross-
+            classified data
+DATA:       FILE = ex9.24.dat;
+VARIABLE:   NAMES = y x1 x2 w z level2a level2b;
+            CLUSTER = level2b level2a;
+            WITHIN = x1 x2;
+            BETWEEN = (level2a) w (level2b) z;
+ANALYSIS:   TYPE = CROSSCLASSIFIED RANDOM;
+            ESTIMATOR = BAYES;
+            PROCESSORS = 2;
+            BITER = (2000);
+MODEL:      %WITHIN%
+            y ON x1;
+            s | y ON x2;
+            %BETWEEN level2a%
+            y ON w;
+            s ON w;
+            y WITH s;
+            %BETWEEN level2b%
+            y ON z;
+            s ON Z;
+            y WITH s;
+OUTPUT:     TECH1 TECH8;

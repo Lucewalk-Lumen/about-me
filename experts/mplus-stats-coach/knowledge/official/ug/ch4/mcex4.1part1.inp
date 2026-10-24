@@ -1,0 +1,30 @@
+title:	this is an example of an exploratory 
+		factor analysis with continuous 
+		factor indicators
+montecarlo:
+	names = y1-y12;
+	nobs = 500;
+	nreps = 1;
+	save = ex4.1a.dat;
+
+model population:
+	f1 by y1-y3*.7;
+	f2 by y4-y6*.7;
+	f3 by y7-y9*.7;
+	f4 by y10-y12*.7;
+	y1-y12*.51;
+	!this gives unit y variances so that
+	!EFA estimates are in the same metric
+	f1-f4@1;
+
+model:	
+	f1 by y1-y3*.7;
+	f2 by y4-y6*.7;
+	f3 by y7-y9*.7;
+	f4 by y10-y12*.7;
+	y1-y12*.51;
+	f1-f4@1;
+
+output:
+	tech9;
+

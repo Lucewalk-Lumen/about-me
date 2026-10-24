@@ -1,0 +1,84 @@
+title:
+	this is an example of a confirmatory LCA 
+	with two categorical latent variables
+
+montecarlo:
+	names are u1-u4 y1-y4;
+	genclasses = cu(2) cy(3);
+	classes = cu(2) cy(3);
+	generate = u1-u4(1);
+	categorical = u1-u4;
+	nobs = 1000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.14.dat;
+
+analysis:
+	type = mixture;
+	parameterization = loglinear;
+
+model population:
+
+	%overall%
+
+	y1-y4*1;
+	[y1-y4*0];
+
+	[cu#1*0 cy#1*0 cy#2*0];
+
+	cu#1 with cy#1*.5;
+	cu#1 with cy#2*.75;
+
+model population-cu:
+	
+	%cu#1%
+	[u1$1-u4$1*-1];
+	%cu#2%
+	[u1$1-u4$1*1];
+
+model population-cy:
+	
+	%cy#1%
+	[y1-y4*-1];
+	%cy#2%
+	[y1-y4*1];
+	%cy#3%
+	[y1-y4*2];
+
+model:
+
+	%overall%
+
+	y1-y4*1;
+	[y1-y4*0];
+
+	[cu#1*0 cy#1*0 cy#2*0];
+
+	cu#1 with cy#1*.5;
+	cu#1 with cy#2*.75;
+
+model cu:
+	
+	%cu#1%
+	[u1$1-u4$1*-1];
+	%cu#2%
+	[u1$1-u4$1*1];
+
+model cy:
+	
+	%cy#1%
+	[y1-y4*-1];
+	%cy#2%
+	[y1-y4*1];
+	%cy#3%
+	[y1-y4*2];
+
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

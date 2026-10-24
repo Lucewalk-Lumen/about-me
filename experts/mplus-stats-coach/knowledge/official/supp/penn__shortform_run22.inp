@@ -1,0 +1,47 @@
+title: 
+    Generate as M on X, Y on M and X
+    Analyze as M on X, Y on X
+    Using Imai formulas with rho=0, 
+    so same as regular mediation run
+
+montecarlo:
+    names = y m x;
+    nobs = 400;
+    nreps = 500;
+    cutpoints = x(0);
+   
+model population:
+    x@1;
+    [y*1]; ! beta0
+    y on m*.5 ! beta1
+    x*.4; ! beta2    
+    [m*2]; ! gamma0
+    m on x*.5; ! gamma1
+    y*.5; ! sig1
+    m*1; ! sig2
+
+analysis:
+
+model:
+    [y] (kappa0);
+    y on x (kappa1);
+    [m*2] (gamma0);
+    m on x*.5 (gamma1);
+    y*.75 (sig);
+    m*1 (sig2);
+    y with m*.5 (cov);
+
+model constraint:
+    new(rhocurl*.5774 beta1*.5 beta2*.4 beta0*1 sig1*.5 
+    ind*.25 de*.4);
+    rhocurl=cov/(sqrt(sig)*sqrt(sig2));
+    ! derive the data-generating model parameters
+    ! from the analysis model parameters:
+    beta1=rhocurl*sqrt(sig)/sqrt(sig2);
+    beta2=kappa1-beta1*gamma1;
+    beta0=kappa0-beta1*gamma0;
+    sig1=sig-beta1*beta1*sig2;
+    ! express the effects in terms of the data-generating
+    ! parameters:
+    ind=beta1*gamma1;
+    de=beta2;

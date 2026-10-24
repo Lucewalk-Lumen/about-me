@@ -1,0 +1,176 @@
+{
+  "name": "workbuddy-expert-studio",
+  "version": "1.0.2",
+  "description": "Turn an idea for an expert into a ready-to-import package, guided by a lead and six specialists.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "agents": [
+    "./agents/workbuddy-expert-studio-team-lead.md",
+    "./agents/agent-diagnostician.md",
+    "./agents/agent-architect.md",
+    "./agents/agent-engineer.md",
+    "./agents/agent-auditor.md",
+    "./agents/agent-packager.md",
+    "./agents/agent-release-chronicler.md"
+  ],
+  "skills": [
+    "./skills/workbuddy-expert-studio-toolkit",
+    "./skills/workbuddy-expert-studio-web-crawler"
+  ],
+  "expertType": "team",
+  "agentName": "workbuddy-expert-studio-team-lead",
+  "teamInfo": {
+    "leadAgent": "workbuddy-expert-studio-team-lead",
+    "memberAgents": [
+      "agent-diagnostician",
+      "agent-architect",
+      "agent-engineer",
+      "agent-auditor",
+      "agent-packager",
+      "agent-release-chronicler"
+    ]
+  },
+  "displayName": {
+    "zh": "WorkBuddy 专家开发工坊",
+    "en": "WorkBuddy Expert Studio"
+  },
+  "profession": {
+    "zh": "WorkBuddy 专家开发工坊",
+    "en": "WorkBuddy Expert Studio"
+  },
+  "displayDescription": {
+    "zh": "主理人带六位专业成员，把你的专家构想做成可直接导入使用的成品包：先对齐需求，再设计、撰写、检查与打包，全程把关。",
+    "en": "A lead and six specialists turn your idea for an expert (or expert team) into a ready-to-import package step by step — align the requirements first, then design, build, review and package it, with quality checks throughout."
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我想做一个教学类专家：帮老师备课、出题、批改作业，做成能直接导入使用的成品。",
+    "en": "I want to build a teaching expert that helps teachers prepare lessons, create quizzes and grade work — turn it into a ready-to-import package."
+  },
+  "plugin": "workbuddy-expert-studio",
+  "tags": [
+    {
+      "en": "Expert Dev",
+      "zh": "专家开发"
+    },
+    {
+      "en": "Expert Team",
+      "zh": "专家团协作"
+    },
+    {
+      "en": "Quality Check",
+      "zh": "质量把关"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "我想做一个教学类专家：帮老师备课、出题、批改作业，做成能直接导入使用的成品。",
+      "en": "I want to build a teaching expert that helps teachers prepare lessons, create quizzes and grade work — turn it into a ready-to-import package."
+    },
+    {
+      "zh": "我想做一个个人效率助手：管理日程、待办和学习计划。",
+      "en": "I want to build a personal productivity assistant for schedules, to-dos and study plans."
+    },
+    {
+      "zh": "帮我做一个企业内部使用的 HR / 运营专家。",
+      "en": "Build an internal HR / operations expert for my company."
+    }
+  ],
+  "members": [
+    {
+      "id": "workbuddy-expert-studio-team-lead",
+      "name": {
+        "en": "Qi",
+        "zh": "齐衡"
+      },
+      "profession": {
+        "en": "Delivery Director",
+        "zh": "交付总监"
+      },
+      "avatar": "avatars/team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "agent-diagnostician",
+      "name": {
+        "en": "Shen",
+        "zh": "沈证"
+      },
+      "profession": {
+        "en": "Diagnostic Lead",
+        "zh": "立项诊断官"
+      },
+      "avatar": "avatars/agent-diagnostician.png",
+      "role": "member"
+    },
+    {
+      "id": "agent-architect",
+      "name": {
+        "en": "Gao",
+        "zh": "高构"
+      },
+      "profession": {
+        "en": "Structure Architect",
+        "zh": "结构设计官"
+      },
+      "avatar": "avatars/agent-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "agent-engineer",
+      "name": {
+        "en": "Ke",
+        "zh": "柯码"
+      },
+      "profession": {
+        "en": "Implementation Engineer",
+        "zh": "实现分片官"
+      },
+      "avatar": "avatars/agent-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "agent-auditor",
+      "name": {
+        "en": "Yan",
+        "zh": "严证"
+      },
+      "profession": {
+        "en": "Audit Inspector",
+        "zh": "取证核查官"
+      },
+      "avatar": "avatars/agent-auditor.png",
+      "role": "member"
+    },
+    {
+      "id": "agent-packager",
+      "name": {
+        "en": "Bao",
+        "zh": "包洁"
+      },
+      "profession": {
+        "en": "Release Packager",
+        "zh": "干净落位官"
+      },
+      "avatar": "avatars/agent-packager.png",
+      "role": "member"
+    },
+    {
+      "id": "agent-release-chronicler",
+      "name": {
+        "en": "Shi",
+        "zh": "史衡"
+      },
+      "profession": {
+        "en": "Acceptance Chronicler",
+        "zh": "验收沉淀官"
+      },
+      "avatar": "avatars/agent-release-chronicler.png",
+      "role": "member"
+    }
+  ]
+}

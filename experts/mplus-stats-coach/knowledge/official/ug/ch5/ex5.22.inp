@@ -1,0 +1,16 @@
+TITLE:	this is an example of a two-group twin
+	model for categorical outcomes using parameter 
+    constraints 
+DATA:	FILE = ex5.22.dat;
+VARIABLE:	NAMES = u1 u2 g;
+	GROUPING = g(1=mz 2=dz);
+	CATEGORICAL = u1 u2;
+MODEL:	[u1$1-u2$1](1);
+	u1 WITH u2(covmz);
+MODEL dz:	u1 WITH u2(covdz);
+MODEL CONSTRAINT:
+	NEW(a c e h); 
+	covmz = a**2 + c**2;
+	covdz = 0.5*a**2 + c**2;
+	e = 1 - (a**2 + c**2);
+	h = a**2/1;

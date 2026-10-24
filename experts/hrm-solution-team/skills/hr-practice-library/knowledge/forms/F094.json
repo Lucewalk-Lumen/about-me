@@ -1,0 +1,59 @@
+{
+  "form_id": "F094",
+  "module_code": "PER",
+  "module_zh": "绩效管理",
+  "module_order": 4,
+  "kind": "表格",
+  "title": "员工通用项目考核表",
+  "file": "templates/PER/form/F094.docx",
+  "n_tables": 1,
+  "n_rows": 24,
+  "outline": [
+    "考核项目",
+    "考核要素",
+    "考核内容",
+    "标准分",
+    "加、扣分",
+    "职业道德（20）",
+    "工作态度（20）",
+    "工作成果（32）",
+    "其他管理（18）",
+    "总计"
+  ],
+  "n_outline": 10,
+  "body": "考核项目 | 考核要素 | 考核内容 | 标准分 | 加、扣分\n4 | 自评 | 考核小组 | 考核得分\n职业道德（20） | 忠于职守 | 热爱本岗位工作 | 4\n工作素质 | 热爱集体，尊重领导，配合支持工作 | 4\n团结精神 | 关心他人，团结协作 | 4\n业务学习 | 钻研业务，勤奋好学，要求上进 | 4\n服务态度 | 对内、外用户服务周到、热情 | 4\n工作态度（20） | 遵守制度 | 遵守公司规章制度 | 4\n出勤情况 | 满勤 | 4\n积极性 | 对高标准做好职务范围内的业务的热情 | 4\n责任性 | 完成本职工作的持续性和责任性 | 4\n协调性 | 与同事、上司合作的情况 | 4\n工作成果（32） | 完成任务 | 是否完成任务的具体计划安排 | 10\n成本意识 | 努力减少时间、物质上的损失 | 8\n创新能力 | 提出改进工作的建议情况 | 5\n特殊成果 | 给公司在某方面解决重大问题 | 5\n培养人才 | 参加培训或对他人进行培训 | 4\n其他管理（18） | 能源管理 | 节约能源（水、电等） | 3\n设备管理 | 爱护设备，保养好 | 3\n财务管理 | 节约开支，精打细算，遵守财务制度 | 3\n物资管理 | 按计划领用物资，节约，杜绝浪费 | 3\n安全防火 | 安全防火意识强，能主动做好工作 | 3\n计划生育 | 严格执行计划生育政策 | 3\n总计 | 100",
+  "body_chars": 602,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-25T09:15:00Z",
+    "modified": "2019-04-26T07:18:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "performance-management",
+    "owner_agent": "performance-management",
+    "primary_engines": [
+      "okr_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/performance.md"
+      },
+      {
+        "skill": "performance-management",
+        "path": "skills/performance-management/references/okr-template-library.md"
+      }
+    ]
+  }
+}

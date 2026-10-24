@@ -1,0 +1,62 @@
+{
+  "form_id": "F129",
+  "module_code": "COM",
+  "module_zh": "薪酬福利管理",
+  "module_order": 5,
+  "kind": "表格",
+  "title": "年度补充医疗保险费用结算报表",
+  "file": "templates/COM/form/F129.docx",
+  "n_tables": 1,
+  "n_rows": 13,
+  "outline": [
+    "项目 分类",
+    "门诊",
+    "住院",
+    "医疗费用总合计",
+    "补充医疗保险合计支付",
+    "栏目",
+    "人员类别",
+    "其他种类",
+    "合计"
+  ],
+  "n_outline": 9,
+  "body": "劳动保障证号：                                                         财政主管处室：\n填报单位及盖章：                                                 财政代码（结算预算代码）：\n项目 分类 | 门诊 | 住院 | 医疗费用总合计 | 补充医疗保险合计支付\n人数 | 医疗费用合计 | 个人自理 | 医保范围内费用 | 个人自付金额（起付线及自付比例） | 统筹（大病）基金支付 | 补充医疗保险支付 | 人数 | 医疗费用合计 | 个人自理 | 医保范围内费用 | 个人自付金额（起付线及自付比例） | 统筹（大病）基金支付 | 补充医疗保险支付\n栏目 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16\n人员类别 | 在职\n退休\n小计\n其他种类 | 生育及计划生育\n退职\n重大工伤\n转业干部人事关系未衔接好\n其他费用\n小计\n合计\n截止       年      月       日，单位享受补充医疗保险人数为（在册在编人数）：        人，其中在职人员        人，退休       人，退职(限公安系统)           人。\n备注：1、表内各栏关系：4=2-3       7=4-5-6         11=9-10         14=11-12-13          15=2+9          16=7+14。\n2.人员类别指在职人员、退休人员凭医保发票或医保零星报销支付单进行补充医疗保险报销的费用。\n3.生育及计划生育费用，与职工医保费用分开填写。\n4.转业干部人事关系未衔接前费用是指转入本单位的转业干部转业后、人事关系未转入前发生的医疗费用。\n5.其他费用是指本单位有特殊情况、无法归类的医疗费用，如果存在，单位详细说明原因并加盖公章。\n6.本表一式二份，单位留一份，报医保部一份。\n7.本表必须按时、按要求报送。逾期未报，其支出费用由报送单位自理。\n负责人签名：                经办人签名：                填报日期：        年     月     日",
+  "body_chars": 969,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-28T09:17:00Z",
+    "modified": "2019-03-28T09:18:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "compensation-strategy",
+    "owner_agent": "compensation-strategy",
+    "primary_engines": [
+      "payroll_engine.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-band.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/compensation-pitfalls.md"
+      },
+      {
+        "skill": "compensation-strategy",
+        "path": "skills/compensation-strategy/references/payroll-china.md"
+      }
+    ]
+  }
+}

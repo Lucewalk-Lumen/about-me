@@ -1,0 +1,78 @@
+title:
+	this is an example of a GMM for a count 
+    outcome using a negative binomial model 
+    with automatic starting values and random 
+    starts 
+
+montecarlo:
+	names are u1-u8 x;
+	generate = u1-u8(nb);
+	count = u1-u8(nb);
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 500;
+	seed = 3454367;
+	nrep = 1;
+	save = ex8.5b.dat;
+
+analysis:
+	type = mixture;
+	algorithm = integration;
+
+model population:
+
+	%overall%
+
+	[x@0]; x@1;
+
+	i s q | u1@0 u2@1 u3@2 u4@3 u5@4 u6@5 u7@6 u8@7;
+	[u1-u8@0]; 
+
+	i*.7; 
+	s-q@0; 
+	i with s-q@0;
+	q with s@0;
+
+	u1-u8*2; 
+
+	c#1 on x*1;
+	i on x*.02;
+	s on x*.01;
+
+	%c#1%
+	[i*-3 s*1.5 q*-.2];
+
+	%c#2%
+	[i*-1 s*.7 q*-.1];
+
+
+model:
+	
+	%overall%
+
+
+
+	i s q | u1@0 u2@1 u3@2 u4@3 u5@4 u6@5 u7@6 u8@7;
+	[u1-u8@0]; 
+
+	i*.7; 
+	s-q@0; 
+	i with s-q@0;
+	q with s@0;
+
+	u1-u8*2; 
+
+	c#1 on x*1;
+	i on x*.02;
+	s on x*.01;
+
+	%c#1%
+	[i*-3 s*1.5 q*-.2];
+
+	%c#2%
+	[i*-1 s*.7 q*-.1];
+
+
+
+output:
+	tech8 tech9;

@@ -1,0 +1,22 @@
+TITLE:	this is an example of a censored regression for a censored
+		 dependent variable with two covariates
+MONTECARLO:			
+			NAMES = y1 x1 x3;
+			NOBSERVATIONS = 1000;
+			NREPS = 1;
+			SEED = 53487;
+			GENERATE = y1(cb 0);
+			CENSORED = y1(b);
+			SAVE = ex3.2.dat;	
+ANALYSIS:	ESTIMATOR = MLR;
+MODEL POPULATION:
+			[x1-x3@0];
+			x1-x3@1;
+			y1 ON x1*1 x3*.5;
+			y1*1;
+			[y1*.5];
+MODEL:
+			y1 ON x1*1 x3*.5;
+			y1*1;
+			[y1*.5];
+OUTPUT:		TECH8 TECH9;

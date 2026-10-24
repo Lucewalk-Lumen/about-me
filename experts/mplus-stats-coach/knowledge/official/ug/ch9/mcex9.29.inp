@@ -1,0 +1,60 @@
+TITLE:	this is an example of a two-level confirmatory factor 
+            analysis (CFA) with continuous factor indicators,
+	        covariates, and a factor with a random residual variance
+MONTECARLO:
+	NAMES ARE y1-y4 x1 x2 w;
+	NOBSERVATIONS = 1000;
+	NCSIZES = 3;
+	CSIZES = 40 (5) 50 (10) 20 (15);
+	SEED = 58459;
+	NREPS = 1;
+	WITHIN = x1 x2;
+	BETWEEN = w;
+    SAVE = ex9.29.dat;
+MODEL POPULATION:
+	%WITHIN%
+	x1-x2@1;
+	fw BY y1@1 
+	y2*1 
+	y3*1 
+	y4*1;
+	fw ON x1*1 x2*.5;
+	y1-y4*1;
+    logv | fw;
+	%BETWEEN%
+	[w@0]; w@.7;
+	fb BY y1@1 
+	y2*1 
+	y3*1 
+	y4*1;
+	fb ON w*.5;
+	fb*.4;
+	y1-y4*.1;
+    logv ON w*.3;
+    [logv*0]; logv*.1;
+ANALYSIS:	
+	TYPE = TWOLEVEL RANDOM;
+    ESTIMATOR = BAYES;
+    PROCESSORS = 2;
+    BITERATIONS = (10000);
+MODEL:	
+	%WITHIN%
+    fw BY y1@1 
+	y2*1 
+	y3*1 
+	y4*1;
+	fw ON x1*1 x2*.5;
+	y1-y4*1;
+    logv | fw;
+	%BETWEEN%
+	fb BY y1@1 
+	y2*1 
+	y3*1 
+	y4*1;
+	fb ON w*.5;
+	fb*.4;
+	y1-y4*.1;
+    logv ON w*.3;
+    [logv*0]; logv*.1;
+OUTPUT:
+	TECH8;

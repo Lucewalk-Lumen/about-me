@@ -1,0 +1,19 @@
+TITLE:	this is an example of a two-level 
+	multiple group CFA with continuous
+	factor indicators
+DATA: 	FILE IS ex9.11.dat;
+VARIABLE:	NAMES ARE y1-y6 g clus;
+	GROUPING = g (1 = g1 2 = g2);
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL;
+MODEL:	
+	%WITHIN%
+	fw1 BY y1-y3;
+	fw2 BY y4-y6;
+	%BETWEEN%
+	fb1 BY y1-y3;
+	fb2 BY y4-y6;
+MODEL g2:
+	%WITHIN%
+	fw1 BY y2-y3;
+	fw2 BY y5-y6;

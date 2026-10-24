@@ -1,0 +1,133 @@
+{
+  "name": "obhrm-brain-trust",
+  "version": "1.0.3",
+  "description": "OBHRM multi-agent knowledge team linking a 12-chapter textbook with 145 theories, 601 scales and 108 R methods: a lead orchestrator routes each concept query to three specialist agents and assembles one complete four-library answer.",
+  "author": {
+    "name": "Xing Bu",
+    "email": "Lucewalk@users.noreply.github.com"
+  },
+  "agents": [
+    "./agents/obhrm-brain-trust-lead.md",
+    "./agents/obhrm-scale.md",
+    "./agents/obhrm-theory.md",
+    "./agents/obhrm-ranalysis.md"
+  ],
+  "skills": [
+    "./skills/bridge",
+    "./skills/scale",
+    "./skills/theory",
+    "./skills/ranalysis"
+  ],
+  "expertType": "team",
+  "agentName": "obhrm-brain-trust-lead",
+  "teamInfo": {
+    "leadAgent": "obhrm-brain-trust-lead",
+    "memberAgents": [
+      "obhrm-scale",
+      "obhrm-theory",
+      "obhrm-ranalysis"
+    ]
+  },
+  "displayName": {
+    "en": "OBHRM Brain Trust",
+    "zh": "OBHRM 智囊团"
+  },
+  "profession": {
+    "en": "OBHRM Brain Trust",
+    "zh": "OBHRM 智囊团"
+  },
+  "displayDescription": {
+    "zh": "查组织行为学的理论、量表与分析方法：一个概念、四库联查、一次给全，附教材出处与可信度标注。",
+    "en": "Look up OBHRM theories, scales and analysis methods: one concept, four libraries searched together, delivered complete with textbook anchors and credibility flags."
+  },
+  "avatar": "avatars/team.jpg",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "查「情绪劳动」：教材出处、相关理论、测量量表与分析方法，一次给全。",
+    "en": "Look up \"emotional labor\": textbook anchor, relevant theories, established scales and analysis methods, all in one pass."
+  },
+  "plugin": "obhrm-brain-trust",
+  "tags": [
+    {
+      "en": "Knowledge Query",
+      "zh": "知识检索"
+    },
+    {
+      "en": "Theory Query Expert",
+      "zh": "理论查询"
+    },
+    {
+      "en": "Data Analysis Expert",
+      "zh": "数据分析指导"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "查「情绪劳动」：教材出处、相关理论、测量量表与分析方法，一次给全。",
+      "en": "Look up \"emotional labor\": textbook anchor, relevant theories, established scales and analysis methods, all in one pass."
+    },
+    {
+      "zh": "工作绩效有哪些成熟量表？给出维度、题数、计分方式与出处。",
+      "en": "What established scales measure job performance? Give dimensions, item counts, scoring and sources."
+    },
+    {
+      "zh": "讲清「情感事件理论」：内容、作用机制、结构与应用，附参考文献。",
+      "en": "Explain Affective Events Theory: content, processes, structure and application, with references."
+    }
+  ],
+  "members": [
+    {
+      "id": "obhrm-brain-trust-lead",
+      "name": {
+        "en": "Vivian",
+        "zh": "程亦楠"
+      },
+      "profession": {
+        "en": "Chief Knowledge Officer",
+        "zh": "首席知识官"
+      },
+      "avatar": "avatars/team-lead.jpg",
+      "role": "lead"
+    },
+    {
+      "id": "obhrm-scale",
+      "name": {
+        "en": "Felix",
+        "zh": "顾铭泽"
+      },
+      "profession": {
+        "en": "Scale Retrieval Expert",
+        "zh": "量表检索专家"
+      },
+      "avatar": "avatars/obhrm-scale.jpg",
+      "role": "member"
+    },
+    {
+      "id": "obhrm-theory",
+      "name": {
+        "en": "Sophia",
+        "zh": "江语桐"
+      },
+      "profession": {
+        "en": "Theory Query Expert",
+        "zh": "理论查询专家"
+      },
+      "avatar": "avatars/obhrm-theory.jpg",
+      "role": "member"
+    },
+    {
+      "id": "obhrm-ranalysis",
+      "name": {
+        "en": "Derek",
+        "zh": "陆奕辰"
+      },
+      "profession": {
+        "en": "Data Analysis Expert",
+        "zh": "数据分析专家"
+      },
+      "avatar": "avatars/obhrm-ranalysis.jpg",
+      "role": "member"
+    }
+  ],
+  "license": "MIT"
+}

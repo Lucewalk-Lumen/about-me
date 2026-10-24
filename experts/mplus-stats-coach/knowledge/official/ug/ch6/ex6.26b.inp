@@ -1,0 +1,12 @@
+TITLE:	    this is an example of an N=1 time series analysis with a 
+            first-order autoregressive AR(1) confirmatory factor 
+            analysis (CFA) model with continuous factor indicators
+DATA:       FILE = ex6.26.dat;
+VARIABLE:   NAMES = y1-y4;
+ANALYSIS:   ESTIMATOR = BAYES;
+            PROCESSORS = 2;
+            BITERATIONS = (20000);	
+MODEL:	    f BY y1-y4 (&1); 
+	        y1-y4 ON f&1;
+OUTPUT:     TECH1 TECH8;
+PLOT:       TYPE = PLOT3;

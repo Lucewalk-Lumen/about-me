@@ -1,0 +1,86 @@
+{
+  "form_id": "F048",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "新员工试用期自评表",
+  "file": "templates/REC/form/F048.docx",
+  "n_tables": 1,
+  "n_rows": 21,
+  "outline": [
+    "姓名",
+    "所属部门",
+    "试用岗位",
+    "试用期从事的工作描述：",
+    "自我综合评价：（包括收获与存在的不足）",
+    "希望公司提供哪些帮助，使你未来工作得更好：",
+    "试用期分项自我考评",
+    "一、对试用期间的工作感到：",
+    "□非常满意；□还可以；□需要改进；□不满意",
+    "二、对公司的人际关系感到：",
+    "□非常融洽；□比较友好；□沟通不畅；□比较紧张",
+    "三、对目前的工作强度感到：",
+    "四、对目前的工作量感到：",
+    "□太多；□略多；□刚好；□略少；□太少",
+    "五、对目前的工作环境感到：",
+    "□很好；□舒适；□一般；□较差",
+    "六、对目前的工作待遇感到：",
+    "□很高；□合适；□一般；□较差",
+    "七、对从事的岗位希望：",
+    "八、对公司的意见与建议：",
+    "本人签名："
+  ],
+  "n_outline": 21,
+  "body": "部门：\n(姓名)，                         （岗位），于       年    月    日入司，现试用期将满，为及时总结试用期的工作表现和需要改进之处，请你仔细认真填写《新员工试用期自评表》，在近期公司相关部门会对你的工作表现和工作能力进行评定。\n姓名 | 所属部门 | 试用岗位\n试用期从事的工作描述：\n自我综合评价：（包括收获与存在的不足）\n希望公司提供哪些帮助，使你未来工作得更好：\n试用期分项自我考评\n一、对试用期间的工作感到：\n□非常满意；□还可以；□需要改进；□不满意\n二、对公司的人际关系感到：\n□非常融洽；□比较友好；□沟通不畅；□比较紧张\n三、对目前的工作强度感到：\n□轻松，可以承担更具挑战的工作；□合适，可适当加大强度； □刚好适合本人目前的能力；□不太适应，略感吃力\n四、对目前的工作量感到：\n□太多；□略多；□刚好；□略少；□太少\n五、对目前的工作环境感到：\n□很好；□舒适；□一般；□较差\n六、对目前的工作待遇感到：\n□很高；□合适；□一般；□较差\n七、对从事的岗位希望：\n□继续从事现岗位工作； □如有可能，希望变更至               部门              岗位工作； □对本公司工作不适应\n八、对公司的意见与建议：\n本人签名： | 填表日期：",
+  "body_chars": 561,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-18T08:26:00Z",
+    "modified": "2019-03-18T08:26:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

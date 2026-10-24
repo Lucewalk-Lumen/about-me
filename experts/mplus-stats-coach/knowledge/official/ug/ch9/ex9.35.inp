@@ -1,0 +1,20 @@
+TITLE:	this is an example of a two-level time series analysis 
+    with a first-order autoregressive AR(1) IRT model for binary factor indicators 
+    with random thresholds, a random AR(1) slope, and a random residual variance
+DATA:	FILE = ex9.35part2.dat;
+VARIABLE:	NAMES = u1-u4 subject;
+	CATEGORICAL = u1-u4;
+	CLUSTER = subject;
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+	ESTIMATOR = BAYES; 
+	PROCESSORS = 2; 
+	BITERATIONS = (3000);    
+MODEL:	%WITHIN%
+	f BY u1-u4*(&1 1-4); 
+	s | f ON f&1; 
+	logvf | f;
+	%BETWEEN%
+	fb BY u1-u4* (1-4);
+	[logvf@0];
+	fb s logvf WITH fb s logvf;   
+OUTPUT:	TECH1 TECH8;	

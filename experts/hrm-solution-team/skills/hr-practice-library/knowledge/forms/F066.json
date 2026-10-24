@@ -1,0 +1,59 @@
+{
+  "form_id": "F066",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "员工培训考核成绩汇总表",
+  "file": "templates/TRN/form/F066.docx",
+  "n_tables": 1,
+  "n_rows": 8,
+  "outline": [
+    "培训项目",
+    "培训时间",
+    "讲师",
+    "序号",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "……"
+  ],
+  "n_outline": 10,
+  "body": "培训项目 | 培训时间 | 讲师\n序号 | 姓名 | 部门 | 考评成绩 | 补考成绩 | 备注\n1\n2\n3\n4\n5\n……\n填表人：                                      填表日期：",
+  "body_chars": 109,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-22T03:17:00Z",
+    "modified": "2019-03-22T03:17:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [
+      "okr_tracker.sh"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

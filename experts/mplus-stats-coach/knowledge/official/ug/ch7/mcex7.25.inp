@@ -1,0 +1,38 @@
+TITLE:	this is an example of a zero-inflated 
+		Poisson regression carried out as a two-
+		class model
+MONTECARLO:			
+		NAMES = u1 x1 x3;
+		NOBSERVATIONS = 500;
+		NREPS = 1;
+		SEED = 53487;
+		GENCLASSES = c(2);
+		CLASSES = c(2);
+		GENERATE = u1(c);
+		COUNT = u1;
+		SAVE = ex7.25.dat;	
+MODEL POPULATION:
+		%OVERALL%
+		[x1-x3@0];
+		x1-x3@1;
+		[c#1*-1];
+		c#1 ON x1*2 x3*1;
+		%c#1%
+		[u1@-15];
+		u1 ON x1@0 x3@0;
+		%c#2%
+		[u1*1];
+		u1 ON x1*.5 x3*.3;
+ANALYSIS:
+		TYPE = MIXTURE;
+MODEL:
+		%OVERALL%
+		[c#1*-1];
+		c#1 ON x1*2 x3*1;
+		%c#1%
+		[u1@-15];
+		u1 ON x1@0 x3@0;
+		%c#2%
+		[u1*1];
+		u1 ON x1*.5 x3*.3;
+OUTPUT:	TECH8;

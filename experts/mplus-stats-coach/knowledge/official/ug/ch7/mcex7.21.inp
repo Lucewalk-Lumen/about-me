@@ -1,0 +1,57 @@
+TITLE: 
+	this is an example of mixture modeling
+	with known classes (multiple group 
+	analysis)
+
+montecarlo:
+	names are y1-y4 g;
+	generate = g(1);
+	categorical = g;
+	genclasses = cg(2) c(2);
+	classes = cg(2) c(2);
+	nobs = 1000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.21.dat;
+
+ANALYSIS:
+	TYPE = MIXTURE;
+
+MODEL POPULATION:
+	%OVERALL%
+	c#1 on cg#1*1;
+
+MODEL POPULATION-c:
+	%c#1%
+	[y1-y4*-1];
+	%c#2%
+	[y1-y4*1];
+
+MODEL POPULATION-cg:
+	%cg#1%
+	[g$1@15];
+	y1-y4*1;
+	%cg#2%
+	[g$1@-15];
+	y1-y4*.5;
+
+MODEL:
+	%OVERALL%
+	c#1 on cg#1*1;
+
+MODEL c:
+	%c#1%
+	[y1-y4*-1];
+	%c#2%
+	[y1-y4*1];
+
+MODEL cg:
+	%cg#1%
+	[g$1@15];
+	y1-y4*1;
+	%cg#2%
+	[g$1@-15];
+	y1-y4*.5;
+
+OUTPUT:
+	TECH8;

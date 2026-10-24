@@ -1,0 +1,19 @@
+TITLE:	this is an example of an external Monte
+	Carlo analysis of clustered data generated
+	for a two-level growth model for a
+	continuous outcome using TYPE=COMPLEX for
+	a single-level growth model
+DATA:	FILE = ex12.6replist.dat;
+	TYPE = MONTECARLO;
+VARIABLE:	NAMES = y1-y4 x w clus;
+	USEVARIABLES = y1-w;
+	MISSING = ALL (999);
+	CLUSTER = clus;
+ANALYSIS:	TYPE = COMPLEX;
+MODEL:	i s | y1@0 y2@1 y3@2 y4@3;
+	y1-y4*.5;
+	i ON x*1 w*.5;
+	s ON x*.25 w*.25;
+	i*1.2; s*.3;
+	[i*1 s*.5];
+OUTPUT:	TECH9;

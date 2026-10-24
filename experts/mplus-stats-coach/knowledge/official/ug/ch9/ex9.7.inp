@@ -1,0 +1,19 @@
+TITLE:	this is an example of a two-level CFA with 
+	categorical factor indicators, a random intercept 
+    factor, and covariates
+DATA:	FILE IS ex9.7.dat;
+VARIABLE:	NAMES ARE u1-u4 x1 x2 w clus;
+	CATEGORICAL = u1-u4; 
+	WITHIN = x1 x2;
+	BETWEEN = w;
+	CLUSTER = clus;
+	MISSING = ALL (999);
+ANALYSIS:	TYPE = TWOLEVEL; 
+MODEL:
+	%WITHIN%
+	fw BY u1-u4;	
+	fw ON x1 x2;
+	%BETWEEN%
+	fb BY u1-u4; 	
+	fb ON w;
+OUTPUT:	TECH1 TECH8;

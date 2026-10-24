@@ -1,0 +1,32 @@
+title:	this is an example of a linear growth 
+	model for a count outcome using a Poisson 
+	model 
+
+montecarlo:
+	names = u11-u14;
+	generate = u11-u14(c);
+	count = u11-u14;
+	nobs = 500;
+	nreps = 1;
+	save = ex6.6.dat;
+
+model population:
+
+	i s | u11@0 u12@1 u13@2 u14@3;
+	[u11-u14@0]; 
+
+	[i*.2 s*.005];
+	i*.4; s*.1; i with s*0;
+
+model:
+	
+	i s | u11@0 u12@1 u13@2 u14@3;
+	[u11-u14@0]; 
+
+	[i*.2 s*.005];
+	i*.4; s*.1; i with s*0;
+
+
+output:
+	tech8 tech9;
+

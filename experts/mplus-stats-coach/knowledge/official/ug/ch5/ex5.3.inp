@@ -1,0 +1,8 @@
+TITLE:	this is an example of a CFA with
+	continuous and categorical factor
+	indicators 
+DATA:	FILE IS ex5.3.dat;
+VARIABLE:	NAMES ARE u1-u3 y4-y6;
+	CATEGORICAL ARE u1 u2 u3;
+MODEL:	f1 BY u1-u3;
+	f2 BY y4-y6;

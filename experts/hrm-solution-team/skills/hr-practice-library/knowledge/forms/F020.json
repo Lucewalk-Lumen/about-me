@@ -1,0 +1,65 @@
+{
+  "form_id": "F020",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "各部门薪酬标准表",
+  "file": "templates/HRP/form/F020.docx",
+  "n_tables": 1,
+  "n_rows": 19,
+  "outline": [
+    "部门",
+    "职位",
+    "基本工资",
+    "岗位补贴",
+    "通讯补贴",
+    "交通补贴",
+    "高管",
+    "人力资源部",
+    "财务部",
+    "销售部",
+    "客户服务部",
+    "技术部",
+    "……"
+  ],
+  "n_outline": 13,
+  "body": "部门 | 职位 | 基本工资 | 岗位补贴 | 通讯补贴 | 交通补贴\n高管 | 总经理\n副总经理\n人力资源部 | 经理\n主管\n员工\n财务部 | 经理\n主管\n员工\n销售部 | 经理\n主管\n员工\n客户服务部 | 经理\n主管\n员工\n技术部 | 经理\n主管\n员工\n…… | ……",
+  "body_chars": 136,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-13T07:44:00Z",
+    "modified": "2019-03-13T07:47:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [
+      "payroll_engine.py"
+    ],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

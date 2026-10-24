@@ -1,0 +1,60 @@
+{
+  "form_id": "F014",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "人力资源异动分析月报表",
+  "file": "templates/HRP/form/F014.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "部门",
+    "定编人数",
+    "月初人数",
+    "新增人数",
+    "离职情况",
+    "新招",
+    "异动情况",
+    "月末人数",
+    "合计",
+    "本月情况小结："
+  ],
+  "n_outline": 10,
+  "body": "部门 | 定编人数 | 月初人数 | 新增人数 | 离职情况 | 新招 | 异动情况 | 月末人数\n个人辞职 | 公司辞退 | 自动离职 | 协商解除 | 违纪解除 | 合同终止 | 其它情况 | 离职率 | 小计 | 调入 | 调出 | 晋升 | 调岗 | 小计\n合计\n平衡公式：离职率=当月离职人数÷当月平均人数×100% 月末人数=月初人数+新增人数-离职人数小计 新增人数=新招人数+调入人数 本月异动小计=调入人数+调出人数+晋升人数+调岗人数\n制表部门：                                                                                                                                                         填表人：\n填表说明：本表已填涂颜色部分无需填写，公式自动生成。无填充颜色的部分可根据实际情况填写。 上报时间：本月月报应于次月2~5日内提交，遇法定节假日延后，但不超过次月10日 送达部门：本公司综合办\n本月情况小结：",
+  "body_chars": 495,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-08T03:13:00Z",
+    "modified": "2019-03-08T03:14:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+TITLE:	this is an example of a Monte Carlo
+	simulation study for a two-level growth 
+	model for a continuous outcome (three-
+	level analysis)
+MONTECARLO:
+	NAMES ARE y1-y4 x w;
+	NOBSERVATIONS = 1000;
+	NREPS = 500;
+	SEED = 58459;
+	CUTPOINTS = x (1) w (0);
+	MISSING = y1-y4;
+	NCSIZES = 3;
+	CSIZES = 40 (5) 50 (10) 20 (15);
+	WITHIN = x;
+	BETWEEN = w;
+MODEL POPULATION:
+	%WITHIN%
+	x@1;
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4*.5;
+	iw ON x*1;
+	sw ON x*.25;
+	iw*1; sw*.2;
+	%BETWEEN%
+	w@1;
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib ON w*.5;
+	sb ON w*.25;
+	[ib*1 sb*.5];
+	ib*.2; sb*.1;
+MODEL MISSING:
+	[y1-y4@-1];
+	y1 ON x*.4;
+	y2 ON x*.8;
+	y3 ON x*1.6;
+	y4 ON x*3.2;
+ANALYSIS:	TYPE IS TWOLEVEL;
+MODEL:
+	%WITHIN%
+	iw sw | y1@0 y2@1 y3@2 y4@3;
+	y1-y4*.5;
+	iw ON x*1;
+	sw ON x*.25;
+	iw*1; sw*.2;
+	%BETWEEN%
+	ib sb | y1@0 y2@1 y3@2 y4@3;
+	y1-y4@0;
+	ib ON w*.5;
+	sb ON w*.25;
+	[ib*1 sb*.5];
+	ib*.2; sb*.1;
+OUTPUT:	TECH9 NOCHISQUARE;

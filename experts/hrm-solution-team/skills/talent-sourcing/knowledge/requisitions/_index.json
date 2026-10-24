@@ -1,0 +1,28 @@
+{
+  "schema": "job-requisition",
+  "schema_version": "1.0.0",
+  "count": 1,
+  "id_prefix": "J",
+  "fields": [
+    "req_id",
+    "title",
+    "department",
+    "city",
+    "level",
+    "headcount",
+    "must_have",
+    "nice_to_have",
+    "salary_band",
+    "sourcing_profile.target_companies",
+    "sourcing_profile.target_titles",
+    "sourcing_profile.capability_weights",
+    "sourcing_profile.implicit_expectations",
+    "sourcing_profile.talent_tags",
+    "sourcing_profile.skill_keywords",
+    "sourcing_profile.exclude",
+    "priority",
+    "status"
+  ],
+  "searchable_filters": ["status", "priority", "city", "level", "department"],
+  "updated_at": "2026-09-29"
+}

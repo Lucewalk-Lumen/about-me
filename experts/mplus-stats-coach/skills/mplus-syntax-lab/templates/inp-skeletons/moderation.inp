@@ -1,0 +1,27 @@
+TITLE:
+    Moderation skeleton - latent interaction via XWITH (self-authored)
+
+DATA:
+    FILE IS mydata.dat;
+
+VARIABLE:
+    NAMES ARE y1-y4 x1-x3 z1-z3;
+    USEVARIABLES = y1-y4 x1-x3 z1-z3;
+    MISSING = ALL (-999);
+
+ANALYSIS:
+    ESTIMATOR = MLR;
+    ALGORITHM = INTEGRATION;
+
+MODEL:
+    fy BY y1-y4;
+    fx BY x1-x3;
+    fz BY z1-z3;
+    int | fx XWITH fz;
+    fy ON fx fz int;
+
+OUTPUT:
+    SAMPSTAT STANDARDIZED TECH1 TECH8;
+
+! 潜变量交互需 ALGORITHM=INTEGRATION; 变量数较多时计算量上升明显。
+! 本类带结果的可对照样本极薄 —— 输出中必须声明结果参照不足。

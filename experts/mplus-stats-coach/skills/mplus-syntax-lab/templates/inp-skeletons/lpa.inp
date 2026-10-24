@@ -1,0 +1,27 @@
+TITLE:
+    LPA skeleton - latent profile analysis, continuous indicators (self-authored)
+
+DATA:
+    FILE IS mydata.dat;
+
+VARIABLE:
+    NAMES ARE y1-y6 aux1 aux2;
+    USEVARIABLES = y1-y6;
+    CLASSES = c (2);
+    AUXILIARY = aux1 aux2;
+
+ANALYSIS:
+    TYPE = MIXTURE;
+    ESTIMATOR = MLR;
+    STARTS = 500 100;
+    PROCESSORS = 4;
+
+MODEL:
+    %OVERALL%
+    [y1-y6];
+
+OUTPUT:
+    SAMPSTAT STANDARDIZED TECH1 TECH8 TECH11 TECH14;
+
+! 类别数由用户按 AIC/BIC/aBIC/LMR-LRT/BLRT/熵值 逐次枚举后再定,
+! 本骨架不替用户预设最终类别数。

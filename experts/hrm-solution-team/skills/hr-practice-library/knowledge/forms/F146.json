@@ -1,0 +1,70 @@
+{
+  "form_id": "F146",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "劳动争议情况调查表",
+  "file": "templates/ER/form/F146.docx",
+  "n_tables": 1,
+  "n_rows": 7,
+  "outline": [
+    "争议提出人",
+    "部门",
+    "职务",
+    "合同签订日期",
+    "提出争议原因",
+    "调查情况和结果记录",
+    "调查项目/内容",
+    "调查负责人",
+    "审核意见"
+  ],
+  "n_outline": 9,
+  "body": "争议提出人 | 部门 | 职务\n合同签订日期 | 提出争议日期\n提出争议原因\n调查情况和结果记录\n调查项目/内容 | 调查结果 | 备注\n调查负责人 | 调查日期\n审核意见 | 审核人/日期",
+  "body_chars": 95,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-01T09:01:00Z",
+    "modified": "2019-04-01T09:07:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

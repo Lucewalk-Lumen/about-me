@@ -1,0 +1,25 @@
+TITLE:	this is an example of a Monte Carlo
+	simulation study for a CFA with covariates
+	(MIMIC) with continuous factor indicators
+	and patterns of missing data 
+MONTECARLO:
+	NAMES ARE y1-y4 x1 x2;
+	NOBSERVATIONS = 500;
+	NREPS = 500;
+	SEED = 4533;
+	CUTPOINTS = x2(1); 
+	PATMISS = y1(.1) y2(.2) y3(.3) y4(1) |
+	          y1(1) y2(.1) y3(.2) y4(.3);
+	PATPROBS = .4 | .6;
+MODEL POPULATION:
+	[x1-x2@0];	
+	x1-x2@1;
+	f BY y1@1 y2-y4*1;
+	f*.5;
+	y1-y4*.5;
+	f ON x1*1 x2*.3;
+MODEL:	f BY y1@1 y2-y4*1;
+	f*.5;
+	y1-y4*.5;
+	f ON x1*1 x2*.3;
+OUTPUT:	TECH9;

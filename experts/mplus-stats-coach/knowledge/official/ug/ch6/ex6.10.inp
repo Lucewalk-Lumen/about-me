@@ -1,0 +1,11 @@
+TITLE:	this is an example of a linear growth
+	model for a continuous outcome with time-
+	invariant and time-varying covariates
+DATA:	FILE IS ex6.10.dat;
+VARIABLE:	NAMES ARE y11-y14 x1 x2 a31-a34;
+MODEL:	i s | y11@0 y12@1 y13@2 y14@3;
+	i s ON x1 x2;
+	y11 ON a31;
+	y12 ON a32;
+	y13 ON a33;
+	y14 ON a34;

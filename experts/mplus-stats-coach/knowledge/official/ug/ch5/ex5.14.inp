@@ -1,0 +1,13 @@
+TITLE:	this is an example of a multiple group CFA
+	with covariates (MIMIC) with continuous
+	factor indicators
+DATA:	FILE IS ex5.14.dat;
+VARIABLE:	NAMES ARE y1-y6 x1-x3 g;
+	GROUPING IS g (1=male 2=female);
+ANALYSIS:	MODEL = NOMEANSTRUCTURE;
+	INFORMATION = EXPECTED;
+MODEL:	f1 BY y1-y3;
+	f2 BY y4-y6;
+	f1 f2 ON x1-x3;
+MODEL female: 
+	f1 BY y3; 

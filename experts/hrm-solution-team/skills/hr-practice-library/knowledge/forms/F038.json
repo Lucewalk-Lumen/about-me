@@ -1,0 +1,78 @@
+{
+  "form_id": "F038",
+  "module_code": "REC",
+  "module_zh": "招聘与配置管理",
+  "module_order": 2,
+  "kind": "表格",
+  "title": "内部竞聘申请表",
+  "file": "templates/REC/form/F038.docx",
+  "n_tables": 1,
+  "n_rows": 12,
+  "outline": [
+    "申请人姓名",
+    "性别",
+    "出生年月",
+    "最高学历",
+    "职称/技术等级",
+    "现工作部门",
+    "竞聘部门",
+    "个人特长/受过何种培训",
+    "工作简历",
+    "所获公司表彰或荣誉",
+    "竞聘报告",
+    "部门评价",
+    "领导审核 意见"
+  ],
+  "n_outline": 13,
+  "body": "申请人姓名 | 性别 | 出生年月\n最高学历 | 毕业院校 | 所学专业\n职称/技术等级 | 英语/普通话等级 | 联系电话\n现工作部门 | 现任职务\n竞聘部门 | 竞聘岗位\n个人特长/受过何种培训\n工作简历\n所获公司表彰或荣誉\n竞聘报告 | 请另附页（不少于800字）内容包括个人在公司的成长经历、竞聘目的、对竞聘岗位的认识、竞聘工作思路等内容\n部门评价 | （说明：自荐员工此处暂不用填写） 签名/盖章：\n领导审核 意见 | 符合竞聘条件 □                     不符合竞聘条件 □ 盖章：\n备注：1.每位竞聘者最多只可报名竞聘两个岗位。 2.部门评价可以从竞聘者日常工作业绩、工作能力和敬业程度等方面给出客观、公正的评价。",
+  "body_chars": 324,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-19T03:48:00Z",
+    "modified": "2019-04-26T07:03:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "recruitment-pipeline",
+    "owner_agent": "recruitment-pipeline",
+    "primary_engines": [
+      "candidate_scorer.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/recruiting-pipeline.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-evaluation.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/candidate-crm.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/interview-framework.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/workflow-details.md"
+      },
+      {
+        "skill": "recruitment-pipeline",
+        "path": "skills/recruitment-pipeline/references/advanced-screening-and-interview-design.md"
+      }
+    ]
+  }
+}

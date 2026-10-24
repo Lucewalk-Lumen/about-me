@@ -1,0 +1,50 @@
+title:
+    this is an example of multiple-group EFA 
+with continuous factor indicators 
+measurement invariance (3rd model version, ex4c) 
+
+montecarlo:
+      names = y1-y10;
+      ngroups = 2;
+      nobs = 500 500;
+      nreps = 1;
+      save = ex5.27.dat;
+
+model population:
+      f1 by y1-y5*.8 y6-y10*0;
+      f2 by y1-y5*0 y6-y10*.8;
+      f1-f2@1;
+      f1 with f2*.5;
+     
+      y1-y10*1;
+      [y1-y10*1];
+      [f1-f2@0];
+
+model population-g2:
+    f1*1.5 f2*2;
+    f1 with f2*1;
+    y1-y10*2;
+    [f1*.5 f2*.8];
+      
+
+model:
+
+      f1 by y1-y5*.8 y6-y10*0 (*1);
+      f2 by y1-y5*0 y6-y10*.8 (*1);
+      f1-f2@1;
+      f1 with f2*.5;
+     
+      y1-y10*1;
+      [y1-y10*1] (1-10);
+      [f1-f2@0];
+
+model g2:
+
+    f1*1.5 f2*2;
+    f1 with f2*1;
+    y1-y10*2;
+    [f1*.5 f2*.8];
+
+output:
+      tech9;
+

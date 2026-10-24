@@ -1,0 +1,13 @@
+TITLE:	this is an example of a path analysis
+	with continuous dependent variables,  
+	bootstrapped standard errors, indirect 
+	effects, and non-symmetric bootstrap confidence intervals
+DATA:	FILE IS ex3.11.dat;
+VARIABLE:	NAMES ARE y1-y3 x1-x3;
+ANALYSIS:	BOOTSTRAP = 1000;
+MODEL:	y1 y2 ON x1 x2 x3;
+	y3 ON y1 y2 x2;
+MODEL INDIRECT:
+	y3 IND y1 x1;
+	y3 IND y2 x1;
+OUTPUT:	CINTERVAL (BOOTSTRAP);

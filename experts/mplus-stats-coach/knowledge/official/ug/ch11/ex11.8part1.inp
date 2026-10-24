@@ -1,0 +1,28 @@
+TITLE:	this is an example of multiple imputation 
+		using a two-level factor model 
+		with categorical outcomes 
+DATA:           FILE = ex11.8.dat;
+VARIABLE:	NAMES are u11 u21 u31 u12 u22 u32 u13 u23 u33 clus;
+		CATEGORICAL = u11-u33;
+		CLUSTER = clus;
+		MISSING = ALL (999);
+ANALYSIS:	TYPE = TWOLEVEL;
+		ESTIMATOR = BAYES;
+		PROCESSORS = 2;
+MODEL:	%WITHIN%
+		f1w BY u11 
+		u21 (1)
+		u31 (2);
+		f2w BY u12 
+		u22 (1)
+		u32 (2);
+		f3w BY u13 
+		u23 (1)
+		u33 (2);
+		%BETWEEN%
+		fb BY u11-u33*1;
+		fb@1;
+DATA IMPUTATION:
+		IMPUTE = u11-u33(c);
+                SAVE = ex11.8imp*.dat;
+OUTPUT:	TECH1 TECH8;

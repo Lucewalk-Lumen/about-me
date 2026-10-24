@@ -1,0 +1,33 @@
+{
+  "schema": "talent-map",
+  "schema_version": "1.1.0",
+  "map_id": "M000001",
+  "target_company": "某电商公司",
+  "target_function": "订单交易技术团队",
+  "entries": [
+    {"name_or_alias": "某甲（公开署名）", "title": "技术专家", "public_profile_ref": "公开技术博客 URL", "relevance": "高", "mapped_at": "2026-08-20"}
+  ],
+  "tiers": {
+    "benchmark": [
+      {"alias": "某公司A", "city": "杭州", "business": "全品类电商交易", "fit_reason": "交易架构与本岗位技术栈高度重合"}
+    ],
+    "direct_competitor": [
+      {"alias": "某公司B", "city": "上海", "business": "垂直电商订单系统", "fit_reason": "直接竞品，订单域人才对口"}
+    ],
+    "high_potential": [
+      {"alias": "某公司C", "city": "杭州", "business": "社交电商", "fit_reason": "高增速赛道，人才薪酬带宽匹配"}
+    ]
+  },
+  "red_lines": {
+    "exclude_client": true,
+    "exclude_abnormal_operation": true,
+    "same_city_ratio_min": 0.4
+  },
+  "team_size_estimate": "约 40 人（公开信息推断）",
+  "hiring_signal": "该公司近 3 个月招聘收缩（公开招聘页观察）",
+  "baseline_date": "2026-08-20",
+  "verification": "manual_review_required",
+  "note": "仅收录公开职业信息；不含私人联系方式；联系方式以候选人主动提供或授权为限",
+  "_red_lines_note": "三条硬规则：exclude_client 剔除客户主体；exclude_abnormal_operation 规避经营异常主体（以国家企业信用信息公示系统为准并标注基准日期）；same_city_ratio_min 同城市占比 ≥40%，低于该比例须补充周边同能级城市企业并标注说明",
+  "_note": "示例档案：公司与人物均为占位别名，不对应真实主体；tiers 默认基准为头部标杆 10 家 / 直接竞品 8 家 / 高潜力 2 家，可按岗位层级调整。"
+}

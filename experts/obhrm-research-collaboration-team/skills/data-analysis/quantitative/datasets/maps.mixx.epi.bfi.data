@@ -1,0 +1,9 @@
+# SAMPLE PLACEHOLDER — NOT real data. Generated for package completeness.
+# Tab-separated, header=TRUE. Replace with your own BFI item responses before running the §5.2 R snippet.
+# First 5 columns (E1-E5) are consumed by the EFA example mydata[,1:5]. Likert 1-5 (consistent with a BFI-style dataset).
+E1	E2	E3	E4	E5
+5	3	4	2	4
+4	4	3	3	5
+3	2	5	4	3
+2	5	4	5	2
+4	3	3	4	4

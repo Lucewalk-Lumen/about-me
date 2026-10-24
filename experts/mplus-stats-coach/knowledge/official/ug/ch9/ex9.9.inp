@@ -1,0 +1,23 @@
+TITLE:	this is an example of a two-level SEM with categorical 
+factor indicators on the within level and cluster-level 
+continuous observed and random intercept factor indicators 
+on the between level
+DATA:   	FILE IS ex9.9.dat;
+VARIABLE:	NAMES ARE u1-u6 y1-y4 x1 x2 w clus;
+	CATEGORICAL = u1-u6;
+	WITHIN = x1 x2;
+         	BETWEEN = w y1-y4;
+          	CLUSTER IS clus;
+ANALYSIS:	TYPE IS TWOLEVEL;
+	ESTIMATOR = WLSMV;
+MODEL:
+	%WITHIN%
+	fw1 BY u1-u3;
+	fw2 BY u4-u6;
+	fw1 fw2 ON x1 x2;
+	%BETWEEN%
+	fb BY u1-u6;
+	f BY y1-y4;
+	fb ON w f;
+	f ON w;
+SAVEDATA:	SWMATRIX = ex9.9sw.dat;

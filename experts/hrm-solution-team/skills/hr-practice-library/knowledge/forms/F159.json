@@ -1,0 +1,69 @@
+{
+  "form_id": "F159",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "签订劳动合同明细表",
+  "file": "templates/ER/form/F159.docx",
+  "n_tables": 1,
+  "n_rows": 13,
+  "outline": [
+    "工号",
+    "姓名",
+    "性别",
+    "年龄",
+    "入职日期",
+    "合同年限",
+    "合同期限",
+    "备注"
+  ],
+  "n_outline": 8,
+  "body": "工号 | 姓名 | 性别 | 年龄 | 入职日期 | 合同年限 | 合同期限 | 备注\n男 | 女\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日\n年    月    日 | 年    月    日——      年    月    日",
+  "body_chars": 544,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-02T06:14:00Z",
+    "modified": "2019-04-02T06:14:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

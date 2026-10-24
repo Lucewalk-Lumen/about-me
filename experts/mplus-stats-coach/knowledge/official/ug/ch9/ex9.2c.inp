@@ -1,0 +1,14 @@
+TITLE:	this is an example of a two-level 
+	regression analysis for a continuous 
+	dependent variable with a random slope and a latent covariate
+DATA:   FILE = ex9.2c.dat;
+VARIABLE:	NAMES = y x w clus;
+	BETWEEN = w;
+	CLUSTER = clus;
+ANALYSIS:	TYPE = TWOLEVEL RANDOM;
+MODEL:
+	%WITHIN%	
+ 	s | y ON x;		
+	%BETWEEN%	
+	y s ON w x;
+	y WITH s;

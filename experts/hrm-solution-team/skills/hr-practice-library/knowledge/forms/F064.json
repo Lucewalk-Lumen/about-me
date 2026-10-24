@@ -1,0 +1,59 @@
+{
+  "form_id": "F064",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "内部培训讲师申请表",
+  "file": "templates/TRN/form/F064.docx",
+  "n_tables": 1,
+  "n_rows": 14,
+  "outline": [
+    "申请人基本信息",
+    "姓名",
+    "部门",
+    "学历/专业",
+    "申请讲师类别",
+    "申请授课内容",
+    "申请说明",
+    "个人情况介绍",
+    "资格鉴定",
+    "人力资源主管审核意见",
+    "部门意见",
+    "部/子公司主管领导意见"
+  ],
+  "n_outline": 12,
+  "body": "申请人基本信息\n姓名 | 工号\n部门 | 岗位\n学历/专业 | 入司时间\n申请讲师类别 | □管理技能类    □岗位技能类    □基础技能类（通用）    □其它\n申请授课内容\n申请说明\n个人情况介绍 | 工作经历（在司工作经历优先）：\n受训经历：\n授课经验：\n资格鉴定\n人力资源主管审核意见 | □经审核，申请人符合内部讲师资格。 □经审核，申请人不符合内部讲师资格。 签字：\n部门意见 | 综合管理部主管意见\n部/子公司主管领导意见 | 公司主管领导意见",
+  "body_chars": 231,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-20T08:47:00Z",
+    "modified": "2019-03-20T08:48:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+TITLE:	this is an example of a continuous-time     
+ 	survival analysis using the Cox regression model
+DATA:	FILE = ex6.20.dat;
+VARIABLE:	NAMES = t x tc;
+	SURVIVAL = t;
+	TIMECENSORED = tc (0 = NOT 1 = RIGHT);
+MODEL:	t ON x;

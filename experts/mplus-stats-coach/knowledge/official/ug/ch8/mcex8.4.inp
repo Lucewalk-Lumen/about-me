@@ -1,0 +1,72 @@
+title:
+	this is an example of a GMM for a 
+	categorical outcome using automatic 
+	starting values and random starts 
+
+montecarlo:
+	names are u1-u4 x;
+	generate = u1-u4(4);
+	categorical = u1-u4;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 1000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex8.4.dat;
+
+analysis:
+	type = mixture;
+	algorithm = integration;
+
+model population:
+
+	%overall%
+
+	[x@0]; x@1;
+
+	i s | u1@0 u2@1 u3@2 u4@3;
+
+	[u1$1-u4$1*-.5] (1);
+	[u1$2-u4$2*0] (2);	
+	[u1$3-u4$3*.5] (3);
+	[u1$4-u4$4*1] (4);
+
+	i*1; s*.5;
+
+	c#1 on x*1;
+	i on x*.4;
+	s on x*.3;
+
+	%c#1%
+	[i*3 s*1];
+
+	%c#2%
+	[i@0 s*.5];
+
+
+model:
+	
+	%overall%
+
+	i s | u1@0 u2@1 u3@2 u4@3;
+
+	[u1$1-u4$1*-.5] (1);
+	[u1$2-u4$2*0] (2);	
+	[u1$3-u4$3*.5] (3);
+	[u1$4-u4$4*1] (4);
+
+	i*1; s*.5;
+
+	c#1 on x*1;
+	i on x*.4;
+	s on x*.3;
+
+	%c#1%
+	[i*3 s*1];
+
+	%c#2%
+	[i@0 s*.5];
+
+
+output:
+	tech8 tech9;

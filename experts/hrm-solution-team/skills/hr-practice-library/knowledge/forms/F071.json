@@ -1,0 +1,56 @@
+{
+  "form_id": "F071",
+  "module_code": "TRN",
+  "module_zh": "培训与开发管理",
+  "module_order": 3,
+  "kind": "表格",
+  "title": "培训效果反馈表",
+  "file": "templates/TRN/form/F071.docx",
+  "n_tables": 1,
+  "n_rows": 21,
+  "outline": [
+    "培训课程",
+    "培训讲师",
+    "培训日期",
+    "培训满意度评价项目",
+    "课程内容",
+    "讲师表现",
+    "组织工作",
+    "总计得分",
+    "培训组织方签名/日期"
+  ],
+  "n_outline": 9,
+  "body": "培训课程 | 培训讲师\n培训日期 | 培训时间\n为了不断提高我们的培训质量，请您认真、完整填写此份调查表。请在相应的数字上划“√”。\n培训满意度评价项目 | 很满意 | 满意 | 一般 | 不满意 | 得分统计（组织人员填写）\n10 | 9 | 8 | 7 | 6 | 5 | 4 | 3\n课程内容 | 课程适合我的工作和个人发展需要\n课程内容深度适中，易于理解\n课程内容切合实际、便于应用\n课程重点内容突出、主次分明\n课程让我获得了新知或启发\n讲师表现 | 讲师的仪表标准、个人形象\n讲师的有充分的准备\n表达清晰、语言简练、重点突出\n讲师课堂气氛及互动情况\n讲师培训技能及方法\n组织工作 | 培训开展筹备工作充分\n培训时间 /地点安排合理\n现场秩序维护周到\n总计得分\n1.您认为这种课程最好采用哪种培训方式？（请在对应字母上划“√”，可多选） A、讲授；B、现场演示；C、分组讨论；D、案例分析；E、游戏互动；F、拓展训练；G、头脑风暴；H、网络学习；I、角色演练 2.您对本次课程内容、讲师表现或培训组织工作的建议？（请简要写出您的宝贵意见） 3.再有此类课程您是否还愿意参与？除了本课程外，您目前还对哪些培训课程较为感兴趣？（请简要写出您的宝贵意见） 4.其他您想提出的宝贵意见？\n培训组织方签名/日期",
+  "body_chars": 554,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-20T09:05:00Z",
+    "modified": "2019-03-20T09:30:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "talent-development",
+    "owner_agent": "talent-development",
+    "primary_engines": [],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/talent-development.md"
+      },
+      {
+        "skill": "talent-development",
+        "path": "skills/talent-development/references/training-program-design.md"
+      }
+    ]
+  }
+}

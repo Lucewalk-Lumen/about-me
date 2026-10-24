@@ -1,0 +1,11 @@
+TITLE:	this is an example of a path analysis
+	with a combination of censored,
+	categorical, and unordered categorical
+	(nominal) dependent variables
+DATA:	FILE IS ex3.15.dat;
+VARIABLE:	NAMES ARE y1 u2 u1 x1-x3;
+	CENSORED IS y1 (a);
+	CATEGORICAL IS u1;
+	NOMINAL IS u2;
+MODEL:	y1 u1 ON x1 x2 x3;
+	u2 ON y1 u1 x2;

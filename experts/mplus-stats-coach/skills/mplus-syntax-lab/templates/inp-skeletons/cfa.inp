@@ -1,0 +1,21 @@
+TITLE:
+    CFA skeleton - three-factor measurement model (self-authored)
+
+DATA:
+    FILE IS mydata.dat;
+
+VARIABLE:
+    NAMES ARE id x1-x4 y1-y4 z1-z4;
+    USEVARIABLES = x1-x4 y1-y4 z1-z4;
+    MISSING = ALL (-999);
+
+ANALYSIS:
+    ESTIMATOR = MLR;
+
+MODEL:
+    fx BY x1-x4;
+    fy BY y1-y4;
+    fz BY z1-z4;
+
+OUTPUT:
+    SAMPSTAT STANDARDIZED MODINDICES(4);

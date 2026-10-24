@@ -1,0 +1,11 @@
+TITLE:	this is an example of CFA with a non-parametric
+	representation of a non-normal factor
+DATA:	FILE IS ex7.26.dat;
+VARIABLE:	NAMES ARE y1-y5 c;
+	USEV = y1-y5;
+	CLASSES = c(3);
+ANALYSIS:	TYPE = MIXTURE;
+MODEL:	%OVERALL%
+	f BY y1-y5;
+	f@0;
+OUTPUT:	TECH1 TECH8;

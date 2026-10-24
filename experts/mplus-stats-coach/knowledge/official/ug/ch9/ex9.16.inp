@@ -1,0 +1,23 @@
+TITLE:	this is an example of a linear 
+growth model for a continuous outcome 
+with time-invariant and time-varying 
+covariates carried out as a two-level 
+growth model using the DATA WIDETOLONG command 
+DATA:	FILE IS ex9.16.dat;
+DATA WIDETOLONG:
+	WIDE = y11-y14 | a31-a34;
+	LONG = y | a3;
+	IDVARIABLE = person;
+	REPETITION = time;
+VARIABLE:	NAMES ARE y11-y14 x1 x2 a31-a34;
+	USEVARIABLE = x1 x2 y a3 person time;
+	CLUSTER = person; 
+	WITHIN = time a3;
+	BETWEEN = x1 x2;
+ANALYSIS:	TYPE = TWOLEVEL RANDOM; 
+MODEL:	%WITHIN%
+	s | y ON time;
+	y ON a3;
+	%BETWEEN%
+	y s on x1 x2;
+	y WITH s;	

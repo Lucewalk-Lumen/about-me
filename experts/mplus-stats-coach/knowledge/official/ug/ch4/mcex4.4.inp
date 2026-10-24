@@ -1,0 +1,68 @@
+title:
+	this is an example of a factor mixture analysis
+    with continuous latent class indicators 
+
+montecarlo:
+	names are y1-y8;
+	genclasses = c(2);
+	classes = c(2);
+	nobs = 2000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex4.4.dat;
+
+model population:
+
+	%overall%
+
+    f1 by y1-y4*1;
+    f2 by y5-y8*1;
+    y1-y8*.5;
+    f1-f2@1;
+    [f1-f2@0];
+
+	[c#1*0];
+	
+	%c#1%
+    f1 by y1-y4*1; 
+    f2 by y5-y8*.5;
+	[y1*2 y2*2 y3*2 y4*2 y5*-1 y6*-1 y7*-1 y8*-1];
+
+	%c#2%
+    f1 by y1-y4*.5; 
+    f2 by y5-y8*1;
+	[y1*-1 y2*-1 y3*-1 y4*-1 y5*2 y6*2 y7*2 y8*2];
+
+analysis:
+	type = mixture;
+ 
+model:
+   %overall%
+
+    f1 by y1-y4*1;
+    f2 by y5-y8*1;
+    y1-y8*.5;
+    f1-f2@1;
+    [f1-f2@0];
+
+	[c#1*0];
+	
+	%c#1%
+    f1 by y1-y4*1; 
+    f2 by y5-y8*.5;
+	[y1*2 y2*2 y3*2 y4*2 y5*-1 y6*-1 y7*-1 y8*-1];
+
+	%c#2%
+    f1 by y1-y4*.5; 
+    f2 by y5-y8*1;
+	[y1*-1 y2*-1 y3*-1 y4*-1 y5*2 y6*2 y7*2 y8*2];
+
+
+output:
+	tech8 tech9;
+	
+	
+	
+
+	
+	

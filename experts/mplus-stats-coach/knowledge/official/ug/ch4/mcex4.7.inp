@@ -1,0 +1,24 @@
+TITLE:
+    bi-factor EFA analyzed by ESEM
+MONTECARLO:
+    NAMES = y1-y10;
+    NOBSERVATIONS = 5000;
+    NREPS = 1;
+    SAVE = ex4.7.dat;
+MODEL POPULATION:
+    fg BY y1-y10*0.7;
+    f1 BY y1*1 y2*0.4 y3*0.7 y4*2;
+    f2 BY y5*0.3 y6*0.5 y6*0.7 y7*0.9 y8*1.1 y9*1.1 y10*1.3;
+    fg-f2@1;
+    fg WITH f1-f2@0;
+    f1 WITH f2*0;
+    y1-y4*2.35 y5-y10*2.42;
+ANALYSIS:
+    iterations = 2000; 
+    ROTATION = BI-GEOMIN;
+MODEL:
+    fg BY y1-y10*0.7 (*1);
+    f1 BY y1*1 y2*0.4 y3*0.7 y4*2 y5-y10*0 (*1);
+    f2 BY y1-y4*0 y5*0.3 y6*0.5 y6*0.7 y7*0.9 y8*1.1 y9*1.1 y10*1.3 (*1);
+    y1-y4*2.35 y5-y10*2.42;
+

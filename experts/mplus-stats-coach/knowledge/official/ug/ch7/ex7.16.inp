@@ -1,0 +1,13 @@
+TITLE:	this is an example of LCA with partial conditional independence
+DATA:	FILE IS ex7.16.dat;
+VARIABLE:	NAMES ARE u1-u4;
+	CATEGORICAL = u1-u4;
+	CLASSES = c(2);
+ANALYSIS:	TYPE = MIXTURE;
+	PARAMETERIZATION = RESCOVARIANCES;
+MODEL:	
+	%OVERALL% 
+	%c#1%
+	[u1$1-u4$1*-1];
+	u2 WITH u3;
+OUTPUT:	TECH1 TECH8;

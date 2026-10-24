@@ -1,0 +1,41 @@
+title:
+    Adding priors
+
+    Yuan and MacKinnon firefighters
+    mediation using Bayesian analysis
+    
+    Elliot DL, Goldberg L, Kuehl KS, et al. 
+    The PHLAME Study: process and outcomes 
+    of 2 models of behavior change. 
+    J Occup Environ Med. 2007;49(2):204-213.
+
+data:
+    file = fire.dat;
+
+variable:
+    names = y m x;
+
+model:
+    m on x (a);
+    y on m (b)
+    x;
+
+analysis:
+    estimator = bayes;
+    process = 2;
+    fbiter = 10000;
+
+model priors:
+    a~n(0.35,0.04);
+    b~n(0.1,0.01);
+
+model constraint:
+    new(indirect);
+    indirect = a*b;
+
+output:
+    tech1 tech8;
+
+plot:
+    type = plot2;
+

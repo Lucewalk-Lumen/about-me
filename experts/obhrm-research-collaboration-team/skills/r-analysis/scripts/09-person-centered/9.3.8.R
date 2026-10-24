@@ -1,0 +1,71 @@
+# 潜增长中介（Latent Growth Mediation，纵向机制的完整形式）  （方法编号 9.3.8）
+# @method   潜增长中介（Latent Growth Mediation，纵向机制的完整形式）
+# @chapter  第9章
+# @input    用户提供 CSV 数据文件（G3 门禁）：Rscript 9.3.8.R 数据.csv [变量列...]
+# @use_cond 至少 3 个时间点的纵向数据；X 为基线变量，Y 为远端结果；建议 Bootstrap 检验。
+# @deps     lavaan
+# @output   分析结果输出至控制台 / 工作目录
+# @example  使用自身数据时按 @input 提供文件
+# 说明：本脚本配套《R 语言数据分析手册》，代码已检验；运行需本机安装 R。
+
+# G4 环境门禁：缺失包则提示安装（不代装）
+ensure_pkg <- function(p) {
+  if (!requireNamespace(p, quietly=TRUE)) {
+    stop(paste0('G4: 未安装 R 包 ', p, '，请先运行 install.packages(\'', p, '\')'))
+  }
+  library(p, character.only=TRUE)
+}
+ensure_pkg("lavaan")
+# ================= 可复现性：固定随机种子 =================
+# 本脚本含随机过程（bootstrap / 置换检验 / 随机初值 / 多重插补之一或多个）。
+# 未固定种子时，同一份数据两次运行可能得出不同结论 —— 学术结论不可复现。
+# 种子随结果一并输出（控制台 + sessionInfo.txt），供复核与他人复现。
+OBHRM_SEED <- 20260101   # 全局随机种子
+set.seed(OBHRM_SEED)
+cat(sprintf("seed: %d\n", OBHRM_SEED))
+
+
+# [G3] 用户提供数据：Rscript <this>.R 数据.csv [变量列...]
+args <- commandArgs(trailingOnly=TRUE)
+if (length(args) < 1) {
+  cat("G3 门禁：请提供数据文件，例如 Rscript this.R mydata.csv\n")
+  cat("数据要求：宽格式 CSV，每列一个变量，首行为变量名。\n")
+  # 用 sys.nframe() 区分「顶层脚本」与「被 source() 调入」两种情形：
+  #   Rscript 运行 → nframe()==0，保持 cat()+quit(status=1) 的原行为（干净输出 + 明确退出码）；
+  #   被 source() 时 → nframe()>0，改用 stop()，避免连带终止调用方的整个 R 会话。
+  if (sys.nframe() == 0L) {
+    quit(status = 1)
+  }
+  stop("G3 门禁：未提供数据文件（请用 Rscript 运行，或显式传入数据文件路径）", call. = FALSE)
+}
+dat <- read.csv(args[1], fileEncoding="UTF-8", stringsAsFactors=FALSE)
+cols <- if (length(args) >= 2) args[2:length(args)] else names(dat)   # 默认全部列；按方法需要可显式指定列
+dat <- dat[, cols, drop=FALSE]   # dat = 待分析数据框（默认全部数值列）
+# ---- 将 y1-y3 替换为三个时间点的变量名，x/outcome 替换为自变量/远端结果 ----
+library(lavaan)
+lgm_med_model <- '
+  # 潜增长因子（截距 i 和斜率 s）
+  i =~ 1*y1 + 1*y2 + 1*y3
+  s =~ 0*y1 + 1*y2 + 2*y3
+  # 自变量 X 预测增长参数
+  i ~ a1*x
+  s ~ a2*x
+  # 增长参数预测远端结果 Y
+  outcome ~ b1*i + b2*s + c*x
+  # 纵向间接效应
+  ind_i := a1*b1   # X 通过初始水平（截距）影响 Y
+  ind_s := a2*b2   # X 通过变化速率（斜率）影响 Y
+  ind_total := ind_i + ind_s
+'
+fit <- sem(lgm_med_model, data=dat, se='boot', bootstrap=5000)
+summary(fit, standardized=TRUE, ci=TRUE)
+
+# ================= 可复现性元数据（sessionInfo 快照）=================
+# 记录 R 版本与全部已加载包的版本号。这是防止
+# R 包版本漂移导致结论不可复现的最小保障。写入失败必须可见（非 fail-silent）。
+.obhrm_si <- try(writeLines(capture.output(sessionInfo()), "sessionInfo.txt"), silent = TRUE)
+if (inherits(.obhrm_si, "try-error")) {
+  message("警告：sessionInfo.txt 写入失败（工作目录可能只读），复现元数据未落盘")
+} else if (exists("OBHRM_SEED")) {
+  cat(sprintf("random_seed: %s\n", OBHRM_SEED), file = "sessionInfo.txt", append = TRUE)
+}

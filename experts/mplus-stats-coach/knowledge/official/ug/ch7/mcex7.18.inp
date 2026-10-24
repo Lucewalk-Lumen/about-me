@@ -1,0 +1,71 @@
+title:
+	this is an example of a LCA with a second-
+	order factor (twin analysis)
+
+montecarlo:
+	names are u11-u13 u21-u23;
+	genclasses = c1(2) c2(2);
+	classes = c1(2) c2(2);
+	generate = u11-u23(1);
+	categorical = u11-u23;
+	nobs = 5000;
+	seed = 3454367;
+	nrep = 1;
+	save = ex7.18.dat;
+
+analysis:
+	type = mixture;
+	algo = int;
+
+model population:
+	%overall%
+
+	f by u11@0;
+	[f@0];
+	f@1;
+
+	[c1#1*0 c2#1*0];
+	c1#1 c2#1 on f*1 (1);
+
+model population-c1:
+	
+	%c1#1%
+	[u11$1-u13$1*-1];
+	%c1#2%
+	[u11$1-u13$1*1];
+
+model population-c2:
+	
+	%c2#1%
+	[u21$1-u23$1*-1];
+	%c2#2%
+	[u21$1-u23$1*1];
+	
+model:
+	%overall%
+
+	
+	f by u11@0;
+	[f@0];
+	f@1;
+
+	[c1#1*0 c2#1*0];
+	c1#1 c2#1 on f*1 (1);
+
+model c1:
+	
+	%c1#1%
+	[u11$1-u13$1*-1];
+	%c1#2%
+	[u11$1-u13$1*1];
+
+model c2:
+	
+	%c2#1%
+	[u21$1-u23$1*-1];
+	%c2#2%
+	[u21$1-u23$1*1];
+
+output:
+	tech8 tech9;	
+	

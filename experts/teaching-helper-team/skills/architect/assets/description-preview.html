@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Template Description Preview</title>
+    <style>
+      :root {
+        color: #020814;
+        background: #f5f7fb;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+      }
+
+      .page {
+        display: grid;
+        grid-template-columns: minmax(360px, 1fr) minmax(360px, 520px);
+        gap: 24px;
+        min-height: 100vh;
+        padding: 32px;
+      }
+
+      .editor,
+      .preview {
+        min-width: 0;
+        background: #fff;
+        border: 1px solid #e8ebf2;
+        border-radius: 8px;
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+      }
+
+      .editor {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .panelHeader {
+        padding: 18px 20px 14px;
+        border-bottom: 1px solid #edf0f6;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hint {
+        margin-top: 4px;
+        color: #6b7280;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      textarea {
+        flex: 1;
+        width: 100%;
+        min-height: 620px;
+        padding: 20px;
+        color: #242833;
+        font: 14px/22px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+        background: #fbfcfe;
+        border: 0;
+        outline: none;
+        resize: none;
+      }
+
+      .preview {
+        padding: 20px;
+      }
+
+      .templateCard {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .identity {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        padding-bottom: 4px;
+      }
+
+      .avatar {
+        display: grid;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        color: #165dff;
+        font-weight: 600;
+        font-size: 18px;
+        background: linear-gradient(135deg, #e7f0ff 0%, #f6f9ff 100%);
+        border: 1px solid #dbe7ff;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      .meta {
+        color: #86909c;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .detailSection {
+        padding: 12px 20px;
+        background: #f9fbfd;
+        border-radius: 8px;
+      }
+
+      .detailSection h3 {
+        margin-bottom: 10px;
+        color: #1d2129;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .sectionContent {
+        color: #4e5969;
+        font-size: 14px;
+        line-height: 22px;
+        white-space: pre-wrap;
+      }
+
+      .sectionContent ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin: 0;
+        padding-left: 1.2em;
+      }
+
+      .sectionContent li {
+        padding-left: 2px;
+      }
+
+      .empty {
+        color: #86909c;
+      }
+
+      @media (max-width: 860px) {
+        .page {
+          grid-template-columns: 1fr;
+          padding: 16px;
+        }
+
+        textarea {
+          min-height: 420px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="editor" aria-labelledby="editorTitle">
+        <div class="panelHeader">
+          <h1 id="editorTitle">Description markdown</h1>
+          <p class="hint">使用 “我的介绍 / 能帮你做什么 / 内置技能” 作为 markdown 标题，右侧会实时预览。</p>
+        </div>
+        <textarea id="descriptionInput" spellcheck="false"></textarea>
+      </section>
+
+      <section class="preview" aria-labelledby="previewTitle">
+        <div class="templateCard">
+          <div class="identity">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div>
+              <h2 id="previewTitle" class="name">Agent Template</h2>
+              <p class="meta">Description preview</p>
+            </div>
+          </div>
+
+          <section class="detailSection">
+            <h3>我的介绍</h3>
+            <div id="introContent" class="sectionContent"></div>
+          </section>
+
+          <section class="detailSection">
+            <h3>能帮你做什么</h3>
+            <div id="capabilityContent" class="sectionContent"></div>
+          </section>
+
+          <section class="detailSection">
+            <h3>内置技能</h3>
+            <div id="skillContent" class="sectionContent"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const defaultDescription = `## 我的介绍
+
+作为音视频处理专家，深度集成媒体处理相关工具，负责解决用户碰到的各种媒体处理相关问题，例如音视频处理、视频剪辑、图像处理等
+
+## 能帮你做什么
+
+- 视频理解：AI 分析视频内容，生成自然语言描述
+- 音视频剪辑：精确裁剪音视频时长
+- 音视频拼接：拼接多个片段，支持转场效果
+- 音频提取：从视频中提取音频轨道
+- 画质增强：提升视频画质、分辨率、帧率
+- 文生视频：图片生成视频，支持动画效果
+- 音视频合成：合成新的音轨与视频
+
+## 内置技能
+- byted-mediakit-process-tools：音视频处理原子能力专家技能`;
+
+      const input = document.getElementById('descriptionInput');
+      const introContent = document.getElementById('introContent');
+      const capabilityContent = document.getElementById('capabilityContent');
+      const skillContent = document.getElementById('skillContent');
+
+      const normalizeMarkdownLineBreaks = value =>
+        (value || '').replace(/\r\n?/g, '\n').replace(/\\r\\n|\\n|\\r/g, '\n');
+
+      const stripMarkdown = value =>
+        normalizeMarkdownLineBreaks(value)
+          .replace(/^#{1,6}\s+/gm, '')
+          .replace(/[*_`>~]/g, '')
+          .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+          .replace(/\n+/g, ' ')
+          .trim();
+
+      const extractMarkdownSection = (source, title) => {
+        if (!source) {
+          return '';
+        }
+
+        const normalizedSource = normalizeMarkdownLineBreaks(source);
+        const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const titleMatch = new RegExp(`#{1,6}\\s*${escapedTitle}\\s*`).exec(normalizedSource);
+
+        if (!titleMatch) {
+          return '';
+        }
+
+        const sectionStart = titleMatch.index + titleMatch[0].length;
+        const rest = normalizedSource.slice(sectionStart);
+        const nextTitle = /#{1,6}\s+/.exec(rest);
+        return rest.slice(0, nextTitle?.index ?? rest.length).trim();
+      };
+
+      const splitLines = value =>
+        (value || '')
+          .split(/\n+/)
+          .map(item => stripMarkdown(item.replace(/^\s*[-*•]\s*/, '').trim()))
+          .filter(Boolean);
+
+      const renderText = (container, value, fallback) => {
+        container.replaceChildren();
+        const text = stripMarkdown(value);
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text || fallback;
+        if (!text) {
+          paragraph.className = 'empty';
+        }
+        container.append(paragraph);
+      };
+
+      const renderList = (container, lines, fallback) => {
+        container.replaceChildren();
+
+        if (!lines.length) {
+          const paragraph = document.createElement('p');
+          paragraph.className = 'empty';
+          paragraph.textContent = fallback;
+          container.append(paragraph);
+          return;
+        }
+
+        const list = document.createElement('ul');
+        lines.forEach(line => {
+          const item = document.createElement('li');
+          item.textContent = line;
+          list.append(item);
+        });
+        container.append(list);
+      };
+
+      const renderPreview = () => {
+        const description = input.value;
+        const intro = extractMarkdownSection(description, '我的介绍');
+        const capabilities = extractMarkdownSection(description, '能帮你做什么');
+        const skills = extractMarkdownSection(description, '内置技能');
+
+        renderText(introContent, intro || description, '暂无介绍');
+        renderList(capabilityContent, splitLines(capabilities), '暂无描述');
+        renderList(skillContent, splitLines(skills), '暂无内置技能');
+      };
+
+      input.value = defaultDescription;
+      input.addEventListener('input', renderPreview);
+      renderPreview();
+    </script>
+  </body>
+</html>

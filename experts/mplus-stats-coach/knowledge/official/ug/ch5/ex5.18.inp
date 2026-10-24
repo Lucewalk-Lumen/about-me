@@ -1,0 +1,20 @@
+TITLE:	this is an example of a two-group twin
+	model for continuous outcomes where
+	factors represent the ACE components 
+DATA:	FILE = ex5.18.dat;
+VARIABLE:	NAMES = y1 y2 g;
+	GROUPING = g (1 = mz 2 = dz);
+ANALYSIS:MODEL = NOCOVARIANCES;
+MODEL:	[y1-y2]   (1);
+	y1-y2@0;
+	a1 BY y1* (2);
+	a2 BY y2* (2);
+	c1 BY y1* (3);
+	c2 BY y2* (3);
+	e1 BY y1* (4);
+	e2 BY y2* (4);
+	a1-e2@1;
+	[a1-e2@0];
+	a1 WITH a2@1; 
+	c1 WITH c2@1;
+MODEL dz:	a1 WITH a2@.5;  

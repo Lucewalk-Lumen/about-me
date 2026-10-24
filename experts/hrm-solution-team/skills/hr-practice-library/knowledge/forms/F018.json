@@ -1,0 +1,63 @@
+{
+  "form_id": "F018",
+  "module_code": "HRP",
+  "module_zh": "人力资源规划",
+  "module_order": 1,
+  "kind": "表格",
+  "title": "人力资源需求预测表",
+  "file": "templates/HRP/form/F018.docx",
+  "n_tables": 1,
+  "n_rows": 11,
+  "outline": [
+    "部门",
+    "目前编制",
+    "人员配置情况",
+    "人员需求",
+    "总经理办公室",
+    "财务部",
+    "市场拓展部",
+    "运营部",
+    "工程部",
+    "人力资源部",
+    "行政部",
+    "项目中心",
+    "合计"
+  ],
+  "n_outline": 13,
+  "body": "日期：      年    月    日\n部门 | 目前编制 | 人员配置情况 | 人员需求\n超编 | 缺编 | 不符合岗位要求\n总经理办公室\n财务部\n市场拓展部\n运营部\n工程部\n人力资源部\n行政部\n项目中心\n合计",
+  "body_chars": 107,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-03-11T03:03:00Z",
+    "modified": "2019-03-11T03:10:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "org-planning",
+    "owner_agent": "org-planning",
+    "primary_engines": [
+      "org_health.py",
+      "workforce_plan_tracker.sh"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/org-health.md"
+      },
+      {
+        "skill": "org-planning",
+        "path": "skills/org-planning/references/workforce-planning.md"
+      }
+    ]
+  }
+}

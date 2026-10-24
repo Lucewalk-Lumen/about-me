@@ -1,0 +1,74 @@
+{
+  "form_id": "F161",
+  "module_code": "ER",
+  "module_zh": "员工关系管理",
+  "module_order": 6,
+  "kind": "表格",
+  "title": "职工退休审批表",
+  "file": "templates/ER/form/F161.docx",
+  "n_tables": 1,
+  "n_rows": 14,
+  "outline": [
+    "姓名",
+    "性别",
+    "出生年月",
+    "参加工作时间",
+    "现工作岗位",
+    "居住社区",
+    "社会保障号",
+    "年 月前特殊工种",
+    "92年所在工作单位名称",
+    "缴费年限",
+    "退休告知情况",
+    "单位或县劳动保障部门意见",
+    "地方劳动保障行政部门意见"
+  ],
+  "n_outline": 13,
+  "body": "姓名 | 性别 | 出生年月 | 参加工作时间\n现工作岗位 | 女职工5年前工作岗位\n居住社区 | 联系人 | 电话\n社会保障号 | 张榜公示时间 | 从   月   日至   月   日 | 邮编\n年 月前特殊工种 | 工种 | 年 月前省级以上劳模 | 名称 | 非因工或因病提前退休情况 | 鉴定等级\n实际年限 | 获奖时间 | 提前年限\n折算工龄 | 增发比例 | 减法比例\n92年所在工作单位名称\n缴费年限 | 至 年 月 日 | 年工资\n至退休时 | 是否独生子女\n退休告知情况 | 职工本人 | 签名： 年    月    日\n单位 | 年    月    日告诉职工本人。 经办人签名： 年    月    日\n单位或县劳动保障部门意见 | （盖章） 年    月    日\n地方劳动保障行政部门意见 | 同意            同志从       年    月起退休 （盖章） 经办人：             复核人：          年    月    日",
+  "body_chars": 442,
+  "origin": {
+    "creator": "Administrator",
+    "last_modified_by": "Administrator",
+    "created": "2019-04-03T06:16:00Z",
+    "modified": "2019-04-26T02:32:00Z",
+    "note": "模板原件来源为公开渠道资料，入库仅作结构参考；原件未标注作者或出版信息，商用或对外发布前须自行确认授权（详见 LICENSE 第 4 条）。"
+  },
+  "status": "verified",
+  "note": "文本为 .docx 原件的抽取副本；内容与格式一律以 file 字段指向的原件为准。本表单的归属与引擎连接均指向包内真实存在的技能 / agent / 引擎。",
+  "solution_links": {
+    "owner_skill": "labor-compliance",
+    "owner_agent": "labor-compliance",
+    "primary_engines": [
+      "compliance_gate.py"
+    ],
+    "extra_engines": [],
+    "gate": {
+      "skill": "labor-compliance",
+      "agent": "labor-compliance",
+      "engine": "compliance_gate.py",
+      "path": "skills/hrm-solution/scripts/security/compliance_gate.py"
+    },
+    "related_refs": [
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/policy-generation.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-baseline.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/compliance-pitfalls.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/clause-rewrite.md"
+      },
+      {
+        "skill": "labor-compliance",
+        "path": "skills/labor-compliance/references/dispute-handling.md"
+      }
+    ]
+  }
+}

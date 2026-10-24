@@ -1,0 +1,35 @@
+title:		this is an example of a linear growth 
+	model for a censored outcome using a 
+	censored model
+
+montecarlo:
+	names = y11-y14;
+	generate = y11-y14(cb 0);
+	censored = y11-y14(b);
+	nobs = 500;
+	nreps = 1;
+	save = ex6.2.dat;
+
+analysis:
+	estimator = mlr;
+
+model population:
+
+	i s | y11@0 y12@1 y13@2 y14@3;
+	[y11-y14@0]; 
+	y11-y14*.5;
+	[i*.5 s*1]; 
+	! censored below at zero gives many zeros at time 1
+	i*1; s*.2; i with s*.1;
+
+model:
+	
+	i s | y11@0 y12@1 y13@2 y14@3;
+
+	y11-y14*.5;
+	[i*.5 s*1];
+	i*1; s*.2; i with s*.1;
+
+output:
+	tech8 tech9;
+

@@ -1,0 +1,403 @@
+{
+  "_meta": {
+    "purpose": "SOP地图：把常见用户问题映射到应加载的文件，主理人不靠记忆做路由。按需加载。",
+    "version": "1.0.0"
+  },
+  "entries": [
+    {
+      "id": "plan-brainstorming-start",
+      "domain": "plan",
+      "subdomain": "brainstorming",
+      "title_zh": "开题头脑风暴",
+      "key_question": "我想写篇综述，该怎么开始？",
+      "files": [
+        "../../obhrm-methodology/references/reasoning/brainstorming_protocol.md"
+      ],
+      "est_tokens": 1800,
+      "related": [
+        "plan-topic-scoping",
+        "plan-lit-methods"
+      ]
+    },
+    {
+      "id": "plan-topic-scoping",
+      "domain": "plan",
+      "subdomain": "topic-scoping",
+      "title_zh": "选题方向收敛",
+      "key_question": "文献读完了，怎么定综述的选题方向？",
+      "files": [
+        "topic_scoping_prompt.md",
+        "gap_novelty.json"
+      ],
+      "est_tokens": 2000,
+      "related": [
+        "plan-gap-novelty",
+        "verify-gate-g1"
+      ]
+    },
+    {
+      "id": "plan-gap-novelty",
+      "domain": "plan",
+      "subdomain": "topic-scoping",
+      "title_zh": "缺口与新颖性判断",
+      "key_question": "我这个选题有没有新意？属于什么研究缺口？",
+      "files": [
+        "gap_novelty.json",
+        "journal_standards.json"
+      ],
+      "est_tokens": 2808,
+      "related": [
+        "plan-topic-scoping",
+        "verify-gate-g1"
+      ]
+    },
+    {
+      "id": "plan-lit-methods",
+      "domain": "plan",
+      "subdomain": "lit-methods",
+      "title_zh": "文献检索方法",
+      "key_question": "该怎么系统地找文献、读文献？",
+      "files": [
+        "literature_research_methods.json"
+      ],
+      "est_tokens": 1800,
+      "related": [
+        "tools-pdf-ingest",
+        "plan-brainstorming-start"
+      ]
+    },
+    {
+      "id": "write-paradigm-select",
+      "domain": "write",
+      "subdomain": "paradigm",
+      "title_zh": "综述范式选择",
+      "key_question": "我该用哪种综述范式来写？",
+      "files": [
+        "paradigms.json",
+        "../references/paradigms.md"
+      ],
+      "est_tokens": 9113,
+      "related": [
+        "write-structure-elements",
+        "plan-gap-novelty"
+      ]
+    },
+    {
+      "id": "write-structure-elements",
+      "domain": "write",
+      "subdomain": "structure",
+      "title_zh": "结构要素梳理",
+      "key_question": "综述应该包含哪些结构要素？",
+      "files": [
+        "amj_elements.json",
+        "journal_standards.json"
+      ],
+      "est_tokens": 2461,
+      "related": [
+        "write-structure-intro",
+        "write-templates"
+      ]
+    },
+    {
+      "id": "write-structure-intro",
+      "domain": "write",
+      "subdomain": "structure",
+      "title_zh": "引言撰写",
+      "key_question": "综述引言应该怎么写？",
+      "files": [
+        "amj_elements.json",
+        "../references/nature-tips.md"
+      ],
+      "est_tokens": 5726,
+      "related": [
+        "write-structure-elements",
+        "write-evidence-map"
+      ]
+    },
+    {
+      "id": "write-templates",
+      "domain": "write",
+      "subdomain": "structure",
+      "title_zh": "套用写作模板",
+      "key_question": "有没有现成的综述章节模板可以套？",
+      "files": [
+        "templates.json",
+        "../references/writing-templates.md"
+      ],
+      "est_tokens": 5644,
+      "related": [
+        "write-structure-elements",
+        "write-style"
+      ]
+    },
+    {
+      "id": "write-style",
+      "domain": "write",
+      "subdomain": "style",
+      "title_zh": "学术措辞与风格",
+      "key_question": "综述的措辞和引用格式有什么规范？",
+      "files": [
+        "writing_style_notes.md",
+        "../references/nature-tips.md",
+        "../references/hrmr-standards.md"
+      ],
+      "est_tokens": 11397,
+      "related": [
+        "write-templates",
+        "write-de-ai"
+      ]
+    },
+    {
+      "id": "write-evidence-map",
+      "domain": "write",
+      "subdomain": "evidence",
+      "title_zh": "证据-论点映射",
+      "key_question": "怎么把文献和我的论点对应起来？",
+      "files": [
+        "evidence_claim_map.json",
+        "reading_codes.json"
+      ],
+      "est_tokens": 3000,
+      "related": [
+        "write-argumentation",
+        "verify-gate-g2"
+      ]
+    },
+    {
+      "id": "write-argumentation",
+      "domain": "write",
+      "subdomain": "evidence",
+      "title_zh": "论证连接",
+      "key_question": "每段之间怎么衔接、论点怎么有说服力？",
+      "files": [
+        "argumentation_framework.json",
+        "evidence_claim_map.json"
+      ],
+      "est_tokens": 4000,
+      "related": [
+        "write-evidence-map",
+        "verify-gate-g4"
+      ]
+    },
+    {
+      "id": "write-bilingual",
+      "domain": "write",
+      "subdomain": "bilingual",
+      "title_zh": "双语术语与写作",
+      "key_question": "中英文术语怎么对应、双语综述怎么写？",
+      "files": [
+        "bilingual_terms.json",
+        "../references/bilingual-paradigms.md"
+      ],
+      "est_tokens": 3429,
+      "related": [
+        "write-templates",
+        "write-style"
+      ]
+    },
+    {
+      "id": "write-de-ai",
+      "domain": "write",
+      "subdomain": "de-ai",
+      "title_zh": "去AI化写作",
+      "key_question": "怎么让综述读起来不像 AI 写的？",
+      "files": [
+        "../references/ai-fingerprint-guide.md",
+        "closed_loop.json"
+      ],
+      "est_tokens": 8347,
+      "related": [
+        "write-style",
+        "verify-integrity-closed-loop"
+      ]
+    },
+    {
+      "id": "verify-gate-overview",
+      "domain": "verify",
+      "subdomain": "gate",
+      "title_zh": "阶段门控总览",
+      "key_question": "每个阶段之间有哪些质量关卡要过？",
+      "files": [
+        "stage_gates.json"
+      ],
+      "est_tokens": 3800,
+      "related": [
+        "verify-gate-g1",
+        "verify-quality-scoring"
+      ]
+    },
+    {
+      "id": "verify-gate-g1",
+      "domain": "verify",
+      "subdomain": "gate",
+      "title_zh": "G1+ 选题收敛门",
+      "key_question": "选题定了能不能开始写？G1 要检查什么？",
+      "files": [
+        "stage_gates.json",
+        "gap_novelty.json"
+      ],
+      "est_tokens": 5100,
+      "related": [
+        "plan-gap-novelty",
+        "verify-gate-g2"
+      ]
+    },
+    {
+      "id": "verify-gate-g2",
+      "domain": "verify",
+      "subdomain": "gate",
+      "title_zh": "证据映射门 G2",
+      "key_question": "能不能开始拟提纲？证据映射建好了吗？",
+      "files": [
+        "stage_gates.json",
+        "evidence_claim_map.json"
+      ],
+      "est_tokens": 5400,
+      "related": [
+        "write-evidence-map",
+        "verify-gate-g4"
+      ]
+    },
+    {
+      "id": "verify-gate-g4",
+      "domain": "verify",
+      "subdomain": "gate",
+      "title_zh": "撰写质量门 G4",
+      "key_question": "这节写得合格吗？能进下一节吗？",
+      "files": [
+        "stage_gates.json",
+        "argumentation_framework.json"
+      ],
+      "est_tokens": 6200,
+      "related": [
+        "write-argumentation",
+        "verify-quality-scoring"
+      ]
+    },
+    {
+      "id": "verify-quality-scoring",
+      "domain": "verify",
+      "subdomain": "quality",
+      "title_zh": "阶段质量评分",
+      "key_question": "怎么给当前阶段的质量打分？",
+      "files": [
+        "quality_scoring.json"
+      ],
+      "est_tokens": 2200,
+      "related": [
+        "verify-gate-overview",
+        "verify-peer-review"
+      ]
+    },
+    {
+      "id": "verify-integrity-closed-loop",
+      "domain": "verify",
+      "subdomain": "integrity",
+      "title_zh": "闭环自检",
+      "key_question": "成稿了怎么做闭环自检、防止编造引用？",
+      "files": [
+        "closed_loop.json",
+        "red_flags.json",
+        "../references/closed-loop-editing.md"
+      ],
+      "est_tokens": 25460,
+      "related": [
+        "verify-citation-check",
+        "write-de-ai"
+      ]
+    },
+    {
+      "id": "verify-citation-check",
+      "domain": "verify",
+      "subdomain": "integrity",
+      "title_zh": "引证验证",
+      "key_question": "怎么核查引用是不是真实、归属对不对？",
+      "files": [
+        "../references/verification-protocol.md",
+        "red_flags.json"
+      ],
+      "est_tokens": 4200,
+      "related": [
+        "verify-integrity-closed-loop",
+        "verify-gate-g5"
+      ]
+    },
+    {
+      "id": "verify-gate-g5",
+      "domain": "verify",
+      "subdomain": "gate",
+      "title_zh": "成稿自检门 G5",
+      "key_question": "定稿前的最终自检要过哪些项？",
+      "files": [
+        "stage_gates.json",
+        "closed_loop.json"
+      ],
+      "est_tokens": 9862,
+      "related": [
+        "verify-citation-check",
+        "verify-peer-review"
+      ]
+    },
+    {
+      "id": "verify-peer-review",
+      "domain": "verify",
+      "subdomain": "peer",
+      "title_zh": "同行评审自审",
+      "key_question": "投稿前怎么用审稿人视角自审？",
+      "files": [
+        "../references/peer_review_framework.md"
+      ],
+      "est_tokens": 3500,
+      "related": [
+        "verify-quality-scoring",
+        "verify-gate-g5"
+      ]
+    },
+    {
+      "id": "tools-pdf-ingest",
+      "domain": "tools",
+      "subdomain": "pdf",
+      "title_zh": "PDF 文献摄取",
+      "key_question": "我有一堆 PDF 文献，怎么批量提取和整理？",
+      "files": [
+        "../references/pdf-ingestion.md",
+        "reading_codes.json"
+      ],
+      "est_tokens": 3109,
+      "related": [
+        "plan-lit-methods",
+        "write-evidence-map"
+      ]
+    },
+    {
+      "id": "tools-diagram",
+      "domain": "tools",
+      "subdomain": "diagram",
+      "title_zh": "综述配图绘制",
+      "key_question": "综述里的框架图、流程图怎么画？",
+      "files": [
+        "../references/diagram-recipes.md"
+      ],
+      "est_tokens": 1371,
+      "related": [
+        "tools-export",
+        "write-structure-elements"
+      ]
+    },
+    {
+      "id": "tools-export",
+      "domain": "tools",
+      "subdomain": "export",
+      "title_zh": "导出与参考文献格式",
+      "key_question": "怎么导出成 Word、参考文献怎么排版？",
+      "files": [
+        "reference_formats.json"
+      ],
+      "est_tokens": 1100,
+      "related": [
+        "tools-diagram",
+        "verify-citation-check"
+      ]
+    }
+  ]
+}
