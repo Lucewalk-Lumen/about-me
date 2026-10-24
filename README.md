@@ -24,10 +24,10 @@ For OB & HRM scholars: theory and scale knowledge bases that answer with citatio
 
 | Product | What makes it different |
 |---|---|
-| [Obhrm-brain-trust](https://github.com/Lucewalk-Lumen/Obhrm-brain-trust) | A theory & scale knowledge base with **grounded, citation-first answers** — fuzzy word-form matching that still respects exact provenance, explicit "not covered by source" labels, maturity-gated entries (idea → draft → official → archive), and coverage tracking across 130+ theory entries and curated scales (from Hawthorne studies to the burnout three-dimensional model). |
-| [Academic-literature-analysis-team](https://github.com/Lucewalk-Lumen/Academic-literature-analysis-team) | Bibliometric analysis over your own library — from raw exports to a **review skeleton** you can actually write against. |
-| [Mplus-stats-coach](https://github.com/Lucewalk-Lumen/Mplus-stats-coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
-| [Endnote-analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
+| [Obhrm-Brain-Trust](https://github.com/Lucewalk-Lumen/Obhrm-Brain-Trust) | A theory & scale knowledge base with **grounded, citation-first answers** — fuzzy word-form matching that still respects exact provenance, explicit "not covered by source" labels, maturity-gated entries (idea → draft → official → archive), and coverage tracking across 130+ theory entries and curated scales (from Hawthorne studies to the burnout three-dimensional model). |
+| [Academic-Literature-Analysis-Team](https://github.com/Lucewalk-Lumen/Academic-Literature-Analysis-Team) | Bibliometric analysis over your own library — from raw exports to a **review skeleton** you can actually write against. |
+| [Mplus-Stats-Coach](https://github.com/Lucewalk-Lumen/Mplus-Stats-Coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
+| [Endnote-Analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-Analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
 
 > The line's flagship, **obhrm-research-collaboration-team** (full research pipeline: literature review, paper writing, methods, data analysis, peer review and journal selection, with EndNote/Zotero library import), is closed-source and distributed via the WorkBuddy Expert Center only.
 
@@ -37,11 +37,11 @@ For higher-education teachers: course building, case writing, assessment and cla
 
 | Product | What makes it different |
 |---|---|
-| [Teaching-helper-team](https://github.com/Lucewalk-Lumen/Teaching-helper-team) | The deepest teaching pack — **nine experts and 18 skills** covering course architecture, case writing, material extraction, knowledge wikis, plus built-in citation-integrity and de-AI-flavor rules for classroom deliverables. |
-| [Course-tutor](https://github.com/Lucewalk-Lumen/Course-tutor) | Course companion for teachers (v2.4.0, full build source): roster import, learning analytics, participation scoring, weekly teaching briefings — nine Python modules and a data-hub config you can audit and extend. Ships with a student-edition build pipeline. |
-| [Campus-ppt-helper](https://github.com/Lucewalk-Lumen/Campus-ppt-helper) | A six-member team for teaching and academic slide decks — from outline to speaker-ready pages. |
-| [Erp-teaching-team](https://github.com/Lucewalk-Lumen/Erp-teaching-team) | Seven experts for ERP courses — course design, cases and lab setups grounded in real enterprise processes. |
-| [College-competition-coaching-team](https://github.com/Lucewalk-Lumen/College-competition-coaching-team) | Competition coaching for student teams — planning, mentoring and stage-gate review. |
+| [Teaching-Helper-Team](https://github.com/Lucewalk-Lumen/Teaching-Helper-Team) | The deepest teaching pack — **nine experts and 18 skills** covering course architecture, case writing, material extraction, knowledge wikis, plus built-in citation-integrity and de-AI-flavor rules for classroom deliverables. |
+| [Course-Tutor](https://github.com/Lucewalk-Lumen/Course-Tutor) | Course companion for teachers (v2.4.0, full build source): roster import, learning analytics, participation scoring, weekly teaching briefings — nine Python modules and a data-hub config you can audit and extend. Ships with a student-edition build pipeline. |
+| [Campus-Ppt-Helper](https://github.com/Lucewalk-Lumen/Campus-Ppt-Helper) | A six-member team for teaching and academic slide decks — from outline to speaker-ready pages. |
+| [Erp-Teaching-Team](https://github.com/Lucewalk-Lumen/Erp-Teaching-Team) | Seven experts for ERP courses — course design, cases and lab setups grounded in real enterprise processes. |
+| [College-Competition-Coaching-Team](https://github.com/Lucewalk-Lumen/College-Competition-Coaching-Team) | Competition coaching for student teams — planning, mentoring and stage-gate review. |
 
 ### 🧭 Practice & tooling line — consulting discipline and the factory that builds the ecosystem
 
@@ -49,12 +49,12 @@ China-market HRM consulting with privacy engineering, plus the tooling that buil
 
 | Product | What makes it different |
 |---|---|
-| [Hrm-advisory-corps](https://github.com/Lucewalk-Lumen/Hrm-advisory-corps) | China-market HRM consulting — one orchestrator plus eight specialists across org planning, recruiting pipeline, talent development, performance, compensation and **labor compliance**. Handles candidate PII the compliant way: desensitized archives, encrypted PII vault, plaintext never touching ordinary files. |
-| [Workbuddy-expert-studio](https://github.com/Lucewalk-Lumen/Workbuddy-expert-studio) | **The factory behind this whole catalog** — a team that takes an expert idea through alignment, drafting, quality gates and packaging until it is publishable. Every product listed on this page was produced with it. |
-| [Kb-library-team](https://github.com/Lucewalk-Lumen/Kb-library-team) | Knowledge-base governance — one chief knowledge officer with six internalized domains (ingest, classify, promote, index, grounded Q&A, archive), four-pool maturity gates and hard ingestion guardrails (≤50 files per batch). |
-| [Ai-butler](https://github.com/Lucewalk-Lumen/Ai-butler) | Teacher workbench (offline-first): todos, schedule, teaching calendar with `.ics` import, morning/weekly briefings — single-file HTML plus a local bridge, your data never leaves the machine; optional end-to-end encrypted sync. |
+| [Hrm-Advisory-Corps](https://github.com/Lucewalk-Lumen/Hrm-Advisory-Corps) | China-market HRM consulting — one orchestrator plus eight specialists across org planning, recruiting pipeline, talent development, performance, compensation and **labor compliance**. Handles candidate PII the compliant way: desensitized archives, encrypted PII vault, plaintext never touching ordinary files. |
+| [Workbuddy-Expert-Studio](https://github.com/Lucewalk-Lumen/Workbuddy-Expert-Studio) | **The factory behind this whole catalog** — a team that takes an expert idea through alignment, drafting, quality gates and packaging until it is publishable. Every product listed on this page was produced with it. |
+| [Kb-Library-Team](https://github.com/Lucewalk-Lumen/Kb-Library-Team) | Knowledge-base governance — one chief knowledge officer with six internalized domains (ingest, classify, promote, index, grounded Q&A, archive), four-pool maturity gates and hard ingestion guardrails (≤50 files per batch). |
+| [Ai-Butler](https://github.com/Lucewalk-Lumen/Ai-Butler) | Teacher workbench (offline-first): todos, schedule, teaching calendar with `.ics` import, morning/weekly briefings — single-file HTML plus a local bridge, your data never leaves the machine; optional end-to-end encrypted sync. |
 | [Distill](https://github.com/Lucewalk-Lumen/Distill) | Condense long material into structured, citable summaries — reading time in, reference-ready out. |
-| [Ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/Ghost-workspace-hunter) | Skill — reversible cleanup of corrupted WorkBuddy workspaces: database backup first, active-session guard, trash instead of delete. |
+| [Ghost-Workspace-Hunter](https://github.com/Lucewalk-Lumen/Ghost-Workspace-Hunter) | Skill — reversible cleanup of corrupted WorkBuddy workspaces: database backup first, active-session guard, trash instead of delete. |
 
 ## Why separate repositories?
 
@@ -63,7 +63,7 @@ These experts and skills solve very different problems and each has real depth �
 ## Install (any product)
 
 1. Download the package zip from the product's **Releases** page (or clone its repo);
-2. Unzip keeping the internal manifest structure intact (`.codebuddy-plugin/`; `Ai-butler` uses an `agent-card.json` UMAS manifest);
+2. Unzip keeping the internal manifest structure intact (`.codebuddy-plugin/`; `Ai-Butler` uses an `agent-card.json` UMAS manifest);
 3. Import/register in WorkBuddy (custom connector → trust & enable).
 
 ## Quality & security
@@ -71,7 +71,7 @@ These experts and skills solve very different problems and each has real depth �
 - Every package passed a sensitive-info & ownership precheck before publication — see [docs/PRECHECK.md](docs/PRECHECK.md);
 - Version source of truth: the `version` field in each package's `.codebuddy-plugin/plugin.json`;
 - Cross-package version alignment history: [CHANGELOG.md](CHANGELOG.md);
-- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk-Lumen/About-me/discussions).
+- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk-Lumen/About-Me/discussions).
 
 ## Citation
 
@@ -99,24 +99,24 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 ## 产品目录(三条产品线)
 
 ### 🔬 研究线(OB & HRM)
-- [Obhrm-brain-trust](https://github.com/Lucewalk-Lumen/Obhrm-brain-trust):12 章教材 × 145 理论 × 601 量表 × 108 R 方法的四库溯源问答
-- [Academic-literature-analysis-team](https://github.com/Lucewalk-Lumen/Academic-literature-analysis-team):学术文献计量分析,从题录到综述骨架
-- [Mplus-stats-coach](https://github.com/Lucewalk-Lumen/Mplus-stats-coach):语法实验室、方法顾问与输出门诊三环辅导
-- [Endnote-analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-analysis):EndNote 引用结构与综述骨架
+- [Obhrm-Brain-Trust](https://github.com/Lucewalk-Lumen/Obhrm-Brain-Trust):12 章教材 × 145 理论 × 601 量表 × 108 R 方法的四库溯源问答
+- [Academic-Literature-Analysis-Team](https://github.com/Lucewalk-Lumen/Academic-Literature-Analysis-Team):学术文献计量分析,从题录到综述骨架
+- [Mplus-Stats-Coach](https://github.com/Lucewalk-Lumen/Mplus-Stats-Coach):语法实验室、方法顾问与输出门诊三环辅导
+- [Endnote-Analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-Analysis):EndNote 引用结构与综述骨架
 
 ### 🎓 教学线
-- [Teaching-helper-team](https://github.com/Lucewalk-Lumen/Teaching-helper-team):九专家十八技能,三层架构,六大预设工作流
-- [Course-tutor](https://github.com/Lucewalk-Lumen/Course-tutor):课程伴学精灵·教师版(含完整源码与学生版构建线)
-- [Campus-ppt-helper](https://github.com/Lucewalk-Lumen/Campus-ppt-helper):六成员流水线的教学课件制作
-- [Erp-teaching-team](https://github.com/Lucewalk-Lumen/Erp-teaching-team):五教练覆盖选型、概念、练习、进度全周期
-- [College-competition-coaching-team](https://github.com/Lucewalk-Lumen/College-competition-coaching-team):大学生赛事教练团
+- [Teaching-Helper-Team](https://github.com/Lucewalk-Lumen/Teaching-Helper-Team):九专家十八技能,三层架构,六大预设工作流
+- [Course-Tutor](https://github.com/Lucewalk-Lumen/Course-Tutor):课程伴学精灵·教师版(含完整源码与学生版构建线)
+- [Campus-Ppt-Helper](https://github.com/Lucewalk-Lumen/Campus-Ppt-Helper):六成员流水线的教学课件制作
+- [Erp-Teaching-Team](https://github.com/Lucewalk-Lumen/Erp-Teaching-Team):五教练覆盖选型、概念、练习、进度全周期
+- [College-Competition-Coaching-Team](https://github.com/Lucewalk-Lumen/College-Competition-Coaching-Team):大学生赛事教练团
 
 ### 🧭 实践与工具线
-- [Hrm-advisory-corps](https://github.com/Lucewalk-Lumen/Hrm-advisory-corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
-- [Workbuddy-expert-studio](https://github.com/Lucewalk-Lumen/Workbuddy-expert-studio):本合集所有产品的诞生地
-- [Ai-butler](https://github.com/Lucewalk-Lumen/Ai-butler):教师工作台(离线优先)
+- [Hrm-Advisory-Corps](https://github.com/Lucewalk-Lumen/Hrm-Advisory-Corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
+- [Workbuddy-Expert-Studio](https://github.com/Lucewalk-Lumen/Workbuddy-Expert-Studio):本合集所有产品的诞生地
+- [Ai-Butler](https://github.com/Lucewalk-Lumen/Ai-Butler):教师工作台(离线优先)
 - [Distill](https://github.com/Lucewalk-Lumen/Distill):蒸馏师——长文进、可引用摘要出
-- [Ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/Ghost-workspace-hunter):幽灵工作空间猎手(技能)
+- [Ghost-Workspace-Hunter](https://github.com/Lucewalk-Lumen/Ghost-Workspace-Hunter):幽灵工作空间猎手(技能)
 
 > 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
 
