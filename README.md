@@ -1,8 +1,10 @@
 # Lucewalk Lumen · 沐光行客
 
-> **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [沐光行客](https://github.com/Lucewalk).
+> **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [沐光行客](https://github.com/Lucewalk-Lumen).
 >
 > Grounded knowledge · compliance-first engineering · one product, one repository
+>
+> 📌 This is the **full product catalog**. The profile page ([Lucewalk-Lumen](https://github.com/Lucewalk-Lumen/Lucewalk-Lumen)) is a short intro that links here — product details live only on this page.
 
 ![Lucewalk Experts — repository banner](docs/social-preview.png)
 
