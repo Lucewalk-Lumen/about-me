@@ -1,5 +1,7 @@
 # WorkBuddy Experts
 
+> **English** — A collection of expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) platform: OB & HRM research packs, teaching assistants, and productivity tools. Each package is independently versioned; grab individual packages from [Releases](https://github.com/Lucewalk/WorkBuddy-Experts/releases/latest). Documentation below is in Chinese.
+
 WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,由 [Xing Bu](mailto: REPLACE_WITH_YOUR_EMAIL) 维护。
 
 > **版本真源**:每个包以 `.codebuddy-plugin/plugin.json` 的 `version` 字段为准,各包 CHANGELOG 记录变更历史。
