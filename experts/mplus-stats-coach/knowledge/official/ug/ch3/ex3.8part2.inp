@@ -1,7 +1,0 @@
-TITLE:	this is an example of a negative binomial 
-		model for a count dependent variable with 
-		two covariates
-DATA:		FILE IS ex3.8b.dat;
-VARIABLE:	NAMES ARE u1 x1 x3;
-		COUNT IS u1 (nb);
-MODEL:	u1 ON x1 x3;

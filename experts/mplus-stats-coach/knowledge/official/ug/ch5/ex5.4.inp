@@ -1,9 +1,0 @@
-TITLE:	this is an example of a CFA with censored
-	and count factor indicators 
-DATA:	FILE IS ex5.4.dat;
-VARIABLE:	NAMES ARE u4-u6 y1-y3;
-	CENSORED ARE y1-y3 (a); 
-	COUNT ARE u4-u6;
-MODEL:	f1 BY y1-y3;
-	f2 BY u4-u6;
-OUTPUT:	TECH1 TECH8;

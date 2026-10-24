@@ -1,7 +1,0 @@
-TITLE:	this is an example of an exploratory factor 
-		analysis with continuous factor indicators 
-		using exploratory structural equation modeling (ESEM)
-DATA:		FILE IS ex4.1b.dat;
-VARIABLE:	NAMES ARE y1-y12;
-MODEL:	f1-f4 BY y1-y12 (*1);
-OUTPUT:	MODINDICES standardized;

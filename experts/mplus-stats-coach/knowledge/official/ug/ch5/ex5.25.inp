@@ -1,9 +1,0 @@
-TITLE:	this is an example of a SEM with 
-EFA and CFA factors with continuous factor indicators
-DATA:	FILE IS ex5.25.dat;
-VARIABLE:	NAMES ARE y1-y12;
-MODEL:	f1-f2 BY y1-y6 (*1);
-	f3 BY y7-y9;
-	f4 BY y10-y12;
-	f3 ON f1-f2;
-	f4 ON f3;
