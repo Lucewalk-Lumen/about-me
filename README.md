@@ -16,7 +16,7 @@ Every product here is shaped by three disciplines I bring from my daily work:
 
 - **From peer review — the grounding discipline.** I review manuscripts for a living, so my agents are built to answer the way a reviewer reads: every scale points to its source publication, every theory entry carries its literature trail, and when evidence is missing the agent says *so* instead of improvising. Several packages ship with dedicated citation-integrity and de-AI-flavor rules.
 - **From engineering — the compliance discipline.** Packages go through a sensitive-info and ownership precheck before publication; the ones that touch personal data ship with `PRIVACY.md`, encrypted PII handling and desensitized archives; operations are reversible by design; and every package has exactly one version source of truth.
-- **From teaching — the workflow discipline.** Each expert is modeled on a real course, research project or consulting engagement, then iterated across semesters of actual use until it earns its own repository. Sixteen of them made it to the platform.
+- **From teaching — the workflow discipline.** Each expert is modeled on a real course, research project or consulting engagement, then iterated across semesters of actual use until it earns its own repository. Seventeen of them made it to the platform.
 
 ## The three product lines
 
