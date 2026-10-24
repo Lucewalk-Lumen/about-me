@@ -6,6 +6,10 @@
 
 ![WorkBuddy Experts — repository banner](docs/social-preview.png)
 
+## About me
+
+I'm **Xing Bu** — an OB & HRM academic at Guangdong University of Finance & Economics, building expert teams, agents and skills on the WorkBuddy platform. My focus spans knowledge-base governance, academic literature analysis, scale & theory knowledge bases, and AI teaching assistants — 16+ experts published on the WorkBuddy Expert Center, with the open-source collection cataloged here.
+
 Each product lives in **its own repository** for focused documentation, issues and releases. This repository is the catalog and entry point.
 
 ## Why separate repositories?
@@ -53,7 +57,7 @@ These experts and skills solve very different problems and each has real depth �
 - Every package passed a sensitive-info & ownership precheck before publication — see [docs/PRECHECK.md](docs/PRECHECK.md);
 - Version source of truth: the `version` field in each package's `.codebuddy-plugin/plugin.json`;
 - Cross-package version alignment history: [CHANGELOG.md](CHANGELOG.md);
-- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/WorkBuddy-Experts/discussions).
+- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/lucewalk-experts/discussions).
 
 ## Citation
 
