@@ -3,7 +3,8 @@
   "version": "1.0.3",
   "description": "蒸馏师甄澄：手动触发的知识蒸馏专家，与 WorkBuddy 自带记忆互补——把你的操作流程、纠正与经验炼成带「何时用 + 怎么做 + 边界」的可复用资产，再回灌宿主长期记忆；支持一键备份与恢复，换机或重装不丢。",
   "author": {
-    "name": "Xing Bu（广东财经大学）"
+    "name": "Xing Bu",
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/distill.md"
