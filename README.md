@@ -1,4 +1,4 @@
-# WorkBuddy Experts
+# Lucewalk Experts
 
 > **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [Xing Bu](https://github.com/Lucewalk).
 >
