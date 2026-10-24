@@ -30,7 +30,7 @@ Every product here is shaped by three disciplines I bring from my daily work:
 | [endnote-analysis](https://github.com/Lucewalk-Lumen/endnote-analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
 
 > **obhrm-research-collaboration-team** (closed-source · WorkBuddy Expert Center only)
-> The full OBHRM research pipeline, run by **seven agents** across the whole lifecycle: topic modeling → literature review → paper writing → grant proposals → data analysis → journal selection & submission → revision / response to reviewers (with EndNote/Zotero library import throughout). Ships with a grounded asset library — 599 scales, 134 theories, 108 R analysis scripts — and a security baseline: no hardcoded keys, least-privilege, input-bounds checks, operation audit. Not open-source; install it from the WorkBuddy Expert Center.
+> The full OBHRM research pipeline, run by **seven agents** across the whole lifecycle: topic modeling → literature review → paper writing → grant proposals → data analysis → journal selection & submission → revision / response to reviewers (with EndNote/Zotero library import throughout). Built on a private grounded asset library (closed-source, not publicly browsable) and a security baseline: no hardcoded keys, least-privilege, input-bounds checks, operation audit. Not open-source; install it from the WorkBuddy Expert Center.
 
 ### 🎓 Teaching line — built on real classrooms, semester after semester
 
@@ -66,6 +66,9 @@ These are **expert packages / skills for the WorkBuddy AI assistant**. The quick
 3. **Start small** — run one minimal example (see each product's README) to confirm the output matches your standards before scaling up.
 
 **Prerequisites:** WorkBuddy installed and signed in (latest version recommended, for the built-in quality gates & connectors). Some products need your own materials ready first (a literature library, a course outline, etc.) — the agent works under a "stay faithful to the source, cite the page" rule.
+
+
+**Platform portability** — These packages are delivered for the WorkBuddy AI assistant and won't run as-is on another platform. But every repository documents its methodology, prompts and structure in plain text, so the approach can be re-implemented on another agent framework if you migrate. The knowledge (scales, theories, workflows) is portable even if the runtime isn't.
 
 **Need help?** Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk-Lumen/about-me/discussions).
 
@@ -124,7 +127,7 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team):投研星图团——多角色投研流水线(A股/美股数据、公司深研、回测),内容仅供信息参考非投资建议
 
 > **obhrm-research-collaboration-team**（闭源 · 仅经 WorkBuddy 专家中心分发）
-> OBHRM 全流程研究流水线,由**七位智能体**覆盖研究全生命周期:选题建模 → 文献综述 → 论文写作 → 基金申报 → 数据分析 → 选刊投稿 → 返修回应(全程支持 EndNote/Zotero 题录导入)。内置溯源资产库——量表 599、理论 134、R 分析脚本 108——与安全基线:无硬编码密钥、最小权限、输入越界校验、操作审计。不开源,请从 WorkBuddy 专家中心安装。
+> OBHRM 全流程研究流水线,由**七位智能体**覆盖研究全生命周期:选题建模 → 文献综述 → 论文写作 → 基金申报 → 数据分析 → 选刊投稿 → 返修回应(全程支持 EndNote/Zotero 题录导入)。内置私有溯源资产库(闭源,不公开可浏览)——与安全基线:无硬编码密钥、最小权限、输入越界校验、操作审计。不开源,请从 WorkBuddy 专家中心安装。
 
 ## 如何使用(任一产品)
 
@@ -135,6 +138,9 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 3. **先小后大** —— 先跑一个最小示例(见各产品 README),确认输出符合你的口径再规模化使用。
 
 **前置条件:** 已安装并登录 WorkBuddy(建议最新版,以兼容内置质量门禁与连接器)。部分产品需要你先准备好自己的资料(文献库、课程大纲等),专家包在「忠于源文本、标注出处」约束下工作。
+
+
+**平台可移植性** —— 这些包目前以 WorkBuddy AI 助理格式交付,换到其他平台无法直接运行。但每个仓库都以纯文本记录了方法、提示词与结构,迁移时可作为参考设计在另一套智能体框架上重建。知识(量表、理论、工作流)可移植,运行时不可移植。
 
 **需要帮助?** 在各产品仓库提 `Issues`,或发起 [Discussion](https://github.com/Lucewalk-Lumen/about-me/discussions)。
 
