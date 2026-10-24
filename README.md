@@ -1,4 +1,4 @@
-# Lucewalk Lumen
+# Lucewalk Lumen · 沐光行客
 
 > **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [Xing Bu](https://github.com/Lucewalk).
 >
@@ -88,7 +88,7 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 
 # Lucewalk Lumen
 
-**Lucewalk(光行)** 是我为 WorkBuddy AI 助手平台打造的专家团、专家与技能合集的品牌门户。
+**Lucewalk Lumen(沐光行客)**——沐光而行,以光为伴——是我为 WorkBuddy AI 助手平台打造的专家团、专家与技能合集的品牌门户。
 
 ## 品牌逻辑
 
