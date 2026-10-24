@@ -41,3 +41,10 @@
 1. Version numbers only increase and are never reused; the `version` field is the single source of truth;
 2. Renamed packages keep one release note "(formerly ...)", then the old name is dropped;
 3. Every cross-package release attaches a precheck record in `docs/`.
+
+## 2026-10-24 · Brand & architecture
+
+- The collection split into **per-product repositories** (16 experts + 1 skill), each with an in-depth English README and a collapsible Chinese section;
+- This hub was renamed **lucewalk-lumen** (Lumen: the luminous measure — light walked into work) and rebuilt as the brand catalog: three product lines (Research / Teaching / Practice & Tooling);
+- Brand narrative formalized: grounded knowledge, compliance-first engineering, one product one repository;
+- The old combined release was retired; per-product releases now carry the packages.
