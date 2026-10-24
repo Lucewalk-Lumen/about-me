@@ -1,0 +1,26 @@
+# 投研星图团 · 意图路由表（外部化，单一真源）
+# 由 lead（touyan-expert-team-lead）在编排时加载；agents/touyan-expert-team-lead.md 中的路由描述以本文件为准。
+# 匹配规则：按 keywords 做大小写不敏感子串匹配；cross_module 为有依赖顺序的串行编排。
+version: 1
+default_route: touyan-expert-team-lead
+
+# 单角色路由：命中即路由到对应 agent
+routes:
+  - id: lead_upstream
+    agent: touyan-expert-team-lead
+    keywords: [热点, 行业, 主题, 对比, 组合, 策略, 事件, 政策, 综合投研, 方向, 研报, 泛投研, 深度研报]
+  - id: hotspot_scan
+    agent: hotspot
+    keywords: [看什么方向, 市场机会, 热点扫描, 机会发现, 不知道买什么, 扫一下热点, 有什么值得研究]
+  - id: stock_deep_dive
+    agent: stock
+    keywords: [分析个股, 写研报, 盘前, 盘后, 收盘小结, 盯盘, 持仓, 监控, 预警, 个股全景, 数据守门, 个股研报, 美股研报, 美股深研, 美股基本面, 中概股, 纳斯达克, 纽交所, 美交所]
+  - id: kline_ta
+    agent: kline
+    keywords: [看K线, K线, 技术复盘, 多周期, 量价, 支撑压力, 风险边界, K线解读, K线数据, CSV离线, 技术面, 回测, 策略回测, 夏普, 最大回撤, 均线策略, 参数网格, 美股K线, 美股行情, 美股技术, 美股复盘]
+
+# 交叉请求：按 sequence 串行调度，统一由 lead 汇编交付
+cross_module:
+  - id: stock_plus_kline
+    sequence: [stock, kline]
+    final_gate: touyan-expert-team-lead
