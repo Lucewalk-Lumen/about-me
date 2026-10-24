@@ -1,4 +1,4 @@
-# WorkBuddy Experts Collection
+# WorkBuddy Experts
 
 WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,由 [Xing Bu](mailto: REPLACE_WITH_YOUR_EMAIL) 维护。
 
