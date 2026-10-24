@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "umas-1.0",
+  "standard": "Universal Multi-Agent Standard (UMAS) v1.0 —— 本包自用的元数据组织约定；字段组织方式参考 A2A AgentCard，详见 UNIVERSAL-STANDARD.md",
+  "runtimeNote": "本文件承载跨运行时迁移所需的通用元数据（各运行时加载方式见 PORTABILITY.md）；WorkBuddy 平台以 .codebuddy-plugin/plugin.json 清单为准。",
+  "id": "ai-butler",
+  "name": "ai-butler",
+  "version": "1.1.4",
+  "description": {
+    "zh": "教师工作台：上课、会议、科研与办公事务一屏打理，管待办与日程、播报周报；纯本地离线，默认数据不出本机。",
+    "en": "Teacher Workbench: teaching, meetings, research, and admin in one screen — todos and schedule, weekly briefings, automated reminders. Fully local, single-file and offline; by default your data never leaves the device."
+  },
+  "type": "agent",
+  "collaboration": {
+    "topology": "single",
+    "orchestrator": "ai-butler",
+    "messageRouting": "direct",
+    "protocol": "单 Agent 专家：由本智能体直接处理请求，不组建团队、不做成员路由与中转。"
+  },
+  "agents": [
+    {
+      "id": "ai-butler",
+      "name": "启明星",
+      "role": "教师工作台管家：帮高校教师把上课、会议、科研与日常办公事务收在一处。在默认浏览器中打开单文件工作台 HTML，并自动拉起本地桥；读取数据快照，播报待办、截止日与本周进展；管理定时自动化（晨报 / 周报 / 备份提醒）。核心触发词：「打开工作台」「我的工作台」「教研台」「今天待办」「周报」「备份」「自动化」「教学日历」。默认纯本地离线；内置可选的 CloudBase 端到端加密云同步，填入 CDN/SDK 地址即可开启。"
+    }
+  ],
+  "skills": [
+    { "id": "todo-schedule", "description": "今天待办与日程管理：全字段编辑、全局搜索、逾期与今日到期" },
+    { "id": "quick-capture", "description": "灵感速记：一句话转任务并写回工作台" },
+    { "id": "project-tracking", "description": "项目跟进：进展、卡点与周次视图" },
+    { "id": "weekly-review", "description": "每周复盘：基于真实数据汇总完成与卡点" },
+    { "id": "briefing-report", "description": "晨间播报与周报生成（只读快照，绝不编造数字）" },
+    { "id": "automation", "description": "定时自动化：晨报 / 周报 / 备份提醒（平台 rrule）" },
+    { "id": "teaching-calendar", "description": "教学日历：学期周次设置与文本/图片/PDF/.ics 导入" },
+    { "id": "data-portability", "description": "JSON 导出导入、容量预警与 v1→v2 无损迁移" },
+    { "id": "personalization", "description": "8 主题 / 8 图标 / 10 背景 / 8 页头装饰 / 分类管理" },
+    { "id": "local-bridge", "description": "本地桥数据读写：快照播报与速记回写（127.0.0.1 回环）" },
+    { "id": "cloud-sync", "description": "可选端到端加密云同步（用户自配 SDK 地址，默认关闭）" }
+  ],
+  "ioModes": [
+    "text",
+    "markdown",
+    "json"
+  ],
+  "auth": {
+    "type": "none"
+  },
+  "runtimeAdapters": [
+    "workbuddy"
+  ],
+  "compliance": {
+    "p0NoEmojiIcons": true,
+    "p0NoPurplePinkGradient": true,
+    "guardrailsPreserved": true,
+    "zeroExternalDependency": true,
+    "noNewAgents": true
+  }
+}

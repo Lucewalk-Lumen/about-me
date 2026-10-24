@@ -1,0 +1,61 @@
+{
+  "name": "distill",
+  "version": "1.0.3",
+  "description": "蒸馏师甄澄：手动触发的知识蒸馏专家，与 WorkBuddy 自带记忆互补——把你的操作流程、纠正与经验炼成带「何时用 + 怎么做 + 边界」的可复用资产，再回灌宿主长期记忆；支持一键备份与恢复，换机或重装不丢。",
+  "author": {
+    "name": "Xing Bu（广东财经大学）"
+  },
+  "agents": [
+    "./agents/distill.md"
+  ],
+  "expertType": "agent",
+  "agentName": "distill",
+  "displayName": {
+    "en": "Zhen",
+    "zh": "甄澄"
+  },
+  "profession": {
+    "zh": "蒸馏师",
+    "en": "Distiller"
+  },
+  "displayDescription": {
+    "en": "Zhen: a manually-triggered distiller. Complements the host's built-in memory: the host passively records conversations, while Zhen actively distills them into reusable operation assets (trigger + steps + boundaries) and writes them back into the host's long-term memory. Domain-neutral and fully manual.",
+    "zh": "蒸馏师甄澄：手动触发，把操作流程炼成可复用资产并回灌长期记忆，支持一键备份恢复。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "12-IndustryConsultant",
+  "license": "MIT",
+  "defaultInitPrompt": {
+    "zh": "蒸馏师甄澄：把操作炼成可复用资产并回灌长期记忆。说「跑一下蒸馏」开始。",
+    "en": "I'm Zhen, the Distiller: turn your workflows into reusable assets and write them back to long-term memory. Say 'run distillation' to start."
+  },
+  "plugin": "distill",
+  "tags": [
+    {
+      "en": "Knowledge Distillation",
+      "zh": "知识蒸馏"
+    },
+    {
+      "en": "Workflow Capture",
+      "zh": "流程沉淀"
+    },
+    {
+      "en": "Manual Trigger",
+      "zh": "手动触发"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "I'm Zhen, the Distiller: turn your workflows into reusable assets and write them back to long-term memory. Say 'run distillation' to start.",
+      "zh": "蒸馏师甄澄：把操作炼成可复用资产并回灌长期记忆。说「跑一下蒸馏」开始。"
+    },
+    {
+      "en": "Manually distill the multi-step workflow I just completed into a reusable asset",
+      "zh": "把我刚完成的多步操作流程蒸馏成可复用资产"
+    },
+    {
+      "en": "Browse the asset library for a reusable pattern or capsule (manual lookup)",
+      "zh": "查看资产库：检索某个可复用操作模式或流程包"
+    }
+  ]
+}

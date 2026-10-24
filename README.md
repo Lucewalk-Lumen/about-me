@@ -23,7 +23,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | teaching-helper-team | 教学帮帮团 | team | 1.1.2 |
 | obhrm-research-collaboration-team | OBHRM 研究协作团 | team | 1.0.1 |
 | obhrm-brain-trust | OBHRM 智囊团 | team | 1.0.3 |
-| hrm-solution-team | HRM 智能方案团 | team | 1.1.2 |
+| hrm-advisory-corps | HRM 实战参谋团 | team | 1.0.1 |
 | workbuddy-expert-studio | WorkBuddy 专家开发工坊 | team | 1.0.2 |
 | course-tutor | 蒲公英(课程导师) | agent | 2.4.0 |
 | campus-ppt-helper | 校园 PPT 助手 | agent | 1.0.3 |
@@ -32,6 +32,9 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | college-competition-coaching-team | 大创竞赛辅导团 | team | 1.0.0 |
 | erp-teaching-team | ERP 教学团 | team | 1.0.0 |
 | academic-literature-analysis-team | 文献计量分析团 | team | 1.0.1 |
+| fde-frontline-team | FDE 前线部署团 | team | 1.0.0 |
+| distill | 蒸馏师(甄澄) | agent | 1.0.3 |
+| ai-butler | 教师工作台(启明星) | agent(UMAS) | 1.1.4 |
 | endnote-analysis-expert | EndNote 分析专家 | agent | 0.3.1 |
 
 ### 技能(skills/)
@@ -53,7 +56,7 @@ ima-kb-ops-team · obsidian-mind-vault · schedule-planner · kb-library-team(1.
 
 1. 从 Release 下载对应包的 zip(或直接克隆本仓库取 `experts/`、`skills/` 下的目录);
 2. 解压后**保持目录名与包内 `.codebuddy-plugin/` 结构不变**;
-3. 在 WorkBuddy 中按平台流程导入/注册(自定义连接器入口 → 信任并启用);
+3. 在 WorkBuddy 中按平台流程导入/注册(自定义连接器入口 → 信任并启用);注:`ai-butler` 为 UMAS v1.0 通用卡片格式,其余包均为 `.codebuddy-plugin` 清单;
 4. 建议导入前对包内容做一次安全审计(本仓库各包的 `docs/PRECHECK.md` 提供作者自检记录)。
 
 ## 历史/更名说明
@@ -62,7 +65,7 @@ ima-kb-ops-team · obsidian-mind-vault · schedule-planner · kb-library-team(1.
 - `obhrm-research-think-tank` → **`obhrm-research-collaboration-team`**
 - `course-tutor-student` → **`course-companion`**
 - `knowledge-management-studio` → **`kb-library-team`**(智博资料室)
-- `hrm-advisory-corps` 为一次未采用的更名尝试,归档不发布
+- `hrm-solution-team` → **`hrm-advisory-corps`**(HRM 实战参谋团,现役)
 
 旧命名安装包不提供,请以本表基准版本为准。
 

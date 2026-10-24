@@ -29,3 +29,9 @@
 - mplus-stats-coach 署名统一为 `Xing Bu`(原为 "Xing");
 - course-tutor 升级 2.3.1 → **2.4.0**(桌面交付版);
 - obhrm-research-collaboration-team 对齐交付版 **1.0.1**(仓库曾误用 1.0.0 源码)。
+
+## 2026-10-24 · 对齐线上专家列表
+
+- HRM 线更正:移除 hrm-solution-team 1.1.2,现役为 **hrm-advisory-corps(HRM 实战参谋团)v1.0.1**(线上审核中版);
+- 新增 fde-frontline-team(FDE 前线部署团)v1.0.0、distill(蒸馏师·甄澄)v1.0.3、ai-butler(教师工作台·启明星)v1.1.4(UMAS 通用卡片格式);
+- course-tutor 2.4.0 确认为源码形态(已含全部 course_*.py 与 data_hub_config.json)。
