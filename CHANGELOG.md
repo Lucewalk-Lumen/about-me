@@ -7,7 +7,7 @@
 
 - Restored the missing `.codebuddy-plugin/plugin.json` (the source zip was shipped incomplete);
 - Briefly restructured to a single agent, then **reverted to team structure (7 agents)** after author confirmation — v1.0.5 is team-type;
-- Author metadata normalized to `Xing Bu <buxing@gdufe.edu.cn>`.
+- Author metadata normalized to `Xing Bu <the author's verified email>`.
 
 ## 2026-10-24 · Alignment with the published expert list
 
