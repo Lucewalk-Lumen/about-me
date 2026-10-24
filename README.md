@@ -21,7 +21,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | 包名 | 名称 | 类型 | 基准版本 |
 |---|---|---|---|
 | teaching-helper-team | 教学帮帮团 | team | 1.1.2 |
-| obhrm-research-collaboration-team | OBHRM 研究协作团 | team | 1.0.1 |
+| obhrm-research-collaboration-team | OBHRM 研究协作团 | team | 1.0.1(闭源,仅经 WorkBuddy 专家中心分发) |
 | obhrm-brain-trust | OBHRM 智囊团 | team | 1.0.3 |
 | hrm-advisory-corps | HRM 实战参谋团 | team | 1.0.1 |
 | workbuddy-expert-studio | WorkBuddy 专家开发工坊 | team | 1.0.2 |
@@ -39,7 +39,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 
 ### 技能(skills/)
 
-ima-kb-ops-team · obsidian-mind-vault · schedule-planner · kb-library-team(1.0.5) · ghost-workspace-hunter
+kb-library-team(1.0.5,智博资料室) · ghost-workspace-hunter(幽灵工作空间猎手)
 
 ## 如何只下载一个智能体 / 技能
 
