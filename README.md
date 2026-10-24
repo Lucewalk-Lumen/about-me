@@ -1,6 +1,6 @@
 # Lucewalk Lumen · 沐光行客
 
-> **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [沐光行客](https://github.com/Lucewalk-Lumen).
+> **Brand hub** for the open expert packages by [沐光行客 (Xing Bu)](https://github.com/Lucewalk-Lumen) — an OBHRM academic, university lecturer and journal peer reviewer. They run on the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform.
 >
 > Grounded knowledge · compliance-first engineering · one product, one repository
 >
@@ -10,7 +10,7 @@
 
 ## About me
 
-I'm **沐光行客** — an OB & HRM academic, a peer reviewer for management journals, and the author of 16+ expert teams and skills published on the WorkBuddy Expert Center.
+I'm **沐光行客 (Xing Bu)** — an OBHRM academic at a Guangdong university, a peer reviewer for management journals, and the lecturer behind a generative-AI literacy course. The expert packages on this page are the toolkit I built for my own research, teaching and HR practice, then published as open packages; they run on the WorkBuddy AI assistant platform.
 
 Every product here is shaped by three disciplines I bring from my daily work:
 
@@ -54,11 +54,17 @@ Every product here is shaped by three disciplines I bring from my daily work:
 
 
 
-## Install (any product)
+## How to use (any product)
 
-1. Download the package zip from the product's **Releases** page (or clone its repo);
-2. Unzip keeping the internal manifest structure intact (`.codebuddy-plugin/`; `ai-butler` uses an `agent-card.json` UMAS manifest);
-3. Import/register in WorkBuddy (custom connector → trust & enable).
+These are **expert packages / skills for the WorkBuddy AI assistant**. The quick path:
+
+1. **Get the package** — download the zip from the product's **Releases** page, or clone its repo. Keep the internal manifest intact (`.codebuddy-plugin/`; `ai-butler` uses an `agent-card.json` UMAS manifest).
+2. **Import / enable** — in WorkBuddy, open *custom connector → trust & enable* (or import the expert / enable the skill from the skill center).
+3. **Start small** — run one minimal example (see each product's README) to confirm the output matches your standards before scaling up.
+
+**Prerequisites:** WorkBuddy installed and signed in (latest version recommended, for the built-in quality gates & connectors). Some products need your own materials ready first (a literature library, a course outline, etc.) — the agent works under a "stay faithful to the source, cite the page" rule.
+
+**Need help?** Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk-Lumen/about-me/discussions).
 
 ## Quality & security
 
@@ -114,11 +120,17 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 
 > 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
 
-## 安装(任一产品)
+## 如何使用(任一产品)
 
-1. 从产品仓库的 Releases 页下载 zip(或克隆仓库);
-2. 解压保持内部清单结构不变(`.codebuddy-plugin/`);
-3. 在 WorkBuddy 中导入/注册(自定义连接器 → 信任并启用)。
+这些都是 **WorkBuddy AI 助理** 平台的专家包 / 技能。快速上手:
+
+1. **取包** —— 从产品仓库的 Releases 页下载 zip(或克隆仓库),保持内部清单结构不变(`.codebuddy-plugin/`)；
+2. **导入 / 启用** —— 在 WorkBuddy 中「自定义连接器 → 信任并启用」,或在技能中心导入专家 / 启用技能；
+3. **先小后大** —— 先跑一个最小示例(见各产品 README),确认输出符合你的口径再规模化使用。
+
+**前置条件:** 已安装并登录 WorkBuddy(建议最新版,以兼容内置质量门禁与连接器)。部分产品需要你先准备好自己的资料(文献库、课程大纲等),专家包在「忠于源文本、标注出处」约束下工作。
+
+**需要帮助?** 在各产品仓库提 `Issues`,或发起 [Discussion](https://github.com/Lucewalk-Lumen/about-me/discussions)。
 
 ## 许可
 
