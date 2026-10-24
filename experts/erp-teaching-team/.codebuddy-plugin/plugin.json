@@ -5,7 +5,7 @@
   "descriptionZh": "ERP 教学团：同一概念按四种基础分层讲透，出题给评分标准，指出学生卡在哪，规划下一步学什么。涵盖选型论证、五年 TCO/ROI、七大业务域、AI 集成与组织落地。",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/erp-teaching-team-team-lead.md",

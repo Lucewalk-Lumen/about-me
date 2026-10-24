@@ -4,7 +4,7 @@
   "description": "A 7-agent OBHRM research team covering the full workflow from topic scoping to submission: literature review, paper and grant writing, data analysis, peer review, and journal selection. Grounded in 599 scales, 134 theories, 108 R scripts, and a 28,241-journal rating database, with shared quality gates throughout.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/obhrm-research-collaboration-team-lead.md",

@@ -4,7 +4,7 @@
   "description": "Offline EndNote library analysis: topic clustering & evolution, keyword co-occurrence network, reading status, duplicate detection, staleness warnings, robustness and effect-size checks, plus a one-click literature-review skeleton. Read-only, Python-first.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "license": "MIT",
   "keywords": [

@@ -5,7 +5,7 @@
   "description": "A 7-member expert team for knowledge-base management across the full lifecycle: ingest, classification, maturity promotion, indexing, grounded Q&A, quality inspection, archiving and metrics.",
   "author": {
     "name": "Xing Bu",
-    "email": "Lucewalk@users.noreply.github.com"
+    "email": "buxing@gdufe.edu.cn"
   },
   "agents": [
     "./agents/kb-library-team-lead.md",

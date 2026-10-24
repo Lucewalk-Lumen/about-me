@@ -34,7 +34,7 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 | course-tutor | 蒲公英(课程导师) | agent | 2.3.1 |
 | campus-ppt-helper | 校园 PPT 助手 | agent | 1.0.3 |
 | touyan-expert-team | 投产专家团 | team | 1.0.0 |
-| mplus-stats-coach | Mplus 统计教练 | — | 1.0.0 |
+| mplus-stats-coach | Mplus 统计教练 | agent | 1.0.0 |
 | college-competition-coaching-team | 大创竞赛辅导团 | team | 1.0.0 |
 | erp-teaching-team | ERP 教学团 | team | 1.0.0 |
 | academic-literature-analysis-team | 文献计量分析团 | team | 1.0.1 |
@@ -43,6 +43,17 @@ WorkBuddy 平台的专家团(Agent Team)、专家(Agent)与技能(Skill)合集,�
 ### 技能(skills/)
 
 brand-knowledge-base · ima-kb-ops-team · kb-organizer · llm-wiki · personal-knowledge-architect · obsidian-mind-vault · schedule-planner · kb-library-team(1.0.5)
+
+## 如何只下载一个智能体 / 技能
+
+1. **Release 附件(推荐)**:进入 [Releases](https://github.com/Lucewalk/WorkBuddy-Experts/releases) 页,每个包都有独立附件 `<包名>-<版本>.zip`(版本号即该包 `plugin.json` 的 `version`),按需下载即可;
+2. **网页子目录下载**:打开对应包目录页(如 `experts/hrm-solution-team`),把浏览器地址粘贴到 <https://download-directory.github.io>,即可只下载该子目录;
+3. **命令行 sparse-checkout**(需要多个包时):
+
+   ```bash
+   git clone --depth 1 --filter=blob:none --sparse git@github.com:Lucewalk/WorkBuddy-Experts.git
+   cd WorkBuddy-Experts && git sparse-checkout set experts/hrm-solution-team skills/kb-library-team
+   ```
 
 ## 安装方式
 

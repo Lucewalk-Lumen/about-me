@@ -8,7 +8,7 @@
            skills[] 均能解析到真实技能目录；lead/member 声明与 agents 列表一致
   [凭证]   token / api key / password / 私钥
   [PII]    绝对家目录路径、真实姓名、非占位邮箱
-  [身份锁] 包级署名必须恒为 IDENTITY（默认 "Xing Bu <Lucewalk@users.noreply.github.com>"，即 plugin.json 的 author 字段）；
+  [身份锁] 包级署名必须恒为 IDENTITY（默认 "Xing Bu <buxing@gdufe.edu.cn>"，即 plugin.json 的 author 字段）；
            单文件 author 字段为「可选」元数据，缺失不报错；仅当包内出现「其他（非 IDENTITY）署名」时才阻断。
   [卫生]   __pycache__ / *.pyc / .DS_Store / *.log 等不应入包的产物
 
@@ -25,10 +25,10 @@ sys.dont_write_bytecode = True  # 校验时不写 __pycache__，避免自检误�
 # ---------------------------------------------------------------- 常量配置
 
 #: 不可更改的法定署名标识。任何包内出现的其他署名一律视为阻断项。
-IDENTITY = "Xing Bu <Lucewalk@users.noreply.github.com>"
+IDENTITY = "Xing Bu <buxing@gdufe.edu.cn>"
 #: IDENTITY 拆分形态：结构化元数据（plugin.json / pyproject.toml）必须以 name+email 双字段表达，
-#: 因此按拆分字段等价判定：同文件内同时出现「Xing Bu」与「Lucewalk@users.noreply.github.com」即视为合规。
-IDENTITY_PARTS = ("Xing Bu", "Lucewalk@users.noreply.github.com")
+#: 因此按拆分字段等价判定：同文件内同时出现「Xing Bu」与「buxing@gdufe.edu.cn」即视为合规。
+IDENTITY_PARTS = ("Xing Bu", "buxing@gdufe.edu.cn")
 
 #: 参与文本扫描的扩展名（含脚本、配置与文本类文件）。
 SCAN_EXT = (
