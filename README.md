@@ -119,6 +119,8 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [ai-butler](https://github.com/Lucewalk-Lumen/ai-butler):教师工作台(离线优先)
 - [distill](https://github.com/Lucewalk-Lumen/distill):蒸馏师——长文进、可引用摘要出
 - [ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/ghost-workspace-hunter):幽灵工作空间猎手(技能)
+- [fde-frontline-team](https://github.com/Lucewalk-Lumen/fde-frontline-team):FDE 前线部署团——场景诊断、闭环重设计与工作坊辅导
+- [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team):投研星图团——多角色投研流水线(A股/美股数据、公司深研、回测),内容仅供信息参考非投资建议
 
 > 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
 
