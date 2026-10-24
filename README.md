@@ -29,7 +29,7 @@ For OB & HRM scholars: theory and scale knowledge bases that answer with citatio
 | [OBHRM-Brain-Trust](https://github.com/Lucewalk-Lumen/OBHRM-Brain-Trust) | A theory & scale knowledge base with **grounded, citation-first answers** — fuzzy word-form matching that still respects exact provenance, explicit "not covered by source" labels, maturity-gated entries (idea → draft → official → archive), and coverage tracking across 130+ theory entries and curated scales (from Hawthorne studies to the burnout three-dimensional model). |
 | [Academic-Literature-Analysis-Team](https://github.com/Lucewalk-Lumen/Academic-Literature-Analysis-Team) | Bibliometric analysis over your own library — from raw exports to a **review skeleton** you can actually write against. |
 | [Mplus-Stats-Coach](https://github.com/Lucewalk-Lumen/Mplus-Stats-Coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
-| [Endnote-Analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-Analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
+| [Endnote-Analysis](https://github.com/Lucewalk-Lumen/Endnote-Analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
 
 > The line's flagship, **obhrm-research-collaboration-team** (full research pipeline: literature review, paper writing, methods, data analysis, peer review and journal selection, with EndNote/Zotero library import), is closed-source and distributed via the WorkBuddy Expert Center only.
 
@@ -104,7 +104,7 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [OBHRM-Brain-Trust](https://github.com/Lucewalk-Lumen/OBHRM-Brain-Trust):12 章教材 × 145 理论 × 601 量表 × 108 R 方法的四库溯源问答
 - [Academic-Literature-Analysis-Team](https://github.com/Lucewalk-Lumen/Academic-Literature-Analysis-Team):学术文献计量分析,从题录到综述骨架
 - [Mplus-Stats-Coach](https://github.com/Lucewalk-Lumen/Mplus-Stats-Coach):语法实验室、方法顾问与输出门诊三环辅导
-- [Endnote-Analysis-expert](https://github.com/Lucewalk-Lumen/Endnote-Analysis):EndNote 引用结构与综述骨架
+- [Endnote-Analysis](https://github.com/Lucewalk-Lumen/Endnote-Analysis):EndNote 引用结构与综述骨架
 
 ### 🎓 教学线
 - [Teaching-Helper-Team](https://github.com/Lucewalk-Lumen/Teaching-Helper-Team):九专家十八技能,三层架构,六大预设工作流
