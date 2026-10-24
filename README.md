@@ -56,6 +56,7 @@ brand-knowledge-base · ima-kb-ops-team · kb-organizer · llm-wiki · personal-
 - `obhrm-knowledge-compass` → `obhrm-research-brain-trust` → `obhrm-hub-team` → **`obhrm-brain-trust`**
 - `obhrm-research-think-tank` → **`obhrm-research-collaboration-team`**
 - `course-tutor-student` → **`course-companion`**
+- `knowledge-management-studio` → **`kb-library-team`**(智博资料室)
 - `hrm-advisory-corps` 为一次未采用的更名尝试,归档不发布
 
 旧命名安装包不提供,请以本表基准版本为准。
