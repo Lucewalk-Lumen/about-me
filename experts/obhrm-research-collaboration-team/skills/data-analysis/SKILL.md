@@ -1,6 +1,6 @@
 ---
 name: data-analysis
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 数据分析域（③ 段）。按证据形态分定量·一手（D1-D4）、定量·二手（元分析 M1-M5）、定性·质性（扎根理论 Q1-Q5）三大分支，回答"研究结论怎么证明成立"。
 ---

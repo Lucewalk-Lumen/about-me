@@ -16,7 +16,7 @@
 
 用法
 ----
-  # 1) 先由 SKILL 经数据通道把该课材料与学情导出到 --src 目录，命名约定：
+  # 1) 先由 主指令 经数据通道把该课材料与学情导出到 --src 目录，命名约定：
   #      materials__<course_id>/**      课程材料（任意嵌套）
   #      <course_id>__<子表>.json       学情/名册等子表（与 backup_data_hub.py 同约定）
   #      analysis__<course_id>__*.json  分析结果（积分榜/看板数据/周报，可选）
@@ -183,7 +183,7 @@ def main():
     ap = argparse.ArgumentParser(description="课程归档 · 学期结束按课程一键打包")
     ap.add_argument("--course", required=True, help="课程名")
     ap.add_argument("--course-id", required=True, help="课程 ID（与 course_versions / 名册一致）")
-    ap.add_argument("--src", required=True, help="SKILL 导出的源目录")
+    ap.add_argument("--src", required=True, help="主指令 导出的源目录")
     ap.add_argument("--out", default=ARCHIVE_ROOT, help="归档根目录")
     ap.add_argument("--close-course", action="store_true", help="打包后把 course_versions 状态置closed（需连接器写回，本脚本仅产出待写回清单）")
     ap.add_argument("--close-note", default="", help="结课说明（写入清单，便于日后追溯）")
@@ -205,12 +205,12 @@ def main():
 
     _emit("!", "材料 %d 个· 子表 %d 张 · 分析结果 %d 个" % (len(materials), len(plain_tables), len(analyses)))
     if not materials and not plain_tables:
-        _emit("FAIL", "源目录里既没有材料也没有 <course_id>__<子表>.json —— 请确认 SKILL 是否已导出")
+        _emit("FAIL", "源目录里既没有材料也没有 <course_id>__<子表>.json —— 请确认 主指令 是否已导出")
         return 1
     if not materials:
         _emit("!", "未找到课程材料（materials__%s/）—— 若该课材料已上云，可只归档学情与分析结果" % cid)
     if not plain_tables:
-        _emit("!", "未找到 <course_id>__<子表>.json —— 学情数据将缺失，请确认 SKILL 是否已导出")
+        _emit("!", "未找到 <course_id>__<子表>.json —— 学情数据将缺失，请确认 主指令 是否已导出")
 
     if args.dry_run:
         _emit("OK", "[dry-run] 将打包：")
@@ -258,7 +258,7 @@ def main():
     with open(mpath, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    # 5) 待写回的结课动作（脚本不碰云端，交由 SKILL 经连接器执行）
+    # 5) 待写回的结课动作（脚本不碰云端，交由 主指令 经连接器执行）
     if args.close_course:
         with open(os.path.join(dest_dir, "pending_close.json"), "w", encoding="utf-8") as f:
             json.dump({
@@ -285,7 +285,7 @@ def main():
     _emit("OK", "清单：材料 %d · 子表 %d（%d 行） · 分析 %d"
          % (manifest["counts"]["materials"], manifest["counts"]["tables"],
             manifest["counts"]["tables_rows"], manifest["counts"]["analyses"]))
-    # 自动埋点（）：调用即记录，失败不影响功能
+    # 自动埋点（使用记录）：调用即记录，失败不影响功能
     try:
         sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         import course_usage_log

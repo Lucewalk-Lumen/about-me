@@ -82,6 +82,9 @@ def normalize_row(row):
     kp = _row_get(row, "知识点", "kp")
     result = _row_get(row, "结果", "result")
     phase = _row_get(row, "环节", "phase")
+    # 历史行「苏格拉底引导」按「首学」口径计入聚合
+    if _norm(phase) == "苏格拉底引导":
+        phase = "首学"
     source = _row_get(row, "来源", "source")
     date = _row_get(row, "时间", "date", "session_time")
     teach_week = _row_get(row, "teach_week")
@@ -461,7 +464,7 @@ def _cmd_monthly(args):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(description="课程伴学周/月学情报告（）")
+    parser = argparse.ArgumentParser(description="课程伴学周/月学情报告（weekly / monthly / push）")
     sub = parser.add_subparsers(dest="cmd")
 
     pw = sub.add_parser("weekly", help="生成周报")

@@ -20,7 +20,7 @@ python3 "${CODEBUDDY_PLUGIN_ROOT}/course_usage_log.py" \
 # 教师想看「功能使用说明书」时
 python3 "${CODEBUDDY_PLUGIN_ROOT}/course_usage_log.py" --report
 
-# 若教师已建 usage_log 子表，把本地记录同步回中枢（SKILL 调用，脚本只产出 JSON）
+# 若教师已建 usage_log 子表，把本地记录同步回中枢（主指令 调用，脚本只产出 JSON）
 python3 "${CODEBUDDY_PLUGIN_ROOT}/course_usage_log.py" --export-json
 ```
 

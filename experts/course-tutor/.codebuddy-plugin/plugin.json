@@ -1,6 +1,6 @@
 {
   "name": "course-tutor",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "Roster import, learning analytics, participation scores, weekly teaching reports and course version publishing. Teachers connect their own Tencent Docs account straight to their own data hub.",
   "author": {
     "name": "Xing Bu",
@@ -30,7 +30,7 @@
     "zh": "导入名册、学情归集与可视化看板、积分游戏化，课程资料云端管理，学生端自动同步，一键发布课程版本。"
   },
   "avatar": "avatars/teacher.png",
-  "categoryId": "12-IndustryConsultant",
+  "categoryId": "15-Education",
   "defaultInitPrompt": {
     "zh": "带我完成首次使用：先做数据中枢与连接自检，再介绍你能帮我做什么。",
     "en": "Walk me through first-time setup: run the data hub self-check, then introduce what you can do for me."

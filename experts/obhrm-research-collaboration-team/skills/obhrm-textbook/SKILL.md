@@ -1,6 +1,6 @@
 ---
 name: obhrm-textbook
-version: 1.0.0
+version: 1.0.1
 description: "《组织行为学精要》12 章全文与节号索引 — 概念地基与出处锚点，供概念桥接层（obhrm-bridge）挂靠教材锚点。"
 ---
 

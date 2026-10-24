@@ -234,7 +234,7 @@ def _cmd_status(args):
 
 def main(argv):
     parser = argparse.ArgumentParser(
-        description="课程伴学校历与教学周次判定（）"
+        description="课程伴学校历与教学周次判定（week / status）"
     )
     sub = parser.add_subparsers(dest="cmd")
 

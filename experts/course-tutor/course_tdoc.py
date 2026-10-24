@@ -53,7 +53,7 @@ TRANSPORT_502_HINTS = ("502", "tunnel connection failed", "bad gateway")
 
 
 def _autodiscover_tdoc():
-    """ 修复：自动扫插件缓存定位最新版 tencentdocs.py。
+    """自动扫插件缓存定位最新版 tencentdocs.py。
 
     覆盖两种实装形态：模块缓存（plugins/cache/workbuddy-builtin/tencent-docs-plugin/...）
     与市场插件目录（plugins/marketplaces/...）。取修改时间最新的一个，免去每次
@@ -122,7 +122,7 @@ def _capture(script, rest, env=None):
 
 
 def _cmd_make_records(rows_path):
-    """ 修复：把简单行 [{列:值}] 转成 smartsheet add_records 的 field_values 规范格式。
+    """把简单行 [{列:值}] 转成 smartsheet add_records 的 field_values 规范格式。
 
     背景：直接写 {fields:{列:值}} 会「返回成功但数据为空」——文本字段必须带
     text_value.items[].type="text"。本子命令纯本地转换，不联网、不依赖 tencentdocs.py。

@@ -1,6 +1,6 @@
 ---
 name: literature-review
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 文献综述域（L 路径·路由器）。覆盖选题→收集→阅读分类→方向收敛→论证评估→提纲→综合撰写的七阶段综述成稿流程；含头脑风暴协议、PRISMA 流程图、PDF 资料库总结与中英双语综述。
 ---

@@ -1,6 +1,6 @@
 # 课程伴学专家 · 参考细则（teacher_errors.md）
 
-> 本文件由 `agents/course-tutor.md` 按无损分片拆出，**内容与原 SKILL 逐字一致**。
+> 本文件是教师端主指令（`agents/course-tutor.md`）的外置参考细则，与主指令配套使用。
 > 引用方式：`${CODEBUDDY_PLUGIN_ROOT}/references/teacher_errors.md`。
 
 ## 9. 错误处理

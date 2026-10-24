@@ -2,12 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "obhrm://scale-library/schema.json",
   "title": "OBHRM 量表库 Schema（M-11）",
-  "description": "定义量表条目文件 knowledge/scales/Sxxx.json 与量表索引 knowledge/_scale_index.json 的结构契约。由索引校验流程强制校验。新增/修改量表条目必须同时通过 entry 与 index 两个子 schema。",
+  "description": "定义量表条目记录与量表索引 knowledge/_scale_index.json 的结构契约。条目记录的存储形态为 knowledge/scales/entities.json（合并存储，键为 scale_id）；历史单文件形态 knowledge/scales/Sxxx.json 已被合并存储取代。由索引校验流程强制校验。新增/修改量表条目必须同时通过 entry 与 index 两个子 schema。",
   "$defs": {
     "scale_id": {
       "type": "string",
       "pattern": "^S[0-9]{3}$",
-      "description": "量表稳定主键，形如 S001。文件名必须为 <scale_id>.json。"
+      "description": "量表稳定主键，形如 S001。在合并存储 entities.json 中作为顶层键；历史单文件形态下文件名必须为 <scale_id>.json。"
     },
     "construct_id": {
       "type": "string",
@@ -129,7 +129,7 @@
     },
     "entry": {
       "type": "object",
-      "title": "量表条目文件（knowledge/scales/Sxxx.json）",
+      "title": "量表条目记录（entities.json 的值，键为 scale_id）",
       "properties": {
         "scale_id": {
           "$ref": "#/$defs/scale_id"
@@ -254,7 +254,7 @@
             "count": {
               "type": "integer",
               "minimum": 0,
-              "description": "必须等于 nodes 长度且等于 scales/ 目录下条目文件数。"
+              "description": "必须等于 nodes 长度，且等于 entities.json 的顶层键数（合并存储形态）或 scales/ 目录下条目文件数（历史单文件形态）。"
             },
             "maintain_note": {
               "type": "string"

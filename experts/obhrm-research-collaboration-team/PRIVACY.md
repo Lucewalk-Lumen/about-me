@@ -1,6 +1,6 @@
 # 隐私说明（PRIVACY）
 
-> 适用版本：`obhrm-research-collaboration-team` 1.1.0
+> 适用版本：`obhrm-research-collaboration-team` 1.0.1
 > 生效范围：本插件包（CodeBuddy/WorkBuddy 插件市场分发）的安装与运行期行为
 
 本说明用于向用户说明本插件

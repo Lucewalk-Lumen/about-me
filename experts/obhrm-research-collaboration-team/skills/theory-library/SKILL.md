@@ -1,6 +1,6 @@
 ---
 name: theory-library
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 理论库（理论域资产）。134 个组织行为/人力资源管理理论（中英理论名+构念+内容/作用机制/结构/应用四段正文+参考文献），条目带 verified/draft 生命周期，支持按 construct_id / 关键词 / theory_id 检索，供理论框架构建、假设推导、综述理论增量论证。
 ---

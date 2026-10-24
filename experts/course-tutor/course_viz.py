@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """学情可视化看板生成器（核心）。
 
-输入：教师端 SKILL 已从数据中枢取出并本地聚合后的学情 JSON（见 references/data_viz.md 口径）。
+输入：教师端 主指令 已从数据中枢取出并本地聚合后的学情 JSON（见 references/data_viz.md 口径）。
 输出：一份**自包含** HTML 看板（内联数据 + 通过 CDN 引入 Chart.js），无需任何后端 / 服务。
 
 看板覆盖的分析维度（不止「收敛 / 部分 / 卡住」三个面）：
@@ -348,8 +348,8 @@ def render_html(data, course_name, generated_at, max_students=40, max_kp=12):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="学情可视化看板生成器（）")
-    ap.add_argument("data_json", help="聚合后的学情 JSON（由 SKILL 从数据中枢取出后生成）")
+    ap = argparse.ArgumentParser(description="学情可视化看板生成器（自包含 HTML，无子命令）")
+    ap.add_argument("data_json", help="聚合后的学情 JSON（由 主指令 从数据中枢取出后生成）")
     ap.add_argument("--course", default="", help="课程名（用于看板标题）")
     ap.add_argument("--out", default="", help="输出 HTML 路径；缺省打印到 stdout")
     ap.add_argument("--max-students", type=int, default=40,
@@ -390,7 +390,7 @@ def main():
         print(f"[OK] 看板已生成: {args.out} （{len(html)} 字节，自包含静态页面）")
     else:
         sys.stdout.write(html)
-    # 自动埋点（）：调用即记录，失败不影响功能
+    # 自动埋点（使用记录）：调用即记录，失败不影响功能
     try:
         import course_usage_log
         n_stu = len((data.get("students") or []))

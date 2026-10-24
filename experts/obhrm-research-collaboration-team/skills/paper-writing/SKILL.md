@@ -1,6 +1,6 @@
 ---
 name: paper-writing
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — 论文写作域（A 路径）。覆盖从头脑风暴 A0 到答辩 A7 的完整论文写作生命周期（期刊/会议论文走 A6 投稿、学位论文走 A7 答辩），含贡献为先、理论建构与假设发展、IMRaD 成稿、图表嵌入与可追溯矩阵、答辩准备。
 ---

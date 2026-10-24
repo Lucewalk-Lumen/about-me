@@ -1,6 +1,6 @@
 ---
 name: r-analysis
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: OBHRM 研究协作团 — R 分析方法库（实证域资产）。108 个可运行的 R 分析脚本（01-env 环境 → 19-llm 大语言模型，覆盖描述/相关/回归/SEM/剖面/元分析/多层等方法族），每脚本遵循 G3 数据前置 / G4 环境探测(ensure_pkg 不代装) / G5 真实输出 三门禁，脚本正文按模型角色书写变量名（运行前须使数据列名与之一致），支持按 method_no / 关键词精确检索。
 ---

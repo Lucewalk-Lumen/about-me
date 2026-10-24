@@ -1,6 +1,6 @@
 ---
 name: browser-skill
-version: 1.0.0
+version: 1.0.1
 author: "Xing Bu"
 description: |
   当用户要求对已登录浏览器执行自动化任务时使用：访问并读取页面、填写表单、

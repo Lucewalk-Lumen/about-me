@@ -1,6 +1,6 @@
 # 课程伴学专家 · 参考细则（teacher_setup.md）
 
-> 本文件由 `agents/course-tutor.md` 按无损分片拆出，**内容与原 SKILL 逐字一致**。
+> 本文件是教师端主指令（`agents/course-tutor.md`）的外置参考细则，与主指令配套使用。
 > 引用方式：`${CODEBUDDY_PLUGIN_ROOT}/references/teacher_setup.md`。
 
 ### 2.0.1 首次设置向导（首次使用，主动引导搭建教师自己的教学库）
@@ -125,6 +125,8 @@
  `roster` / `course_versions` / `agent_profiles`（列清单见 §1.4 / 学生端 data_plane.md §0.3（随学生包分发））；
 3. **建 Usage 文件**：新建智能表文件（命名如「课程伴学-Usage-<课程名>」），在其下建 2 张子表——
  `usage` / `summaries`（含「智能体」列，同上）；
+ 表名以实际中枢为准：`usage` / `summaries` 与 `usage_records` / `session_summaries` 两种写法均认可，
+ 学生端自动发现会把两种表名写法都识别为同一组数据（配置内统一记为 `usage` / `summaries`）；
 4. **清理默认空表「智能表1」（建完命名表必做）**：新建智能表文件会自动生成一张**无列定义**的默认子表
  「智能表1」——连接器**不支持重命名子表**（会报 `40037`），因此**不做改名**，规范做法是**删除**：
  删除前必须先读取该表**确认其为空**（防误删有数据的表）；若非空 → **不删**，向教师报告并请示处理方式。
