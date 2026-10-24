@@ -1,8 +1,0 @@
-TITLE:	this is an example of an exploratory 
-	factor analysis with categorical factor
-        indicators
-DATA:	FILE IS ex4.2.dat;
-VARIABLE:	NAMES ARE  u1-u12;
-	CATEGORICAL ARE u1-u12;
-ANALYSIS:	TYPE = EFA 1 4;
-

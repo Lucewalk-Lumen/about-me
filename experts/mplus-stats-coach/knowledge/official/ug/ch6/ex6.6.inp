@@ -1,8 +1,0 @@
-TITLE:	this is an example of a linear growth
-	model for a count outcome using a Poisson
-	model 
-DATA:	FILE IS ex6.6.dat;
-VARIABLE:	NAMES ARE u11-u14;
-	COUNT ARE u11-u14;
-MODEL:	i s | u11@0 u12@1 u13@2 u14@3;
-OUTPUT:	TECH1 TECH8;

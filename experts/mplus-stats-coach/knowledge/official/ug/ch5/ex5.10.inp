@@ -1,9 +1,0 @@
-TITLE:	this is an example of a threshold
-	structure CFA for categorical factor indicators
-DATA:	FILE IS ex5.10.dat;
-VARIABLE:	NAMES ARE  u1a-u1c u2a-u2c;
-	CATEGORICAL ARE u1a-u1c u2a-u2c;
-MODEL:	f1 BY u1a u1b@1 u1c@1; 
-	f2 BY u2a u2b@1 u2c@1;
-	[u1a$1 u1b$1 u1c$1] (1);	
-	[u2a$1 u2b$1 u2c$1] (2);

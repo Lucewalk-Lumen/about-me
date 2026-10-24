@@ -1,8 +1,0 @@
-TITLE:	this is an example of a two-level exploratory 
-	factor analysis with continuous factor indicators 
-DATA:	FILE IS ex4.5.dat;
-VARIABLE:	NAMES ARE y1-y6 x1 x2 w clus;
-	USEVARIABLES = y1-y6;
-	CLUSTER = clus;
-ANALYSIS:	TYPE = TWOLEVEL EFA 1 2 UW 1 1 UB;
-

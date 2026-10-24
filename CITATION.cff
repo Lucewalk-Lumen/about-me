@@ -7,8 +7,6 @@ type: software
 authors:
   - given-names: Bu
     family-names: Xing
-    email: buxing@gdufe.edu.cn
-    affiliation: Guangdong University of Finance & Economics
 version: baseline-20261023
 date-released: "2026-10-23"
 license: MIT

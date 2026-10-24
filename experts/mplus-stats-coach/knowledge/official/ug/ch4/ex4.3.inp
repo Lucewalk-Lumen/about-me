@@ -1,8 +1,0 @@
-TITLE:	this is an example of an EFA with continuous,
-    censored, categorical, and count factor indicators 
-DATA:	FILE = ex4.3.dat;
-VARIABLE: 	NAMES = u4-u6 y4-y6 u1-u3 y1-y3;
-	CENSORED = y4-y6(b);
-	CATEGORICAL = u1-u3;
-	COUNT = u4-u6;
-ANALYSIS:	TYPE = EFA 1 4;

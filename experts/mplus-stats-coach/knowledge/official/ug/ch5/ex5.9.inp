@@ -1,8 +1,0 @@
-TITLE:	this is an example of a mean structure CFA 
-	for continuous factor indicators
-	DATA:	FILE IS ex5.9.dat;
-VARIABLE:	NAMES ARE y1a-y1c y2a-y2c;
-MODEL:	f1 BY y1a y1b@1 y1c@1; 
-	f2 BY y2a y2b@1 y2c@1;
-	[y1a y1b y1c] (1);	
-	[y2a y2b y2c] (2);

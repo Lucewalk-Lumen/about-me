@@ -24,7 +24,7 @@
 |---|---|---|---|
 | workbuddy-universal-mentor | **他人用户名路径** `/Users/oumingzhi/...` | `README.md` | 泄漏第三方机器信息,删除或泛化 |
 | endnote-analysis-expert | 本机 EndNote 库默认值 `/Users/buxing/Desktop/EndNote/My EndNote Library.enl` | `skills/endnote-analysis/scripts/run_checks.py` | 改为空默认 + `--library` 参数说明 |
-| teaching-helper-team | `IDENTITY = "Xing Bu <buxing@gdufe.edu.cn>"` 硬编码**身份锁** | `skills/architect/scripts/validate_pack.py`(多处) | 功能性校验逻辑,发布前决策:改用 GitHub noreply 则同步改锁;保持原样则接受邮箱公开 |
+| teaching-helper-team | `IDENTITY = "Xing Bu <the author's institutional email>"` 硬编码**身份锁** | `skills/architect/scripts/validate_pack.py`(多处) | 功能性校验逻辑,发布前决策:改用 GitHub noreply 则同步改锁;保持原样则接受邮箱公开 |
 | teaching-helper-team | 脚本注释引用 `.created-by-session` 机制 | `scripts/verify.py` | 视平台机制而定,建议注释泛化 |
 | obhrm-research-collaboration-team | `.DS_Store` | `skills/grant-writing/.DS_Store` | 删除 + .gitignore 兜底 |
 
@@ -43,7 +43,7 @@
 
 ## 三、统一决策点
 
-1. **作者邮箱** `buxing@gdufe.edu.cn` 出现在全部 15 个 zip/源码的 `plugin.json`(及 touyan 的 COPYRIGHT.md)。公开 GitHub 即公开单位邮箱。可选:① 接受公开(学术署名惯例);② 批量替换为 GitHub noreply(`Xing Bu <xxx@users.noreply.github.com>`)——注意 teaching-helper 的身份锁、verify.py 联动。
+1. **作者邮箱** `the author's institutional email` 出现在全部 15 个 zip/源码的 `plugin.json`(及 touyan 的 COPYRIGHT.md)。公开 GitHub 即公开单位邮箱。可选:① 接受公开(学术署名惯例);② 批量替换为 GitHub noreply(`Xing Bu <xxx@users.noreply.github.com>`)——注意 teaching-helper 的身份锁、verify.py 联动。
 2. **`.codebuddy-plugin` 目录名**:全部包一致,README 安装说明需写清宿主识别方式。
 3. **teaching-helper-team 源码 vs zip**:以 1.1.2 源码为准(已确认),入库前跑一次包校验。
 

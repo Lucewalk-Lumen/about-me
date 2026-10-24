@@ -1,8 +1,0 @@
-TITLE:	this is an example of a zero-inflated 
-		Poisson regression for a count dependent 
-		variable with two covariates
-DATA:		FILE IS ex3.8a.dat;
-VARIABLE:	NAMES ARE u1 x1 x3;
-		COUNT IS u1 (i);
-MODEL:	u1 ON x1 x3;
-		u1#1 ON x1 x3;
