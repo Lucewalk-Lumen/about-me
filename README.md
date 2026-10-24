@@ -1,4 +1,4 @@
-# Lucewalk Experts
+# Lucewalk Lumen
 
 > **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [Xing Bu](https://github.com/Lucewalk).
 >
@@ -71,7 +71,7 @@ These experts and skills solve very different problems and each has real depth �
 - Every package passed a sensitive-info & ownership precheck before publication — see [docs/PRECHECK.md](docs/PRECHECK.md);
 - Version source of truth: the `version` field in each package's `.codebuddy-plugin/plugin.json`;
 - Cross-package version alignment history: [CHANGELOG.md](CHANGELOG.md);
-- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/lucewalk-experts/discussions).
+- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/lucewalk-lumen/discussions).
 
 ## Citation
 
@@ -80,3 +80,54 @@ If any of these expert packs or skills are useful in your research or teaching, 
 ## License
 
 MIT — see [LICENSE](LICENSE). Third-party assets are documented in each product's `SOURCES.md` / `references/`.
+
+---
+
+<details>
+<summary><strong>📖 中文说明(Chinese README)</strong></summary>
+
+# Lucewalk Lumen
+
+**Lucewalk(光行)** 是我为 WorkBuddy AI 助手平台打造的专家团、专家与技能合集的品牌门户。
+
+## 品牌逻辑
+
+- **Grounded knowledge(有据可依)**——审稿人职业习惯的产品化:量表指向来源、理论链接文献、缺失证据标注缺失;
+- **Compliance-first engineering(合规优先)**——发布前敏感信息预检、PRIVACY/SECURITY 文档、可逆操作、每包单一版本真源;
+- **One product, one repository(一产品一仓库)**——每个产品独立成仓,拥有自己的文档、Issue 与发布周期。
+
+## 产品目录(三条产品线)
+
+### 🔬 研究线(OB & HRM)
+- [obhrm-brain-trust](https://github.com/Lucewalk/obhrm-brain-trust):12 章教材 × 145 理论 × 601 量表 × 108 R 方法的四库溯源问答
+- [academic-literature-analysis-team](https://github.com/Lucewalk/academic-literature-analysis-team):学术文献计量分析,从题录到综述骨架
+- [mplus-stats-coach](https://github.com/Lucewalk/mplus-stats-coach):语法实验室、方法顾问与输出门诊三环辅导
+- [endnote-analysis-expert](https://github.com/Lucewalk/endnote-analysis):EndNote 引用结构与综述骨架
+
+### 🎓 教学线
+- [teaching-helper-team](https://github.com/Lucewalk/teaching-helper-team):九专家十八技能,三层架构,六大预设工作流
+- [course-tutor](https://github.com/Lucewalk/course-tutor):课程伴学精灵·教师版(含完整源码与学生版构建线)
+- [campus-ppt-helper](https://github.com/Lucewalk/campus-ppt-helper):六成员流水线的教学课件制作
+- [erp-teaching-team](https://github.com/Lucewalk/erp-teaching-team):五教练覆盖选型、概念、练习、进度全周期
+- [college-competition-coaching-team](https://github.com/Lucewalk/college-competition-coaching-team):大学生赛事教练团
+
+### 🧭 实践与工具线
+- [hrm-advisory-corps](https://github.com/Lucewalk/hrm-advisory-corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
+- [workbuddy-expert-studio](https://github.com/Lucewalk/workbuddy-expert-studio):本合集所有产品的诞生地
+- [ai-butler](https://github.com/Lucewalk/ai-butler):教师工作台(离线优先)
+- [distill](https://github.com/Lucewalk/distill):蒸馏师——长文进、可引用摘要出
+- [ghost-workspace-hunter](https://github.com/Lucewalk/ghost-workspace-hunter):幽灵工作空间猎手(技能)
+
+> 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
+
+## 安装(任一产品)
+
+1. 从产品仓库的 Releases 页下载 zip(或克隆仓库);
+2. 解压保持内部清单结构不变(`.codebuddy-plugin/`);
+3. 在 WorkBuddy 中导入/注册(自定义连接器 → 信任并启用)。
+
+## 许可
+
+MIT——详见 [LICENSE](LICENSE)。
+
+</details>
