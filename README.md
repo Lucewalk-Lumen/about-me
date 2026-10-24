@@ -51,6 +51,8 @@ Every product here is shaped by three disciplines I bring from my daily work:
 | [ai-butler](https://github.com/Lucewalk-Lumen/ai-butler) | Teacher workbench (offline-first): todos, schedule, teaching calendar with `.ics` import, morning/weekly briefings — single-file HTML plus a local bridge, your data never leaves the machine; optional end-to-end encrypted sync. |
 | [distill](https://github.com/Lucewalk-Lumen/distill) | Condense long material into structured, citable summaries — reading time in, reference-ready out. |
 | [ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/ghost-workspace-hunter) | Skill — reversible cleanup of corrupted WorkBuddy workspaces: database backup first, active-session guard, trash instead of delete. |
+| [fde-frontline-team](https://github.com/Lucewalk-Lumen/fde-frontline-team) | FDE frontline deployment — scenario diagnostics, loop redesign and workshop mentoring for frontline delivery loops. |
+| [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team) | Investment-research expert team — multi-role pipeline over A-share & US market data, company deep-dives and backtesting; informational, not financial advice. |
 
 
 
