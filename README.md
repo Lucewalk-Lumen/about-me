@@ -71,7 +71,7 @@ These experts and skills solve very different problems and each has real depth â
 - Every package passed a sensitive-info & ownership precheck before publication â€” see [docs/PRECHECK.md](docs/PRECHECK.md);
 - Version source of truth: the `version` field in each package's `.codebuddy-plugin/plugin.json`;
 - Cross-package version alignment history: [CHANGELOG.md](CHANGELOG.md);
-- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/lucewalk-lumen/discussions).
+- Found a problem? Open an issue on the product's own repository, or start a [Discussion](https://github.com/Lucewalk/about-me/discussions).
 
 ## Citation
 
