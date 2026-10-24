@@ -1,0 +1,13 @@
+{
+  "name": "幽灵工作空间猎手",
+  "installedAt": 1792043612255,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2110607111678607360",
+  "pay_mode": 0,
+  "description_zh": "幽灵工作空间猎手——专清 WorkBuddy 时间戳命名的幽灵工作空间：跨平台、可逆、带备份，护住在跑会话，绝不误伤真实项目。",
+  "description_en": "Ghost Workspace Hunter — purge residual timestamp-named \"ghost workspaces\" from WorkBuddy. Cross-platform, reversible (Recycle Bin/Trash), with DB backup and active-session guard. Never touches real named workspaces.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/48a7d169-b05d-4d67-a6e2-de3138e35c1d/avatar/skill/au_05dca828-443.png",
+  "iconLocalPath": "/Users/buxing/.workbuddy/skills/ghost-workspace-hunter/_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/48a7d169-b05d-4d67-a6e2-de3138e35c1d/avatar/skill/au_05dca828-443.png"
+}
