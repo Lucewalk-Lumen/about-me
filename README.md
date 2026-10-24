@@ -4,7 +4,7 @@
 >
 > Grounded knowledge · compliance-first engineering · one product, one repository
 
-![WorkBuddy Experts — repository banner](docs/social-preview.png)
+![Lucewalk Experts — repository banner](docs/social-preview.png)
 
 ## About me
 
