@@ -28,7 +28,6 @@ Every product here is shaped by three disciplines I bring from my daily work:
 | [academic-literature-analysis-team](https://github.com/Lucewalk-Lumen/academic-literature-analysis-team) | Bibliometric analysis over your own library — from raw exports to a **review skeleton** you can actually write against. |
 | [mplus-stats-coach](https://github.com/Lucewalk-Lumen/mplus-stats-coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
 | [endnote-analysis](https://github.com/Lucewalk-Lumen/endnote-analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
-
 | [obhrm-research-collaboration-team](https://github.com/Lucewalk-Lumen/obhrm-research-collaboration-team) | **Public landing page** for the full OBHRM research pipeline — **seven agents** across the lifecycle (topic modeling → literature review → paper writing → grant proposals → data analysis → journal selection & submission → revision / response to reviewers), with EndNote/Zotero import and a security baseline (no hardcoded keys, least-privilege, input-bounds, operation audit). Install via the WorkBuddy Expert Center. |
 
 ### 🎓 Teaching line — built on real classrooms, semester after semester
@@ -108,6 +107,7 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [academic-literature-analysis-team](https://github.com/Lucewalk-Lumen/academic-literature-analysis-team):学术文献计量分析,从题录到综述骨架
 - [mplus-stats-coach](https://github.com/Lucewalk-Lumen/mplus-stats-coach):语法实验室、方法顾问与输出门诊三环辅导
 - [endnote-analysis](https://github.com/Lucewalk-Lumen/endnote-analysis):EndNote 引用结构与综述骨架
+- [obhrm-research-collaboration-team](https://github.com/Lucewalk-Lumen/obhrm-research-collaboration-team):公开落地页(经 WorkBuddy 专家中心安装)——OBHRM 全流程研究流水线,由七位智能体覆盖研究全生命周期:选题建模 → 文献综述 → 论文写作 → 基金申报 → 数据分析 → 选刊投稿 → 返修回应(全程 EndNote/Zotero 题录导入);安全基线:无硬编码密钥、最小权限、输入越界校验、操作审计
 
 ### 🎓 教学线
 - [teaching-helper-team](https://github.com/Lucewalk-Lumen/teaching-helper-team):九专家十八技能,三层架构,六大预设工作流
@@ -119,13 +119,12 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 ### 🧭 实践与工具线
 - [hrm-advisory-corps](https://github.com/Lucewalk-Lumen/hrm-advisory-corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
 - [workbuddy-expert-studio](https://github.com/Lucewalk-Lumen/workbuddy-expert-studio):本合集所有产品的诞生地
+- [kb-library-team](https://github.com/Lucewalk-Lumen/kb-library-team):智博资料室——知识库治理:首席知识官统筹摄入/分类/晋升/索引/有据问答/归档六域,四池成熟度门禁,单次摄入≤50 文件护栏
 - [ai-butler](https://github.com/Lucewalk-Lumen/ai-butler):教师工作台(离线优先)
 - [distill](https://github.com/Lucewalk-Lumen/distill):蒸馏师——长文进、可引用摘要出
 - [ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/ghost-workspace-hunter):幽灵工作空间猎手(技能)
 - [fde-frontline-team](https://github.com/Lucewalk-Lumen/fde-frontline-team):FDE 前线部署团——场景诊断、闭环重设计与工作坊辅导
 - [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team):投研星图团——多角色投研流水线(A股/美股数据、公司深研、回测),内容仅供信息参考非投资建议
-
-- [obhrm-research-collaboration-team](https://github.com/Lucewalk-Lumen/obhrm-research-collaboration-team):公开落地页(经 WorkBuddy 专家中心安装)——OBHRM 全流程研究流水线,由七位智能体覆盖研究全生命周期:选题建模 → 文献综述 → 论文写作 → 基金申报 → 数据分析 → 选刊投稿 → 返修回应(全程 EndNote/Zotero 题录导入);安全基线:无硬编码密钥、最小权限、输入越界校验、操作审计
 
 ## 如何使用(任一产品)
 
