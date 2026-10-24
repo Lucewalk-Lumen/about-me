@@ -45,11 +45,11 @@ Every product here is shaped by three disciplines I bring from my daily work:
 
 | Product | What makes it different |
 |---|---|
-| [HRM-Advisory-Corps](https://github.com/Lucewalk-Lumen/HRM-Advisory-Corps) | China-market HRM consulting — one orchestrator plus eight specialists across org planning, recruiting pipeline, talent development, performance, compensation and **labor compliance**. Handles candidate PII the compliant way: desensitized archives, encrypted PII vault, plaintext never touching ordinary files. |
+| [hrm-advisory-corps](https://github.com/Lucewalk-Lumen/hrm-advisory-corps) | China-market HRM consulting — one orchestrator plus eight specialists across org planning, recruiting pipeline, talent development, performance, compensation and **labor compliance**. Handles candidate PII the compliant way: desensitized archives, encrypted PII vault, plaintext never touching ordinary files. |
 | [workbuddy-expert-studio](https://github.com/Lucewalk-Lumen/workbuddy-expert-studio) | **The factory behind this whole catalog** — a team that takes an expert idea through alignment, drafting, quality gates and packaging until it is publishable. Every product listed on this page was produced with it. |
-| [KB-Library-Team](https://github.com/Lucewalk-Lumen/KB-Library-Team) | Knowledge-base governance — one chief knowledge officer with six internalized domains (ingest, classify, promote, index, grounded Q&A, archive), four-pool maturity gates and hard ingestion guardrails (≤50 files per batch). |
-| [AI-Butler](https://github.com/Lucewalk-Lumen/AI-Butler) | Teacher workbench (offline-first): todos, schedule, teaching calendar with `.ics` import, morning/weekly briefings — single-file HTML plus a local bridge, your data never leaves the machine; optional end-to-end encrypted sync. |
-| [Distill](https://github.com/Lucewalk-Lumen/Distill) | Condense long material into structured, citable summaries — reading time in, reference-ready out. |
+| [kb-library-team](https://github.com/Lucewalk-Lumen/kb-library-team) | Knowledge-base governance — one chief knowledge officer with six internalized domains (ingest, classify, promote, index, grounded Q&A, archive), four-pool maturity gates and hard ingestion guardrails (≤50 files per batch). |
+| [ai-butler](https://github.com/Lucewalk-Lumen/ai-butler) | Teacher workbench (offline-first): todos, schedule, teaching calendar with `.ics` import, morning/weekly briefings — single-file HTML plus a local bridge, your data never leaves the machine; optional end-to-end encrypted sync. |
+| [distill](https://github.com/Lucewalk-Lumen/distill) | Condense long material into structured, citable summaries — reading time in, reference-ready out. |
 | [ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/ghost-workspace-hunter) | Skill — reversible cleanup of corrupted WorkBuddy workspaces: database backup first, active-session guard, trash instead of delete. |
 
 
@@ -57,7 +57,7 @@ Every product here is shaped by three disciplines I bring from my daily work:
 ## Install (any product)
 
 1. Download the package zip from the product's **Releases** page (or clone its repo);
-2. Unzip keeping the internal manifest structure intact (`.codebuddy-plugin/`; `AI-Butler` uses an `agent-card.json` UMAS manifest);
+2. Unzip keeping the internal manifest structure intact (`.codebuddy-plugin/`; `ai-butler` uses an `agent-card.json` UMAS manifest);
 3. Import/register in WorkBuddy (custom connector → trust & enable).
 
 ## Quality & security
@@ -106,10 +106,10 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [college-competition-coaching-team](https://github.com/Lucewalk-Lumen/college-competition-coaching-team):大学生赛事教练团
 
 ### 🧭 实践与工具线
-- [HRM-Advisory-Corps](https://github.com/Lucewalk-Lumen/HRM-Advisory-Corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
+- [hrm-advisory-corps](https://github.com/Lucewalk-Lumen/hrm-advisory-corps):一主理人八专家的 HRM 实战咨询,PII 加密处理
 - [workbuddy-expert-studio](https://github.com/Lucewalk-Lumen/workbuddy-expert-studio):本合集所有产品的诞生地
-- [AI-Butler](https://github.com/Lucewalk-Lumen/AI-Butler):教师工作台(离线优先)
-- [Distill](https://github.com/Lucewalk-Lumen/Distill):蒸馏师——长文进、可引用摘要出
+- [ai-butler](https://github.com/Lucewalk-Lumen/ai-butler):教师工作台(离线优先)
+- [distill](https://github.com/Lucewalk-Lumen/distill):蒸馏师——长文进、可引用摘要出
 - [ghost-workspace-hunter](https://github.com/Lucewalk-Lumen/ghost-workspace-hunter):幽灵工作空间猎手(技能)
 
 > 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
