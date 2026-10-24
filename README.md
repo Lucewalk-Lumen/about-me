@@ -1,6 +1,6 @@
 # Lucewalk Lumen · 沐光行客
 
-> **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [Xing Bu](https://github.com/Lucewalk).
+> **Brand hub** — expert teams, agents and skills built for the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform, maintained by [沐光行客](https://github.com/Lucewalk).
 >
 > Grounded knowledge · compliance-first engineering · one product, one repository
 
@@ -8,7 +8,7 @@
 
 ## About me
 
-I'm **Xing Bu** — an OB & HRM academic, a peer reviewer for management journals, and the author of 16+ expert teams and skills published on the WorkBuddy Expert Center.
+I'm **沐光行客** — an OB & HRM academic, a peer reviewer for management journals, and the author of 16+ expert teams and skills published on the WorkBuddy Expert Center.
 
 Every product here is shaped by three disciplines I bring from my daily work:
 
