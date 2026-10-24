@@ -1,6 +1,6 @@
 # Lucewalk Lumen · 沐光行客
 
-> **Brand hub** for the open expert packages by [沐光行客 (Xing Bu)](https://github.com/Lucewalk-Lumen) — an OBHRM academic, university lecturer and journal peer reviewer. They run on the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform.
+> **Brand hub** for the open expert packages by [沐光行客](https://github.com/Lucewalk-Lumen) — an OBHRM academic, university lecturer and journal peer reviewer. They run on the [WorkBuddy](https://www.workbuddy.cn) AI assistant platform.
 >
 > Grounded knowledge · compliance-first engineering · one product, one repository
 >
@@ -10,7 +10,7 @@
 
 ## About me
 
-I'm **沐光行客 (Xing Bu)** — an OBHRM academic at a Guangdong university, a peer reviewer for management journals, and the lecturer behind a generative-AI literacy course. The expert packages on this page are the toolkit I built for my own research, teaching and HR practice, then published as open packages; they run on the WorkBuddy AI assistant platform.
+I'm **沐光行客** — an OBHRM academic at a Guangdong university, a peer reviewer for management journals, and the lecturer behind a generative-AI literacy course. The expert packages on this page are the toolkit I built for my own research, teaching and HR practice, then published as open packages; they run on the WorkBuddy AI assistant platform.
 
 Every product here is shaped by three disciplines I bring from my daily work:
 
@@ -29,7 +29,7 @@ Every product here is shaped by three disciplines I bring from my daily work:
 | [mplus-stats-coach](https://github.com/Lucewalk-Lumen/mplus-stats-coach) | Statistics coaching for Mplus — syntax guidance, modeling decisions and output interpretation, tuned for students who need to defend their choices. |
 | [endnote-analysis](https://github.com/Lucewalk-Lumen/endnote-analysis) | Turns an EndNote library into citation-structure and research-profile insights — built on the author's own daily literature-management workflow. |
 
-> The line's flagship, **obhrm-research-collaboration-team** (full research pipeline: literature review, paper writing, methods, data analysis, peer review and journal selection, with EndNote/Zotero library import), is closed-source and distributed via the WorkBuddy Expert Center only.
+> **obhrm-research-collaboration-team** (closed-source · WorkBuddy Expert Center only) — the full research pipeline: literature review, paper writing, methods, data analysis, peer review and journal selection, with EndNote/Zotero library import. Not open-source; install it from the WorkBuddy Expert Center.
 
 ### 🎓 Teaching line — built on real classrooms, semester after semester
 
@@ -122,7 +122,7 @@ MIT — see [LICENSE](LICENSE). Third-party assets are documented in each produc
 - [fde-frontline-team](https://github.com/Lucewalk-Lumen/fde-frontline-team):FDE 前线部署团——场景诊断、闭环重设计与工作坊辅导
 - [touyan-expert-team](https://github.com/Lucewalk-Lumen/touyan-expert-team):投研星图团——多角色投研流水线(A股/美股数据、公司深研、回测),内容仅供信息参考非投资建议
 
-> 闭源旗舰 obhrm-research-collaboration-team 仅经 WorkBuddy 专家中心分发。
+> **obhrm-research-collaboration-team**（闭源 · 仅经 WorkBuddy 专家中心分发）—— 完整研究流水线:文献综述、论文写作、方法、数据分析、同行评审与选刊,支持 EndNote/Zotero 题录导入。不开源,请从 WorkBuddy 专家中心安装。
 
 ## 如何使用(任一产品)
 
